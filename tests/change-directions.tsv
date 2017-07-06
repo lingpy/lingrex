@@ -1,0 +1,261 @@
+WHERE	FROM	TO	WEIGHT	NOTE
+c	ʔ	-		
+c	ŋ	ŋ		
+c	∼	-		
+c	k	-		
+c	n	n		
+c	m	m		
+c	t	t		
+c	p	p		
+c	j	-		
+c	w	w		
+c	k	ts	9	
+c	ŋ	nʲ	9	
+c	ʈ	-		
+c	k	ʔ		
+i	m			
+i	l			
+i	l	r		
+i	m	m̥		
+i	l	l̥		
+i	l	j		
+i	k	tɕ		
+i	k	tʃ		
+i	k	ts		
+i	s	s		
+i	n	n		
+i	p	p		
+i	t	t		
+i	ŋ	ŋ		
+i	kʰ	tɕʰ		
+i	kʰ	tʃʰ		
+i	kʰ	tsʰ		
+i	j	j		
+i	r	j		
+i	l	j		
+i	ʃ	ʃ		
+i	ʃ	s		
+i	kʰ	x		
+i	tʰ	tʰ		
+i	ts	ts		
+i	pʰ	pʰ		
+i	w	v		
+i	tʃ	ts		
+i	tʃ	tʃ		
+i	n	n̥		only if the vowel is tense
+i	tsʰ	tsʰ		
+i	s	tθ		
+i	nʲ	ɲ		
+i	ʂ	s		
+i	r	ɣ		
+i	kʰ	ɣ		
+i	w	w		
+i	tʃʰ	tɕʰ		
+i	m	m̥		only if the vowel is tense
+i	tʃʰ	tʃʰ		
+i	tʃʰ	tsʰ		
+i	r	ʐ		
+i	tʃ	tɕ		
+i	ʃ	ɕ		
+i	kʰ	f		
+i	kʰ	x		
+i	c	ts		
+i	tsʰ	sʰ		
+i	l	l̥		only if the vowel is tense
+i	ɲ			
+i	r	r		
+i	cʰ	tsʰ		
+i	nʲ	n̥ʲ		only if the vowel is tense
+i	ŋ	ŋ̊		only if the vowel is tense
+i	b			
+i	tsʰ	tʰ		
+i	ʈʂʰ			
+i	ʑ			
+i	ç			
+i	r	r̥		only if the vowel is tense
+i	d			
+i	ɲ	ɲ̊		only if the vowel is tense
+i	kʰr	xʐ		
+i	rj	r		
+i	rj	j		
+i	rj	rj		
+i	tʂ			
+i	h	h		
+i	l	ɬ		only if the vowel is tense
+i	dʑ			
+i	g			
+i	ʈʂ			
+i	ɳ			
+i	r̥	x		
+i	r	r̥		
+i	m	m		
+i	l	l		
+i	p	p		
+i	t	t		
+i	ʃ	ʃ		
+i	ʃ	ʂ		
+i	ʃ	s		
+i	mʲ	nʲ		
+i	m	m		
+i	nʲ	n		
+i	mʲ	m		
+i	n	n		
+i	k	k		
+i	k	tɕ		
+i	kʰ	kʰ		
+i	kʰ	x		
+i	kʰ	tɕʰ		
+i	kʰ	cʰ		
+i	s	s		
+i	s	tθ		
+i	s	ʂ		
+i	x	f		
+i	ŋ	ŋ		
+i	tʃ	tʃ		
+i	tʃ	ts		
+i	tʃ	cʰ		
+i	ts	t		
+i	ts	s		
+i	ts	ts		
+i	ŋ	ŋ̊		
+i	ŋ	ŋ		
+i	ŋ̊	n̥		
+i	tʰ	tʰ		
+i	nʲ	n̥ʲ		
+i	n̥ʲ	n̥		
+i	nʲ	n		
+i	r	ʐ		
+i	r	r		
+i	r	ɣ		
+i	r	j		
+i	ɣ	j		
+i	ɣ	v		
+i	ŋʲ	ŋʲ		
+i	ŋʲ	ŋ		
+i	ŋʲ	nʲ		
+i	nʲ	ɲ		
+i	j	j		
+i	rj	j		
+i	v	ɣ		
+i	ʃ	ɕ		
+i	ʃ	ç		
+i	rj	r		
+m	j			
+m	r	ʐ		
+m	w			
+m	r	r		
+m	u			
+m	l	r		
+m	l	l		
+m	l	j		
+m	i			
+M	u			
+m	a	ɑ		
+m	ɤ			
+M	?			
+m	rj	r		
+m	rj	j		
+m	rj	rj		
+n	a			
+n	?			
+n	i			
+n	u			
+n	a	ɔ		
+n	ɔ	ɔ		
+n	o			
+N	u			
+N	i			
+n	ɛ			
+n	e			
+n	a	ɑ		
+n	a̰			
+n	ə			
+n	ã	ɑ̃		
+n	ṵ			
+n	ɔ̃	ɔ̃		
+n	ã	ɔ̃		
+n	ɔ̰	ɔ̰		
+n	a̰	ɔ̰		
+n	ə̆			
+n	ă			
+n	ḭ			
+n	ĩ			
+n	ɛ̰			
+n	u	ʊ		
+n	ɛ̃			
+n	ŏ			
+n	aː			
+n	o̰			
+n	ɿ			
+n	ə̰			
+n	ɯ			
+n	ɔ̆			
+n	ɔː			
+n	uː			
+n	õ			
+n	ɛ̰̃			
+n	ṵː			
+n	əː			
+n	ɛː			
+n	ḛ			
+n	ẽ			
+n	ɤ			
+n	ø			
+n	ɔ̰̃			
+n	a̰ː			
+n	ĕ			
+n	ə̰ː			
+n	eː			
+n	ũ			
+n	n			
+n	iː			
+n	ɔ̰ː	ɔ̰ː		
+n	a̰ː	ɔ̰ː		
+n	ḭː			
+n	n̩			
+N	a			
+n	ø̰			
+n	ɛ̰ː			
+n	a̰	ɑ̰		
+n	ɛ̆			
+n	ã̆	ɔ̃̆		
+n	ɔ̃̆	ɔ̃̆		
+n	ɪ̆			
+n	ŋ			
+n	ø̃			
+n	ĭ			
+n	ŏ̰			
+n	ɪ̃			
+n	yː			
+t	⁵⁵			
+t	³¹			
+t	³⁵			
+t	²¹			
+t	²²			
+t	⁵³			
+t	³³			
+t	⁵¹			
+t	⁴			
+t	k			
+t	j			
+t	ŋ			
+t	m			
+t	t			
+t	ts			
+t	w			
+	tθ			
+	tɕʰ			
+	ts	tɕ		
+	k	ɣ		
+	k	r		
+	k	j		
+	ts	s		
+	c	s		
+	ts	c		
+	ts	t		
+	s	tθ		
+	ʃ	ʂ		
+	ʃ	s		
+	m	m̥		
+	x			
+	m̥			

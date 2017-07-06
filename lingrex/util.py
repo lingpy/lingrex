@@ -1,0 +1,181 @@
+# *-* coding: utf-8 *-*
+from __future__ import print_function, division, unicode_literals
+from collections import defaultdict
+from itertools import combinations
+import os
+# TODO export this function to lingpy or something else
+from sinopy.segments import get_structure
+from lingpy.sequence.sound_classes import tokens2morphemes
+from lingpy import *
+import networkx as nx
+import html
+import codecs
+
+
+
+def lingrex_path(*comps):
+    """
+    Our data-path in CLICS.
+    """
+    return os.path.join(os.path.dirname(__file__), os.pardir, *comps)
+
+def data_path(*comps):
+
+    return lingrex_path('data', *comps)
+
+def get_simple_structure(seg):
+    """Bad-ass function to get the major structures for alignments etc."""
+    cls = ''.join(tokens2class(seg, 'cv'))
+    mapper = {
+            'CCV': 'imn',
+            'CCVC': 'imnc',
+            'CCVCT': 'imnct',
+            'CCVVT' : '',
+            'CVC': 'inc',
+            'CT' : 'nt',
+            'CVCT': 'inct',
+            'VVCT': 'mnct',
+            'VC': 'nc',
+            'VCT': 'nct',
+            'CVVCT': '',
+            'VVT': '',
+            'CVT': 'int',
+            'CVVT': '',
+            'V': 'n',
+            'CV': 'in',
+            'CCVT': 'imnt',
+            'VT': 'nt',
+            'CCVVCT': 'imnNct',
+            }
+    if not cls in mapper:
+        return
+    if not mapper[cls]:
+        # our problem are VV instances, so we need to extract these
+        dlg = ''.join(tokens2class(seg, 'sca'))
+        ncls = ''
+        for c, d in zip(cls, dlg):
+            if c == 'V':
+                ncls += d
+            else:
+                ncls += c
+        nmapper = {
+            "UIT": 'nNt',
+            "CUYT": 'inNt',
+            "CYACT": 'imnct',
+            "CYAT": 'imnt',
+            "AYT": 'nNt',
+            "CCUAT": 'imMnt',
+            "CCYAT": 'imMnt',
+            "CCAUT": 'imnNt',
+            "CCAYT": 'imnNt',
+            "CCIAT": 'imMnt',
+            "CCAIT": 'imnNt',
+            "CCEAT": 'imMnt',
+            "CCYIT": 'imnNt',
+            "CCEIT": 'imnNt',
+            "CCUYT": 'imnNt',
+            "CIYT": 'imnt',
+            "CYIT": 'inNt',
+            "CAIT": 'inNt',
+            "CEIT": 'inNt',
+            "CIUCT": 'imnct',
+            "CAYT": 'inNt',
+            "CIACT": 'imnct',
+            "CAYCT": 'inNct',
+            "CAICT": 'inNct',
+            "CUIT": 'inNt',
+            "YIT": 'nNt',
+            "EET": 'mnt'}
+        if ncls in nmapper:
+            if nmapper[ncls]:
+                return nmapper[ncls]
+        print(ncls,seg)
+        return
+
+    return mapper[cls]
+
+def get_segments_and_structure(wordlist, etd, cogid, ref='cogids', segments='segments',
+        structure='structure'):
+    """shortcut function to retrieve a couple of things from a wordlist"""
+    idxs = []
+    for v in etd[cogid]:
+        if v: idxs += v
+    out = {}
+    for idx in idxs:
+        segs = wordlist[idx, segments]
+        cogids = wordlist[idx, ref]
+        cogidx = cogids.index(cogid)
+        morpheme = tokens2morphemes(segs)[cogidx]
+        struct = wordlist[idx, structure].split(' + ')[cogidx]
+        out[idx] = [wordlist[idx, 'doculect'], wordlist[idx, 'concept'], 
+            morpheme, struct.split(' ')]
+
+    return out
+
+def renumber_partials(wordlist, ref):
+    newidx = 1
+    partials = {}
+    for idx, concept, cogids in iter_rows(wordlist, 'concept', ref):
+        new_cogs = []
+        for cogid in cogids:
+            _cogid = str(cogid)+'-'+concept
+            if _cogid not in partials:
+                partials[_cogid] = newidx
+                newidx += 1
+            new_cogs += [partials[_cogid]]
+        wordlist[idx, ref] = new_cogs
+   
+
+def align_by_structure(wordlist, template='imMnNct', segments='segments',
+        ref='cogids', structure='structure', alignment='alignment'):
+    """Align patterns simply by following the template"""
+    etd = wordlist.get_etymdict(ref='cogids')
+    alms = {}
+    for key in etd:
+        # get the essential data
+        alm, idxs, cidxs = [], [], []
+        for idx, (d, c, m, s) in get_segments_and_structure(wordlist, etd, key,
+                ref, segments, structure).items():
+            alm += [[]]
+            mapper = dict(zip(s, m))
+            for t in template:
+                alm[-1] += [mapper.get(t, '-')]
+            idxs += [idx]
+        ignore = []
+        for i in range(len(alm[0])):
+            col = [alm[j][i] for j in range(len(idxs))]
+            if not [x for x in col if x != '-']:
+                ignore += [i]
+
+        out = []
+        for idx, row in zip(idxs, alm):
+            out = [row[i] for i in range(len(alm[0])) if i not in ignore]
+            alms[key, idx] = out
+
+    alignments = {}
+    for idx, cogids in iter_rows(wordlist, ref):
+        print(idx, wordlist[idx, 'concept'], wordlist[idx, 'doculect'], cogids)
+        alignments[idx] = ' + '.join([' '.join(alms[cogid, idx]) for cogid in
+            cogids]).split(' ')
+    wordlist.add_entries(alignment, alignments, lambda x: x)
+
+def add_structure(wordlist, segments='tokens', structure='structure', sep='+'):
+    """Add the structure data on sounds we need for our analysis"""
+    structures = {}
+    ssep = ' '+sep+' '
+    for idx, segs in iter_rows(wordlist, segments):
+        strucs = []
+        for mrp in tokens2morphemes(segs):
+            strucs += [' '.join(get_simple_structure(mrp))]
+        structures[idx] = ssep.join(strucs)
+    wordlist.add_entries(structure, structures, lambda x: x)
+    
+
+def save_network(filename, graph):
+    with codecs.open(filename, 'w', 'utf-8') as f:
+        for line in nx.generate_gml(graph):
+            f.write(html.unescape(line)+'\n')
+def load_network(filename):
+    with codecs.open(filename, 'r', 'utf-8') as f:
+        lines = [l.encode('ascii', 'xmlcharrefreplace').decode('utf-8') for l in f]
+        return nx.parse_gml('\n'.join(lines))
