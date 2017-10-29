@@ -4,6 +4,13 @@ from collections import defaultdict
 from itertools import combinations
 from lingpy.sequence.sound_classes import tokens2morphemes
 
+# use this to make a sorting-based algorithm for clique detection
+from functools import cmp_to_key
+
+# test graph coloring as well
+# https://networkx.github.io/documentation/networkx-1.10/reference/generated/networkx.algorithms.coloring.greedy_color.html#networkx.algorithms.coloring.greedy_color
+
+
 import networkx as nx
 from networkx.algorithms.approximation.clique import clique_removal
 from lingpy import *
@@ -252,6 +259,131 @@ def compatible_columns(colA, colB, missing='Ø'):
                 matches += 1
     return matches
 
+def sort_compatibility_graph(graph, debug=False, threshold=2):
+    """Detect clusters of compatible nodes by sorting the graph."""
+
+    def sorter(x, y, init=True):
+        if init:
+            cc = compatible_columns(x[1:], y[1:])
+            lA = len([i for i in x[1:] if i == 'Ø'])
+            lB = len([i for i in y[1:] if i == 'Ø'])
+            tA = ' '.join(x[1:])
+            tB = ' '.join(y[1:])
+        else:
+            cc = compatible_columns(x[0].split(' '), y[0].split(' '))
+            lA = len([i for i in x[0].split(' ') if i == 'Ø'])
+            lB = len([i for i in y[0].split(' ') if i == 'Ø'])
+            tA = x[0]
+            tB = y[0]
+
+        if cc == -1:
+            return -1
+            #if tA < tB:
+            #    return -1
+            #return 1
+        if cc == 0:
+            if tA < tB:
+                return -1
+            return 1
+
+        if lA < lB:
+            return -1
+        elif lA > lB:
+            return 1
+        return 0
+
+    nodes = []
+    for node in graph.nodes(data=True):
+        nodes += [[node[0]] + node[1]['column'].split(' ')]
+    if not nodes:
+        raise ValueError('empty graph delivered')
+    snodes = sorted(nodes, key=cmp_to_key(sorter))
+    elm = snodes[0][1:]
+    out, tmp = defaultdict(list), []
+    for i, k in enumerate(snodes):
+        if compatible_columns(k[1:], elm) == -1:
+            for idx in tmp:
+                out[' '.join(elm)] += [idx]
+            tmp = [i]
+            elm = k[1:]
+        else:
+            tmp += [i]
+            nelm = []
+            for a, b in zip(elm, k[1:]):
+                if a == 'Ø' and b != 'Ø':
+                    nelm += [b]
+                elif b == 'Ø' and a != 'Ø':
+                    nelm += [a]
+                else:
+                    nelm += [a]
+            elm = nelm
+    for idx in tmp:
+        out[' '.join(elm)] += [idx]
+    
+    #print(len(out))
+    for i in range(1000):
+        # second run
+        nnodes = sorted(out, key=cmp_to_key(
+            lambda x, y: sorter(x, y, init=False)))
+        elm = nnodes[0].split(' ')
+        out2, tmp = defaultdict(list), []
+        for i, k in enumerate(nnodes):
+            if compatible_columns(k.split(' '), elm) == -1:
+                for idx in tmp:
+                    idxs = out[' '.join(elm)]
+                    for this_idx in idxs:
+                        out2[' '.join(elm)] += [this_idx]
+                tmp = [i]
+                elm = k.split(' ')
+            else:
+                tmp += [i]
+                nelm = []
+                for a, b in zip(elm, k.split(' ')):
+                    if a == 'Ø' and b != 'Ø':
+                        nelm += [b]
+                    elif b == 'Ø' and a != 'Ø':
+                        nelm += [a]
+                    else:
+                        nelm += [a]
+                elm = nelm
+        for idx in tmp:
+            idxs = out[' '.join(elm)]
+            for this_idx in idxs:
+                out2[' '.join(elm)] += [this_idx]
+        out = out2.copy()
+        #print(len(out))
+        #print('--')
+    fails = 0
+    for nA, nB, nC in combinations(out, r=3):
+        if compatible_columns(nA.split(' '), nB.split(' ')) > 0:
+            if compatible_columns(nB.split(' '), nC.split(' ')) > 0:
+                if compatible_columns(nA.split(' '), nC.split(' ')) > 0:
+                    fails += 1
+    #                print('\t'.join(nA.split()))
+    #                print('\t'.join(nB.split()))
+    #                print('\t'.join(nC.split()))
+    #                print('---')
+    #                input()
+
+    single, mass = 0, 0
+    singletons = []
+    for key, vals in out.items():
+        if len(vals) >= threshold:
+            if debug: print(str(len(vals))+ '\t ITMS\t'+ '\t'.join(key.split(' ')))
+            for v in vals:
+                mass += 1
+                if debug: print('---\t'+'\t'.join(snodes[v]))
+            if debug: print('===')
+        else:
+            single += len(vals)
+            for val in vals:
+                singletons += [snodes[val]]
+
+    if debug:
+        print('count:', single, mass, single+mass,
+                '{0:.2f}'.format(single/(single+mass)))
+    return single, mass, single+mass, mass/(single+mass), out, fails
+
 def nodes_with_condition(alms, ref='cogid', pos='A', prostring=False):
     """
     Calculate the patterns which match a certain condition and those which do
@@ -366,7 +498,7 @@ def compatibility_graph(
                                 for idx in msa['ID']
                                 ]
                     #strucs = [get_simple_structure([x for x in s if x != '-']) for s in msa['seqs']]
-                    print(strucs, msa)
+                    #print(strucs, msa)
                     msa_strucs = [class2tokens(struc, alm) for struc, alm in
                         zip(strucs, msa['alignment'])]
                     consensus = get_consensus(msa['alignment'], gaps=True)
@@ -390,7 +522,14 @@ def compatibility_graph(
                         pidx = _prostring.index(pos)
                     else:
                         pidx = -1
-                if pidx != -1:
+                    # function to find all pidx
+                    pidxs = []
+                    for i, p in enumerate(_prostring):
+                        if p == pos:
+                            pidxs += [i]
+
+                #if pidx != -1:
+                for pidx in pidxs:
                     stats[1] += 1
                     good_patterns += [cogid]
                     reflexes = []
@@ -399,10 +538,9 @@ def compatibility_graph(
                             reflexes += [missing]
                         else:
                             reflexes += [msa['alignment'][_taxa.index(t)][pidx]]
-                    graph.add_node(str(cogid), column = ' '.join(reflexes),
+                    graph.add_node(str(cogid)+'-'+str(pidx), column = ' '.join(reflexes),
                             consensus=consensus[pidx], clique=0, cliquesize=0,
                             color = tokens2class(consensus, color)[0])
-
     # determine compatibility and assign edges
     zero_edges = []
     for nA, nB in combinations(graph.nodes(), r=2):
@@ -423,12 +561,12 @@ def compatibility_graph(
     # remove edges where we don't find a triad-compatibility
     remove_edges = []
     for i, (nA, nB) in enumerate(zero_edges):
-        neighborsA = {n for n, d in graph.edge[nA].items() if d['weight']}
-        neighborsB = {n for n, d in graph.edge[nB].items() if d['weight']}
+        neighborsA = {n for n, d in graph[nA].items() if d['weight']}
+        neighborsB = {n for n, d in graph[nB].items() if d['weight']}
         common_nodes = neighborsA.intersection(neighborsB)
         triadic_compatibility = False
         for n in common_nodes:
-            if graph.edge[n][nA]['weight'] and graph.edge[n][nB]['weight']:
+            if graph[n][nA]['weight'] and graph[n][nB]['weight']:
                 triadic_compatibility = True
                 break
         if not triadic_compatibility:
@@ -464,9 +602,9 @@ def retrieve_identical_morphemes(alms, segments='segments', ref='cogids'):
             for (k1, i1, c1), (k2, i2, c2) in combinations(vals, r=2):
                 cog1, cog2 = alms[k1, ref][i1], alms[k2, ref][i2]
                 try:
-                    graph.edge[cog1][cog2]['language'] += [col]
-                    graph.edge[cog1][cog2]['idxs'] += [(str(k1), str(k2))]
-                    graph.edge[cog1][cog2]['concepts'] += [(c1, c2)]
+                    graph[cog1][cog2]['language'] += [col]
+                    graph[cog1][cog2]['idxs'] += [(str(k1), str(k2))]
+                    graph[cog1][cog2]['concepts'] += [(c1, c2)]
                 except KeyError:
                     graph.add_edge(cog1, cog2, idxs = [(str(k1), str(k2))],
                         language=[col], concepts=[(c1, c2)])
@@ -534,35 +672,39 @@ def greedy_clique_partition(graph, debug=True, weight_clique=None,
                 clique_removal(graph)[1], 
                 key=lambda x: weight_clique(x), reverse=True
                 )
+        for i, clique in enumerate(cliques):
+            for node in clique:
+                graph.node[node]['clique'] = i+1
+                graph.node[node]['cliquesize'] = len(clique)
     else:
         cliques = sorted(nx.find_cliques(graph), key=lambda x: weight_clique(x),
                 reverse=True)
 
-    visited = []
-    idx = 1
-    with pb(desc='GREEDY CLIQUE PARTITION', total=len(cliques)) as progress:
-        while cliques:
-            progress.update(1)
-            next_clique = cliques.pop(0)
-            not_visited = [n for n in next_clique if n not in visited]
-            nvl = len(not_visited)
-            for node in not_visited:
-                graph.node[node]['clique'] = idx
-                graph.node[node]['cliquesize'] = nvl
-            visited += not_visited
-            idx += 1
-            cliques = [c for c in cliques if len([y for y in c if y not in
-                visited]) > 1]
-            cliques = sorted(cliques, key=lambda x: weight_clique(x), reverse=True)
-            if debug: 
-                print('{0} cliques left'.format(len(cliques)))
+        visited = []
+        idx = 1
+        with pb(desc='GREEDY CLIQUE PARTITION', total=len(cliques)) as progress:
+            while cliques:
+                progress.update(1)
+                next_clique = cliques.pop(0)
+                not_visited = [n for n in next_clique if n not in visited]
+                nvl = len(not_visited)
+                for node in not_visited:
+                    graph.node[node]['clique'] = idx
+                    graph.node[node]['cliquesize'] = nvl
+                visited += not_visited
+                idx += 1
+                cliques = [c for c in cliques if len([y for y in c if y not in
+                    visited]) > 1]
+                cliques = sorted(cliques, key=lambda x: weight_clique(x), reverse=True)
+                if debug: 
+                    print('{0} cliques left'.format(len(cliques)))
 
-    # assign new indices to graph for all nodes with clique as "0"
-    for node in graph.nodes():
-        if graph.node[node]['clique'] == 0: 
-            graph.node[node]['clique'] = idx
-            graph.node[node]['cliquesize'] = 1
-            idx += 1
+        # assign new indices to graph for all nodes with clique as "0"
+        for node in graph.nodes():
+            if graph.node[node]['clique'] == 0: 
+                graph.node[node]['clique'] = idx
+                graph.node[node]['cliquesize'] = 1
+                idx += 1
     return graph
 
 def score_graph(graph, clique='clique'):
@@ -590,19 +732,53 @@ def get_consensus_patterns(graph, debug=False, missing="Ø"):
     consensus = {}
     for clique in cliques:
         patterns = [x[1]['column'].split(' ') for x in graph.nodes(data=True) if x[1]['clique'] == clique]
-        nodes = ', '.join([x[0] for x in graph.nodes(data=True) if x[1]['clique'] ==
-            clique])
-        consensus[clique] = (consensus_pattern(patterns), len(patterns), nodes)
+        nodes_ = [x[0] for x in graph.nodes(data=True) if x[1]['clique'] ==
+            clique]
+        nodes = [] 
+        for node in nodes_:
+            nodes += [node]
+            nbunch = graph.node[node].get('nodebunch', '').split(',')
+            for n in nbunch:
+                if n not in nodes:
+                    nodes += [n]
+        consensus[clique] = (consensus_pattern(patterns), len(patterns),
+                ', '.join(nodes))
 
     for (clique1, (c1, n1, d1)), (clique2, (c2, n2, d2)) in combinations(consensus.items(), r=2):
         cc = compatible_columns(c1, c2, missing=missing)
-        if cc > 0:
+        if cc > 0 and debug:
             print(clique1, '\t', n1, '\t', '\t'.join(c1))
             print(clique2, '\t', n2, '\t', '\t'.join(c2))
             print('---{0}---'.format(cc))
 
     return consensus
 
+def add_patterns_to_wordlist(consensus, wordlist, patterns='patterns', alignment='alignment', ref='cogids'):
+    """
+    Add the inferred patterns to the alignments in a word list.
+    """
+    etd = wordlist.get_etymdict(ref)
+    D = {idx: '' for idx in wordlist}
+    # transpose consensus
+    cons = {}
+    for key, values in consensus.items():
+        cogs = values[-1].split(', ')
+        for cog in cogs:
+            cons[cog] = '{0}//{1}'.format(reconstruct_from_consensus(
+                values[0]), key)
+    for cogid, vals in etd.items():
+        for idx in [v[0] for v in vals if v]:
+            alm = wordlist[idx, alignment]
+            pattern = []
+            for i, site in enumerate(alm):
+                pt = '{0}-{1}'.format(cogid, i)
+                if pt in cons:
+                    pattern += [cons[pt]]
+                else:
+                    pattern += ['?']
+            D[idx] = pattern
+    wordlist.add_entries('patterns', D, lambda x: x)
+        
 
 def find_source(consensus, graph):
     """find the source in a sound change graph for a given subset"""
@@ -619,7 +795,7 @@ def find_source(consensus, graph):
         nx.is_isolate(subgraph, n) and not nx.ancestors(subgraph, n)
         )]:
         return alt
-    queue = [subgraph.nodes()[0]]
+    queue = [list(subgraph.nodes())[0]]
     sources = []
     visited = []
     while queue:
@@ -662,7 +838,8 @@ def parse_sound_change_graph(path, source=1, target=2):
 
 def add_proto_slots(alignments, proto_name, structure='structure', threshold=3,
         segments='segments', unknown='?', ref='cogids', alignment='alignment',
-        template='imMnNct', consensus=False, rule='majority', graph=None):
+        template='imMnNct', consensus=False, rule='majority', graph=None,
+        _spacebar='\u2423'):
     """Add proto-language slots where there are enough reflexes"""
 
     def create_pattern(alms, idxs, wordlist):
@@ -695,7 +872,7 @@ def add_proto_slots(alignments, proto_name, structure='structure', threshold=3,
                 pids += [cogid]
                 rstrucs, alms, structs = [], [], []
                 for idx in reflexes:
-                    print(alignments.header, alignments[idx])
+                    #print(alignments.header, alignments[idx])
                     midx = alignments[idx, ref].index(cogid)
                     rstrucs += [alignments[idx, 'structure'].split(' + ')[midx]]
                     alms += [tokens2morphemes(alignments[idx,
@@ -716,8 +893,7 @@ def add_proto_slots(alignments, proto_name, structure='structure', threshold=3,
                         sounds, pattern_info = reconstruct_by_pattern(p, ctx, consensus[ctx],
                                 threshold, rule=rule, graph=graph)
                         pform += ['|'.join(sounds)]
-                        pinfo += ['<tr><td>'+sounds[0]+'</td><td>'+'</td><td>'.join(
-                            pattern_info[0])+'</td></tr>']
+                        pinfo += [_spacebar.join(pattern_info[0])]
                     if '?' in sounds:
                         print(concept)
                         print(cogids)
@@ -729,7 +905,7 @@ def add_proto_slots(alignments, proto_name, structure='structure', threshold=3,
                         print(languages)
                         input()
                     pforms += [' '.join(pform)]
-                    pinfos += ['<table border=1>'+ ''.join(pinfo)+'</table>']
+                    pinfos += [' '.join(pinfo)]
 
         if pids:
             print('---', pinfos, pforms, pids, ref)
@@ -740,7 +916,7 @@ def add_proto_slots(alignments, proto_name, structure='structure', threshold=3,
                     '-']),
                 structure: ' + '.join(pstrucs),
                 alignment: ' + '.join(pforms),
-                'patterns': '<br>'.join(pinfos),
+                'patterns': ' + '.join(pinfos),
                 ref: pids
                 }
             widx += 1

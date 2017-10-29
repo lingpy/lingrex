@@ -48,7 +48,7 @@ def get_simple_structure(seg):
             'CCVVCT': 'imnNct',
             }
     if not cls in mapper:
-        return
+        return '?' * len(seg)
     if not mapper[cls]:
         # our problem are VV instances, so we need to extract these
         dlg = ''.join(tokens2class(seg, 'sca'))
@@ -90,7 +90,7 @@ def get_simple_structure(seg):
             if nmapper[ncls]:
                 return nmapper[ncls]
         print(ncls,seg)
-        return
+        return '?' * len(seg)
 
     return mapper[cls]
 
@@ -166,6 +166,7 @@ def add_structure(wordlist, segments='tokens', structure='structure', sep='+'):
     for idx, segs in iter_rows(wordlist, segments):
         strucs = []
         for mrp in tokens2morphemes(segs):
+            struc = get_simple_structure(mrp)
             strucs += [' '.join(get_simple_structure(mrp))]
         structures[idx] = ssep.join(strucs)
     wordlist.add_entries(structure, structures, lambda x: x)
