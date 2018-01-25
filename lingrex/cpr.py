@@ -13,6 +13,8 @@ from lingpy.align.sca import get_consensus, SCA, Alignments
 from lingpy.util import pb
 from lingpy.compare.partial import Partial, _get_slices
 from lingpy.read.qlc import normalize_alignment
+from lingpy.algorithm.cython.misc import squareform
+from lingpy.algorithm.extra import infomap_clustering
 
 
 def consensus_pattern(patterns, missing="Ø"):
@@ -47,6 +49,40 @@ def consensus_pattern(patterns, missing="Ø"):
         out += [no_gaps[0] if no_gaps else missing]
     return out
 
+def incompatible_columns(patterns, missing="Ø"):
+    """
+    Compute whether a pattern has incompatible columns.
+    """
+    columns = []
+    for i in range(len(patterns[0])):
+        col = [patterns[j][i] for j in range(len(patterns)) if patterns[j][i]
+                != missing]
+        if len(set(col)) > 1:
+            columns += ['*']
+        else:
+            columns += ['']
+    return columns
+
+
+def missing_in_pattern(pattern, missing="Ø"):
+    return pattern.count(missing)
+
+
+def score_patterns(patterns, missing="Ø"):
+    """Function gives a score for the overall number of reflexes.
+
+    Notes
+    -----
+    This score tells simply to which degree a pattern is filled. It divides the
+    number of cells not containing missing data by the number of cells in the
+    matrix.
+    """
+    cols = []
+    for i in range(len(patterns[0])):
+        col = [row[i] for row in patterns]
+        cols += [len(patterns) - col.count(missing)]
+    return sum(cols) / (len(patterns) * len(patterns[0]))
+
 def compatible_columns(colA, colB, missing='Ø'):
     """Check for column compatibility.
 
@@ -75,9 +111,11 @@ def compatible_columns(colA, colB, missing='Ø'):
                 matches += 1
     return matches, mismatches
 
+
 class CorPatR(Alignments):
     def __init__(self, wordlist, **keywords):
         Alignments.__init__(self, wordlist, **keywords)
+        self.ref = keywords['ref']
     
     # helper functions, generic
     def positions_from_alignment(self, alignment, pos):
@@ -91,8 +129,8 @@ class CorPatR(Alignments):
         if self._mode == 'fuzzy':
             strucs = []
             for idx, struc, alm in zip(indices, structures, alignment):
-                pos = self[idx, self._ref].index(cogid)
-                strucs += [class2tokens(tokens2morphemes(struc)[pos], alm)]
+                pos_ = self[idx, self._ref].index(cogid)
+                strucs += [class2tokens(tokens2morphemes(struc)[pos_], alm)]
         else:
             strucs = [class2tokens(struc.split(' '), alm) for struc, alm in
                     zip(structures, alignment)]
@@ -100,11 +138,11 @@ class CorPatR(Alignments):
         prostring = []
         for i in range(len(strucs[0])):
             row = [x[i] for x in strucs if x[i] != '-']
-            prostring += [row[0]]
+            prostring += [row[0] if row else '+']
         if len(prostring) != len(alignment[0]):
             print(prostring)
             print(consensus)
-            print('\n'.join(['\t'.join(alm) for alm in alignmet]))
+            print('\n'.join(['\t'.join(alm) for alm in alignment]))
             input('problematic alignment')
         return [i for i, p in enumerate(prostring) if p == pos]
 
@@ -120,7 +158,7 @@ class CorPatR(Alignments):
 
     def get_patterns(
             self,
-            ref='cogid',
+            ref=None,
             pos='A',
             minimal_taxa=3,
             taxa=None,
@@ -131,6 +169,7 @@ class CorPatR(Alignments):
             ):
         """
         """
+        ref = ref or self.ref
         patterns, all_patterns = {}, {}
         taxa = taxa or self.cols
         
@@ -148,8 +187,14 @@ class CorPatR(Alignments):
                     if not prostring:
                         positions = self.positions_from_alignment(_alms, pos)
                     else:
-                        _strucs = [self[idx, prostring] for idx in \
-                                _wlid]
+                        if self._mode == 'fuzzy':
+                            _strucs = []
+                            for _widx in _wlid:
+                                _these_strucs = self[_widx, prostring]
+                                _strucs += [_these_strucs]
+                        else:
+                            _strucs = [self[idx, prostring] for idx in \
+                                    _wlid]
                         positions = self.positions_from_prostrings(
                                 cogid, _wlid, _alms, _strucs, pos)
                     for pidx in positions:
@@ -165,6 +210,27 @@ class CorPatR(Alignments):
         return patterns, all_patterns 
 
     def sort_patterns(self, patterns=None, missing='Ø', threshold=2, debug=False):
+        """
+        Pre-sort the patterns to speed up the performance of the cluster algorithm.
+        
+        Parameters
+        ----------
+        patterns : dict (default=None)
+            The correspondence patterns as identified by the algorithm.
+            Defaults to None, meaning that the internally computed patterns
+            will be used.
+        missing : str (default="Ø")
+            The symbol to be used for missing values.
+        threshold : int (default=2)
+            The threshold of the minimal number of cognate sets per cluster
+            which should be regarded as regular.
+        
+        Notes
+        -----
+        The sorting algorithm sorts similar patterns straightforwardly into
+        initial clusters and then runs through the sorted items, merging all
+        compatible patterns into one cluster.
+        """
         def sorter(x, y):
             """Sorter arranges patterns to allow for a quicker assembly"""
             cc = compatible_columns(x[1], y[1])
@@ -183,6 +249,7 @@ class CorPatR(Alignments):
             elif lA > lB:
                 return 1
             return 0
+
         patterns = patterns or self.patterns
         sorted_patterns = sorted(patterns.items(), key=cmp_to_key(sorter))
         previous = sorted_patterns[0][1]
@@ -203,8 +270,7 @@ class CorPatR(Alignments):
         single, mass = 0, 0
         for key, vals in out.items():
             if len(vals) >= threshold:
-                if debug: print(str(len(vals))+ '\t ITMS\t'+ '\t'.join(key))
-                print(vals)
+                if debug: print(str(len(vals))+ '\t'+ '\t'.join(key))
                 for v in vals:
                     mass += 1
                     if debug: print('---\t'+'\t'.join(
@@ -216,8 +282,28 @@ class CorPatR(Alignments):
         self.clusters = out
         return out
         
-    def cluster_patterns(self, clusters=None, threshold=2, debug=False):
-        """Cluster patterns following an the spirit of Welsh-Powel algorithm."""
+    def cluster_patterns(self, clusters=None, threshold=2, debug=False,
+            missing="Ø"):
+        """Cluster patterns following an the spirit of Welsh-Powel algorithm.
+        
+        Parameters
+        ----------
+        clusters : dict (default=None)
+            The clusters are assumed to be computed by the algorithm, so if set
+            to None, the pre-computed clusters will be computed.
+        missing : str (default="Ø")
+            The symbol to be used for missing values.
+        threshold : int (default=2)
+            The threshold of the minimal number of cognate sets per cluster
+            which should be regarded as regular.
+
+        Notes
+        -----
+        This algorithm follows the spirit of the Welsh-Powell algorithm for
+        graph coloring. Since graph coloring is the inverse of clique
+        partitioning, we can use the algorithm in the same spirit.
+
+        """
         clusters = clusters or self.clusters
         sorted_clusters = sorted(clusters.items(), key=lambda x: len(x[1]),
                 reverse=True)
@@ -226,7 +312,8 @@ class CorPatR(Alignments):
             (this_cluster, these_vals), remaining_clusters = sorted_clusters[0], sorted_clusters[1:]
             queue = []
             for next_cluster, next_vals in remaining_clusters:
-                match, mism = compatible_columns(this_cluster, next_cluster)
+                match, mism = compatible_columns(this_cluster, next_cluster,
+                        missing=missing)
                 if match != 0 and mism == 0:
                     this_cluster = consensus_pattern([this_cluster,
                             next_cluster])
@@ -237,7 +324,7 @@ class CorPatR(Alignments):
             sorted_clusters = sorted(queue, key=lambda x: len(x[1]),
                     reverse=True)
         clusters = {tuple(a): b for a, b in out}
-        single, mass = 0, 0
+        single, mass, good_patterns = 0, 0, 0
         for key, vals in sorted(clusters.items(), key=lambda x: len(x[1])):
             if len(vals) >= threshold:
                 if debug: print(str(len(vals))+ '\t'+ '\t'.join(key))
@@ -246,8 +333,206 @@ class CorPatR(Alignments):
                     if debug: print('---\t'+'\t'.join(
                         self.patterns[v])
                         )
-                if debug: print('===')
+                good_patterns += 1
+                if debug: 
+                    print(
+                            '=== {0:.2f} ({1}) ==='.format(
+                                score_patterns(
+                                    [self.patterns[v] for v in vals]),
+                                    good_patterns))
             else:
                 single += len(vals)
         self.clusters = clusters
+        self.ordered_clusters = sorted(clusters, key=lambda x: len(x[1]))
         print(single, mass)
+
+    def similar_patterns(self, mismatches=1, matches=3, debug=False, missing="Ø"):
+        """
+        Compute clusters by applying a community detection algorithm.
+
+        Parameters
+        ----------
+        mismatches : int (default=1)
+            The maximal amount of incompatible patterns allowed to make an edge
+            in the graph.
+        matches : int (default=3)
+            The minimal amount of mutual matches (no missing characters per
+            alignment) which will be accepted per pattern.
+        missing : str (default="Ø")
+            The symbol to be used for missing values.
+
+        Notes
+        -----
+        This algorithm uses a community detection approach to cluster the
+        patterns. Essentially, it allows for a certain degree of
+        incompatibility, given that it is not an explicit solution of the
+        clique partitioning problem.
+        """
+        if not hasattr(self, 'ordered_clusters'):
+            raise ValueError("you need to compute clusters first")
+        matrix = []
+        for c1, c2 in combinations(self.ordered_clusters, r=2):
+            match, misms = compatible_columns(c1, c2, missing=missing)
+            if misms <= mismatches and match >= matches:
+                matrix += [1]
+            else:
+                matrix += [3]
+        matrix = squareform(matrix)
+
+        clr = infomap_clustering(2, matrix, taxa=self.ordered_clusters)
+        if debug:
+            for key, value in sorted(clr.items(), key=lambda x: len(x[1]),
+                    reverse=True):
+                if len(value) > 2:
+                    print('CLUSTER {0}'.format(key))
+                    for pattern in value:
+                        print('{0:5}\t'.format(
+                            len(self.clusters[pattern]))+'\t'.join(
+                                pattern))
+                    cols = incompatible_columns(value)
+                    print('{0:5}\t'.format('')+'\t'.join(cols))
+                    print('---')
+
+        return clr
+
+    def irregular_patterns(self, accepted=2, mismatches=1, matches=1,
+            debug=False, missing="Ø", irregular_prefix='!'):
+        """
+        Try to assign irregular patterns to accepted patterns.
+
+        Parameters
+        ----------
+        accepted : int (default=2)
+            Minimal size of clusters that we regard as regular.
+
+        """
+        bad_clusters = [(clr, pts[0]) for clr, pts in self.clusters.items() if len(pts)
+                == 1]
+        good_clusters = sorted([(clr, pts) for clr, pts in self.clusters.items() if len(pts)
+            >= accepted], key=lambda x: len(x[1]), reverse=True)
+        new_clusters = {clr: [] for clr, pts in good_clusters}
+        irregular_patterns = []
+        for clr, ptn in bad_clusters:
+            if missing_in_pattern(ptn, missing=missing) <= 2:
+                for clrB, pts in good_clusters:
+                    match, mism = compatible_columns(clr, clrB)
+                    if mism <= matches and match > matches:
+                        new_clusters[clrB] += [clr]
+                        irregular_patterns += [clr]
+                        break
+        # re-assign alignments to the data by adding the irregular character
+        for key, value in sorted(new_clusters.items(), key=lambda x: len(x[1]),
+                reverse=True):
+            if len(value) > 0:
+                if debug:
+                    print('<<<')
+                    print('{0:5}\t'.format(len(self.clusters[key]))+'\t'.join(key))
+                for i, pattern in enumerate(value):
+                    pt = []
+                    for lid, (a, b) in enumerate(zip(key, pattern)):
+                        if a != b and missing not in [a, b]:
+                            pt += [irregular_prefix+b]
+                            # assign pattern to the corresponding alignments
+                            doc = self.cols[lid]
+                            for cogid, position in self.clusters[pattern]:
+                                if self._mode == 'fuzzy':
+                                    word_indices = self.etd[self.ref][cogid][lid]
+                                    for widx in word_indices:
+                                        # get the position in the alignment
+                                        alms = tokens2morphemes(self[widx,
+                                            'alignment'])
+                                        cog_pos = self[widx,
+                                                self.ref].index(cogid)
+                                        new_alm = alms[cog_pos]
+                                        new_alm[position] = '{0}{1}/{2}'.format(
+                                                irregular_prefix,
+                                                b,
+                                                a)
+                                        alms[cog_pos] = new_alm
+                                        self[widx, 'alignment'] = ' + '.join([' '.join(x) for x in alms]).split()
+                                else:
+                                    word_indices = self.etd[self.ref][cogid][lid]
+                                    for widx in word_indices:
+                                        # get the position in the alignment
+                                        self[widx, 'alignment'][position] = '{0}{1}/{2}'.format(
+                                                irregular_prefix,
+                                                b,
+                                                a)
+                        else:
+                            pt += [b]
+                    if debug:
+                        print('     \t'+'\t'.join(pt))
+                if debug:
+                    print('---')
+        self.irregular_patterns = new_clusters
+        for pattern, data in [(a, b) for a, b in bad_clusters if a not in 
+                irregular_patterns]:
+            cogid, position = data
+            if self._mode == 'fuzzy':
+                for indices in [idx for idx in self.etd[self.ref][cogid] if
+                        idx]:
+                    for widx in indices:
+                        cog_pos = self[widx, self.ref].index(cogid)
+                        alms = tokens2morphemes(self[widx, 'alignment'])
+                        new_alm = alms[cog_pos]
+                        new_alm[position] = '{0}{1}'.format(
+                                irregular_prefix, new_alm[position])
+                        alms[cog_pos] = new_alm
+                        print(alms)
+                        self[widx, 'alignment'] = ' + '.join([
+                            ' '.join(x) for x in alms]).split()
+
+        return new_clusters
+
+    def regularity(self):
+        """Evaluate the regularity of cognate sets.
+        """
+        pass
+
+    def add_patterns(self, ref="patterns", irregular_patterns=False,
+            proto=False):
+        """Assign patterns to a new column in the word list.
+        """
+        if proto:
+            pidx = self.cols.index(proto)
+        else:
+            pidx = 0
+
+        if irregular_patterns:
+            new_clusters = defaultdict(list)
+            for reg, iregs in self.irregular_patterns.items():
+                for cogid, position in self.clusters[reg]:
+                    new_clusters[reg] += [(cogid, position)]
+                for ireg in iregs:
+                    for cogid, position in self.clusters[ireg]:
+                        new_clusters[reg] += [(cogid, position)]
+        else:
+            new_clusters = self.clusters
+        for pattern, rest in self.clusters.items():
+            for cogid, position in rest:
+                if (cogid, position) not in new_clusters[pattern]:
+                    new_clusters[pattern] += [(cogid, position)]
+
+        P = {idx: ['0/n' if x != '+' else '+' for x in self[idx, 'alignment']] for idx in self}
+        for i, (pattern, data) in enumerate(sorted(new_clusters.items(),
+            key=lambda x: len(x), reverse=True)):
+            pattern_id = '{0}-{1}/{2}'.format(
+                    i+1,
+                    len(self.clusters[pattern]),
+                    pattern[pidx]
+                    )
+            for cogid, position in data:
+                word_indices = [c for c in self.etd[self.ref][cogid] if c]
+                for idxs in word_indices:
+                    for idx in idxs:
+                        if self._mode == 'fuzzy':
+                            print(idx, cogid, position, P[idx], self[idx,
+                                'ipa'])
+                            split_patterns = tokens2morphemes(P[idx], cldf=True)
+                            pattern_position = self[idx, self.ref].index(cogid)
+                            this_pattern = split_patterns[pattern_position]
+                            this_pattern[position] = pattern_id
+                            split_patterns[pattern_position] = this_pattern
+                            P[idx] = ' + '.join([' '.join(ptn) for ptn in
+                                split_patterns]).split()
+        self.add_entries(ref, P, lambda x: x)
