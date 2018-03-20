@@ -27,7 +27,8 @@ def seed_deviations(wordlist, events=50, alignment='alignment', ref='cogid',
         active = [i for i in range(len(alm)) if alm[i] not in '-+_']
         chosen = random.choice(active)
         sc = token2class(alm[chosen], model)
-        new_sound = random.choice([x for x in changer[sc] if x != alm[chosen]])
+        new_sound = random.choice([x for x in changer[sc] if x != alm[chosen]]
+                or ['?'])
         D[idx] = '{0}/{1}/{2}'.format(chosen, alm[chosen], new_sound)
         alm[chosen] = new_sound
         wordlist[idx, alignment] = ' '.join(alm)

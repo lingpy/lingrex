@@ -175,7 +175,7 @@ def add_structure(wordlist, model='cv', segments='tokens', structure='structure'
     if model == 'c':
         for idx, tks in wordlist.iter_rows(segments):
             D[idx] = ' '.join(tokens2class(tks, 'cv')).lower().replace('v',
-                    'c')
+                    'c').replace('t', 'c')
     wordlist.add_entries(structure, D, lambda x: x)
 
 

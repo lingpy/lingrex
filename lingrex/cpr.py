@@ -98,6 +98,7 @@ def score_patterns(patterns, missing="Ø", mode='coverage'):
         witnesses += [len(col) - col.count(missing)]
     if mode == 'coverage':
         return sum(cols) / (len(patterns) * len(patterns[0]))
+
     elif mode == 'witnesses':
         return sum(witnesses) / len(witnesses)
     return min(witnesses)
@@ -148,7 +149,7 @@ def density(wordlist, ref='cogid'):
             sums += [1 / cogids.count(cogid)]
         score = sum(sums) / len(sums)
         scores += [score]
-    return sum(scores) / len(scores)
+    return 1-sum(scores) / len(scores)
 
 
 class CorPatR(Alignments):
