@@ -23,9 +23,10 @@ def data_path(*comps):
 
     return lingrex_path('data', *comps)
 
-def get_simple_structure(seg):
-    """Bad-ass function to get the major structures for alignments etc."""
-    cls = ''.join(tokens2class(seg, 'cv'))
+def get_c_structure(seg, cldf=True):
+    """Bad-ass function to get the major structures for alignments in chinese
+    data"""
+    cls = ''.join(tokens2class(seg, 'cv', cldf=cldf))
     mapper = {
             'CCV': 'imn',
             'CCVC': 'imnc',
@@ -51,7 +52,7 @@ def get_simple_structure(seg):
         return '?' * len(seg)
     if not mapper[cls]:
         # our problem are VV instances, so we need to extract these
-        dlg = ''.join(tokens2class(seg, 'sca'))
+        dlg = ''.join(tokens2class(seg, 'sca', cldf=True))
         ncls = ''
         for c, d in zip(cls, dlg):
             if c == 'V':
@@ -106,13 +107,18 @@ def get_segments_and_structure(wordlist, etd, cogid, ref='cogids', segments='seg
         cogids = wordlist[idx, ref]
         cogidx = cogids.index(cogid)
         morpheme = tokens2morphemes(segs)[cogidx]
-        struct = wordlist[idx, structure].split(' + ')[cogidx]
+        if isinstance(wordlist[idx, structure], (list, tuple)):
+            struct = ' '.join(wordlist[idx, structure]).split(' + ')[cogidx]
+        else:
+            struct = wordlist[idx, structure].split(' + ')[cogidx]
         out[idx] = [wordlist[idx, 'doculect'], wordlist[idx, 'concept'], 
             morpheme, struct.split(' ')]
 
     return out
 
+
 def renumber_partials(wordlist, ref):
+    """Renumber function for partial cognates"""
     newidx = 1
     partials = {}
     for idx, concept, cogids in iter_rows(wordlist, 'concept', ref):
@@ -129,7 +135,7 @@ def renumber_partials(wordlist, ref):
 def align_by_structure(wordlist, template='imMnNct', segments='segments',
         ref='cogids', structure='structure', alignment='alignment'):
     """Align patterns simply by following the template"""
-    etd = wordlist.get_etymdict(ref='cogids')
+    etd = wordlist.get_etymdict(ref=ref)
     alms = {}
     for key in etd:
         # get the essential data
@@ -154,12 +160,26 @@ def align_by_structure(wordlist, template='imMnNct', segments='segments',
 
     alignments = {}
     for idx, cogids in iter_rows(wordlist, ref):
-        print(idx, wordlist[idx, 'concept'], wordlist[idx, 'doculect'], cogids)
         alignments[idx] = ' + '.join([' '.join(alms[cogid, idx]) for cogid in
             cogids]).split(' ')
     wordlist.add_entries(alignment, alignments, lambda x: x)
 
-def add_structure(wordlist, segments='tokens', structure='structure', sep='+'):
+
+def add_structure(wordlist, model='cv', segments='tokens', structure='structure'):
+    """Add structure to a wordlist to make sure correspondence patterns can be
+    inferred"""
+    D = {}
+    if model == 'cv':
+        for idx, tks in wordlist.iter_rows(segments):
+            D[idx] = ' '.join(tokens2class(tks, 'cv')).lower()
+    if model == 'c':
+        for idx, tks in wordlist.iter_rows(segments):
+            D[idx] = ' '.join(tokens2class(tks, 'cv')).lower().replace('v',
+                    'c')
+    wordlist.add_entries(structure, D, lambda x: x)
+
+
+def add_c_structure(wordlist, segments='tokens', structure='structure', sep='+'):
     """Add the structure data on sounds we need for our analysis"""
     structures = {}
     ssep = ' '+sep+' '
@@ -176,6 +196,8 @@ def save_network(filename, graph):
     with codecs.open(filename, 'w', 'utf-8') as f:
         for line in nx.generate_gml(graph):
             f.write(html.unescape(line)+'\n')
+
+
 def load_network(filename):
     with codecs.open(filename, 'r', 'utf-8') as f:
         lines = [l.encode('ascii', 'xmlcharrefreplace').decode('utf-8') for l in f]

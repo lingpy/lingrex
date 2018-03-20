@@ -3,9 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 .info
+tests/bak/*
+dev/
 # C extensions
 *.so
-
+*.swp
+.idea
 # Distribution / packaging
 .Python
 env/
