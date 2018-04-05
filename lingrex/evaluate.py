@@ -5,9 +5,20 @@ from collections import defaultdict
 from lingpy.sequence.generate import MCPhon
 from lingpy.sequence.sound_classes import token2class
 
+def bad_alignments(wordlist, alignment='alignment', ref='cogid'):
+    """Create bad alignments for a given wordlist."""
+    A = {}
+    etd = wordlist.get_etymdict(ref=ref)
+    for key, values in etd.items():
+        idxs = []
+        for v in values:
+            if v:
+                idxs += v
+        reflexes = [wordlist[idx, 'tokens'] for idx in wordlist]
+
 
 def seed_deviations(wordlist, events=50, alignment='alignment', ref='cogid',
-        model='sca'):
+        model='sca', structure='structure', pos='c', segments='tokens'):
     """Seed problematic sounds to the data that should not occur there."""
     # select all alignments
     alms = []
@@ -23,14 +34,17 @@ def seed_deviations(wordlist, events=50, alignment='alignment', ref='cogid',
     D = {idx: '' for idx in wordlist}
     for idx in selected:
         # get active indices
-        alm = wordlist[idx, alignment].split()
-        active = [i for i in range(len(alm)) if alm[i] not in '-+_']
+        tks = [h for h in wordlist[idx, segments]]
+        struc = wordlist[idx, structure].split()
+        active = [i for i in range(len(tks)) if struc[i] == pos]
         chosen = random.choice(active)
-        sc = token2class(alm[chosen], model)
-        new_sound = random.choice([x for x in changer[sc] if x != alm[chosen]]
+        sc = token2class(tks[chosen], model)
+        new_sound = random.choice([x for x in changer[sc] if x != tks[chosen]]
                 or ['?'])
-        D[idx] = '{0}/{1}/{2}'.format(chosen, alm[chosen], new_sound)
-        alm[chosen] = new_sound
+        tks[chosen] = new_sound
+        alm = class2tokens(tks, wordlist[idx, alignment])
+        D[idx] = '{0}//{1}//{2}'.format(alm.index(new_sound), tks[chosen], new_sound)
+
         wordlist[idx, alignment] = ' '.join(alm)
     for idx, alm in wordlist.iter_rows(alignment):
         wordlist[idx, alignment] = alm.split()

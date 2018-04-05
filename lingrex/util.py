@@ -7,6 +7,7 @@ import os
 from sinopy.segments import get_structure
 from lingpy.sequence.sound_classes import tokens2morphemes
 from lingpy import *
+from lingpy.align.sca import get_consensus
 import networkx as nx
 import html
 import codecs
@@ -165,17 +166,34 @@ def align_by_structure(wordlist, template='imMnNct', segments='segments',
     wordlist.add_entries(alignment, alignments, lambda x: x)
 
 
-def add_structure(wordlist, model='cv', segments='tokens', structure='structure'):
+def add_structure(wordlist, model='cv', segments='tokens',
+        structure='structure', ref='cogid', gap='-'):
     """Add structure to a wordlist to make sure correspondence patterns can be
     inferred"""
     D = {}
     if model == 'cv':
         for idx, tks in wordlist.iter_rows(segments):
             D[idx] = ' '.join(tokens2class(tks, 'cv')).lower()
+    
     if model == 'c':
         for idx, tks in wordlist.iter_rows(segments):
             D[idx] = ' '.join(tokens2class(tks, 'cv')).lower().replace('v',
                     'c').replace('t', 'c')
+    if model == 'nogap':
+        assert hasattr(wordlist, 'msa')
+        for cogid, msa in wordlist.msa[ref].items():
+            cons = ['c' if c != gap else gap for c in get_consensus(msa['alignment'], 
+                gaps=True)]
+            for idx, alm in zip(msa['ID'], msa['alignment']):
+                struc = []
+                for a, b in zip(cons, alm):
+                    if b != '-':
+                        struc += [a]
+                D[idx] = ' '.join(struc)
+        for idx, tks in wordlist.iter_rows(segments):
+            if idx not in D:
+                D[idx] = ' '.join(['c' if c != '+' else c for c in tks])
+
     wordlist.add_entries(structure, D, lambda x: x)
 
 
