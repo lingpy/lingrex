@@ -18,6 +18,7 @@ from lingpy.read.qlc import normalize_alignment
 from lingpy.algorithm.cython.misc import squareform
 from lingpy.algorithm.extra import infomap_clustering
 from lingpy import log
+from lingpy import basictypes as bt
 
 from lingrex.util import add_structure
 
@@ -173,9 +174,10 @@ class CoPaR(Alignments):
         The column which stores the alignments (or will store the alignments if
         they have not yet been computed).
     """
-    def __init__(self, wordlist, **keywords):
+    def __init__(self, wordlist, minrefs=3, **keywords):
         Alignments.__init__(self, wordlist, **keywords)
         self.ref = keywords['ref']
+        self._minrefs=minrefs
 
     def add_structure(self, model='cv', structure='structure', gap='-'):
         """Add structure to a wordlist.
@@ -212,7 +214,7 @@ class CoPaR(Alignments):
                 pos_ = self[idx, self._ref].index(cogid)
                 strucs += [class2tokens(tokens2morphemes(struc)[pos_], alm)]
         else:
-            strucs = [class2tokens(struc.split(' '), alm) for struc, alm in
+            strucs = [class2tokens(struc, alm) for struc, alm in
                     zip(structures, alignment)]
         consensus = get_consensus(alignment, gaps=True)
         prostring = []
@@ -245,7 +247,7 @@ class CoPaR(Alignments):
             self,
             ref=None,
             pos='A',
-            minrefs=2,
+            minrefs=False,
             missing='Ø',
             structure=False,
             irregular = "!?"
@@ -275,6 +277,11 @@ class CoPaR(Alignments):
         ref = ref or self.ref
         patterns, all_patterns = OrderedDict(), OrderedDict()
         taxa = self.cols
+        if minrefs:
+            self._minrefs = minrefs
+
+        for idx, struc in self.iter_rows(structure):
+            self[idx, structure] = self._str_type(struc)
         
         # iterate over all sites in the alignment
         for cogid, msa in pb(sorted(self.msa[ref].items()), 
@@ -293,7 +300,7 @@ class CoPaR(Alignments):
                         _strucs = []
                         for _widx in _wlid:
                             _these_strucs = self[_widx, structure]
-                            _strucs += [_these_strucs.split()]
+                            _strucs += [_these_strucs]
                     else:
                         _strucs = [self[idx, structure] for idx in \
                                 _wlid]
@@ -309,6 +316,7 @@ class CoPaR(Alignments):
                 all_patterns[cogid, pidx] = reflexes
         self.patterns = patterns
         self.all_patterns = all_patterns
+        self._minrefs = minrefs
         return patterns, all_patterns 
 
     def sort_patterns(self, patterns=None, missing='Ø', threshold=2, debug=False):
@@ -480,7 +488,7 @@ class CoPaR(Alignments):
                 [len(b) for a, b in self.sites.items()]) / len(self.sites)
         return fuzziness
 
-    def refine_sites(self):
+    def refine_sites(self, missing='Ø'):
         if not hasattr(self, 'sites'):
             raise ValueError('run sites_to_pattern first')
         if not hasattr(self, 'clusters'):
@@ -512,8 +520,13 @@ class CoPaR(Alignments):
                     break
             new_sites[site] = selected
             new_clusters[selected[0][1]] += [site]
+
+        self.clusters = OrderedDict()
+        for p, sites in new_clusters.items():
+            cons = consensus_pattern(
+                    [self.patterns[s] for s in sites], missing=missing)
+            self.clusters[tuple(cons)] = sites
         self.sites = new_sites
-        self.clusters = new_clusters
 
 
 
@@ -608,28 +621,31 @@ class CoPaR(Alignments):
                             for cogid, position in self.clusters[pattern]:
                                 if self._mode == 'fuzzy':
                                     word_indices = self.etd[self.ref][cogid][lid]
-                                    for widx in word_indices:
-                                        # get the position in the alignment
-                                        alms = tokens2morphemes(self[widx,
-                                            'alignment'])
-                                        cog_pos = self[widx,
-                                                self.ref].index(cogid)
-                                        new_alm = alms[cog_pos]
-                                        new_alm[position] = '{0}{1}/{2}'.format(
-                                                irregular_prefix,
-                                                b,
-                                                a)
-                                        alms[cog_pos] = new_alm
-                                        self[widx, 'alignment'] = ' + '.join([' '.join(x) for x in alms]).split()
+                                    if word_indices:
+                                        for widx in word_indices:
+                                            # get the position in the alignment
+                                            alms = tokens2morphemes(self[widx,
+                                                'alignment'])
+                                            cog_pos = self[widx,
+                                                    self.ref].index(cogid)
+                                            new_alm = alms[cog_pos]
+                                            new_alm[position] = '{0}{1}/{2}'.format(
+                                                    irregular_prefix,
+                                                    b,
+                                                    a)
+                                            alms[cog_pos] = new_alm
+                                            self[widx, 'alignment'] = ' + '.join([' '.join(x) for x in alms]).split()
                                 else:
                                     word_indices = self.etd[self.ref][cogid][lid]
-                                    for widx in word_indices:
-                                        print(widx, word_indices, position,
-                                                self[widx, 'alignment'])
-                                        self[widx, 'alignment'][position] = '{0}{1}/{2}'.format(
-                                                irregular_prefix,
-                                                b,
-                                                a)
+                                    if word_indices:
+                                        for widx in word_indices:
+                                            alm = self[widx,
+                                                    'alignment'].split()
+                                            alm[position] = '{0}{1}/{2}'.format(
+                                                    irregular_prefix,
+                                                    b,
+                                                    a)
+                                            self[widx, 'alignment'] = ' '.join(alm)
                         else:
                             pt += [b]
                     if debug:
@@ -645,6 +661,7 @@ class CoPaR(Alignments):
                         idx]:
                     for widx in indices:
                         cog_pos = self[widx, self.ref].index(cogid)
+                        #print(widx, self[widx, 'alignment'])
                         alms = tokens2morphemes(self[widx, 'alignment'])
                         new_alm = alms[cog_pos]
                         new_alm[position] = '{0}{1}'.format(
@@ -699,12 +716,52 @@ class CoPaR(Alignments):
             self.add_entries(correct_cognates, D, lambda x: x)
         return regulars, irregulars
 
+    def load_patterns(self, patterns='patterns', alignment='alignment', 
+            structure='structure', missing='Ø'):
+        self.id2ptn = OrderedDict()
+        self.clusters = OrderedDict()
+        self.id2pos = defaultdict(set)
+        self.sites = OrderedDict()
+        # get the template
+        template = [missing for m in self.taxa]
+        tidx = {self.cols[i]: i for i in range(self.width)}
+        for idx, ptn, alm, struc, doc, cogs in self.iter_rows(patterns, alignment,
+                structure, 'doculect', self._ref):
+            if self._mode == 'fuzzy':
+                ptn = bt.lists(ptn)
+                for i in range(len(alm.n)):
+                    for j, (p, a) in enumerate(zip(ptn.n[i], alm.n[i])):
+                        if not p == '0/n':
+                            this_pattern = self.id2ptn.get(p, [t for t in template])
+                            if this_pattern[tidx[doc]] == 'Ø':
+                                this_pattern[tidx[doc]] = a
+                            self.id2ptn[p] = this_pattern
+                            self.id2pos[p].add((cogs[i], j))
+            else:
+                for j, (p, a) in enumerate(zip(ptn, alm)):
+                    if not p == '0/n':
+                        this_pattern = self.id2ptn.get(p, [t for t in
+                            template])
+                        if this_pattern[tidx[doc]] == 'Ø':
+                            this_pattern[tidx[doc]] = a
+                        self.id2ptn[p] = this_pattern
+                        self.id2pos[p].add((cogs, j))
+                        
+        self.ptn2id = {tuple(v): k for k, v in self.id2ptn.items()}
+        for k, v in self.id2ptn.items():
+            self.clusters[tuple(v)] = list(self.id2pos[k])
+            self.id2pos[k] = list(self.id2pos[k])
+            for s in self.id2pos[k]:
+                self.sites[s] = [(len(self.id2pos[k]), tuple(v))]
+
     def add_patterns(self, ref="patterns", irregular_patterns=False,
             proto=False):
         """Assign patterns to a new column in the word list.
         """
         if not hasattr(self, 'id2ptn'):
             self.id2ptn = {}
+        if not hasattr(self, 'pattern2id'):
+            self.ptn2id = {}
         if proto:
             pidx = self.cols.index(proto)
         else:
@@ -725,7 +782,8 @@ class CoPaR(Alignments):
                 if (cogid, position) not in new_clusters[pattern]:
                     new_clusters[pattern] += [(cogid, position)]
 
-        P = {idx: ['0/n' if x not in  rc('morpheme_separators') else '+' for x in self[idx, 'alignment']] for idx in self}
+        P = {idx: bt.lists(['0/n' if x not in  rc('morpheme_separators') else
+            '+' for x in self[idx, 'alignment']]) for idx in self}
         for i, (pattern, data) in enumerate(sorted(new_clusters.items(),
             key=lambda x: len(x), reverse=True)):
             pattern_id = '{0}-{1}/{2}'.format(
@@ -734,18 +792,24 @@ class CoPaR(Alignments):
                     pattern[pidx]
                     )
             self.id2ptn[pattern_id] = pattern
+            self.ptn2id[pattern] = pattern_id
             for cogid, position in data:
                 word_indices = [c for c in self.etd[self.ref][cogid] if c]
                 for idxs in word_indices:
                     for idx in idxs:
                         if self._mode == 'fuzzy':
-                            split_patterns = tokens2morphemes(P[idx], cldf=True)
+                            #split_patterns = P[idx].n #, cldf=True)
                             pattern_position = self[idx, self.ref].index(cogid)
-                            this_pattern = split_patterns[pattern_position]
+                            this_pattern = P[idx].n[pattern_position]
                             this_pattern[position] = pattern_id
-                            split_patterns[pattern_position] = this_pattern
-                            P[idx] = ' + '.join([' '.join(ptn) for ptn in
-                                split_patterns]).split()
+                            P[idx].change(pattern_position, this_pattern)
+                            #split_patterns[pattern_position] = this_pattern
+                            ## here we want to insert the Xth element XXX
+                            #pattern_position = self[idx, self.ref].index(cogid)
+                            #P[idx].n[self[idx, self.ref].index(cogid)]
+
+                            #P[idx] = bt.lists(' + '.join([' '.join(ptn) for ptn in
+                            #    split_patterns]))
                         else:
                             P[idx][position] = pattern_id
         self.add_entries(ref, P, lambda x: x)
@@ -775,7 +839,7 @@ class CoPaR(Alignments):
             for cogid, position in rest:
                 if (cogid, position) not in new_clusters[pattern]:
                     new_clusters[pattern] += [(cogid, position)]
-        text = 'ID\tFREQUENCY\t{0}\t{1}\tCOGIDS\tCONCEPTS\n'.format(
+        text = 'ID\tFREQUENCY\t{0}\t{1}\tCOGNATESETS\tCONCEPTS\n'.format(
                 self.cols[pidx],
                 '\t'.join([c for c in self.cols if c != self.cols[pidx]]))
                 
@@ -802,4 +866,44 @@ class CoPaR(Alignments):
                     concepts)
         with open(filename, 'w') as f:
             f.write(text)
+
+    def predict_words(self, **kw):
+        """
+        Predict patterns for those cognate sets where we have missing data.
+        """
+        if not hasattr(self, 'sites'):
+            raise ValueError('You need to compute alignment sites first')
+
+        minrefs = kw.get('minrefs', self._minrefs)
+
+        preds = {}
+        count = 1
+        for cogid, msa in self.msa[self._ref].items():
+            missing = [t for t in self.cols if t not in msa['taxa']]
+            if len(set(msa['taxa'])) >= minrefs:
+                words = [bt.strings('') for m in missing]
+                for i, m in enumerate(missing):
+                    tidx = self.cols.index(m)
+                    for j in range(len(msa['alignment'][0])):
+                        try:
+                            words[i] += [self.sites[cogid, j][0][1][tidx]]
+                        except KeyError:
+                            words[i] += ['?']
+                if words:
+                    preds[cogid] = dict(zip(missing, words))
+                    if kw.get('debug'):
+                        for m, w in zip(missing, words):
+                            #print(count, cogid, self[msa['ID'][0], 'concept'], m, ' '.join(w))
+                            count += 1
+        return preds
+
+    def stats(self, threshold=2):
+        sums = sum([len(x) for x in self.clusters.values() if len(x) >=
+            threshold])
+        oris = sum([len(x) for x in self.clusters.values()])
+        return sums / oris
+
+
+                
+                
 

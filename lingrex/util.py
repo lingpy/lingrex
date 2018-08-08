@@ -8,10 +8,37 @@ from sinopy.segments import get_structure
 from lingpy.sequence.sound_classes import tokens2morphemes
 from lingpy import *
 from lingpy.align.sca import get_consensus
+from lingpy import basictypes as bt
 import networkx as nx
 import html
 import codecs
 
+
+def complexity(wordlist, pos='A', segments='tokens', structure='structure'):
+    """
+    Return the worst-case scenario for correspondence patterns.
+    
+    Note
+    ----
+    Worst-case here means: for n languages with n₁, n₂, ..., sounds each, we
+    would calculate the number of different calculations between them all.
+    """
+    # retrieve all sounds in the structure of the language
+    languages = defaultdict(lambda : defaultdict(int))
+    for idx, doc, tokens, strucs in wordlist.iter_rows(
+            'doculect', segments, structure):
+        if isinstance(strucs, str):
+            strucs = strucs.split()
+        for t, s in zip(tokens, strucs):
+            if pos == s:
+                languages[doc][t] += 1
+    score = 1
+    for doc in wordlist.cols:
+        print('{0:20} | {1:20} '.format(doc, len(languages[doc])))
+        score *= len(languages[doc])
+    print('{0:20} | {1:20}'.format('TOTAL', score))
+    return languages
+    
 
 
 def lingrex_path(*comps):
@@ -29,9 +56,14 @@ def get_c_structure(seg, cldf=True):
     data"""
     cls = ''.join(tokens2class(seg, 'cv', cldf=cldf))
     mapper = {
+            'C': "i",
+            "CVCC": "inNc",
+            "CVV": "inN",
+            "CVCV": "inIN",
             'CCV': 'imn',
             'CCVC': 'imnc',
             'CCVCT': 'imnct',
+            'CCVT': 'imnt',
             'CCVVT' : '',
             'CVC': 'inc',
             'CT' : 'nt',
@@ -39,8 +71,8 @@ def get_c_structure(seg, cldf=True):
             'VVCT': 'mnct',
             'VC': 'nc',
             'VCT': 'nct',
-            'CVVCT': '',
-            'VVT': '',
+            'CVVCT': 'inNct',
+            'VVT': 'nNt',
             'CVT': 'int',
             'CVVT': '',
             'V': 'n',
@@ -48,6 +80,7 @@ def get_c_structure(seg, cldf=True):
             'CCVT': 'imnt',
             'VT': 'nt',
             'CCVVCT': 'imnNct',
+            'CVCCT': 'incCt',
             }
     if not cls in mapper:
         return '?' * len(seg)
@@ -64,6 +97,7 @@ def get_c_structure(seg, cldf=True):
             "UIT": 'nNt',
             "CUYT": 'inNt',
             "CYACT": 'imnct',
+            "CYET": "imnt",
             "CYAT": 'imnt',
             "AYT": 'nNt',
             "CCUAT": 'imMnt',
@@ -92,6 +126,7 @@ def get_c_structure(seg, cldf=True):
             if nmapper[ncls]:
                 return nmapper[ncls]
         print(ncls,seg)
+        input()
         return '?' * len(seg)
 
     return mapper[cls]
@@ -153,7 +188,6 @@ def align_by_structure(wordlist, template='imMnNct', segments='segments',
             col = [alm[j][i] for j in range(len(idxs))]
             if not [x for x in col if x != '-']:
                 ignore += [i]
-
         out = []
         for idx, row in zip(idxs, alm):
             out = [row[i] for i in range(len(alm[0])) if i not in ignore]
@@ -170,6 +204,8 @@ def add_structure(wordlist, model='cv', segments='tokens',
         structure='structure', ref='cogid', gap='-'):
     """Add structure to a wordlist to make sure correspondence patterns can be
     inferred"""
+    if model not in ['cv', 'c', 'nogap']:
+        raise ValueError('[i] you need to select a valid model')
     D = {}
     if model == 'cv':
         for idx, tks in wordlist.iter_rows(segments):
@@ -193,19 +229,18 @@ def add_structure(wordlist, model='cv', segments='tokens',
         for idx, tks in wordlist.iter_rows(segments):
             if idx not in D:
                 D[idx] = ' '.join(['c' if c != '+' else c for c in tks])
+    struc_ = bt.lists if wordlist._mode == 'fuzzy' else bt.strings
+    wordlist.add_entries(structure, D, lambda x: struc_(x))
 
-    wordlist.add_entries(structure, D, lambda x: x)
 
-
-def add_c_structure(wordlist, segments='tokens', structure='structure', sep='+'):
+def add_c_structure(wordlist, segments='tokens', structure='structure', sep=' +'):
     """Add the structure data on sounds we need for our analysis"""
     structures = {}
     ssep = ' '+sep+' '
     for idx, segs in iter_rows(wordlist, segments):
         strucs = []
         for mrp in tokens2morphemes(segs):
-            struc = get_simple_structure(mrp)
-            strucs += [' '.join(get_simple_structure(mrp))]
+            strucs += [' '.join(get_c_structure(mrp))]
         structures[idx] = ssep.join(strucs)
     wordlist.add_entries(structure, structures, lambda x: x)
     
