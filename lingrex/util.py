@@ -204,7 +204,7 @@ def add_structure(wordlist, model='cv', segments='tokens',
         structure='structure', ref='cogid', gap='-'):
     """Add structure to a wordlist to make sure correspondence patterns can be
     inferred"""
-    if model not in ['cv', 'c', 'nogap']:
+    if model not in ['cv', 'c', 'CcV', 'ps', 'nogap']:
         raise ValueError('[i] you need to select a valid model')
     D = {}
     if model == 'cv':
@@ -229,6 +229,13 @@ def add_structure(wordlist, model='cv', segments='tokens',
         for idx, tks in wordlist.iter_rows(segments):
             if idx not in D:
                 D[idx] = ' '.join(['c' if c != '+' else c for c in tks])
+    if model == 'CcV':
+        for idx, tks in wordlist.iter_rows(segments):
+            D[idx] = ' '.join(list(prosodic_string(tks, _output='CcV')))
+    if model == 'ps':
+        for idx, tks in wordlist.iter_rows(segments):
+            D[idx] = ' '.join(list(prosodic_string(tks)))
+
     struc_ = bt.lists if wordlist._mode == 'fuzzy' else bt.strings
     wordlist.add_entries(structure, D, lambda x: struc_(x))
 
@@ -242,7 +249,7 @@ def add_c_structure(wordlist, segments='tokens', structure='structure', sep=' +'
         for mrp in tokens2morphemes(segs):
             strucs += [' '.join(get_c_structure(mrp))]
         structures[idx] = ssep.join(strucs)
-    wordlist.add_entries(structure, structures, lambda x: x)
+    wordlist.add_entries(structure, structures, lambda x: bt.strings(x))
     
 
 def save_network(filename, graph):
