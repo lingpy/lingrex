@@ -121,6 +121,12 @@ def get_c_structure(seg, cldf=True):
             "CAICT": 'inNct',
             "CUIT": 'inNt',
             "YIT": 'nNt',
+            "CYUT": "imnt",
+            "CIET": "imnt",
+            "CIUT": "imnt",
+            "CIAT": "imnt",
+            "CAUT": "inNt",
+            "CIIT": "imnt",
             "EET": 'mnt'}
         if ncls in nmapper:
             if nmapper[ncls]:

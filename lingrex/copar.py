@@ -4,7 +4,7 @@ from six import text_type
 from collections import defaultdict, OrderedDict
 from itertools import combinations
 from functools import cmp_to_key
-import unicodedata
+from math import sqrt
 
 from lingpy.sequence.sound_classes import (
         prosodic_string, tokens2morphemes,
@@ -21,6 +21,8 @@ from lingpy import log
 from lingpy import basictypes as bt
 
 from lingrex.util import add_structure
+
+#import networkx as nx
 
 def consensus_pattern(patterns, missing="Ø"):
     """Return consensus pattern of multiple patterns.
@@ -74,7 +76,7 @@ def missing_in_pattern(pattern, missing="Ø"):
     return pattern.count(missing)
 
 
-def score_patterns(patterns, missing="Ø", mode='coverage', smooth=1):
+def score_patterns(patterns, missing="Ø", mode='coverage', smooth=0):
     """Function gives a score for the overall number of reflexes.
 
     Notes
@@ -83,6 +85,11 @@ def score_patterns(patterns, missing="Ø", mode='coverage', smooth=1):
     number of cells not containing missing data by the number of cells in the
     matrix.
     """
+    # return -1 if the patterns are not compatible
+    for i in range(len(patterns[0])):
+        if len(set([row[i] for row in patterns if row[i] != missing])) > 1:
+            return -1
+
     # we rank the columns by sorting them first
     if mode == 'ranked':
         if len(patterns) == 1:
@@ -96,7 +103,35 @@ def score_patterns(patterns, missing="Ø", mode='coverage', smooth=1):
         for rank, col in zip(ranks, cols):
             scores += [rank * col]
         return sum(scores) / sum(ranks) / len(patterns)
+    
+    if mode == 'squared':
+        if len(patterns) == smooth:
+            return 0
+        scores = []
+        psize = len(patterns[0])
+        for row in patterns:
+            scores += [((psize-row.count(missing))/psize)**2]
+        score = sum(scores) / len(scores)
+        return score
 
+    if mode == 'pairs':
+        if len(patterns) == smooth:
+            return 0
+
+        # count the number of pairs in the data
+        pairs = 0
+        covered = 0
+        m, n = len(patterns[0]), len(patterns)
+        for i in range(n):
+            vals = m - patterns[i].count(missing)
+            pairs += (vals**2-vals)/2
+        for i in range(m):
+            vals = n - [p[i] for p in patterns].count(missing)
+            pairs += (vals**2-vals)/2
+            if vals != 0:
+                covered += 1
+        return ((pairs / n) / covered) / m
+    
     cols = []
     for i in range(len(patterns[0])):
         col = [row[i] for row in patterns]
@@ -275,7 +310,7 @@ class CoPaR(Alignments):
             computed, using LingPy's prostring method.
         """
         ref = ref or self.ref
-        patterns, all_patterns = OrderedDict(), OrderedDict()
+        sites, all_sites = OrderedDict(), OrderedDict()
         taxa = self.cols
         if minrefs:
             self._minrefs = minrefs
@@ -286,10 +321,14 @@ class CoPaR(Alignments):
         elif not structure:
             structure = 'structure'
 
-        for idx, struc in self.iter_rows(structure):
+        for idx, struc, alm in self.iter_rows(structure, self._alignment):
             self[idx, structure] = self._str_type(struc)
+            if not len(self[idx, structure]) == len([x for x in 
+                self[idx, self._alignment] if x != '-']):
+                log.warn('alignment and structure do not match in {0}'.format(idx))
         
         # iterate over all sites in the alignment
+        visited = []
         for cogid, msa in pb(sorted(self.msa[ref].items()), 
                 desc='CoPaR: get_patterns()',
                 total=len(self.msa[ref])):
@@ -298,6 +337,8 @@ class CoPaR(Alignments):
             _idxs = {t: msa['taxa'].index(t) for t in _taxa}
             _alms = [msa['alignment'][_idxs[t]] for t in _taxa]
             _wlid = [msa['ID'][_idxs[t]] for t in _taxa]
+            # store visited entries
+            visited += msa['ID']
             if len(_taxa) >= minrefs:
                 if self._mode == 'fuzzy':
                     _strucs = []
@@ -312,18 +353,89 @@ class CoPaR(Alignments):
                 for pidx, pos in positions:
                     reflexes = self.reflexes_from_pos(
                             pidx, taxa, _taxa, _alms, missing, irregular)
-                    patterns[cogid, pidx] = [pos, tuple(reflexes)]
+                    sites[cogid, pidx] = [pos, tuple(reflexes)]
             for pidx in range(len(_alms[0])):
                 reflexes = self.reflexes_from_pos(
                         pidx, taxa, _taxa, _alms, missing, irregular)
-                all_patterns[cogid, pidx] = reflexes
+                all_sites[cogid, pidx] = reflexes
 
-        self.patterns = patterns
-        self.all_patterns = all_patterns
+        # add non-visited segments
+        for idx in [i for i in self if i not in visited]:
+            if self._mode == 'fuzzy':
+                for tt, ss, cogid in zip(
+                        self[idx, self._segments].n,
+                        self[idx, structure].n,
+                        self[idx, self._ref]):
+                    for i, (t, s) in enumerate(zip(tt, ss)):
+                        all_sites[cogid, i] = [
+                                missing if tax != self[idx][self._colIdx] \
+                                        else t for tax in self.cols]
+            else:
+                for i, (t, s) in enumerate(zip(
+                    self[idx, self._segments],
+                    self[idx, structure])):
+                        all_sites[self[idx, self._ref], i] = [
+                                missing if tax != self[idx][self._colIdx] \
+                                        else t for tax in self.cols]
+
+        self.sites = sites
+        self.all_sites = all_sites
         self._minrefs = minrefs
-        return patterns, all_patterns 
+        self._structure = structure
+        #return sites, all_sites
+    
+    def upper_bound(self, missing="Ø", match_threshold=1, 
+            gap="-", debug=False):
+        """Compute upper bound for clique partitioning following Bhasker 1991.
+        """ 
+        # compute nodes
+        nodes = len(self.sites)
+        # compute edges
+        edges = 0
+        degs = {s: 0 for s in self.sites}
+        sings = {s: 0 for s in self.sites}
+        for (nA, (posA, ptnA)), (nB, (posB, ptnB)) in combinations(
+                self.sites.items(), r=2):
+            if posA == posB:
+                m, n = compatible_columns(ptnA, ptnB)
+                if n > 0:
+                    degs[nA] += 1
+                    degs[nB] += 1
+                else:
+                    sings[nA] += 1
+                    sings[nB] += 1
+            else:
+                degs[nA] += 1
+                degs[nB] += 1
 
-    def sort_patterns(self, patterns=None, missing='Ø', threshold=2, debug=False):
+        return max([b for a, b in degs.items() if sings[a] > 0])
+
+    def greedy_color(self, missing="Ø", strategy="smallest_last", gap="-", match_threshold=1, debug=False):
+        """Use networkx greedy color strategies for the graph coloring task.
+        """
+
+        import networkx as nx
+        E = nx.Graph()
+        for s in self.sites:
+            E.add_node(s)
+        for (nA, (posA, ptA)), (nB, (posB, ptB)) in combinations(
+                self.sites.items(), r=2):
+            m, n = compatible_columns(ptA, ptB, missing=missing, gap=gap)
+            if n == 0 and posA == posB and m >= match_threshold:
+                pass
+            else:
+                E.add_edge(nA, nB)
+
+        colors = nx.greedy_color(E, strategy=strategy)
+        self.clusters = {}
+        for color in colors.values():
+            sites = [s for s in colors if colors[s] == color]
+            ptns = [self.sites[site][1] for site in sites]
+            strucs = [self.sites[site][0] for site in sites]
+            cons = consensus_pattern(ptns)
+            self.clusters[strucs[0], cons] = sites 
+
+    def sort_sites(self, patterns=None, missing='Ø', debug=False):
         """
         Pre-sort the patterns to speed up the performance of the cluster algorithm.
         
@@ -335,9 +447,6 @@ class CoPaR(Alignments):
             will be used.
         missing : str (default="Ø")
             The symbol to be used for missing values.
-        threshold : int (default=2)
-            The threshold of the minimal number of cognate sets per cluster
-            which should be regarded as regular.
         
         Notes
         -----
@@ -367,15 +476,15 @@ class CoPaR(Alignments):
             else:
                 return (x[1][1] > y[1][1]) - (x[1][1] < y[1][1])
 
-        patterns = patterns or self.patterns
-        sorted_patterns = sorted(patterns.items(), key=cmp_to_key(sorter))
-        previousp, previous = sorted_patterns[0][1]
+        sites = self.sites
+        sorted_sites = sorted(sites.items(), key=cmp_to_key(sorter))
+        previousp, previous = sorted_sites[0][1]
         out, indices = defaultdict(list), []
-        for i, (key, (pos, pattern)) in enumerate(sorted_patterns):
+        for i, (key, (pos, pattern)) in enumerate(sorted_sites):
             match, mism = compatible_columns(pattern, previous)
             if mism > 0 or match == 0 or previousp != pos:
                 for idx in indices:
-                    out[previousp, previous] += [sorted_patterns[idx][0]]
+                    out[previousp, previous] += [sorted_sites[idx][0]]
                 indices = [i]
                 previous = pattern
                 previousp = pos
@@ -383,15 +492,15 @@ class CoPaR(Alignments):
                 indices += [i]
                 previous = consensus_pattern([previous, pattern])
         for idx in indices:
-            out[pos, previous] += [sorted_patterns[idx][0]]
+            out[pos, previous] += [sorted_sites[idx][0]]
         
         self.clusters = OrderedDict(**out)
         return out
         
-    def cluster_patterns(self, clusters=None, debug=False,
+    def cluster_sites(self, clusters=None, debug=False,
             missing="Ø", match_threshold=1, gap='-', iterations=2,
             score_mode='coverage'):
-        """Cluster patterns following an the spirit of Welsh-Powel algorithm.
+        """Cluster alignment sites using greedy clique cover.
         
         Parameters
         ----------
@@ -417,67 +526,72 @@ class CoPaR(Alignments):
         """
         if not hasattr(self, 'clusters'):
             self.clusters = defaultdict(list)
-            for (cogid, idx), (pos, ptn) in self.patterns.items():
+            for (cogid, idx), (pos, ptn) in self.sites.items():
                 self.clusters[pos, ptn] += [(cogid, idx)]
                 
-        clusters = clusters or self.clusters
-        sorted_clusters = sorted(
-                clusters.items(), 
-                key=lambda x: (
-                    len(x[0]) - x[0].count(missing),
-                    score_patterns(
-                        [self.patterns[y] for y in x[1]],
-                        mode=score_mode
-                        ),
-                    len(x[1]),
-                    ),
-                reverse=True)
-        out = []
-        with pb(desc='CoPaR: cluster_patterns()', total=iterations*len(clusters)) as progress:
-            while sorted_clusters:
-                plen = len(sorted_clusters)
-                ((this_pos, this_cluster), these_vals), remaining_clusters = sorted_clusters[0], sorted_clusters[1:]
-                for i in range(iterations):
+        clusters = self.clusters
+        
+        with pb(desc='CoPaR: cluster_sites()', 
+                total=0.5 * iterations*len(self.clusters)) as progress:
+            for it in range(iterations):
+                sorted_clusters = sorted(
+                        clusters.items(), 
+                        key=lambda x: (
+                            score_patterns(
+                                [self.sites[y][1] for y in x[1]],
+                                mode=score_mode
+                                ),
+                            len(x[1]),
+                            ),
+                        reverse=True)
+                out = []
+                while sorted_clusters:
+                    plen = len(sorted_clusters)
+                    ((this_pos, this_cluster), these_vals), remaining_clusters = (
+                            sorted_clusters[0], sorted_clusters[1:])
+                    sorted_clusters = sorted(
+                            sorted_clusters, 
+                            key=lambda x: (
+                                score_patterns(
+                                    [self.sites[x][1] for x in these_vals]+\
+                                            [self.sites[y][1] for y in x[1]],
+                                    mode=score_mode
+                                    ),
+                                ),
+                            reverse=True)
                     queue = []
                     for (next_pos, next_cluster), next_vals in remaining_clusters:
-                        match, mism = compatible_columns(this_cluster, next_cluster,
+                        match, mism = compatible_columns(
+                                this_cluster, next_cluster,
                                 missing=missing, gap=gap)
 
-                        if this_pos == next_pos and match >= match_threshold and mism == 0:
+                        if this_pos == next_pos and match >= match_threshold \
+                                and mism == 0:
                             this_cluster = consensus_pattern([this_cluster,
                                     next_cluster])
                             these_vals += next_vals
                         else:
                             queue += [((next_pos, next_cluster), next_vals)]
-                        remaining_clusters = queue
-                out += [((this_pos, this_cluster), these_vals)]
-                sorted_clusters = sorted(
-                        queue, 
-                        key=lambda x: (
-                            len(x[0]) - x[0].count(missing),
-                            score_patterns(
-                                [self.patterns[y] for y in x[1]],
-                                mode=score_mode
-                                ),
-                            len(x[1])
-                            ),
-                        reverse=True)
-                progress.update(iterations * (plen - len(queue)))
-        clusters = {tuple(a): b for a, b in out}
+
+                    sorted_clusters = queue
+                    out += [((this_pos, this_cluster), these_vals)]
+                    progress.update(plen - len(queue))
+                clusters = {tuple(a): b for a, b in out}
+                
         self.clusters = clusters
         self.ordered_clusters = sorted(clusters, key=lambda x: len(x[1]))
         alls = [c for c in clusters]
         match = 0
-        for i, a in enumerate(alls):
-            for j, b in enumerate(alls):
-                if i < j:
-                    ma, mi = compatible_columns(a, b)
+        for i, (_a, a) in enumerate(alls):
+            for j, (_b, b) in enumerate(alls):
+                if i < j and _a == _b:
+                    ma, mi = compatible_columns(a, b, missing=missing, gap=gap)
                     if ma and not mi:
                         match += 1
         if match:
             log.warn('found {0} clusters which could be further merged'.format(match))
         if debug: print(single, mass, '{0:.2f}'.format(mass / (single + mass)))
-
+        
     def sites_to_pattern(self, threshold=1, missing="Ø", debug=False):
         """Algorithm assigns alignment sites to patterns.
 
@@ -492,38 +606,47 @@ class CoPaR(Alignments):
                 total=len(self.clusters)):
             sites = self.clusters[consensus]
             for cog, pos in sites:
-                struc, pattern = self.patterns[cog, pos]
+                struc, pattern = self.sites[cog, pos]
                 for strucB, consensusB in self.clusters:
                     ma, mi = compatible_columns(pattern, consensusB)
                     if struc == strucB and not mi and ma >= threshold:
                         asites[cog, pos] += [(ma, struc, consensusB)]
-        self.sites = asites
+        self.patterns = asites
 
     def fuzziness(self):
 
         fuzziness = sum(
-                [len(b) for a, b in self.sites.items()]) / len(self.sites)
-        return fuzziness
+                [len(b) for a, b in self.patterns.items()]) / len(self.patterns)
+        scores = []
+        for s, vals in self.patterns.items():
+            
+            counts = sum([x[0] for x in vals])
+            score = sqrt(sum(
+                [(x[0]/counts)**2 for x in vals]))
+            scores += [score]
 
-    def refine_sites(self, missing='Ø'):
-        if not hasattr(self, 'sites'):
+        return sum(scores) / len(scores)
+        #return fuzziness
+
+    def refine_patterns(self, missing='Ø', score_mode='pairs'):
+        if not hasattr(self, 'patterns'):
             raise ValueError('run sites_to_pattern first')
         if not hasattr(self, 'clusters'):
             raise ValueError('run cluster detection first')
         new_clusters = defaultdict(list)
-        new_sites = {}
+        new_patterns = {}
         for site, patterns in pb(
-                sorted(self.sites.items()),
+                sorted(self.patterns.items()),
                 desc='COPAR: site to patterns',
-                total=len(self.sites)
+                total=len(self.patterns)
                 ):
             spats = sorted(
                     patterns, 
                     key=lambda x: (
                         x[0], 
                         len(self.clusters[x[1], x[2]]), 
-                        score_patterns([y for y in self.clusters[x[1], x[2]]],
-                            mode='coverage')
+                        score_patterns([y[1] for y in self.clusters[x[1], x[2]]],
+                            mode=score_mode)
                         ),
                     reverse=True)
             best_score, best_freq = spats[0][0], len(self.clusters[spats[0][1],
@@ -537,7 +660,7 @@ class CoPaR(Alignments):
                     selected += [spat]
                 else:
                     break
-            new_sites[site] = selected
+            new_patterns[site] = selected
             new_clusters[selected[0][1], selected[0][2]] += [site]
 
         self.clusters = OrderedDict()
@@ -545,8 +668,7 @@ class CoPaR(Alignments):
             cons = consensus_pattern(
                     [self.patterns[s][1] for s in sites], missing=missing)
             self.clusters[p[0], cons] = sites
-        self.sites = new_sites
-
+        self.patterns = new_patterns
 
 
     def similar_patterns(self, mismatches=1, matches=3, debug=False, missing="Ø"):
@@ -692,7 +814,7 @@ class CoPaR(Alignments):
         return new_clusters
 
     def regular_cognates(self, regularity_threshold=0.5, alignment_threshold=0.5,
-            correct_cognates=None, ref='cogid', score_mode='coverage'):
+            correct_cognates=None, ref='cogid', score_mode='coverage', smooth=1):
         """Evaluate the regularity of cognate sets.
 
         Notes
@@ -710,9 +832,11 @@ class CoPaR(Alignments):
             raise ValueError('You should computer the clusters first.')
         for key, values in self.clusters.items():
             # assemble patterns
-            patterns = [self.patterns[cog, pos] for cog, pos in values]
+            patterns = [self.patterns[cog, pos][1] for cog, pos in values]
             regular = 1
-            if score_patterns(patterns, mode=score_mode) <= regularity_threshold:
+            ps = score_patterns(patterns, mode=score_mode, smooth=smooth)
+            #print(patterns, ps)
+            if ps <= regularity_threshold:
                 regular = 0
             for cogid, _ in values:
                 cogs[cogid] += [regular] # [score_patterns(patterns, mode=score_mode)]
@@ -896,8 +1020,8 @@ class CoPaR(Alignments):
         ranked_clusters = sorted([(s, p, len(f)) for (s, p), f in
             self.clusters.items()],
             key=lambda x: x[2], reverse=True)
-        for (cogid, pos), ptns in self.sites.items():
-            struc, ptn = self.patterns[cogid, pos]
+        for (cogid, pos), ptns in self.patterns.items():
+            struc, ptn = self.sites[cogid, pos]
             missings = [i for i in range(self.width) if ptn[i] ==
                     missing]
             if (struc, ptn) in self.clusters:
@@ -913,17 +1037,32 @@ class CoPaR(Alignments):
                         ranked_sites[cogid, pos] += [
                                 (freq, strucB, ptnB)]
 
+        purity = {site: {} for site in ranked_sites}
+        #for site, vals in ranked_sites.items():
+        #    for i, doc in enumerate(self.cols):
+        #        if self.patterns[site][1][i] == missing:
+        #            scores = []
+        #            for f, _p, ptn in vals:
+        #                p = ptn[i]
+        #                if p != missing:
+        #                    scores += [f]
+        #            ss = sum(scores)
+        #            if ss:
+        #                pur = sqrt(sum([(s/ss)**2 for s in scores]))
+        #            else:
+        #                pur = 0
+        #            purity[site][doc] = pur
+
+
         preds = {}
         count = 1
         for cogid, msa in self.msa[self._ref].items():
-
             missings = [t for t in self.cols if t not in msa['taxa']]
             if len(set(msa['taxa'])) >= minrefs:
                 words = [bt.strings('') for m in missings]
                 for i, m in enumerate(missings):
                     tidx = self.cols.index(m)
                     for j in range(len(msa['alignment'][0])):
-
                         segments = defaultdict(int)
                         sidx = 0
                         if (cogid, j) in ranked_sites:
@@ -936,9 +1075,16 @@ class CoPaR(Alignments):
                                 sidx += 1
                                 if sidx == len(ranked_sites[cogid, j]):
                                     break
+                        if not (cogid, j) in purity:
+                            purity[cogid, j] = {}
+
                         if not segments:
-                            words[i] += ['?']
+                            words[i] += ['Ø']
+                            purity[cogid, j][m] = 0
                         else:
+                            purity[cogid, j][m] = sqrt(
+                                    sum([(s/sum(segments.values()))**2 for s in
+                                        segments.values()]))
                             words[i] += ['|'.join([s for s in sorted(segments,
                                 key=lambda x: segments[x],
                                 reverse=True)][:samples])]
@@ -948,14 +1094,83 @@ class CoPaR(Alignments):
                         for m, w in zip(missings, words):
                             print(count, cogid, self[msa['ID'][0], 'concept'], m, ' '.join(w))
                             count += 1
-        return preds
 
-    def stats(self, threshold=2):
-        sums = sum([len(x) for x in self.clusters.values() if len(x) >=
-            threshold])
-        oris = sum([len(x) for x in self.clusters.values()])
-        return sums / oris
+        pudity = {doc: [] for doc in self.cols}
+        for site, docs in purity.items():
+            for doc in docs:
+                pudity[doc] += [purity[site][doc]]
+        for doc, purs in pudity.items():
+            pudity[doc] = sum(purs) / len(purs)
 
+        return preds, purity, pudity
+
+    def stats(self, threshold=2, missing="Ø", score_mode='pairs', smooth=1):
+        rest = 0
+        if self._mode == 'fuzzy':
+            for idx, cogids, alms in self.iter_rows(self._ref, self._alignment):
+                for alm, cogid in zip(alms, cogids):
+                    if cogid not in self.msa[self._ref]:
+                        rest += len(alm)
+                    else:
+                        pass
+        else:
+            for idx, cogid, alm in self.iter_rows(self._ref, self._alignment):
+                if cogid not in self.msa[self._ref]:
+                    rest += len(alm)
+        scores = [0 for i in range(rest)]
+        for (p, ptn), sites in self.clusters.items():
+            scores += len(sites) * [score_patterns(
+                [
+                    self.sites[site][1] for site in sites
+                    ], mode=score_mode, smooth=smooth)]
+        return sum(scores) / len(scores)
+        goodcl = []
+        for a, b in self.clusters.items():
+            if not 'Ø' in a:
+                goodcl += [len(b)]
+            else:
+                rest += len(b)
+        all_sums = rest + sum([x for x in goodcl]) #self.clusters.values()])
+        all_scores = [(1/all_sums)**2 for i in range(rest)]
+        for c in goodcl: #self.clusters.values():
+            all_scores += [(c/all_sums)**2]
+        return sqrt(sum(all_scores))
+        #sums = sum([len(x) for x in self.clusters.values() if len(x) >=
+        #    threshold and not missing in x])
+        #oris = sum([len(x) for x in self.clusters.values()])
+        #return sums / oris
+    
+    def pattern_confusion(self, missing="Ø"):
+        """
+        Compute confusion for patterns based on their fuzzy sites.
+        """
+        stats = {c: defaultdict(lambda : defaultdict(int)) for c in self.cols}
+        
+        for site in self.sites:
+            for i, vals in enumerate(self.sites[site][0][2]):
+                if self.patterns[site][1][i] == missing:
+                    if vals != missing:
+                        stats[self.cols[i]][vals][vals] += self.sites[site][0][0]
+                        for _n, _p, valsB in self.sites[site][1:]:
+                            if valsB[i] != missing:
+                                stats[self.cols[i]][vals][valsB[i]] += _n
+        aggr = {c: {} for c in self.cols}
+        for c in self.cols:
+            for s1, sounds in stats[c].items():
+                counts = sum(sounds.values())
+                score = 0
+                for i, s in enumerate(sorted(sounds.values(), reverse=True)):
+                    score += s
+                    if score / counts > 0.75:
+                        aggr[c][s1] = i+1
+                        break
+                
+                cfi = sounds.get(s1, 0) / sum(sounds.values())
+                aggr[c][s1] = cfi
+                aggr[c][s1] = i+1
+        return stats, aggr
+
+                
 
                 
                 

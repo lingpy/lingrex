@@ -31,7 +31,8 @@ def expand_alignment(msa, taxa, missing="Ø"):
     for taxon in taxa:
         if taxon in msa['taxa']:
             tidx = msa['taxa'].index(taxon)
-            out += [msa['alignment'][tidx]]
+            out += [[x.split('/')[1] if '/' in x else x for x in
+                msa['alignment'][tidx]]]
         else:
             out += [missing]
     return out
@@ -70,7 +71,8 @@ def find_colexified_alignments(alignments, cognates='cogids', segments='tokens',
     """Identify identical alignments in a dataset and label them as homophones"""
     
     queue = []
-    for cogid, msa in alignments.msa[cognates].items():
+    for cogid, msa in sorted(alignments.msa[cognates].items(), key=lambda x:
+            len(set(x[1]['taxa']))):
         queue += [(cogid, expand_alignment(msa, alignments.taxa,
             missing=missing))]
 
