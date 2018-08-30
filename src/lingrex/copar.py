@@ -15,7 +15,7 @@ from lingpy.align.sca import get_consensus, SCA, Alignments
 from lingpy.util import pb
 from lingpy.compare.partial import Partial, _get_slices
 from lingpy.read.qlc import normalize_alignment
-from lingpy.algorithm.cython.misc import squareform
+from lingpy.algorithm.cython._misc import squareform
 from lingpy.algorithm.extra import infomap_clustering
 from lingpy import log
 from lingpy import basictypes as bt
@@ -645,7 +645,7 @@ class CoPaR(Alignments):
                     key=lambda x: (
                         x[0], 
                         len(self.clusters[x[1], x[2]]), 
-                        score_patterns([y[1] for y in self.clusters[x[1], x[2]]],
+                        score_patterns([self.sites[y][1] for y in self.clusters[x[1], x[2]]],
                             mode=score_mode)
                         ),
                     reverse=True)
@@ -666,7 +666,7 @@ class CoPaR(Alignments):
         self.clusters = OrderedDict()
         for p, sites in new_clusters.items():
             cons = consensus_pattern(
-                    [self.patterns[s][1] for s in sites], missing=missing)
+                    [self.sites[s][1] for s in sites], missing=missing)
             self.clusters[p[0], cons] = sites
         self.patterns = new_patterns
 
@@ -1038,21 +1038,6 @@ class CoPaR(Alignments):
                                 (freq, strucB, ptnB)]
 
         purity = {site: {} for site in ranked_sites}
-        #for site, vals in ranked_sites.items():
-        #    for i, doc in enumerate(self.cols):
-        #        if self.patterns[site][1][i] == missing:
-        #            scores = []
-        #            for f, _p, ptn in vals:
-        #                p = ptn[i]
-        #                if p != missing:
-        #                    scores += [f]
-        #            ss = sum(scores)
-        #            if ss:
-        #                pur = sqrt(sum([(s/ss)**2 for s in scores]))
-        #            else:
-        #                pur = 0
-        #            purity[site][doc] = pur
-
 
         preds = {}
         count = 1

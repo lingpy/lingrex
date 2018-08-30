@@ -150,6 +150,7 @@ def get_segments_and_structure(wordlist, etd, cogid, ref='cogids', segments='seg
         cogidx = cogids.index(cogid)
         morpheme = tokens2morphemes(segs)[cogidx]
         if isinstance(wordlist[idx, structure], (list, tuple)):
+
             struct = ' '.join(wordlist[idx, structure]).split(' + ')[cogidx]
         else:
             struct = wordlist[idx, structure].split(' + ')[cogidx]

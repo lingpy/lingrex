@@ -1,23 +1,19 @@
-import distribute_setup
-distribute_setup.use_setuptools()
-
-try:
-    from setuptools import setup, find_packages, Extension
-except ImportError:
-    from distribute_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup, find_packages, Extension
-
-# setup package name etc as a default
-pkgname = 'lingrex'
-pkg_dir = {'':'.'}
-pkg_location = '.'
+from setuptools import setup, find_packages
 
 setup(
-        name=pkgname,
+        name='lingrex',
+        author='Johann-Mattis List',
+        url='https://github.com/lingpy/lingrex',
+        classifiers=[
+            'Development Status :: 4 - Beta',
+            'Intended Audience :: Science/Research',
+            'Operating System :: OS Independent',
+            'Programming Language :: Python :: 3',
+            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.6',
+        ],
         version='0.1',
-        packages=find_packages(pkg_location),
-        package_dir=pkg_dir,
-        install_requires=['lingpy', 'clldutils'],
-        author='Johann-Mattis List'
+        packages=find_packages(where='src'),
+        package_dir={'': 'src'},
+        install_requires=['lingpy', 'sinopy'],
         )
