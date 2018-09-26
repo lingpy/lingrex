@@ -258,6 +258,7 @@ class CoPaR(Alignments):
             row = [x[i] for x in strucs if x[i] != '-']
             prostring += [row[0] if row else '+']
         if len(prostring) != len(alignment[0]):
+            print(cogid, indices)
             print(prostring)
             print(consensus)
             print('\n'.join(['\t'.join(alm) for alm in alignment]))
@@ -325,6 +326,8 @@ class CoPaR(Alignments):
             self[idx, structure] = self._str_type(struc)
             if not len(self[idx, structure]) == len([x for x in 
                 self[idx, self._alignment] if x != '-']):
+                print(idx, self[idx, structure], '|', self[idx,
+                    self._alignment], '|', self[idx, 'tokens'])
                 log.warn('alignment and structure do not match in {0}'.format(idx))
         
         # iterate over all sites in the alignment
@@ -410,8 +413,19 @@ class CoPaR(Alignments):
 
         return max([b for a, b in degs.items() if sings[a] > 0])
 
-    def greedy_color(self, missing="Ø", strategy="smallest_last", gap="-", match_threshold=1, debug=False):
+    def greedy_color(
+            self, 
+            missing="Ø", 
+            strategy="smallest_last", 
+            gap="-", 
+            match_threshold=1, 
+            debug=False
+            ):
         """Use networkx greedy color strategies for the graph coloring task.
+
+        Note
+        ----
+        We list this only for experimental approaches.
         """
 
         import networkx as nx
@@ -434,72 +448,16 @@ class CoPaR(Alignments):
             strucs = [self.sites[site][0] for site in sites]
             cons = consensus_pattern(ptns)
             self.clusters[strucs[0], cons] = sites 
-
-    def sort_sites(self, patterns=None, missing='Ø', debug=False):
-        """
-        Pre-sort the patterns to speed up the performance of the cluster algorithm.
         
-        Parameters
-        ----------
-        patterns : dict (default=None)
-            The correspondence patterns as identified by the algorithm.
-            Defaults to None, meaning that the internally computed patterns
-            will be used.
-        missing : str (default="Ø")
-            The symbol to be used for missing values.
-        
-        Notes
-        -----
-        The sorting algorithm sorts similar patterns straightforwardly into
-        initial clusters and then runs through the sorted items, merging all
-        compatible patterns into one cluster.
-        """
-        def sorter(x, y):
-            """Sorter arranges patterns to allow for a quicker assembly"""
-            if x[1][1] == y[1][1] and x[1][0] == y[1][0]:
-                return 0
-            mg, mb = compatible_columns(x[1][1], y[1][1])
-            tA = x[1][1].count(missing)
-            tB = y[1][1].count(missing)
-            if x[1][0] != y[1][0]:
-                if tA < tB:
-                    return -1
-                if tA > tB:
-                    return 1
-                return (x[1][1] > y[1][1]) - (x[1][1] < y[1][1])
-            if mg > 0:
-                if tA < tB:
-                    return -1
-                if tA > tB:
-                    return 1
-                return (x[1][1] > y[1][1]) - (x[1][1] < y[1][1])
-            else:
-                return (x[1][1] > y[1][1]) - (x[1][1] < y[1][1])
-
-        sites = self.sites
-        sorted_sites = sorted(sites.items(), key=cmp_to_key(sorter))
-        previousp, previous = sorted_sites[0][1]
-        out, indices = defaultdict(list), []
-        for i, (key, (pos, pattern)) in enumerate(sorted_sites):
-            match, mism = compatible_columns(pattern, previous)
-            if mism > 0 or match == 0 or previousp != pos:
-                for idx in indices:
-                    out[previousp, previous] += [sorted_sites[idx][0]]
-                indices = [i]
-                previous = pattern
-                previousp = pos
-            else:
-                indices += [i]
-                previous = consensus_pattern([previous, pattern])
-        for idx in indices:
-            out[pos, previous] += [sorted_sites[idx][0]]
-        
-        self.clusters = OrderedDict(**out)
-        return out
-        
-    def cluster_sites(self, clusters=None, debug=False,
-            missing="Ø", match_threshold=1, gap='-', iterations=2,
-            score_mode='coverage'):
+    def cluster_sites(
+            self, 
+            clusters=None, 
+            debug=False,
+            missing="Ø", 
+            match_threshold=1, 
+            gap='-', 
+            score_mode='pairs'
+            ):
         """Cluster alignment sites using greedy clique cover.
         
         Parameters
@@ -514,8 +472,6 @@ class CoPaR(Alignments):
             alignment sites
             for compatibility, in order to avoid problems from highly gappy
             sites.
-        iterations : int (default=2)
-            To make sure that during the 
 
         Notes
         -----
@@ -528,12 +484,12 @@ class CoPaR(Alignments):
             self.clusters = defaultdict(list)
             for (cogid, idx), (pos, ptn) in self.sites.items():
                 self.clusters[pos, ptn] += [(cogid, idx)]
-                
         clusters = self.clusters
-        
-        with pb(desc='CoPaR: cluster_sites()', 
-                total=0.5 * iterations*len(self.clusters)) as progress:
-            for it in range(iterations):
+        while True:
+            prog = 0
+            with pb(desc='CoPaR: cluster_sites()', 
+                    total=len(self.clusters), 
+                    ) as progress:
                 sorted_clusters = sorted(
                         clusters.items(), 
                         key=lambda x: (
@@ -546,25 +502,13 @@ class CoPaR(Alignments):
                         reverse=True)
                 out = []
                 while sorted_clusters:
-                    plen = len(sorted_clusters)
                     ((this_pos, this_cluster), these_vals), remaining_clusters = (
                             sorted_clusters[0], sorted_clusters[1:])
-                    sorted_clusters = sorted(
-                            sorted_clusters, 
-                            key=lambda x: (
-                                score_patterns(
-                                    [self.sites[x][1] for x in these_vals]+\
-                                            [self.sites[y][1] for y in x[1]],
-                                    mode=score_mode
-                                    ),
-                                ),
-                            reverse=True)
                     queue = []
                     for (next_pos, next_cluster), next_vals in remaining_clusters:
                         match, mism = compatible_columns(
                                 this_cluster, next_cluster,
                                 missing=missing, gap=gap)
-
                         if this_pos == next_pos and match >= match_threshold \
                                 and mism == 0:
                             this_cluster = consensus_pattern([this_cluster,
@@ -572,26 +516,26 @@ class CoPaR(Alignments):
                             these_vals += next_vals
                         else:
                             queue += [((next_pos, next_cluster), next_vals)]
-
                     sorted_clusters = queue
                     out += [((this_pos, this_cluster), these_vals)]
-                    progress.update(plen - len(queue))
+                    progress.update(len(self.sites) - len(queue) - prog)
+                    prog = len(self.sites)-len(queue)
                 clusters = {tuple(a): b for a, b in out}
-                
+                alls = [c for c in clusters]
+                match = 0
+                for i, (_a, a) in enumerate(alls):
+                    for j, (_b, b) in enumerate(alls):
+                        if i < j and _a == _b:
+                            ma, mi = compatible_columns(a, b, missing=missing, gap=gap)
+                            if ma and not mi:
+                                match += 1               
+                if not match:
+                    break
+                else:
+                    log.warn('iterating, since {0} clusters can further be merged'.format(match))
         self.clusters = clusters
         self.ordered_clusters = sorted(clusters, key=lambda x: len(x[1]))
-        alls = [c for c in clusters]
-        match = 0
-        for i, (_a, a) in enumerate(alls):
-            for j, (_b, b) in enumerate(alls):
-                if i < j and _a == _b:
-                    ma, mi = compatible_columns(a, b, missing=missing, gap=gap)
-                    if ma and not mi:
-                        match += 1
-        if match:
-            log.warn('found {0} clusters which could be further merged'.format(match))
-        if debug: print(single, mass, '{0:.2f}'.format(mass / (single + mass)))
-        
+
     def sites_to_pattern(self, threshold=1, missing="Ø", debug=False):
         """Algorithm assigns alignment sites to patterns.
 
@@ -1005,6 +949,16 @@ class CoPaR(Alignments):
     def predict_words(self, **kw):
         """
         Predict patterns for those cognate sets where we have missing data.
+
+        Notes
+        -----
+        Purity (one of the return values) measures how well a given sound for a
+        given site is reflected by one single sound (rather than multiple
+        patterns pointing to different sounds) for a given doculect. It may be seen as a control case for
+        the purity of a given prediction: if there are many alternative
+        possibilities, this means that there is more uncertainty regarding the
+        reconstructions or predictions.
+
         """
         if not hasattr(self, 'sites'):
             raise ValueError('You need to compute alignment sites first')
