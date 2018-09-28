@@ -22,8 +22,6 @@ from lingpy import basictypes as bt
 
 from lingrex.util import add_structure
 
-#import networkx as nx
-
 def consensus_pattern(patterns, missing="Ø"):
     """Return consensus pattern of multiple patterns.
 
@@ -561,16 +559,7 @@ class CoPaR(Alignments):
 
         fuzziness = sum(
                 [len(b) for a, b in self.patterns.items()]) / len(self.patterns)
-        scores = []
-        for s, vals in self.patterns.items():
-            
-            counts = sum([x[0] for x in vals])
-            score = sqrt(sum(
-                [(x[0]/counts)**2 for x in vals]))
-            scores += [score]
-
-        return sum(scores) / len(scores)
-        #return fuzziness
+        return fuzziness
 
     def refine_patterns(self, missing='Ø', score_mode='pairs'):
         if not hasattr(self, 'patterns'):
@@ -613,7 +602,6 @@ class CoPaR(Alignments):
                     [self.sites[s][1] for s in sites], missing=missing)
             self.clusters[p[0], cons] = sites
         self.patterns = new_patterns
-
 
     def similar_patterns(self, mismatches=1, matches=3, debug=False, missing="Ø"):
         """
@@ -684,7 +672,7 @@ class CoPaR(Alignments):
         for clr, ptn in bad_clusters:
             if missing_in_pattern(ptn, missing=missing) <= 2:
                 for clrB, pts in good_clusters:
-                    match, mism = compatible_columns(clr, clrB)
+                    match, mism = compatible_columns(clr[1], clrB[1])
                     if mism <= matches and match > matches:
                         new_clusters[clrB] += [clr]
                         irregular_patterns += [clr]
@@ -698,7 +686,7 @@ class CoPaR(Alignments):
                     print('{0:5}\t'.format(len(self.clusters[key]))+'\t'.join(key))
                 for i, pattern in enumerate(value):
                     pt = []
-                    for lid, (a, b) in enumerate(zip(key, pattern)):
+                    for lid, (a, b) in enumerate(zip(key[1], pattern[1])):
                         if a != b and missing not in [a, b]:
                             pt += [irregular_prefix+b]
                             # assign pattern to the corresponding alignments
@@ -724,8 +712,8 @@ class CoPaR(Alignments):
                                     word_indices = self.etd[self.ref][cogid][lid]
                                     if word_indices:
                                         for widx in word_indices:
-                                            alm = self[widx,
-                                                    'alignment'].split()
+                                            alm = bt.strings(self[widx,
+                                                    'alignment'])
                                             alm[position] = '{0}{1}/{2}'.format(
                                                     irregular_prefix,
                                                     b,
@@ -841,6 +829,73 @@ class CoPaR(Alignments):
             for s in self.id2pos[k]:
                 self.sites[s] = [(len(self.id2pos[k]), tuple(v))]
 
+    def _get_cluster_graph(self):
+
+        import networkx as nx
+        graph = nx.Graph()
+        for (pos, ptn), sites in self.clusters.items():
+            for site in sites:
+                graph.add_node(
+                        '{0[0]}-{0[1]}'.format(site),
+                        pattern=' '.join(ptn),
+                        site = ' '.join(self.sites[site][1])
+                        )
+
+        for ((s1, p1), ptn1), ((s2, p2), ptn2) in combinations(
+                self.sites.items(), r=2):
+            if ptn1[0] == ptn2[0]:
+                m, mm = compatible_columns(ptn1[1], ptn2[1])
+                if m and not mm:
+                    graph.add_edge(
+                            '{0}-{1}'.format(s1, p1), 
+                            '{0}-{1}'.format(s2, p2)
+                            )
+        return graph
+
+    def purity(self, missing="Ø"):
+        """
+        Compute the purity of the cluster analysis.
+        """
+        purities = []
+        for (cog, pos), sites in self.patterns.items():
+            good, bad = 0, 0
+            for (_, c1, ptn1), (_, c2, ptn2) in combinations(sites, r=2):
+                for s1, s2 in zip(ptn1, ptn2):
+                    if missing not in (s1, s2) and s1 != s2:
+                        bad += 1
+                    elif [s1, s2].count(missing) == 2:
+                        bad += 1
+                    else:
+                        good += 1
+            if good or bad:
+                purities += [good/(good + bad)]
+            elif not good and not bad:
+                bad += sites[0][1].count(missing)
+                good += len(sites[0][1])-sites[0][1].count(missing)
+                purities += [good/(good + bad)]
+        return sum(purities) / len(purities)
+
+
+    def _assortativity(self, threshold=1):
+        """
+        Compute assortativity for a given graph and its patterns.
+        
+        Notes
+        -----
+        Compute the assortativity coefficient for a given cluster analysis of
+        the alignment site graph. The threshold indicates which 
+        """
+        graph = self._get_cluster_graph()
+        remove_nodes = []
+        for n, d in nx.degree(graph):
+            if d <= threshold:
+                remove_nodes += [n]
+        graph.remove_nodes_from(remove_nodes)
+
+        ass = nx.attribute_assortativity_coefficient(graph, 'pattern')
+        return ass
+
+
     def add_patterns(self, ref="patterns", irregular_patterns=False,
             proto=False):
         """Assign patterns to a new column in the word list.
@@ -887,8 +942,12 @@ class CoPaR(Alignments):
                         if self._mode == 'fuzzy':
                             pattern_position = self[idx, self.ref].index(cogid)
                             this_pattern = P[idx].n[pattern_position]
-                            this_pattern[position] = pattern_id
-                            P[idx].change(pattern_position, this_pattern)
+                            try:
+                                this_pattern[position] = pattern_id
+                                P[idx].change(pattern_position, this_pattern)
+                            except:
+                                log.warn('error in {0}'.format(cogid))
+
                         else:
                             P[idx][position] = pattern_id
         self.add_entries(ref, P, lambda x: x)
