@@ -175,7 +175,8 @@ def renumber_partials(wordlist, ref):
    
 
 def align_by_structure(wordlist, template='imMnNct', segments='segments',
-        ref='cogids', structure='structure', alignment='alignment'):
+        ref='cogids', structure='structure', alignment='alignment',
+        override=True):
     """Align patterns simply by following the template"""
     etd = wordlist.get_etymdict(ref=ref)
     alms = {}
@@ -190,6 +191,7 @@ def align_by_structure(wordlist, template='imMnNct', segments='segments',
                 alm[-1] += [mapper.get(t, '-')]
             idxs += [idx]
         ignore = []
+
         for i in range(len(alm[0])):
             col = [alm[j][i] for j in range(len(idxs))]
             if not [x for x in col if x != '-']:
@@ -203,8 +205,9 @@ def align_by_structure(wordlist, template='imMnNct', segments='segments',
     for idx, cogids in iter_rows(wordlist, ref):
         alignments[idx] = ' + '.join([' '.join(alms[cogid, idx]) for cogid in
             cogids]).split(' ')
-    wordlist.add_entries(alignment, alignments, lambda x: x)
-
+    wordlist.add_entries(alignment, alignments, lambda x: x, override=override)
+    if hasattr(wordlist, 'add_alignments'):
+        wordlist.add_alignments(override=True)
 
 def add_structure(wordlist, model='cv', segments='tokens',
         structure='structure', ref='cogid', gap='-'):

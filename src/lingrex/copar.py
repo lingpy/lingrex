@@ -240,7 +240,6 @@ class CoPaR(Alignments):
         return [i for i, p in enumerate(prostring) if p == pos]
     
     def positions_from_prostrings(self, cogid, indices, alignment, structures):
-        #, pos):
         """Return positions matching from an alignment and user-defined prosodic strings"""
         if self._mode == 'fuzzy':
             strucs = []
@@ -856,23 +855,33 @@ class CoPaR(Alignments):
         """
         Compute the purity of the cluster analysis.
         """
+        def get_purity(patterns):
+            all_sums = []
+            for i in range(len(patterns[0])):
+                col = [line[i] for line in patterns]
+                subset = set(col)
+                sums = []
+                for itm in subset:
+                    if itm != missing:
+                        sums += [col.count(itm)**2]
+                if sums:
+                    sums = sqrt(sum(sums)) / len(col)
+                else:
+                    sums = 0
+                all_sums += [sums]
+            return sum(all_sums) / len(all_sums)
+
+        graph = self._get_cluster_graph()
         purities = []
-        for (cog, pos), sites in self.patterns.items():
-            good, bad = 0, 0
-            for (_, c1, ptn1), (_, c2, ptn2) in combinations(sites, r=2):
-                for s1, s2 in zip(ptn1, ptn2):
-                    if missing not in (s1, s2) and s1 != s2:
-                        bad += 1
-                    elif [s1, s2].count(missing) == 2:
-                        bad += 1
-                    else:
-                        good += 1
-            if good or bad:
-                purities += [good/(good + bad)]
-            elif not good and not bad:
-                bad += sites[0][1].count(missing)
-                good += len(sites[0][1])-sites[0][1].count(missing)
-                purities += [good/(good + bad)]
+        for node, data in graph.nodes(data=True):
+            patterns = []
+            for neighbor in graph[node]:
+                patterns += [
+                        graph.node[neighbor]['pattern'].split()]
+            if patterns:
+                purities += [get_purity(patterns)]
+            else:
+                purities += [0]
         return sum(purities) / len(purities)
 
 
@@ -897,7 +906,7 @@ class CoPaR(Alignments):
 
 
     def add_patterns(self, ref="patterns", irregular_patterns=False,
-            proto=False):
+            proto=False, override=True):
         """Assign patterns to a new column in the word list.
         """
         if not hasattr(self, 'id2ptn'):
@@ -950,13 +959,16 @@ class CoPaR(Alignments):
 
                         else:
                             P[idx][position] = pattern_id
-        self.add_entries(ref, P, lambda x: x)
+        self.add_entries(ref, P, lambda x: x, override=override)
 
     def write_patterns(self, filename, proto=False, irregular_patterns=False):
         if proto:
             pidx = self.cols.index(proto)
         else:
             pidx = 0
+
+        if not hasattr(self, 'id2ptn'):
+            raise ValueError('You should run CoPaR.add_patterns first!')
 
         if irregular_patterns:
             new_clusters = defaultdict(list)
@@ -984,7 +996,7 @@ class CoPaR(Alignments):
         sound = ''
         idx = 0
         for (struc, pattern), entries in sorted(new_clusters.items(), key=lambda x:
-                (x[0][pidx], len(x[1])), reverse=True):
+                (x[0][0], x[0][1][pidx], len(x[1])), reverse=True):
             if sound != pattern[pidx]:
                 sound = pattern[pidx]
                 idx = 0
@@ -998,7 +1010,8 @@ class CoPaR(Alignments):
 
             idx += 1
             text += '{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\n'.format(
-                    idx, struc, len(entries), pattern[pidx], '\t'.join([
+                    self.ptn2id[pattern].split('/')[0], 
+                    struc, len(entries), pattern[pidx], '\t'.join([
                         p for i, p in enumerate(pattern) if i != pidx]),
                     ', '.join(['{0}:{1}'.format(x, y) for x, y in entries]),
                     concepts)
@@ -1073,6 +1086,7 @@ class CoPaR(Alignments):
                                 sidx += 1
                                 if sidx == len(ranked_sites[cogid, j]):
                                     break
+
                         if not (cogid, j) in purity:
                             purity[cogid, j] = {}
 
