@@ -325,7 +325,7 @@ class CoPaR(Alignments):
                 self[idx, self._alignment] if x != '-']):
                 print(idx, self[idx, structure], '|', self[idx,
                     self._alignment], '|', self[idx, 'tokens'])
-                log.warn('alignment and structure do not match in {0}'.format(idx))
+                log.warning('alignment and structure do not match in {0}'.format(idx))
         
         # iterate over all sites in the alignment
         visited = []
@@ -529,7 +529,7 @@ class CoPaR(Alignments):
                 if not match:
                     break
                 else:
-                    log.warn('iterating, since {0} clusters can further be merged'.format(match))
+                    log.warning('iterating, since {0} clusters can further be merged'.format(match))
         self.clusters = clusters
         self.ordered_clusters = sorted(clusters, key=lambda x: len(x[1]))
 
@@ -955,7 +955,7 @@ class CoPaR(Alignments):
                                 this_pattern[position] = pattern_id
                                 P[idx].change(pattern_position, this_pattern)
                             except:
-                                log.warn('error in {0}'.format(cogid))
+                                log.warning('error in {0}'.format(cogid))
 
                         else:
                             P[idx][position] = pattern_id
