@@ -38,7 +38,7 @@ def shrink_alignments(alignments, gap="-"):
 def template_alignment(
         wordlist,
         ref='cogid',
-        template='CCCCVVccccCCCCVVccccCCCCVVccccCCCCVVccccvv',
+        template='CCCCVVccccT_CCCCVVccccT_CCCCVVccccT_CCCCVVccccT_CCCCvvT',
         structure='structure',
         fuzzy=False,
         segments='tokens',
