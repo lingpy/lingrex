@@ -69,12 +69,15 @@ def get_c_structure(seg, cldf=True):
             'CT' : 'nt',
             'CVCT': 'inct',
             'VVCT': 'mnct',
+            'CCCVT': '',
+            'CCCVCT': '',
             'VC': 'nc',
             'VCT': 'nct',
             'CVVCT': 'inNct',
             'VVT': 'nNt',
             'CVT': 'int',
             'CVVT': '',
+            'CCT': '',
             'V': 'n',
             'CV': 'in',
             'CCVT': 'imnt',
@@ -87,12 +90,19 @@ def get_c_structure(seg, cldf=True):
     if not mapper[cls]:
         # our problem are VV instances, so we need to extract these
         dlg = ''.join(tokens2class(seg, 'sca', cldf=True))
-        ncls = ''
+        ncls, tcls = '', ''
         for c, d in zip(cls, dlg):
             if c == 'V':
                 ncls += d
+                tcls += c
+            elif c == 'C':
+                ncls += c
+                tcls += d
             else:
                 ncls += c
+                tcls += c
+        
+
         nmapper = {
             "UIT": 'nNt',
             "CUYT": 'inNt',
@@ -127,11 +137,37 @@ def get_c_structure(seg, cldf=True):
             "CIAT": "imnt",
             "CAUT": "inNt",
             "CIIT": "imnt",
-            "EET": 'mnt'}
+            "EET": 'mnt' 
+            }
+
+        cmapper = {
+                "MMT": 'int',
+                "NNT": "int",
+                "MSWVT": "iMmnt",
+                "MSWVTT": "iMmnct",
+                "HMT": "int",
+                "KSWVT": "iMmnt",
+                "HNT": "int",
+                "GNT": "int",
+                "PLWVT": "iMmnt",
+                "PSWVT": "iMmnt",
+                "MSWVT": "iMmnt",
+                "TLWVT": "iMmnt",
+                "GSWVT": "iMmnt",
+                "KSWVHT": "iMmnct",
+                "PSWVHT": "iMmnct",
+                "MSWVHT": "iMmnct",
+                "KSWVTT": "iMmnct",
+                "MSWVNT": "iMmnct",
+                "LLT": "int",
+                }
         if ncls in nmapper:
-            if nmapper[ncls]:
-                return nmapper[ncls]
-        print(ncls,seg)
+            return nmapper[ncls]
+        
+        if tcls in cmapper:
+            return cmapper[tcls]
+        
+        print(ncls,seg,tcls)
         input()
         return '?' * len(seg)
 

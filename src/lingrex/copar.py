@@ -245,7 +245,7 @@ class CoPaR(Alignments):
             strucs = []
             for idx, struc, alm in zip(indices, structures, alignment):
                 pos_ = self[idx, self._ref].index(cogid)
-                strucs += [class2tokens(tokens2morphemes(struc)[pos_], alm)]
+                strucs += [class2tokens(struc.n[pos_], alm)]
         else:
             strucs = [class2tokens(struc, alm) for struc, alm in
                     zip(structures, alignment)]
@@ -696,8 +696,7 @@ class CoPaR(Alignments):
                                     if word_indices:
                                         for widx in word_indices:
                                             # get the position in the alignment
-                                            alms = tokens2morphemes(self[widx,
-                                                'alignment'])
+                                            alms = self[widx, 'alignment'].n #tokens2morphemes
                                             cog_pos = self[widx,
                                                     self.ref].index(cogid)
                                             new_alm = alms[cog_pos]
@@ -733,8 +732,7 @@ class CoPaR(Alignments):
                         idx]:
                     for widx in indices:
                         cog_pos = self[widx, self.ref].index(cogid)
-                        #print(widx, self[widx, 'alignment'])
-                        alms = tokens2morphemes(self[widx, 'alignment'])
+                        alms = self[widx, 'alignment'].n
                         new_alm = alms[cog_pos]
                         new_alm[position] = '{0}{1}'.format(
                                 irregular_prefix, new_alm[position])
@@ -766,7 +764,6 @@ class CoPaR(Alignments):
             patterns = [self.patterns[cog, pos][1] for cog, pos in values]
             regular = 1
             ps = score_patterns(patterns, mode=score_mode, smooth=smooth)
-            #print(patterns, ps)
             if ps <= regularity_threshold:
                 regular = 0
             for cogid, _ in values:
