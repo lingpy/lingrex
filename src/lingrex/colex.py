@@ -2,7 +2,7 @@ from lingpy import *
 from collections import defaultdict
 
 def find_bad_internal_alignments(alignments, ref='cogids', segments='tokens',
-        alignment='alignment'):
+        alignment='alignment', transcription='ipa'):
     newIDs = {}
     def get_all_indices(lst):
         idxs = defaultdict(list)
@@ -22,7 +22,8 @@ def find_bad_internal_alignments(alignments, ref='cogids', segments='tokens',
         this_idx = alignments[idx, ref].index(cogid)
         alignments[idx, ref][this_idx] = new_cogid
     return Alignments(alignments, ref=ref, fuzzy=alignments._mode,
-            segments=segments, alignment=alignment)
+            segments=segments, alignment=alignment, 
+            transcription=transcription)
 
 
 def expand_alignment(msa, taxa, missing="Ø"):

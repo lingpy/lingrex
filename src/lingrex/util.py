@@ -245,6 +245,7 @@ def align_by_structure(wordlist, template='imMnNct', segments='segments',
     if hasattr(wordlist, 'add_alignments'):
         wordlist.add_alignments(override=True)
 
+
 def add_structure(wordlist, model='cv', segments='tokens',
         structure='structure', ref='cogid', gap='-'):
     """Add structure to a wordlist to make sure correspondence patterns can be
@@ -276,7 +277,8 @@ def add_structure(wordlist, model='cv', segments='tokens',
                 D[idx] = ' '.join(['c' if c != '+' else c for c in tks])
     if model == 'CcV':
         for idx, tks in wordlist.iter_rows(segments):
-            D[idx] = ' '.join(list(prosodic_string(tks, _output='CcV')))
+            D[idx] = ' '.join(list(prosodic_string(tks,
+                _output='CcV').replace('_', '+')))
     if model == 'ps':
         for idx, tks in wordlist.iter_rows(segments):
             D[idx] = ' '.join(list(prosodic_string(tks)))

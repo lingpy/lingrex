@@ -1,4 +1,5 @@
 from collections import OrderedDict
+from lingpy import basictypes as bt
 from lingpy.read.csv import csv2list
 from lingpy.sequence.sound_classes import tokens2morphemes
 from lingrex.util import *
@@ -77,13 +78,19 @@ def consensus_from_structures(strucs):
     return out
 
 def reconstruct(wordlist, proto, patterns, ref='cogid', segments='tokens',
-        alignment='alignment', minrefs=3, missing="Ø", threshold=3,
-        structure='structure', uncertainty=2, frequency=2):
+        alignment='alignment', minrefs=3, missing="Ø",
+        structure='structure', uncertainty=2, frequency=2,
+        show_certainty=False):
 
     # check for some things
     # TODO
+    if show_certainty:
+        cstr = '{0}{1}'
+    else:
+        cstr = '{1}'
 
     protos = {cogid: {} for cogid in wordlist.msa[ref]}
+    structures = {cogid: [] for cogid in wordlist.msa[ref]}
     freqs = defaultdict(list)
     for cogid, msa in wordlist.msa[ref].items():
         tax2idx = {taxon: patterns['taxa'].index(taxon) for taxon in patterns['taxa']}
@@ -99,6 +106,7 @@ def reconstruct(wordlist, proto, patterns, ref='cogid', segments='tokens',
                             wordlist[idx, structure].split())[cogidx]
                         ]
         scons = consensus_from_structures(strucs)
+        structures[cogid] = scons
 
         for i in range(len(msa['alignment'][0])):
             protos[cogid][i] = []
@@ -129,7 +137,6 @@ def reconstruct(wordlist, proto, patterns, ref='cogid', segments='tokens',
                                 patterns[pt]['size']
                         freqs[pt] += [(cogid, i)]
                         protos[cogid][i] += [pt]
-
     
     out = {}
     for cogid, indices in protos.items():
@@ -144,17 +151,17 @@ def reconstruct(wordlist, proto, patterns, ref='cogid', segments='tokens',
                 if not patterns[pt]['proto'].strip():
                     count += 1
             if not variants:
-                pform += ['⁰?']
+                pform += [cstr.format('⁰', '?')]
             else:
                 start = 0
                 variants_ = []
                 for s, f in sorted(variants.items(), key=lambda x: x[1],
                         reverse=True):
                     if uncertainty > start:
-                        variants_ += ["{0}{1}".format(to_super(f), s)]
+                        variants_ += [cstr.format(to_super(f), s)]
                         start += 1
                 pform += ['|'.join(variants_)]
-        out[cogid] = pform
+        out[cogid] = [bt.strings(pform), bt.strings(structures[cogid])]
     return out
 
 

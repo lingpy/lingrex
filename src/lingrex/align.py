@@ -149,7 +149,5 @@ def template_alignment(
         for idx, cogids in wordlist.iter_rows(ref):
             A[idx] = bt.lists(' + '.join([cogid2alm.get((cogid, idx), '?') for cogid in
                 cogids]))
-                
     wordlist.add_entries(alignment, A, lambda x: x, override=override)
-                
 
