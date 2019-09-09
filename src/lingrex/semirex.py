@@ -4,6 +4,7 @@ from lingpy.read.csv import csv2list
 from lingpy.sequence.sound_classes import tokens2morphemes
 from lingrex.util import *
 from lingrex.copar import CoPaR, compatible_columns
+from lingrex.align import align_to_template, shrink_alignments
 
 def read_patterns(filename, taxa, structure='structure', cognates='cognates',
         proto=False, note=False):
@@ -67,20 +68,25 @@ def to_super(number):
     return string
 
 
-def consensus_from_structures(strucs):
+def consensus_from_structures(strucs, template='imnct', gap='-'):
     """
     Helper function for creating a quick consensus.
     """
+    alms = []
+    for struc in strucs:
+        alms += [align_to_template(struc, struc, template)]
+    shrunk = shrink_alignments(alms)
     out = []
-    for i, s in enumerate('imnct'):
-        if [x for x in strucs if s in x]:
-            out += [s]
+    for i in range(len(shrunk[0])):
+        col = [line[i] for line in shrunk if line[i] != gap][0]
+        out += [col]
     return out
+
 
 def reconstruct(wordlist, proto, patterns, ref='cogid', segments='tokens',
         alignment='alignment', minrefs=3, missing="Ø",
         structure='structure', uncertainty=2, frequency=2,
-        show_certainty=False):
+        show_certainty=False, template='imnct'):
 
     # check for some things
     # TODO
@@ -101,11 +107,8 @@ def reconstruct(wordlist, proto, patterns, ref='cogid', segments='tokens',
         for idx in msa['ID']:
             if wordlist._mode == 'fuzzy':
                 cogidx = wordlist[idx, ref].index(cogid)
-                strucs += [
-                        tokens2morphemes(
-                            wordlist[idx, structure].split())[cogidx]
-                        ]
-        scons = consensus_from_structures(strucs)
+                strucs += [wordlist[idx, structure].n[cogidx]]
+        scons = consensus_from_structures(strucs, template=template)
         structures[cogid] = scons
 
         for i in range(len(msa['alignment'][0])):
@@ -121,14 +124,17 @@ def reconstruct(wordlist, proto, patterns, ref='cogid', segments='tokens',
             pattern = tuple(pattern)
             
             proto_form = defaultdict(int)
+            try:
+                this_struc = scons[i]
+            except IndexError:
+                print(scons, msa['ID'], cogid)
+                this_struc = '?'
+
             # search for pattern
             for pt in sorted(patterns['patterns'], key=lambda x:
                     patterns[x]['size'], reverse=True):
-                try:
-                    scons[i]
-                except:
-                    print(scons, msa['ID'], cogid)
-                if patterns[pt]['structure'] == scons[i] and \
+
+                if patterns[pt]['structure'] == this_struc and \
                         patterns[pt]['size'] >= frequency and \
                         len([p for p in pt if p not in missing]) >= minrefs:
                     m1, m2 = compatible_columns(pattern, pt)

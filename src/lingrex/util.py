@@ -105,6 +105,7 @@ def get_c_structure(seg, cldf=True):
 
         nmapper = {
             "UIT": 'nNt',
+            "CCT": "int",
             "CUYT": 'inNt',
             "CYACT": 'imnct',
             "CYET": "imnt",
@@ -141,25 +142,30 @@ def get_c_structure(seg, cldf=True):
             }
 
         cmapper = {
-                "MMT": 'int',
-                "NNT": "int",
-                "MSWVT": "iMmnt",
-                "MSWVTT": "iMmnct",
-                "HMT": "int",
-                "KSWVT": "iMmnt",
-                "HNT": "int",
-                "GNT": "int",
-                "PLWVT": "iMmnt",
-                "PSWVT": "iMmnt",
-                "MSWVT": "iMmnt",
-                "TLWVT": "iMmnt",
-                "GSWVT": "iMmnt",
-                "KSWVHT": "iMmnct",
-                "PSWVHT": "iMmnct",
-                "MSWVHT": "iMmnct",
-                "KSWVTT": "iMmnct",
-                "MSWVNT": "iMmnct",
-                "LLT": "int",
+            "CNT": "int",
+            "TNT": "int",
+            "KNT": "int",
+            "MNT": "int",
+            "SNT": "int",
+            "MMT": 'int',
+            "NNT": "int",
+            "MSWVT": "iMmnt",
+            "MSWVTT": "iMmnct",
+            "HMT": "int",
+            "KSWVT": "iMmnt",
+            "HNT": "int",
+            "GNT": "int",
+            "PLWVT": "iMmnt",
+            "PSWVT": "iMmnt",
+            "MSWVT": "iMmnt",
+            "TLWVT": "iMmnt",
+            "GSWVT": "iMmnt",
+            "KSWVHT": "iMmnct",
+            "PSWVHT": "iMmnct",
+            "MSWVHT": "iMmnct",
+            "KSWVTT": "iMmnct",
+            "MSWVNT": "iMmnct",
+            "LLT": "int",
                 }
         if ncls in nmapper:
             return nmapper[ncls]
@@ -168,7 +174,7 @@ def get_c_structure(seg, cldf=True):
             return cmapper[tcls]
         
         print(ncls,seg,tcls)
-        input()
+        #input()
         return '?' * len(seg)
 
     return mapper[cls]

@@ -7,6 +7,7 @@ except ImportError:
 
 setup(
         name='lingrex',
+        description="Linguistic reconstruction with LingPy",
         author='Johann-Mattis List',
         url='https://github.com/lingpy/lingrex',
         classifiers=[
@@ -21,4 +22,5 @@ setup(
         packages=find_packages(where='src'),
         package_dir={'': 'src'},
         install_requires=['lingpy', 'sinopy'],
+        keywords="historical linguistics, computational linguistics, computer-assisted language comparison"
         )

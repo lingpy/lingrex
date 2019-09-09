@@ -4,9 +4,13 @@ from tqdm import tqdm
 from sinopy.segmentize import segmentize
 
 def align_to_template(sequence, structures, template, gap="-"):
-    
-    assert len(sequence) == len(structures) and len(template) >= len(sequence)
-    assert len([x for x in structures if x not in template]) == 0
+    try: 
+        assert len(sequence) == len(structures) and len(template) >= len(sequence)
+        assert len([x for x in structures if x not in template]) == 0
+    except:
+        print(sequence)
+        print(structures)
+        raise ValueError
 
     out = []
     idxA, idxB = 0, 0
@@ -24,6 +28,7 @@ def align_to_template(sequence, structures, template, gap="-"):
         idxB += 1
         
     return out
+
 
 def shrink_alignments(alignments, gap="-"):
     excludes = []
