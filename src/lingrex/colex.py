@@ -9,7 +9,6 @@ def find_bad_internal_alignments(alignments, ref='cogids', segments='tokens',
         for i, l in enumerate(lst):
             idxs[l] += [i]
         return idxs
-    
     new_cogid = max(alignments.msa[ref])
     for cogid, msa in alignments.msa[ref].items():
         idxs = [i for t, i in get_all_indices(msa['taxa']).items() if len(i) >
@@ -38,11 +37,13 @@ def expand_alignment(msa, taxa, missing="Ø"):
             out += [missing]
     return out
 
-def compatible(msa1, msa2, missing="Ø"):
+def compatible(msa1, msa2, missing="Ø", gap="-"):
     """Compare two alignments and check whether they colexify."""
     matches = 0
     for line1, line2 in zip(msa1, msa2):
-        if line1 == line2 and missing not in [line1, line2]:
+        if [x for x in line1 if x != gap] == [
+                x for x in line2 if x != gap] and \
+                        missing not in [line1, line2]:
             matches += 1
         else:
             if missing in [line1, line2]:
