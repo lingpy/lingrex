@@ -53,7 +53,7 @@ def compatible(msa1, msa2, missing="Ø", gap="-"):
     return matches
 
 
-def merge_alignments(msa1, msa2, missing="Ø"):
+def merge_alignments(msa1, msa2, missing="Ø", gap='-'):
     out = []
     for line1, line2 in zip(msa1, msa2):
         if line1 == line2:
@@ -62,6 +62,13 @@ def merge_alignments(msa1, msa2, missing="Ø"):
             out += [line2]
         elif line2 == missing:
             out += [line1]
+        elif len(line1) != len(line2) and (
+                [x for x in line1 if x != gap] == [
+                    x for x in line2 if x != gap]):
+            if len(line1) > len(line2):
+                out += [line1]
+            else:
+                out += [line2]
         else:
             print(line1, line2)
             raise ValueError("Alignments cannot be merged.")
