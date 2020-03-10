@@ -62,7 +62,7 @@ def merge_alignments(msa1, msa2, missing="Ø", gap='-'):
             out += [line2]
         elif line2 == missing:
             out += [line1]
-        elif len(line1) != len(line2) and (
+        elif (
                 [x for x in line1 if x != gap] == [
                     x for x in line2 if x != gap]):
             if len(line1) > len(line2):
