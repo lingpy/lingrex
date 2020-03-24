@@ -18,7 +18,7 @@ setup(
             'Programming Language :: Python :: 3.5',
             'Programming Language :: Python :: 3.6',
         ],
-        version='0.1.2',
+        version='0.1.3',
         packages=find_packages(where='src'),
         package_dir={'': 'src'},
         install_requires=['lingpy', 'sinopy'],
