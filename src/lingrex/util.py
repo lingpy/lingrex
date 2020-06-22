@@ -4,7 +4,11 @@ from collections import defaultdict
 from itertools import combinations
 import os
 # TODO export this function to lingpy or something else
-from sinopy.segments import get_structure
+try:
+    from sinopy.segments import get_structure
+except ImportError:
+    get_structure = lambda x: x
+    
 from lingpy.sequence.sound_classes import tokens2morphemes
 from lingpy import *
 from lingpy.align.sca import get_consensus

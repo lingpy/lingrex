@@ -1,7 +1,7 @@
 from lingpy import *
 from lingpy import basictypes as bt
 from tqdm import tqdm
-from sinopy.segmentize import segmentize
+#from sinopy.segmentize import segmentize
 
 def align_to_template(sequence, structures, template, gap="-"):
     try: 
@@ -43,35 +43,35 @@ def shrink_alignments(alignments, gap="-"):
     return out
 
 
-def _shrink(segments, structure, converter={
-            'i m': {'new': 'I'}, 
-            'i':   {'new': 'I'}, 
-            'n c': {'new': 'R'}, 
-            'n':   {'new': 'R'}, 
-            'c':   {'new': 'R'},
-            ' ':   {'new': ''}}
-            ):
-    converted = segmentize(str(structure), converter)
-    pos, out = 0, ['']
-    for elms in converted:
-        if elms.strip():
-            before, before_ = '', False
-            for elm in elms.split():
-                if '/' in segments[pos]:
-                    before_, next_char = segments[pos].split('/')
-                    before +=  before_
-                else:
-                    before += segments[pos]
-                    next_char = segments[pos]
-                out[-1] += next_char
-                pos += 1
-            if before_:
-                out[-1] = before +'/'+out[-1]
-        else:
-            out += ['']
-
-    new_structure = segmentize(str(structure), converter, column='new')
-    return ' '.join(out), ' '.join([n for n in new_structure if n])
+#def _shrink(segments, structure, converter={
+#            'i m': {'new': 'I'}, 
+#            'i':   {'new': 'I'}, 
+#            'n c': {'new': 'R'}, 
+#            'n':   {'new': 'R'}, 
+#            'c':   {'new': 'R'},
+#            ' ':   {'new': ''}}
+#            ):
+#    converted = segmentize(str(structure), converter)
+#    pos, out = 0, ['']
+#    for elms in converted:
+#        if elms.strip():
+#            before, before_ = '', False
+#            for elm in elms.split():
+#                if '/' in segments[pos]:
+#                    before_, next_char = segments[pos].split('/')
+#                    before +=  before_
+#                else:
+#                    before += segments[pos]
+#                    next_char = segments[pos]
+#                out[-1] += next_char
+#                pos += 1
+#            if before_:
+#                out[-1] = before +'/'+out[-1]
+#        else:
+#            out += ['']
+#
+#    new_structure = segmentize(str(structure), converter, column='new')
+#    return ' '.join(out), ' '.join([n for n in new_structure if n])
 
 
 def shrink_template(wordlist, structure='structure', segments='tokens',
