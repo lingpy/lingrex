@@ -1,16 +1,56 @@
 from lingpy import *
 from lingpy import basictypes as bt
-from tqdm import tqdm
-#from sinopy.segmentize import segmentize
+
+
+def gap_free_pairwise(seqA, seqB, syllables=None, gap="-"):
+    """
+    Carry out a gap-free alignment in which segments are merged instead of gapped.
+    """
+    syllables = syllables or []
+    start = True
+    merge = False
+    outA, outB = [], []
+    for i, (charA, charB) in enumerate(zip(seqA, seqB)):
+        if i in syllables:
+            start = True
+        if start and charB == gap:
+            outA += [charA+">"]
+            merge = True
+        elif not merge and charB == gap:
+            outA[-1] += "<"+charA
+        elif merge:
+            if charB == gap:
+                outA[-1] += charA+">"
+            else:
+                outA[-1] += charA
+                outB += [charB]
+                merge = False
+        else:
+            outA += [charA]
+            outB += [charB]
+        start = False
+    return outA, outB
+
+
 
 def align_to_template(sequence, structures, template, gap="-"):
+    """
+    Align a sequence to a template.
+    """
     try: 
         assert len(sequence) == len(structures) and len(template) >= len(sequence)
+    except:
+        raise ValueError(
+                "sequence {0} and structure {1} have different length".format(
+                    repr(sequence), repr(structures)))
+    try:
         assert len([x for x in structures if x not in template]) == 0
     except:
-        print(sequence)
-        print(structures)
-        raise ValueError
+        raise ValueError(
+            "{0} items in the structure {1} is not in the template".format(
+                len([x for x in structures if x not in template]),
+                repr(structures)))
+
 
     out = []
     idxA, idxB = 0, 0
@@ -31,6 +71,9 @@ def align_to_template(sequence, structures, template, gap="-"):
 
 
 def shrink_alignments(alignments, gap="-"):
+    """
+    Remove columns from alignment which all consist of gaps.
+    """
     excludes = []
     for i in range(len(alignments[0])):
         col = set([line[i] for line in alignments])
@@ -43,63 +86,60 @@ def shrink_alignments(alignments, gap="-"):
     return out
 
 
-#def _shrink(segments, structure, converter={
-#            'i m': {'new': 'I'}, 
-#            'i':   {'new': 'I'}, 
-#            'n c': {'new': 'R'}, 
-#            'n':   {'new': 'R'}, 
-#            'c':   {'new': 'R'},
-#            ' ':   {'new': ''}}
-#            ):
-#    converted = segmentize(str(structure), converter)
-#    pos, out = 0, ['']
-#    for elms in converted:
-#        if elms.strip():
-#            before, before_ = '', False
-#            for elm in elms.split():
-#                if '/' in segments[pos]:
-#                    before_, next_char = segments[pos].split('/')
-#                    before +=  before_
-#                else:
-#                    before += segments[pos]
-#                    next_char = segments[pos]
-#                out[-1] += next_char
-#                pos += 1
-#            if before_:
-#                out[-1] = before +'/'+out[-1]
-#        else:
-#            out += ['']
-#
-#    new_structure = segmentize(str(structure), converter, column='new')
-#    return ' '.join(out), ' '.join([n for n in new_structure if n])
+def shrink(tokens, structures, converter):
+    """
+    Shrink tokens according to the converter.
+
+    .. note:: Works only for shrinking two structure elements so far.
+    """
+    outt, outs = [], []
+    merge = False
+    for i in range(len(tokens)):
+        if i > 0:
+            sm = ' '.join([
+                structures[i-1],
+                structures[i]])
+            if sm in converter:
+                outt += [tokens[i-1]+tokens[i]]
+                outs += [converter[sm]]
+                merge = True
+            elif not merge:
+                outt += [tokens[i-1]]
+                outs += [converter.get(structures[i-1], structures[i-1])]
+            else:
+                merge = False
+    if sm not in converter:
+        outt += [tokens[i]]
+        outs += [converter.get(structures[i], structures[i])]
+    return outt, outs
 
 
-def shrink_template(wordlist, structure='structure', segments='tokens',
+def shrink_template(
+        wordlist, 
+        structure='structure', 
+        segments='tokens',
         converter={
-            'i m': {'new': 'I'}, 
-            'i':   {'new': 'I'}, 
-            'n c': {'new': 'R'}, 
-            'n':   {'new': 'R'}, 
-            'c':   {'new': 'R'},
-            ' ':   {'new': ''},
-            '+':   {'new': ' + '}},
+            'i m': 'I', 
+            'i':   'I', 
+            'n c': 'R', 
+            'n':   'R', 
+            'c':   'R'
+            },
         new_structure='structure2', 
         new_tokens='tokens2',
-        new_alignment=False,
         override=False
             ):
+    """
+    Reduce a template by merging certain parts of the structure.
+    """
     D = {}
     for idx, strucs, tokens in wordlist.iter_rows(structure, segments):
-        D[idx] = _shrink(
+        D[idx] = shrink(
             tokens, strucs, converter)
     wordlist.add_entries(new_structure, D, lambda x: bt.lists(x[1]),
             override=override)
     wordlist.add_entries(new_tokens, D, lambda x: bt.lists(x[0]),
             override=override)
-
-    if new_alignment:
-        wordlist.add_entries(new_alignment, D, lambda x: bt.lists(x[0]),
-                override=override)
 
 
 
@@ -114,6 +154,9 @@ def template_alignment(
         alignment='alignment',
         override=True
         ):
+    """
+    Function aligns the cognate sets in a wordlist to a template.
+    """
     
     for idx, tokens, structures in wordlist.iter_rows(segments, structure):
         wordlist[idx, segments], wordlist[idx, structure] = bt.lists(
@@ -137,7 +180,7 @@ def template_alignment(
     if fuzzy:
         cogid2alm = {}
         # only align the first item
-        for cogid, vals in tqdm(etd.items(), desc='aligning cognates'):
+        for cogid, vals in etd.items():
             idxs, alms, strucs = [], [], []
             for val in vals:
                 if val:
