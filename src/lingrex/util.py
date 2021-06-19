@@ -51,141 +51,22 @@ def lingrex_path(*comps):
     """
     return os.path.join(os.path.dirname(__file__), os.pardir, *comps)
 
+
 def data_path(*comps):
 
     return lingrex_path('data', *comps)
 
-def get_c_structure(seg, cldf=True):
-    """Bad-ass function to get the major structures for alignments in chinese
-    data"""
-    cls = ''.join(tokens2class(seg, 'cv', cldf=cldf))
-    mapper = {
-            'C': "i",
-            "CVCC": "inNc",
-            "CVV": "inN",
-            "CVCV": "inIN",
-            'CCV': 'imn',
-            'CCVC': 'imnc',
-            'CCVCT': 'imnct',
-            'CCVT': 'imnt',
-            'CCVVT' : '',
-            'CVC': 'inc',
-            'CT' : 'nt',
-            'CVCT': 'inct',
-            'VVCT': 'mnct',
-            'CCCVT': '',
-            'CCCVCT': '',
-            'VC': 'nc',
-            'VCT': 'nct',
-            'CVVCT': 'inNct',
-            'VVT': 'nNt',
-            'CVT': 'int',
-            'CVVT': '',
-            'CCT': '',
-            'V': 'n',
-            'CV': 'in',
-            'CCVT': 'imnt',
-            'VT': 'nt',
-            'CCVVCT': 'imnNct',
-            'CVCCT': 'incCt',
-            }
-    if not cls in mapper:
-        return '?' * len(seg)
-    if not mapper[cls]:
-        # our problem are VV instances, so we need to extract these
-        dlg = ''.join(tokens2class(seg, 'sca', cldf=True))
-        ncls, tcls = '', ''
-        for c, d in zip(cls, dlg):
-            if c == 'V':
-                ncls += d
-                tcls += c
-            elif c == 'C':
-                ncls += c
-                tcls += d
-            else:
-                ncls += c
-                tcls += c
-        
 
-        nmapper = {
-            "UIT": 'nNt',
-            "CCT": "int",
-            "CUYT": 'inNt',
-            "CYACT": 'imnct',
-            "CYET": "imnt",
-            "CYAT": 'imnt',
-            "AYT": 'nNt',
-            "CCUAT": 'imMnt',
-            "CCYAT": 'imMnt',
-            "CCAUT": 'imnNt',
-            "CCAYT": 'imnNt',
-            "CCIAT": 'imMnt',
-            "CCAIT": 'imnNt',
-            "CCEAT": 'imMnt',
-            "CCYIT": 'imnNt',
-            "CCEIT": 'imnNt',
-            "CCUYT": 'imnNt',
-            "CIYT": 'imnt',
-            "CYIT": 'inNt',
-            "CAIT": 'inNt',
-            "CEIT": 'inNt',
-            "CIUCT": 'imnct',
-            "CAYT": 'inNt',
-            "CIACT": 'imnct',
-            "CAYCT": 'inNct',
-            "CAICT": 'inNct',
-            "CUIT": 'inNt',
-            "YIT": 'nNt',
-            "CYUT": "imnt",
-            "CIET": "imnt",
-            "CIUT": "imnt",
-            "CIAT": "imnt",
-            "CAUT": "inNt",
-            "CIIT": "imnt",
-            "EET": 'mnt' 
-            }
-
-        cmapper = {
-            "CNT": "int",
-            "TNT": "int",
-            "KNT": "int",
-            "MNT": "int",
-            "SNT": "int",
-            "MMT": 'int',
-            "NNT": "int",
-            "MSWVT": "iMmnt",
-            "MSWVTT": "iMmnct",
-            "HMT": "int",
-            "KSWVT": "iMmnt",
-            "HNT": "int",
-            "GNT": "int",
-            "PLWVT": "iMmnt",
-            "PSWVT": "iMmnt",
-            "MSWVT": "iMmnt",
-            "TLWVT": "iMmnt",
-            "GSWVT": "iMmnt",
-            "KSWVHT": "iMmnct",
-            "PSWVHT": "iMmnct",
-            "MSWVHT": "iMmnct",
-            "KSWVTT": "iMmnct",
-            "MSWVNT": "iMmnct",
-            "LLT": "int",
-                }
-        if ncls in nmapper:
-            return nmapper[ncls]
-        
-        if tcls in cmapper:
-            return cmapper[tcls]
-        
-        print(ncls,seg,tcls)
-        #input()
-        return '?' * len(seg)
-
-    return mapper[cls]
-
-def get_segments_and_structure(wordlist, etd, cogid, ref='cogids', segments='segments',
+def get_segments_and_structure(
+        wordlist, 
+        etd, 
+        cogid, 
+        ref='cogids', 
+        segments='segments',
         structure='structure'):
-    """shortcut function to retrieve a couple of things from a wordlist"""
+    """
+    Function helps to get 
+    """
     idxs = []
     for v in etd[cogid]:
         if v: idxs += v

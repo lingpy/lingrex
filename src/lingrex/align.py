@@ -1,3 +1,6 @@
+"""
+Various phonetic alignment functions.
+"""
 from lingpy import *
 from lingpy import basictypes as bt
 

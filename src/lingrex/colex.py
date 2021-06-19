@@ -148,31 +148,6 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
 
 
 
-#def merge_alignments(msa1, msa2, missing="Ø", gap='-'):
-#    """
-#    Check if two alignments can be merged and merge them if this is the case.
-#    """
-#    # identify which case we deal with
-#    out = []
-#    for line1, line2 in zip(msa1, msa2):
-#        if line1 == line2:
-#            out += [line1]
-#        elif line1 == missing:
-#            out += [line2]
-#        elif line2 == missing:
-#            out += [line1]
-#        elif (
-#                [x for x in line1 if x != gap] == [
-#                    x for x in line2 if x != gap]):
-#            if len(line1) > len(line2):
-#                out += [line1]
-#            else:
-#                out += [line2]
-#        else:
-#            raise ValueError("Alignments {0} and {1} cannot be merged.".format(
-#                repr(line1), repr(line2)))
-#    return out
-
 
 def find_colexified_alignments(alignments, cognates='cogids', segments='tokens',
         missing="Ø", ref='crossids'):
