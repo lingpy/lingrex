@@ -121,6 +121,23 @@ def test_merge_alignments():
             missing=missing)
     assert len(matches[0]) == 3
 
+    missing = "?"
+    matches = merge_alignments(
+            [
+                ["a", "b"],
+                ["a", "c"],
+                [missing, missing],
+                ["a", "d"]
+                ],
+            [
+                ["a", "-", "b", "-"],
+                ["a", "x", "b", "-"],
+                ["a", "-", "c", "e"],
+                [missing, missing, missing, missing]
+                ],
+            missing=missing)
+    assert len(matches[0]) == 4
+
 
 def test_find_colexified_alignments():
     wl = Alignments({
