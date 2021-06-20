@@ -1,3 +1,4 @@
+import pytest
 from lingrex.align import (
         gap_free_pairwise, align_to_template,
         shrink_alignments,
@@ -5,7 +6,6 @@ from lingrex.align import (
         shrink_template
         )
 from lingpy import Wordlist
-import pytest
 
 def test_gap_free_pairwise():
 

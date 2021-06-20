@@ -1,17 +1,43 @@
-from lingrex.util import add_structure, align_by_structure, renumber_partials
-from pyburmish import burmish_path
-from lingpy import *
+import pytest
+from lingrex.util import (
+        lingrex_path,
+        add_structure
+        )
+from lingpy import Wordlist, Alignments
 
-wl = Wordlist(burmish_path('dumps', 'burmish.tsv'))
-renumber_partials(wl, 'cogids')
-add_structure(wl)
-count = 1
-for idx, tokens, structures in iter_rows(wl, 'tokens', 'structure'):
-    if len(structures.split(' ')) != len(tokens):
-        print('\t'.join(tokens))
-        print('\t'.join(structures.split(' ')))
-        print(count)
-        print(' ')
-        count += 1
-align_by_structure(wl, segments='tokens')
-wl.output('tsv', filename=burmish_path('dumps', 'alignments'))
+def test_lingrex_path():
+    lingrex_path("test")
+
+
+def test_add_structure():
+    
+    with pytest.raises(ValueError):
+        add_structure(
+                Wordlist({
+                    0: ["doculect", "concept", "tokens", "cogid"],
+                    1: ["a", "b", "b l a".split(), 1],
+                    2: ["b", "b", "b l a x".split(), 1],
+                    3: ["c", "b", "b l i k u s".split(), 1]
+                    }), model="bla")
+
+
+    for m in ["cv", "c", "CcV", "nogap", "ps"]:
+        D = {
+                    0: ["doculect", "concept", "tokens", "cogid"],
+                    1: ["a", "b", "b l a".split(), 1],
+                    2: ["b", "b", "b l a x".split(), 1],
+                    3: ["c", "b", "b l i k u s".split(), 1],
+                    4: ["d", "b", "b l u k", 2]
+                    }
+        wl = Alignments(D, transcription="tokens")
+        add_structure(wl, m)
+
+    for m in ["cv", "c", "CcV", "nogap", "ps"]:
+        D = {
+                    0: ["doculect", "concept", "tokens", "cogids"],
+                    1: ["a", "b", "b l a".split(), [1]],
+                    2: ["b", "b", "b l a x".split(), [1]],
+                    3: ["c", "b", "b l i k u s".split(), [1]]
+                    }
+        wl = Alignments(D, ref="cogids", transcription="tokens")
+        add_structure(wl, m, ref="cogids")

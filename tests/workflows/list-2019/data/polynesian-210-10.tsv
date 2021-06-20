@@ -1,0 +1,2641 @@
+# Wordlist
+
+# DATA
+ID	DOCULECT	CONCEPT	SEGMENTS	ALIGNMENT	STRUCTURE	CROSSIDS
+#
+725	Maori_85	Eight	w a r u	w a r u	c c c c	1
+1169	Tahitian_173	Eight	v a ʔ u	v a ʔ u	c c c c	1
+1595	Rapanui_264	Eight	v a ʔ u	v a ʔ u	c c c c	1
+1853	Mangareva_239	Eight	v a r u	v a r u	c c c c	1
+3076	Sikaiana_243	Eight	v a l u	v a l u	c c c c	1
+3297	NorthMarquesan_38	Eight	v a ʔ u	v a ʔ u	c c c c	1
+4395	Austral_1213	Eight	v a ɢ u	v a ɢ u	c c c c	1
+4592	Tuamotuan_246	Eight	v a r u	v a r u	c c c c	1
+5101	Austral_128	Eight	v a ʔ u	v a ʔ u	c c c c	1
+5614	Hawaiian_52	Eight	w a l u	w a l u	c c c c	1
+#
+720	Maori_85	Fifty	r i m a + t e + k a u	r i m a + t e + k a u	c c c c + c c + c c c	10 14 15
+1849	Mangareva_239	Fifty	r i m a + r o ŋ o + ʔ u r u	r i m a + r o ŋ o + ʔ u r u	c c c c + c c c c + c c c c	10 11 4
+4391	Austral_1213	Fifty	p a e + ʔ a + h u ɢ u	p a e + ʔ a + h u ɢ u	c c c + c c + c c c c	2 3 4
+5097	Austral_128	Fifty	p a e + ʔ a + ʔ u r u	p a e + ʔ a + ʔ u r u	c c c + c c + c c c c	2 3 4
+5609	Hawaiian_52	Fifty	k a n a + l i m a	k a n a + l i m a	c c c c + c c c c	8 9
+#
+728	Maori_85	Five	r i m a	r i m a	c c c c	10
+1172	Tahitian_173	Five	p a e	p a e	c c c	2
+1173	Tahitian_173	Five	r i m a	r i m a	c c c c	10
+1598	Rapanui_264	Five	r i m a	r i m a	c c c c	10
+1856	Mangareva_239	Five	r i m a	r i m a	c c c c	10
+3079	Sikaiana_243	Five	l i m a	l i m a	c c c c	10
+3300	NorthMarquesan_38	Five	ʔ i m a	ʔ i m a	c c c c	10
+4398	Austral_1213	Five	p a e	p a e	c c c	2
+4595	Tuamotuan_246	Five	r i m a	r i m a	c c c c	10
+5104	Austral_128	Five	p a e	p a e	c c c	2
+5617	Hawaiian_52	Five	l i m a	l i m a	c c c c	10
+#
+729	Maori_85	Four	f aː	f aː	c c	23
+1174	Tahitian_173	Four	m a + h a	m a + h a	c c + c c	19 20
+1599	Rapanui_264	Four	h a	h a	c c	23
+1857	Mangareva_239	Four	ʔ a	ʔ a	c c	23
+3080	Sikaiana_243	Four	h aː	h aː	c c	23
+3301	NorthMarquesan_38	Four	f aː	f aː	c c	23
+4399	Austral_1213	Four	m a + h a	m a + h a	c c + c c	19 20
+4596	Tuamotuan_246	Four	h aː	h aː	c c	23
+5105	Austral_128	Four	ʔ a	ʔ a	c c	23
+5618	Hawaiian_52	Four	h aː	h aː	c c	23
+#
+753	Maori_85	I	a u	- a u	c c	24
+1198	Tahitian_173	I	v a u	v a u	c c c	24
+1199	Tahitian_173	I	a u	- a u	c c	2394
+1622	Rapanui_264	I	a u	- a u	c c	24
+1877	Mangareva_239	I	a u	- a u	c c	24
+3103	Sikaiana_243	I	a u	- a u	c c	24
+3324	NorthMarquesan_38	I	ʔ u	ʔ u	c c	29
+3325	NorthMarquesan_38	I	a u	- a u	c c	24
+4421	Austral_1213	I	v a u	v a u	c c c	24
+4609	Tuamotuan_246	I	k u	k u	c c	33
+4610	Tuamotuan_246	I	a u	- a u	c c	24
+5131	Austral_128	I	a u	- a u	c c	24
+5132	Austral_128	I	v a u	v a u	c c c	87
+5641	Hawaiian_52	I	a u	- a u	c c	24
+#
+724	Maori_85	Nine	i w a	- i w a	c c c	36
+1168	Tahitian_173	Nine	i v a	- i v a	c c c	36
+1594	Rapanui_264	Nine	i v a	- i v a	c c c	36
+1852	Mangareva_239	Nine	i v a	- i v a	c c c	36
+3075	Sikaiana_243	Nine	s i v o	s i v o	c c c c	36
+3296	NorthMarquesan_38	Nine	i v a	- i v a	c c c	36
+4394	Austral_1213	Nine	i v a	- i v a	c c c	36
+4591	Tuamotuan_246	Nine	i v a	- i v a	c c c	36
+5100	Austral_128	Nine	i v a	- i v a	c c c	36
+5613	Hawaiian_52	Nine	i w a	- i w a	c c c	36
+#
+732	Maori_85	One	t a h i	t a h i	c c c c	38
+1177	Tahitian_173	One	h o ʔ e	h o ʔ e	c c c c	37
+1178	Tahitian_173	One	t a h i	t a h i	c c c c	38
+1602	Rapanui_264	One	t a h i	t a h i	c c c c	38
+1860	Mangareva_239	One	t a ʔ i	t a ʔ i	c c c c	38
+3083	Sikaiana_243	One	t a s i	t a s i	c c c c	38
+3304	NorthMarquesan_38	One	t a h i	t a h i	c c c c	38
+4402	Austral_1213	One	h o ʔ e	h o ʔ e	c c c c	37
+4599	Tuamotuan_246	One	t a h i	t a h i	c c c c	38
+5109	Austral_128	One	t a ʔ i	t a ʔ i	c c c c	38
+5621	Hawaiian_52	One	ʔ e + k a h i	ʔ e - - + k a h i	c c + c c c c	37 40
+#
+719	Maori_85	One Hundred	r a u	r a u	c c c	41
+1163	Tahitian_173	One Hundred	h aː n e r e	h aː n e r e	c c c c c c	42
+1164	Tahitian_173	One Hundred	r a u	r a u	c c c	41
+1591	Rapanui_264	One Hundred	r a u	r a u	c c c	41
+1848	Mangareva_239	One Hundred	r a u	r a u	c c c	41
+3073	Sikaiana_243	One Hundred	l a u	l a u	c c c	41
+3292	NorthMarquesan_38	One Hundred	ʔ a u	ʔ a u	c c c	41
+4390	Austral_1213	One Hundred	ɢ a u	ɢ a u	c c c	41
+4589	Tuamotuan_246	One Hundred	r a u	r a u	c c c	41
+5096	Austral_128	One Hundred	ʔ aː n e r e	ʔ aː n e r e	c c c c c c	42
+5608	Hawaiian_52	One Hundred	h a n e l e	h a n e l e	c c c c c c	42
+#
+718	Maori_85	One Thousand	m a n o	m a n o	c c c c	43
+1161	Tahitian_173	One Thousand	t a u a t i n i	t a u a t i n i	c c c c c c c c	44
+1162	Tahitian_173	One Thousand	m a n o	m a n o	c c c c	43
+1589	Rapanui_264	One Thousand	p i e r e	p i e r e	c c c c c	48
+1590	Rapanui_264	One Thousand	m a n o	m a n o	c c c c	43
+1847	Mangareva_239	One Thousand	m a n o	m a n o	c c c c	43
+3072	Sikaiana_243	One Thousand	m a n o	m a n o	c c c c	43
+4388	Austral_1213	One Thousand	m a n o	m a n o	c c c c	43
+4389	Austral_1213	One Thousand	t a u a t i n i	t a u a t i n i	c c c c c c c c	44
+4588	Tuamotuan_246	One Thousand	m a n o	m a n o	c c c c	43
+5095	Austral_128	One Thousand	t a u a t i n i	t a u a t i n i	c c c c c c c c	44
+5607	Hawaiian_52	One Thousand	k a u k a n i	k a u k a n i	c c c c c c c	45
+#
+726	Maori_85	Seven	f i t u	f i t u	c c c c	49
+1170	Tahitian_173	Seven	h i t u	h i t u	c c c c	49
+1596	Rapanui_264	Seven	h i t u	h i t u	c c c c	49
+1854	Mangareva_239	Seven	ʔ i t u	ʔ i t u	c c c c	49
+3077	Sikaiana_243	Seven	h i t u	h i t u	c c c c	49
+3298	NorthMarquesan_38	Seven	f i t u	f i t u	c c c c	49
+4396	Austral_1213	Seven	h i t u	h i t u	c c c c	49
+4593	Tuamotuan_246	Seven	h i t u	h i t u	c c c c	49
+5102	Austral_128	Seven	ʔ i t u	ʔ i t u	c c c c	49
+5615	Hawaiian_52	Seven	h i k u	h i k u	c c c c	49
+#
+727	Maori_85	Six	o n o	o n o	c c c	54
+1171	Tahitian_173	Six	o n o	o n o	c c c	54
+1597	Rapanui_264	Six	o n o	o n o	c c c	54
+1855	Mangareva_239	Six	o n o	o n o	c c c	54
+3078	Sikaiana_243	Six	o n o	o n o	c c c	54
+3299	NorthMarquesan_38	Six	o n o	o n o	c c c	54
+4397	Austral_1213	Six	o n o	o n o	c c c	54
+4594	Tuamotuan_246	Six	f e n e	f e n e	c c c c	60
+5103	Austral_128	Six	o n o	o n o	c c c	54
+5616	Hawaiian_52	Six	ʔ e + o n o	ʔ e + o n o	c c + c c c	52 53
+#
+722	Maori_85	Ten	t e k a u	t e k a u	c c c c c	68
+723	Maori_85	Ten	h a ŋ a + h u r u	h a ŋ a + h u r u	c c c c + c c c c	75 4
+1167	Tahitian_173	Ten	ʔ a + h u r u	ʔ a + h u r u	c c + c c c c	3 4
+1592	Rapanui_264	Ten	k a u a t u	k a u a t u	c c c c c c	71
+1593	Rapanui_264	Ten	a ŋ a + h u r u	- a ŋ a + h u r u	c c c + c c c c	75 4
+1851	Mangareva_239	Ten	r o ŋ o + ʔ u r u	r o ŋ o + ʔ u r u	c c c c + c c c c	66 4
+3074	Sikaiana_243	Ten	s e h u i	s e h u i	c c c c c	72
+3294	NorthMarquesan_38	Ten	ʔ o k o + h u ʔ u	ʔ o k o + h u ʔ u	c c c c + c c c c	66 4
+3295	NorthMarquesan_38	Ten	ʔ o n o + h u ʔ u	ʔ o n o + h u ʔ u	c c c c + c c c c	2396 4
+4393	Austral_1213	Ten	ʔ a + h u ɢ u	ʔ a + h u ɢ u	c c + c c c c	3 4
+4590	Tuamotuan_246	Ten	ŋ a + h u r u	- - ŋ a + h u r u	c c + c c c c	75 4
+5099	Austral_128	Ten	ʔ a + ʔ u r u	ʔ a + ʔ u r u	c c + c c c c	3 4
+5611	Hawaiian_52	Ten	ʔ u m i	ʔ u m i	c c c c	65
+5612	Hawaiian_52	Ten	a n a + h u l u	- a n a + h u l u	c c c + c c c c	75 4
+#
+730	Maori_85	Three	t o r u	t o r u	c c c c	76
+1175	Tahitian_173	Three	t o r u	t o r u	c c c c	76
+1600	Rapanui_264	Three	t o r u	t o r u	c c c c	76
+1858	Mangareva_239	Three	t o r u	t o r u	c c c c	76
+3081	Sikaiana_243	Three	t o l u	t o l u	c c c c	76
+3302	NorthMarquesan_38	Three	t o ʔ u	t o ʔ u	c c c c	76
+4400	Austral_1213	Three	t o ɢ u	t o ɢ u	c c c c	76
+4597	Tuamotuan_246	Three	t o r u	t o r u	c c c c	76
+5106	Austral_128	Three	t o r u	t o r u	c c c c	76
+5619	Hawaiian_52	Three	k o l u	k o l u	c c c c	76
+#
+721	Maori_85	Twenty	r u a + t e k a u	r u a + t e k a u	c c c + c c c c c	84 85
+1165	Tahitian_173	Twenty	p i t i + ʔ a h u r u	p i t i + ʔ a h u r u	c c c c + c c c c c c	77 78
+1166	Tahitian_173	Twenty	t a ʔ a u	t a ʔ a u	c c c c c	83
+1850	Mangareva_239	Twenty	t a k a u	t a k a u	c c c c c	83
+3293	NorthMarquesan_38	Twenty	t e k a u	t e k a u	c c c c c	83
+4392	Austral_1213	Twenty	p i t i + ʔ a h u ɢ u	p i t i + ʔ a h u ɢ u	c c c c + c c c c c c	77 78
+5098	Austral_128	Twenty	p i t i + ʔ a ʔ u r u	p i t i + ʔ a ʔ u r u	c c c c + c c c c c c	77 78
+5610	Hawaiian_52	Twenty	i w a k aː + l u a	i w a k aː + l u a	c c c c c + c c c	81 82
+#
+731	Maori_85	Two	r u a	r u a	c c c	87
+1176	Tahitian_173	Two	p i t i	p i t i	c c c c	77
+1601	Rapanui_264	Two	r u a	r u a	c c c	87
+1859	Mangareva_239	Two	r u a	r u a	c c c	87
+3082	Sikaiana_243	Two	l u a	l u a	c c c	87
+3303	NorthMarquesan_38	Two	ʔ u a	ʔ u a	c c c	87
+4401	Austral_1213	Two	p i t i	p i t i	c c c c	77
+4598	Tuamotuan_246	Two	r u a	r u a	c c c	87
+5107	Austral_128	Two	r u a	r u a	c c c	87
+5108	Austral_128	Two	p i t i	p i t i	c c c c	77
+5620	Hawaiian_52	Two	l u a	l u a	c c c	87
+#
+761	Maori_85	above	i + r u ŋ a	i + r u ŋ a	c + c c c c	90 91
+1206	Tahitian_173	above	n i ʔ a	n i ʔ a	c c c c	89
+1630	Rapanui_264	above	r u g a	r u g a	c c c c	88
+1883	Mangareva_239	above	r u ŋ a	r u ŋ a	c c c c	88
+3332	NorthMarquesan_38	above	ʔ u n a	ʔ u n a	c c c c	88
+4424	Austral_1213	above	ɢ u ʔ a	ɢ u ʔ a	c c c c	88
+4617	Tuamotuan_246	above	r u ŋ a	r u ŋ a	c c c c	88
+5139	Austral_128	above	n u ʔ a	n u ʔ a	c c c c	89
+5650	Hawaiian_52	above	i + l u n a	i + l u n a	c + c c c c	90 91
+#
+739	Maori_85	all	k a + t o a	k a + t o - a	c c + c c c	96 99
+1184	Tahitian_173	all	a + t o ʔ a	- a + t o ʔ a	c + c c c c	96 99
+1612	Rapanui_264	all	t a h i	t a h i	c c c c	104
+1865	Mangareva_239	all	k o u + r o a	k o u + r o - a	c c c + c c c	98 99
+3090	Sikaiana_243	all	k a + t o a	k a + t o - a	c c + c c c	96 99
+3311	NorthMarquesan_38	all	t i a + t o h u	t i a + t o h u	c c c + c c c c	102 99
+4407	Austral_1213	all	ʔ a + t o ʔ a	ʔ a + t o ʔ a	c c + c c c c	96 99
+4601	Tuamotuan_246	all	k a + t o ŋ a	k a + t o ŋ a	c c + c c c c	96 99
+5116	Austral_128	all	p aː ʔ aː + t o ʔ a	p aː ʔ aː + t o ʔ a	c c c c + c c c c	94 99
+5627	Hawaiian_52	all	a + p a u	- a + p a u	c + c c c	96 97
+#
+737	Maori_85	and	h o k i	h o k i	c c c c	110
+738	Maori_85	and	m e	m e	c c	105
+1183	Tahitian_173	and	ʔ eː	ʔ eː	c c	105
+1608	Rapanui_264	and	p i r i	p i r i	c c c c	112
+1609	Rapanui_264	and	p e	p e	c c	116
+1610	Rapanui_264	and	m a	m a	c c	107
+1611	Rapanui_264	and	e	- e	c	105
+1864	Mangareva_239	and	e	- e	c	105
+3089	Sikaiana_243	and	m a	m a	c c	107
+3310	NorthMarquesan_38	and	m aː	m aː	c c	107
+4406	Austral_1213	and	e	- e	c	105
+5115	Austral_128	and	ʔ eː	ʔ eː	c c	105
+5626	Hawaiian_52	and	a + m e	- a + m e	c + c c	107 108
+#
+793	Maori_85	ash	p u + ŋ a + r e h u	p u + ŋ a + r e h u	c c + c c + c c c c	124 125 126
+1238	Tahitian_173	ash	r e h u	r e h u	c c c c	117
+1670	Rapanui_264	ash	ʔ e o + ʔ e o	ʔ e o + ʔ e o	c c c + c c c	128 129
+1921	Mangareva_239	ash	ŋ a + r a ʔ u	ŋ a + r a ʔ u	c c + c c c c	122 123
+1922	Mangareva_239	ash	ʔ e ʔ u	ʔ e ʔ u	c c c c	117
+3137	Sikaiana_243	ash	l e h u	l e h u	c c c c	117
+3382	NorthMarquesan_38	ash	ʔ e h u	ʔ e h u	c c c c	117
+4453	Austral_1213	ash	ɢ e h u + a u + a h i	ɢ e h u + a u + a h i	c c c c + c c + c c c	117 118 119
+4652	Tuamotuan_246	ash	r e h u	r e h u	c c c c	117
+5174	Austral_128	ash	r e ʔ u	r e ʔ u	c c c c	117
+5682	Hawaiian_52	ash	l e h u	l e h u	c c c c	117
+#
+763	Maori_85	at	h e i	h e i	c c c	134
+764	Maori_85	at	i	- i	c	130
+1208	Tahitian_173	at	i	- i	c	130
+1633	Rapanui_264	at	i	- i	c	130
+1885	Mangareva_239	at	k i	k i	c c	130
+3110	Sikaiana_243	at	i	- i	c	130
+3335	NorthMarquesan_38	at	i	- i	c	130
+4426	Austral_1213	at	i	- i	c	130
+4619	Tuamotuan_246	at	t e i	t e i	c c c	139
+4620	Tuamotuan_246	at	i	- i	c	130
+5141	Austral_128	at	i	- i	c	130
+5653	Hawaiian_52	at	i	- i	c	130
+5654	Hawaiian_52	at	m a	m a	c c	140
+#
+931	Maori_85	back	t u a + r aː	t u a + r aː	c c c + c c	141 147
+1382	Tahitian_173	back	t u a	t u a	c c c	141
+1829	Rapanui_264	back	t u ʔ a + i v i	t u ʔ a + i v i	c c c c + c c c	149 150
+2095	Mangareva_239	back	t u a	t u a	c c c	141
+3277	Sikaiana_243	back	t u a	t u a	c c c	141
+3569	NorthMarquesan_38	back	t u a	t u a	c c c	141
+4576	Austral_1213	back	t u a	t u a	c c c	141
+4835	Tuamotuan_246	back	p a p a + t u a	p a p a + t u a	c c c c + c c c	153 143
+5340	Austral_128	back	t a u + t u a	t a u + t u a	c c c + c c c	142 143
+5828	Hawaiian_52	back	k u a	k u a	c c c	141
+#
+773	Maori_85	bad, evil	k i n o	k i n o	c c c c	157
+1217	Tahitian_173	bad, evil	ʔ i n o	ʔ i n o	c c c c	157
+1642	Rapanui_264	bad, evil	k i n o	k i n o	c c c c	157
+1896	Mangareva_239	bad, evil	k i n o	k i n o	c c c c	157
+3117	Sikaiana_243	bad, evil	h a k a + k i n o + k i n o	h a k a + k i n o + k i n o	c c c c + c c c c + c c c c	162 163 164
+3347	NorthMarquesan_38	bad, evil	h a u + h a u	h a u + h a u	c c c + c c c	159 160
+3348	NorthMarquesan_38	bad, evil	ʔ i n o	ʔ i n o	c c c c	157
+4434	Austral_1213	bad, evil	ʔ i n o	ʔ i n o	c c c c	157
+4628	Tuamotuan_246	bad, evil	k i r o	k i r o	c c c c	166
+5152	Austral_128	bad, evil	m a n u e n u	m a n u e n u	c c c c c c c	155
+5153	Austral_128	bad, evil	ʔ i n o	ʔ i n o	c c c c	157
+5662	Hawaiian_52	bad, evil	ʔ i n o	ʔ i n o	c c c c	157
+#
+930	Maori_85	belly	p u k u	p u k u	c c c c	171
+1381	Tahitian_173	belly	ʔ oː p uː	ʔ oː p uː	c c c c	170
+1827	Rapanui_264	belly	m a n a v a	m a n a v a	c c c c c c	173
+1828	Rapanui_264	belly	k o p u	k o p u	c c c c	170
+2092	Mangareva_239	belly	k oː p uː	k oː p uː	c c c c	170
+2093	Mangareva_239	belly	m a n a v a	m a n a v a	c c c c c c	173
+2094	Mangareva_239	belly	k o n a	k o n a	c c c c	180
+3276	Sikaiana_243	belly	m a n a v a	m a n a v a	c c c c c c	173
+3568	NorthMarquesan_38	belly	ʔ o p u	ʔ o p u	c c c c	170
+4575	Austral_1213	belly	ʔ oː p uː	ʔ oː p uː	c c c c	170
+4831	Tuamotuan_246	belly	t i a	t i a	c c c	176
+4832	Tuamotuan_246	belly	m a n a v a	m a n a v a	c c c c c c	173
+4833	Tuamotuan_246	belly	k oː p uː	k oː p uː	c c c c	170
+4834	Tuamotuan_246	belly	k o n a	k o n a	c c c c	180
+5339	Austral_128	belly	ʔ oː p uː	ʔ oː p uː	c c c c	170
+5827	Hawaiian_52	belly	ʔ oː p uː	ʔ oː p uː	c c c c	170
+#
+760	Maori_85	below	i + r a r o	i + r a r o	c + c c c c	185 186
+1205	Tahitian_173	below	r a r o	r a r o	c c c c	181
+1629	Rapanui_264	below	r a r o	r a r o	c c c c	181
+1882	Mangareva_239	below	r a r o	r a r o	c c c c	181
+3108	Sikaiana_243	below	l a l o	l a l o	c c c c	181
+3331	NorthMarquesan_38	below	ʔ a ʔ o	ʔ a ʔ o	c c c c	181
+4423	Austral_1213	below	ɢ a ɢ o	ɢ a ɢ o	c c c c	181
+4616	Tuamotuan_246	below	r a r o	r a r o	c c c c	181
+5138	Austral_128	below	r a r o	r a r o	c c c c	181
+5649	Hawaiian_52	below	l a l o	l a l o	c c c c	181
+#
+786	Maori_85	big	n u i	n u i	c c c	189
+1230	Tahitian_173	big	r a h i	r a h i	c c c c	187
+1659	Rapanui_264	big	n u i	n u i	c c c	189
+1660	Rapanui_264	big	r a h i	r a h i	c c c c	187
+1910	Mangareva_239	big	r u ʔ a + r u ʔ a	r u ʔ a + r u ʔ a	c c c c + c c c c	187 191
+1911	Mangareva_239	big	n u i	n u i	c c c	189
+3129	Sikaiana_243	big	n i u	n i u	c c c	195
+3367	NorthMarquesan_38	big	m aː k a	m aː k a	c c c c	193
+3368	NorthMarquesan_38	big	n u i	n u i	c c c	189
+4446	Austral_1213	big	ɢ a h i	ɢ a h i	c c c c	187
+4641	Tuamotuan_246	big	n u i	n u i	c c c	189
+5167	Austral_128	big	r a ʔ i	r a ʔ i	c c c c	187
+5674	Hawaiian_52	big	n u i	n u i	c c c	189
+#
+847	Maori_85	bird	m a n u	m a n u	c c c c	196
+1291	Tahitian_173	bird	m a n u	m a n u	c c c c	196
+1727	Rapanui_264	bird	m a n u	m a n u	c c c c	196
+1987	Mangareva_239	bird	m a n u	m a n u	c c c c	196
+3188	Sikaiana_243	bird	k i v i	k i v i	c c c c	203
+3445	NorthMarquesan_38	bird	m a n u	m a n u	c c c c	196
+4495	Austral_1213	bird	m a n u	m a n u	c c c c	196
+4717	Tuamotuan_246	bird	m a n u	m a n u	c c c c	196
+5231	Austral_128	bird	m a n u	m a n u	c c c c	196
+5736	Hawaiian_52	bird	m a n u	m a n u	c c c c	196
+#
+792	Maori_85	black	m a ŋ u	m a ŋ u	c c c c	212
+1237	Tahitian_173	black	ʔ e r e ʔ e r e	ʔ e r e ʔ e r e	c c c c c c c c	204
+1668	Rapanui_264	black	k e r e + k e r e	- - - - k e r e + k e r e	c c c c + c c c c	204 205
+1919	Mangareva_239	black	k e r e + k e r e	- - - - k e r e + k e r e	c c c c + c c c c	204 205
+1920	Mangareva_239	black	u r i	u r i	c c c	217
+3136	Sikaiana_243	black	u l i	u l i	c c c	217
+3380	NorthMarquesan_38	black	h i v a + h i v a	h i v a + h i v a	c c c c + c c c c	213 214
+4452	Austral_1213	black	ʔ e ɢ e + ʔ e ɢ e	ʔ - - - - e ɢ e + ʔ e ɢ e	c c c c + c c c c	204 205
+4649	Tuamotuan_246	black	h i v a	h i v a	c c c c	213
+4650	Tuamotuan_246	black	u r i	u r i	c c c	217
+4651	Tuamotuan_246	black	k e r e	- - - - k e r e	c c c c	204
+5173	Austral_128	black	ʔ e r e + ʔ e r e	ʔ - - - - e r e + ʔ e r e	c c c c + c c c c	204 205
+5681	Hawaiian_52	black	ʔ e l e + ʔ e l e	ʔ - - - - e l e + ʔ e l e	c c c c + c c c c	204 205
+#
+921	Maori_85	blood	t o t o	t o t o	c c c c	220
+1372	Tahitian_173	blood	t o t o	t o t o	c c c c	220
+1817	Rapanui_264	blood	t o t o	t o t o	c c c c	220
+2082	Mangareva_239	blood	t o t o	t o t o	c c c c	220
+3267	Sikaiana_243	blood	h a e k o	h a e k o	c c c c c	225
+3558	NorthMarquesan_38	blood	t o t o	t o t o	c c c c	220
+4566	Austral_1213	blood	t o t o	t o t o	c c c c	220
+4821	Tuamotuan_246	blood	t o t o	t o t o	c c c c	220
+5326	Austral_128	blood	t o t o	t o t o	c c c c	220
+5818	Hawaiian_52	blood	k o k o	k o k o	c c c c	220
+#
+929	Maori_85	bone	i w i	i w i	c c c	229
+1380	Tahitian_173	bone	i v i	i v i	c c c	229
+1826	Rapanui_264	bone	i v i	i v i	c c c	229
+2091	Mangareva_239	bone	i v i	i v i	c c c	229
+3275	Sikaiana_243	bone	i v i	i v i	c c c	229
+3567	NorthMarquesan_38	bone	i v i	i v i	c c c	229
+4574	Austral_1213	bone	i v iː + v i	i v iː + v i	c c c + c c	229 227
+4830	Tuamotuan_246	bone	i v i	i v i	c c c	229
+5338	Austral_128	bone	i v i	i v i	c c c	229
+5826	Hawaiian_52	bone	i w i	i w i	c c c	229
+#
+830	Maori_85	branch	m a ŋ a	m a ŋ a	c c c c	238
+1273	Tahitian_173	branch	ʔ aː m a ʔ a	ʔ aː m a ʔ a	c c c c c c	230
+1710	Rapanui_264	branch	m a g a	m a g a	c c c c	238
+1967	Mangareva_239	branch	r a + r a	r a + r a	c c + c c	234 234
+3170	Sikaiana_243	branch	l aː	l aː	c c	234
+3424	NorthMarquesan_38	branch	ʔ a + ʔ a	ʔ a + ʔ a	c c + c c	234 234
+4481	Austral_1213	branch	ʔ aː m a m a + ɢ aː + ʔ a u	ʔ aː m a m a + ɢ aː + ʔ a u	c c c c c c + c c + c c c	230 234 232
+4700	Tuamotuan_246	branch	r aː + k a u	r aː + k a u	c c + c c c	234 245
+5212	Austral_128	branch	ʔ aː m a ʔ a	ʔ aː m a ʔ a	c c c c c c	230
+5720	Hawaiian_52	branch	l aː + l aː	l aː + l aː	c c + c c	234 234
+#
+926	Maori_85	breast	uː	- uː	c	250
+1377	Tahitian_173	breast	t iː t iː	t iː t iː	c c c c	257
+1823	Rapanui_264	breast	ʔ uː	ʔ uː	c c	250
+2087	Mangareva_239	breast	k u p e r u	k u p e r u	c c c c c c	251
+3272	Sikaiana_243	breast	uː	- uː	c	250
+3563	NorthMarquesan_38	breast	k i ʔ i + n e n e	k i ʔ i + n e n e	c c c c + c c c c	253 254
+3564	NorthMarquesan_38	breast	u	- u	c	250
+4571	Austral_1213	breast	ʔ o + u m a	ʔ o + u m a	c c + c c c	246 247
+4827	Tuamotuan_246	breast	k oː + u m a	k oː + u m a	c c + c c c	246 247
+5333	Austral_128	breast	ʔ oː + u m a	ʔ oː + u m a	c c + c c c	246 247
+5334	Austral_128	breast	t iː t iː	t iː t iː	c c c c	257
+5823	Hawaiian_52	breast	uː	- uː	c	250
+#
+888	Maori_85	child	t a m a + i t i	t a m a + i t i	c c c c + c c c	258 265
+1336	Tahitian_173	child	t a m a + r i ʔ i	t a m a + r i ʔ i	c c c c + c c c c	258 259
+1780	Rapanui_264	child	p o k i	p o k i	c c c c	267
+2042	Mangareva_239	child	t o r o + m i k i	t o r o + m i k i	c c c c + c c c c	262 259
+3231	Sikaiana_243	child	t a m a + l i k i	t a m a + l i k i	c c c c + c c c c	258 259
+3513	NorthMarquesan_38	child	t a m a	t a m a	c c c c	258
+4533	Austral_1213	child	t a m a + ɢ i ʔ i	t a m a + ɢ i ʔ i	c c c c + c c c c	258 259
+4776	Tuamotuan_246	child	t a m aː + r i k i	t a m aː + r i k i	c c c c + c c c c	258 259
+4777	Tuamotuan_246	child	t a m a	t a m a	c c c c	2397
+5285	Austral_128	child	m a ʔ u r u	m a ʔ u r u	c c c c c c	260
+5286	Austral_128	child	t a m a + r i ʔ i	t a m a + r i ʔ i	c c c c + c c c c	258 259
+5781	Hawaiian_52	child	k e i k i	k e i k i	c c c c c	261
+#
+809	Maori_85	cloud	k a p u a	k a p u a	c c c c c	272
+1254	Tahitian_173	cloud	a t a	a t a	c c c	268
+1690	Rapanui_264	cloud	r a g i	r a g i	c c c c	274
+1691	Rapanui_264	cloud	k o h u	k o h u	c c c c	279
+1945	Mangareva_239	cloud	a o	a o	c c	270
+3153	Sikaiana_243	cloud	l e h u + n a	l e h u + n a	c c c c + c c	275 276
+3402	NorthMarquesan_38	cloud	a o	a o	c c	270
+4467	Austral_1213	cloud	a t a	a t a	c c c	268
+4676	Tuamotuan_246	cloud	t i t i	t i t i	c c c c	278
+4677	Tuamotuan_246	cloud	a o	a o	c c	270
+5192	Austral_128	cloud	a t a	a t a	c c c	268
+5700	Hawaiian_52	cloud	a o	a o	c c	270
+#
+800	Maori_85	cold	m a k a + r i r i	m a k a + r i r i	c c c c + c c c c	285 286
+1245	Tahitian_173	cold	t o ʔ e + t o ʔ e	t o ʔ e + t o ʔ e	c c c c + c c c c	282 282
+1678	Rapanui_264	cold	t a + k e o	t a + k e o	c c + c c c	291 292
+1934	Mangareva_239	cold	m a k a + r i r i	m a k a + r i r i	c c c c + c c c c	285 286
+1935	Mangareva_239	cold	a n u	a n u	c c c	284
+3145	Sikaiana_243	cold	m a k a + l i l i	m a k a + l i l i	c c c c + c c c c	285 286
+3392	NorthMarquesan_38	cold	k a m a + r i r i	k a m a + r i r i	c c c c + c c c c	289 286
+3393	NorthMarquesan_38	cold	a n u	a n u	c c c	284
+3394	NorthMarquesan_38	cold	m a k a + r e r e	m a k a + r e r e	c c c c + c c c c	285 2398
+4460	Austral_1213	cold	h a u + m aː ɢ uː	h a u + m aː ɢ uː	c c c + c c c c	280 281
+4660	Tuamotuan_246	cold	t o k e + t o k e	t o k e + t o k e	c c c c + c c c c	282 282
+4661	Tuamotuan_246	cold	a n u	a n u	c c c	284
+4662	Tuamotuan_246	cold	m a k a + r i r i	m a k a + r i r i	c c c c + c c c c	285 286
+5182	Austral_128	cold	t o ʔ e + t o ʔ e	t o ʔ e + t o ʔ e	c c c c + c c c c	282 282
+5690	Hawaiian_52	cold	a n u	a n u	c c c	284
+#
+772	Maori_85	correct, true	t i k a	t i k a	c c c c	298
+1215	Tahitian_173	correct, true	ʔ aː f a r o	ʔ aː f a r o	c c c c c c	304
+1216	Tahitian_173	correct, true	t a n o	t a n o	c c c c	303
+1641	Rapanui_264	correct, true	t i + t i k a	t i - - + t i k a	c c + c c c c	298 300
+1894	Mangareva_239	correct, true	m a u	m a u	c c c	293
+1895	Mangareva_239	correct, true	t i k a	t i k a	c c c c	298
+3116	Sikaiana_243	correct, true	t o n u	t o n u	c c c c	303
+3345	NorthMarquesan_38	correct, true	t o i + t o i	t o i + t o - i	c c c + c c c	299 300
+3346	NorthMarquesan_38	correct, true	m e a + h e i	m e a + h e i	c c c + c c c	293 309
+4433	Austral_1213	correct, true	m a u	m a u	c c c	293
+4627	Tuamotuan_246	correct, true	t i k a	t i k a	c c c c	298
+5149	Austral_128	correct, true	p a r a u + m a u	p a r a u + m a u	c c c c c + c c c	294 295
+5150	Austral_128	correct, true	ʔ aː f a r o	ʔ aː f a r o	c c c c c c	304
+5151	Austral_128	correct, true	t a n o	t a n o	c c c c	303
+5661	Hawaiian_52	correct, true	ʔ o i aː ʔ i ʔ o	ʔ o i aː ʔ i ʔ o	c c c c c c c c	296
+#
+769	Maori_85	day	r aː	r aː	c c	312
+770	Maori_85	day	a o	a o	c c	313
+1213	Tahitian_173	day	a o	a o	c c	313
+1639	Rapanui_264	day	r aː	r aː	c c	312
+1891	Mangareva_239	day	a o	a o	c c	313
+1892	Mangareva_239	day	a o	a o	c c	2399
+3114	Sikaiana_243	day	a s o	a s o	c c c	318
+3342	NorthMarquesan_38	day	o a + t e a	o a + t e a	c c + c c c	313 316
+3343	NorthMarquesan_38	day	a o	a o	c c	2400
+4431	Austral_1213	day	m a h a n a	m a h a n a	c c c c c c	310
+4624	Tuamotuan_246	day	a o	a o	c c	313
+5146	Austral_128	day	m a ʔ a n a	m a ʔ a n a	c c c c c c	310
+5147	Austral_128	day	a o	a o	c c	313
+5659	Hawaiian_52	day	l aː	l aː	c c	312
+#
+934	Maori_85	dirty	p a r u	p a r u	c c c c	323
+1386	Tahitian_173	dirty	r e p o	r e p o	c c c c	319
+1835	Rapanui_264	dirty	o n e	o n e	c c c	325
+1836	Rapanui_264	dirty	h a v a	h a v a	c c c c	324
+2099	Mangareva_239	dirty	p a n e u	p a n e u	c c c c c	322
+3280	Sikaiana_243	dirty	s a v a	s a v a	c c c c	324
+3281	Sikaiana_243	dirty	p e l a	p e l a	c c c c	323
+3572	NorthMarquesan_38	dirty	h a v a	h a v a	c c c c	324
+3573	NorthMarquesan_38	dirty	p a ʔ a + p a ʔ a	p a ʔ a + p a ʔ a	c c c c + c c c c	323 330
+4578	Austral_1213	dirty	ɢ e p o	ɢ e p o	c c c c	319
+4838	Tuamotuan_246	dirty	h a v a	h a v a	c c c c	324
+5343	Austral_128	dirty	r e p o	r e p o	c c c c	319
+5832	Hawaiian_52	dirty	l e p o	l e p o	c c c c	319
+#
+848	Maori_85	dog	k u r iː	k u r iː -	c c c c	331
+1292	Tahitian_173	dog	ʔ u r iː	ʔ u r iː -	c c c c	331
+1728	Rapanui_264	dog	p a i h e g a	p a i h e g a	c c c c c c c	337
+1729	Rapanui_264	dog	k u r i	k u r i -	c c c c	331
+1988	Mangareva_239	dog	k u r iː	k u r iː -	c c c c	331
+3189	Sikaiana_243	dog	k u l iː	k u l iː -	c c c c	331
+3446	NorthMarquesan_38	dog	n u h e	n u h e	c c c c	336
+3447	NorthMarquesan_38	dog	k u ʔ i	k u ʔ i -	c c c c	331
+4496	Austral_1213	dog	ʔ u ɢ i	ʔ u ɢ i -	c c c c	331
+4718	Tuamotuan_246	dog	k u r i o	k u r i o	c c c c c	331
+5232	Austral_128	dog	ʔ uː r iː	ʔ uː r iː -	c c c c	331
+5737	Hawaiian_52	dog	ʔ iː l i o	ʔ iː l i o	c c c c c	331
+#
+799	Maori_85	dry	m a r o + k e	m a r o + k e	c c c c + c c	338 341
+1244	Tahitian_173	dry	m a r oː	m a r oː	c c c c	338
+1677	Rapanui_264	dry	p a k a + p a k a	p a k a + p a k a	c c c c + c c c c	346 347
+1933	Mangareva_239	dry	m a r o	m a r o	c c c c	338
+3144	Sikaiana_243	dry	m a s a	m a s a	c c c c	348
+3390	NorthMarquesan_38	dry	m o ʔ o	m o ʔ o	c c c c	338
+3391	NorthMarquesan_38	dry	p a k a + k a	p a k a + k a	c c c c + c c	346 341
+4459	Austral_1213	dry	m a ɢ o	m a ɢ o	c c c c	338
+4659	Tuamotuan_246	dry	m a r oː	m a r oː	c c c c	338
+5181	Austral_128	dry	m a r oː	m a r oː	c c c c	338
+5689	Hawaiian_52	dry	m a l o + ʔ o	m a l o + ʔ o	c c c c + c c	338 341
+#
+862	Maori_85	dull, blunt	p uː + h u k i	p uː - - + h u k i	c c + c c c c	355 356
+1306	Tahitian_173	dull, blunt	m a n i a	m a n i a	c c c c c	350
+1747	Rapanui_264	dull, blunt	p u n i	p u n i	c c c c	355
+2006	Mangareva_239	dull, blunt	m o i + m o i	m o i + m o i	c c c + c c c	351 351
+3205	Sikaiana_243	dull, blunt	m a t a + p uː	m a t a + p uː	c c c c + c c	360 361
+3472	NorthMarquesan_38	dull, blunt	p u + r i k i	p u - - + r i k i	c c + c c c c	355 358
+3473	NorthMarquesan_38	dull, blunt	t u m u ʔ e	t u m u ʔ e	c c c c c c	366
+4509	Austral_1213	dull, blunt	p a p a	p a p a	c c c c	349
+4737	Tuamotuan_246	dull, blunt	t iː	t iː	c c	363
+5251	Austral_128	dull, blunt	m a n i a	m a n i a	c c c c c	350
+5252	Austral_128	dull, blunt	t uː + m uː	t uː + m uː -	c c + c c	363 351
+5753	Hawaiian_52	dull, blunt	m uː + m uː	m uː - + m uː -	c c + c c	351 351
+#
+933	Maori_85	dust	p u + e h u	p u - - + e h u	c c + c c c	371 372
+1384	Tahitian_173	dust	r e p o + p u + e h u	r e p o + p u + e h u	c c c c + c c + c c c	373 378 379
+1385	Tahitian_173	dust	h u ʔ a h u aː	h u ʔ a h u aː	c c c c c c c	367
+1831	Rapanui_264	dust	p u g a + e h u	p u g a + e h u	c c c c + c c c	371 372
+1832	Rapanui_264	dust	g a + r a h u	- - g a + r a h u	c c + c c c c	385 386
+1833	Rapanui_264	dust	h u g a	h u g a	c c c c	2401
+2097	Mangareva_239	dust	e ʔ u	- e ʔ u	c c c	369
+2098	Mangareva_239	dust	p u + ʔ e u	p u - - + ʔ e - u	c c + c c c	371 368
+3279	Sikaiana_243	dust	l e h u	l e h u	c c c c	369
+3571	NorthMarquesan_38	dust	ʔ e p o	ʔ e p o	c c c c	373
+4837	Tuamotuan_246	dust	p uː + e h u	p uː - - + e h u	c c + c c c	371 372
+5342	Austral_128	dust	ʔ u ʔ a + ʔ u ʔ a	ʔ u ʔ a - - - + ʔ u ʔ a	c c c c + c c c c	367 368
+5830	Hawaiian_52	dust	ʔ e ʔ a	ʔ e ʔ a	c c c c	369
+5831	Hawaiian_52	dust	ʔ e h u	ʔ e h u	c c c c	2402
+#
+901	Maori_85	ear	t a r i ŋ a	t a r i ŋ a	c c c c c c	387
+1350	Tahitian_173	ear	t a r i ʔ a	t a r i ʔ a	c c c c c c	387
+1795	Rapanui_264	ear	t a r i g a	t a r i g a	c c c c c c	387
+2058	Mangareva_239	ear	t a r i ŋ a	t a r i ŋ a	c c c c c c	387
+3245	Sikaiana_243	ear	t a l i n a	t a l i n a	c c c c c c	387
+3532	NorthMarquesan_38	ear	p u a	p u a	c c c	392
+4547	Austral_1213	ear	t a ɢ i ʔ a	t a ɢ i ʔ a	c c c c c c	387
+4792	Tuamotuan_246	ear	t a r i ŋ a	t a r i ŋ a	c c c c c c	387
+5303	Austral_128	ear	t a r i ʔ a	t a r i ʔ a	c c c c c c	387
+5795	Hawaiian_52	ear	p e p e i a o	p e p e i a o	c c c c c c c	389
+#
+822	Maori_85	earth/soil	k e r e	k e r e	c c c c	397
+823	Maori_85	earth/soil	r e p o	r e p o	c c c c	319
+824	Maori_85	earth/soil	o n e + o n e	- o n e - + o n e	c c c + c c c	399 407
+1267	Tahitian_173	earth/soil	r e p o	r e p o	c c c c	319
+1703	Rapanui_264	earth/soil	o n e	- o n e -	c c c	399
+1704	Rapanui_264	earth/soil	r e p o	r e p o	c c c c	319
+1960	Mangareva_239	earth/soil	r e p o	r e p o	c c c c	319
+3164	Sikaiana_243	earth/soil	k e l e	k e l e	c c c c	397
+3418	NorthMarquesan_38	earth/soil	ʔ e p o	ʔ e p o	c c c c	319
+4477	Austral_1213	earth/soil	ɢ e p o	ɢ e p o	c c c c	319
+4694	Tuamotuan_246	earth/soil	r e p o	r e p o	c c c c	319
+5206	Austral_128	earth/soil	r e p o	r e p o	c c c c	319
+5713	Hawaiian_52	earth/soil	l e p o	l e p o	c c c c	319
+5714	Hawaiian_52	earth/soil	h o n u a	h o n u a	c c c c c	399
+#
+845	Maori_85	egg	h u a + m a n u	h u a + m a n u	c c c + c c c c	409 412
+846	Maori_85	egg	h eː k i	h eː k i	c c c c	421
+1290	Tahitian_173	egg	h u e r o	h u e r o	c c c c c	408
+1725	Rapanui_264	egg	m aː m a r i	m aː m a r i	c c c c c c	411
+1726	Rapanui_264	egg	t o u a	t o u a	c c c c	420
+1986	Mangareva_239	egg	m aː m a r i + m o a	m aː m a r i + m o - a	c c c c c c + c c c	411 412
+3187	Sikaiana_243	egg	t a m a + m o a	t a m a - - + m o - a	c c c c + c c c	411 412
+3444	NorthMarquesan_38	egg	m a m a ʔ i	m a m a ʔ i	c c c c c c	411
+4494	Austral_1213	egg	h u e ɢ o	h u e ɢ o	c c c c c	408
+4716	Tuamotuan_246	egg	t oː u o	t oː u o	c c c c	420
+5230	Austral_128	egg	ʔ u a	ʔ u a	c c c	409
+5735	Hawaiian_52	egg	h u a	h u a	c c c	409
+#
+899	Maori_85	eye	m a t a	m a t a	c c c c	422
+1348	Tahitian_173	eye	m a t a	m a t a	c c c c	422
+1793	Rapanui_264	eye	m a t a	m a t a	c c c c	422
+2056	Mangareva_239	eye	m a t a	m a t a	c c c c	422
+3243	Sikaiana_243	eye	k a l e	k a l e	c c c c	429
+3529	NorthMarquesan_38	eye	m a t a	m a t a	c c c c	422
+3530	NorthMarquesan_38	eye	k o r o h i	k o r o h i	c c c c c c	432
+4545	Austral_1213	eye	m a t a	m a t a	c c c c	422
+4790	Tuamotuan_246	eye	m a t a	m a t a	c c c c	422
+5301	Austral_128	eye	m a t a	m a t a	c c c c	422
+5793	Hawaiian_52	eye	m a k a	m a k a	c c c c	422
+#
+755	Maori_85	far	t a + f i t i	t a - + f i t i	c c + c c c c	438 439
+1201	Tahitian_173	far	aː t e a	aː t e a	c c c c	433
+1624	Rapanui_264	far	k u m i	k u m i	c c c c	442
+1879	Mangareva_239	far	m a + m a ʔ o	m - a - + m a ʔ o	c c + c c c c	434 435
+3105	Sikaiana_243	far	m m a o	m m a o	c c c c	434
+3327	NorthMarquesan_38	far	m e + m a ʔ o	m - e - + m a ʔ o	c c + c c c c	434 435
+4612	Tuamotuan_246	far	t a u + m a + m a o	t a u + m a - - + m a o	c c c + c c + c c c	438 435 447
+5134	Austral_128	far	aː t e a	aː t e a	c c c c	433
+5643	Hawaiian_52	far	m a + m a o	m - a - + m a - o	c c + c c c	434 435
+#
+839	Maori_85	fat/grease	ŋ a k o	ŋ a k o	c c c c	454
+1284	Tahitian_173	fat/grease	m i ʔ i	m i ʔ i	c c c c	449
+1719	Rapanui_264	fat/grease	n a k o	n a k o	c c c c	454
+1978	Mangareva_239	fat/grease	m a t a + t e r e	m a t a + t e r e	c c c c + c c c c	452 453
+1979	Mangareva_239	fat/grease	h i n u	h i n u	c c c c	457
+3181	Sikaiana_243	fat/grease	s i n u	s i n u	c c c c	457
+3436	NorthMarquesan_38	fat/grease	k e r e h i	k e r e h i	c c c c c c	455
+3437	NorthMarquesan_38	fat/grease	h i n u + ʔ a m a	h i n u + ʔ a m a	c c c c + c c c c	457 462
+4488	Austral_1213	fat/grease	p o ɢ i a	p o ɢ i a	c c c c c	448
+4710	Tuamotuan_246	fat/grease	h i n u	h i n u	c c c c	457
+5222	Austral_128	fat/grease	m i ʔ i	m i ʔ i	c c c c	449
+5729	Hawaiian_52	fat/grease	m o + m o n a	m o + m o n a	c c + c c c c	450 451
+#
+884	Maori_85	father	m a t u a	m a t u a	c c c c c	463
+1330	Tahitian_173	father	m e t u a + t aː n e	m e t u a + t aː n e	c c c c c + c c c c	463 464
+1331	Tahitian_173	father	p aː p aː	p aː p aː	c c c c	480
+1775	Rapanui_264	father	k o r o	k o r o	c c c c	473
+1776	Rapanui_264	father	m a t u ʔ a	m a t u ʔ a	c c c c c c	481
+2036	Mangareva_239	father	t i n a + n a	t i n a + n a	c c c c + c c	469 470
+3229	Sikaiana_243	father	t a m a + n a	t a m a + n a	c c c c + c c	474 470
+3509	NorthMarquesan_38	father	m o t u a	m o t u a	c c c c c	463
+4529	Austral_1213	father	m e t u a + t aː n e	m e t u a + t aː n e	c c c c c + c c c c	463 464
+4772	Tuamotuan_246	father	m e t u a + t aː n e	m e t u a + t aː n e	c c c c c + c c c c	463 464
+5279	Austral_128	father	m e t u a + t aː n e	m e t u a + t aː n e	c c c c c + c c c c	463 464
+5280	Austral_128	father	p aː p aː	p aː p aː	c c c c	480
+5777	Hawaiian_52	father	m a k u a + k aː n e	m a k u a + k aː n e	c c c c c + c c c c	463 464
+#
+844	Maori_85	feather	h u r u + m a n u	h u r u + m a n u	c c c c + c c c c	4 196
+1289	Tahitian_173	feather	h u r u + h u r u	h u r u + h u r u	c c c c + c c c c	4 4
+1724	Rapanui_264	feather	h u r u + h u r u	h u r u + h u r u	c c c c + c c c c	4 4
+1985	Mangareva_239	feather	ʔ u r u	ʔ u r u	c c c c	4
+3186	Sikaiana_243	feather	p a l aː	p a l aː	c c c c	495
+3443	NorthMarquesan_38	feather	h u ʔ u + m a n u	h u ʔ u + m a n u	c c c c + c c c c	4 196
+4493	Austral_1213	feather	h u ɢ u + h u ɢ u + m a n u	h u ɢ u + h u ɢ u + m a n u	c c c c + c c c c + c c c c	4 4 484
+4715	Tuamotuan_246	feather	h u r u	h u r u	c c c c	4
+5229	Austral_128	feather	ʔ u r u + ʔ u r u	ʔ u r u + ʔ u r u	c c c c + c c c c	4 4
+5734	Hawaiian_52	feather	h u l u	h u l u	c c c c	4
+#
+796	Maori_85	fire	a h i	a h i	c c c	500
+1241	Tahitian_173	fire	a u + a h i	a u + a h i	c c + c c c	496 497
+1673	Rapanui_264	fire	a h i	a h i	c c c	500
+1927	Mangareva_239	fire	a ʔ i	a ʔ i	c c c	500
+3141	Sikaiana_243	fire	a h i	a h i	c c c	500
+3386	NorthMarquesan_38	fire	a h i	a h i	c c c	500
+4456	Austral_1213	fire	a u + a h i	a u + a h i	c c + c c c	496 497
+4656	Tuamotuan_246	fire	a h i	a h i	c c c	500
+5177	Austral_128	fire	a u + a ʔ i	a u + a ʔ i	c c + c c c	496 497
+5686	Hawaiian_52	fire	a h i	a h i	c c c	500
+#
+832	Maori_85	fish	i k a	- i k a	c c c	501
+1275	Tahitian_173	fish	i ʔ a	- i ʔ a	c c c	501
+1713	Rapanui_264	fish	ʔ iː k a	ʔ iː k a	c c c c	501
+1970	Mangareva_239	fish	i k a	- i k a	c c c	501
+3173	Sikaiana_243	fish	i k a	- i k a	c c c	501
+3174	Sikaiana_243	fish	m a t u	m a t u	c c c c	511
+3175	Sikaiana_243	fish	a l a + a l a + h u t u	a l a + a l a + h u t u	c c c + c c c + c c c c	512 513 514
+3427	NorthMarquesan_38	fish	i ʔ a	- i ʔ a	c c c	501
+4483	Austral_1213	fish	i ʔ a	- i ʔ a	c c c	501
+4703	Tuamotuan_246	fish	p a r u	p a r u	c c c c	510
+5214	Austral_128	fish	i ʔ a	- i ʔ a	c c c	501
+5722	Hawaiian_52	fish	i ʔ a	- i ʔ a	c c c	501
+#
+827	Maori_85	flower	p u aː + w a i	p u aː + w a i	c c c + c c c	517 520
+1270	Tahitian_173	flower	t i a r e	t i a r e	c c c c c	515
+1707	Rapanui_264	flower	p u a	p u a	c c c	517
+1963	Mangareva_239	flower	t i a r e	t i a r e	c c c c c	515
+1964	Mangareva_239	flower	p u a	p u a	c c c	517
+3167	Sikaiana_243	flower	s eː	s eː	c c	523
+3421	NorthMarquesan_38	flower	p u a	p u a	c c c	517
+4478	Austral_1213	flower	t i a ɢ e	t i a ɢ e	c c c c c	515
+4697	Tuamotuan_246	flower	p u a	p u a	c c c	517
+5209	Austral_128	flower	t i a r e	t i a r e	c c c c c	515
+5717	Hawaiian_52	flower	p u a	p u a	c c c	517
+#
+808	Maori_85	fog	k o h u	k o h u	c c c c	526
+1253	Tahitian_173	fog	r uː p e h u	r uː p e h u	c c c c c c	532
+1688	Rapanui_264	fog	k a p u a	k a p u a	c c c c c	530
+1689	Rapanui_264	fog	k o h u	k o h u	c c c c	526
+1944	Mangareva_239	fog	k o ʔ u	k o ʔ u	c c c c	526
+3152	Sikaiana_243	fog	k o h u	k o h u	c c c c	526
+3401	NorthMarquesan_38	fog	k o h u	k o h u	c c c c	526
+4674	Tuamotuan_246	fog	m aː h u	m aː h u	c c c c	533
+4675	Tuamotuan_246	fog	k o h u	k o h u	c c c c	526
+5191	Austral_128	fog	a ʔ i n a + v a i	a ʔ i n a + v a i	c c c c c + c c c	524 525
+5699	Hawaiian_52	fog	ʔ o h u	ʔ o h u	c c c c	526
+#
+826	Maori_85	fruit	h u a	h u a	c c c	409
+1269	Tahitian_173	fruit	m aː ʔ a	m aː ʔ a	c c c c	534
+1706	Rapanui_264	fruit	k a i	k a i	c c c	539
+1962	Mangareva_239	fruit	ʔ u a	ʔ u a	c c c	409
+3166	Sikaiana_243	fruit	h u a	h u a	c c c	409
+3420	NorthMarquesan_38	fruit	h u a	h u a	c c c	409
+4696	Tuamotuan_246	fruit	h u a	h u a	c c c	409
+5208	Austral_128	fruit	m aː ʔ a	m aː ʔ a	c c c c	534
+5716	Hawaiian_52	fruit	h u a	h u a	c c c	409
+#
+774	Maori_85	good	p a i	p a i	c c c	544
+1218	Tahitian_173	good	m a i t a ʔ i	m a i t a ʔ i	c c c c c c c	540
+1643	Rapanui_264	good	r i v a + r i v a	r i v a + r i v a	c c c c + c c c c	547 548
+1644	Rapanui_264	good	r e k a	r e k a	c c c c	549
+1897	Mangareva_239	good	p o r o t u	p o r o t u	c c c c c c	543
+1898	Mangareva_239	good	m a r i e	m a r i e	c c c c c	552
+3118	Sikaiana_243	good	l e k a	l e k a	c c c c	549
+3349	NorthMarquesan_38	good	k a n a + h a u	k a n a + h a u	c c c c + c c c	545 546
+3350	NorthMarquesan_38	good	m e i t a ʔ i	m e i t a ʔ i	c c c c c c c	540
+3351	NorthMarquesan_38	good	ʔ e k a	ʔ e k a	c c c c	549
+4435	Austral_1213	good	m a i t a ʔ i	m a i t a ʔ i	c c c c c c c	540
+4629	Tuamotuan_246	good	m e i t a k i	m e i t a k i	c c c c c c c	540
+4630	Tuamotuan_246	good	r e k a	r e k a	c c c c	549
+5154	Austral_128	good	m a i t a ʔ i	m a i t a ʔ i	c c c c c c c	540
+5663	Hawaiian_52	good	m a i k a ʔ i	m a i k a ʔ i	c c c c c c c	540
+#
+825	Maori_85	grass	k a r aː i h e	k a r aː i h e	c c c c c c c	556
+1268	Tahitian_173	grass	m a t i e	m a t i e	c c c c c	553
+1705	Rapanui_264	grass	m o u k u	m o u k u	c c c c c	554
+1961	Mangareva_239	grass	m u t i e	m u t i e	c c c c c	553
+3165	Sikaiana_243	grass	v e v e	v e v e	c c c c	559
+3419	NorthMarquesan_38	grass	m u t i e	m u t i e	c c c c c	553
+4695	Tuamotuan_246	grass	m oː u k u	m oː u k u	c c c c c	554
+5207	Austral_128	grass	m a t i e	m a t i e	c c c c c	553
+5715	Hawaiian_52	grass	m a u ʔ u	m a u ʔ u	c c c c c	554
+#
+788	Maori_85	green	k aː k aː + r i k i	k aː k aː + r i k i	c c c c + c c c c	565 566
+1232	Tahitian_173	green	n iː n a m u	n iː n a m u	c c c c c c	570
+1233	Tahitian_173	green	m a t i e	m a t i e	c c c c c	553
+1663	Rapanui_264	green	m a t a	m a t a -	c c c c	553
+1915	Mangareva_239	green	m o t o	m o t o	c c c c	564
+3131	Sikaiana_243	green	m o t o	m o t o	c c c c	564
+3373	NorthMarquesan_38	green	ʔ o u t i t e ʔ e	ʔ o u t i t e ʔ e	c c c c c c c c c	567
+4448	Austral_1213	green	m a t i e	m a t i e	c c c c c	553
+4644	Tuamotuan_246	green	m a t i e	m a t i e	c c c c c	553
+5169	Austral_128	green	m a t i e	m a t i e	c c c c c	553
+5676	Hawaiian_52	green	m a ʔ o + m a ʔ o	m a ʔ o + m a ʔ o	c c c c + c c c c	562 563
+#
+918	Maori_85	hair	m a k a w e	m a k a w e	c c c c c c	580
+1369	Tahitian_173	hair	r o u + r u	r o u + r u	c c c + c c	574 575
+1813	Rapanui_264	hair	o h o	o h o	c c c	583
+1814	Rapanui_264	hair	h u r u + h u r u	h u r u + h u r u	c c c c + c c c c	4 4
+2078	Mangareva_239	hair	r a u + o ʔ o	r a u + o ʔ o	c c c + c c c	574 577
+3264	Sikaiana_243	hair	l a u + l u	l a u + l u	c c c + c c	574 575
+3553	NorthMarquesan_38	hair	ʔ o u + o h o	ʔ o u + o h o	c c c + c c c	574 577
+3554	NorthMarquesan_38	hair	h u ʔ u	h u ʔ u	c c c c	4
+4563	Austral_1213	hair	h u ɢ u + h u ɢ u + p o ʔ o	h u ɢ u + h u ɢ u + p o ʔ o	c c c c + c c c c + c c c c	4 4 573
+4815	Tuamotuan_246	hair	r oː + u r u	r oː - + u r u	c c + c c c	574 589
+4816	Tuamotuan_246	hair	h u r u	h u r u	c c c c	4
+5322	Austral_128	hair	r o u + r u	r o u + r u	c c c + c c	574 575
+5815	Hawaiian_52	hair	l a u + o h o	l a u + o h o	c c c + c c c	574 577
+#
+944	Maori_85	hand	r i ŋ a	r i ŋ a	c c c c	590
+1398	Tahitian_173	hand	r i m a	r i m a	c c c c	590
+1846	Rapanui_264	hand	r i m a	r i m a	c c c c	590
+2108	Mangareva_239	hand	r i m a	r i m a	c c c c	590
+3291	Sikaiana_243	hand	l i m a	l i m a	c c c c	590
+3584	NorthMarquesan_38	hand	ʔ i m a	ʔ i m a	c c c c	590
+4587	Austral_1213	hand	ɢ i m a	ɢ i m a	c c c c	590
+4847	Tuamotuan_246	hand	r i m a	r i m a	c c c c	590
+4848	Tuamotuan_246	hand	k a p u	k a p u	c c c c	600
+5356	Austral_128	hand	r i m a	r i m a	c c c c	590
+5842	Hawaiian_52	hand	l i m a	l i m a	c c c c	590
+#
+751	Maori_85	he/she	i a	i a	c c	605
+1196	Tahitian_173	he/she	ʔ oː + n a	ʔ oː + n a	c c + c c	601 602
+1620	Rapanui_264	he/she	i a	i a	c c	605
+1875	Mangareva_239	he/she	k o + i a	k o + i a	c c + c c	601 604
+3101	Sikaiana_243	he/she	i a	i a	c c	605
+3321	NorthMarquesan_38	he/she	i a	i a	c c	605
+4418	Austral_1213	he/she	ʔ oː + n a	ʔ oː + n a	c c + c c	601 602
+4419	Austral_1213	he/she	ʔ o + i a	ʔ o + i a	c c + c c	2403 604
+4607	Tuamotuan_246	he/she	i a	i a	c c	605
+5128	Austral_128	he/she	ʔ o + i a	ʔ o + i a	c c + c c	601 604
+5129	Austral_128	he/she	ʔ oː + n a	ʔ oː + n a	c c + c c	2404 602
+5639	Hawaiian_52	he/she	i a	i a	c c	605
+#
+920	Maori_85	head	u + p o k o	u + p o k o	c + c c c c	611 607
+1371	Tahitian_173	head	u + p o ʔ o	u + p o ʔ o	c + c c c c	611 607
+1816	Rapanui_264	head	p u o k o	p u o k o	c c c c c	608
+2080	Mangareva_239	head	o ʔ o	- o ʔ o	c c c	609
+2081	Mangareva_239	head	u + p o k o	u + p o k o	c + c c c c	611 607
+3266	Sikaiana_243	head	p o h o	p o h o	c c c c	609
+3556	NorthMarquesan_38	head	u + p o k o	u + p o k o	c + c c c c	611 607
+3557	NorthMarquesan_38	head	u ʔ u	u ʔ u	c c c	625
+4565	Austral_1213	head	u + p o ʔ o	u + p o ʔ o	c + c c c c	611 607
+4819	Tuamotuan_246	head	u + p o k o	u + p o k o	c + c c c c	611 607
+4820	Tuamotuan_246	head	u r u	u r u	c c c	625
+5324	Austral_128	head	p a o	p a o - -	c c c	608
+5325	Austral_128	head	u + p o ʔ o	u + p o ʔ o	c + c c c c	611 607
+5817	Hawaiian_52	head	p o ʔ o	p o ʔ o	c c c c	609
+#
+797	Maori_85	heavy	t a i + m a h a	t a i + m a h a	c c c + c c c c	626 627
+1242	Tahitian_173	heavy	t o i + a h a	t o i + a h a	c c c + c c c	626 640
+1674	Rapanui_264	heavy	p a g a + h a ʔ a	p a g a + h a ʔ a	c c c c + c c c c	636 627
+1928	Mangareva_239	heavy	k i k i + k i k i	k i k i + k i k i	c c c c + c c c c	631 632
+1929	Mangareva_239	heavy	t e i + m a h a	t e i + m a h a	c c c + c c c c	626 627
+3142	Sikaiana_243	heavy	m m a h a	m m a h a	c c c c c	638
+3387	NorthMarquesan_38	heavy	t o k o	t o k o	c c c c	635
+3388	NorthMarquesan_38	heavy	t o n o	t o n o	c c c c	2405
+4457	Austral_1213	heavy	t o i + m a h a	t o i + m a h a	c c c + c c c c	626 627
+4657	Tuamotuan_246	heavy	t u ʔ a + t u ʔ a	t u ʔ a + t u ʔ a	c c c c + c c c c	641 642
+5178	Austral_128	heavy	t i a ʔ a	t i a ʔ a	c c c c c	628
+5687	Hawaiian_52	heavy	k a u + m a h a	k a u + m a h a	c c c + c c c c	629 627
+#
+883	Maori_85	house	f a r e	f a r e	c c c c	643
+1329	Tahitian_173	house	f a r e	f a r e	c c c c	643
+1774	Rapanui_264	house	h a r e	h a r e	c c c c	643
+2035	Mangareva_239	house	ʔ a r e	ʔ a r e	c c c c	643
+3228	Sikaiana_243	house	h a l e	h a l e	c c c c	643
+3507	NorthMarquesan_38	house	f a ʔ e	f a ʔ e	c c c c	643
+3508	NorthMarquesan_38	house	a i k a	a i k a	c c c c	653
+4528	Austral_1213	house	h a ɢ e	h a ɢ e	c c c c	643
+4771	Tuamotuan_246	house	h a r e	h a r e	c c c c	643
+5278	Austral_128	house	ʔ a r e	ʔ a r e	c c c c	643
+5776	Hawaiian_52	house	h a l e	h a l e	c c c c	643
+#
+735	Maori_85	how?	p eː + h e a	p eː + h e a	c c + c c c	658 655
+1181	Tahitian_173	how?	n aː + f e a	n aː + f e a	c c + c c c	654 655
+1606	Rapanui_264	how?	p e + h ʔ e	p e + h ʔ e	c c + c c c	658 667
+1863	Mangareva_239	how?	p e + ʔ e a	p e + ʔ e a	c c + c c c	658 655
+3086	Sikaiana_243	how?	p e + h e a	p e + h e a	c c + c c c	658 655
+3308	NorthMarquesan_38	how?	p eː + h e a	p eː + h e a	c c + c c c	658 655
+4405	Austral_1213	how?	n aː + h e a	n aː + h e a	c c + c c c	654 655
+5112	Austral_128	how?	n aː + ʔ e a	n aː + ʔ e a	c c + c c c	654 655
+5624	Hawaiian_52	how?	p e + h e a	p e + h e a	c c + c c c	658 655
+#
+887	Maori_85	husband	t aː n e	t aː n e	c c c c	464
+1335	Tahitian_173	husband	t aː n e	t aː n e	c c c c	464
+1779	Rapanui_264	husband	k e n u	k e n u	c c c c	674
+2040	Mangareva_239	husband	a ʔ a n a	- a ʔ a n a	c c c c c	671
+3512	NorthMarquesan_38	husband	h a h a n a	h a h a n a	c c c c c c	671
+4532	Austral_1213	husband	t aː n e	t aː n e	c c c c	464
+4775	Tuamotuan_246	husband	t aː n e	t aː n e	c c c c	464
+5284	Austral_128	husband	t aː n e	t aː n e	c c c c	464
+5780	Hawaiian_52	husband	k aː n e	k aː n e	c c c c	464
+#
+736	Maori_85	if	m e	m e -	c c	677
+1182	Tahitian_173	if	ʔ i a	ʔ i a	c c c	681
+1607	Rapanui_264	if	a n a	a n a	c c c	676
+3087	Sikaiana_243	if	p e l a	p e l a	c c c c	680
+3088	Sikaiana_243	if	h a n o	h a n o	c c c c	685
+3309	NorthMarquesan_38	if	m e	m e -	c c	677
+5113	Austral_128	if	ʔ a ʔ i r i	ʔ a ʔ i r i	c c c c c c	675
+5114	Austral_128	if	m a i + t e + p a ʔ a u	m a i + t e + p a ʔ a u	c c c + c c + c c c c c	677 683 684
+5625	Hawaiian_52	if	i n aː	i n aː	c c c	676
+#
+762	Maori_85	in, inside	i + r o t o	i + r o t o	c + c c c c	690 691
+1207	Tahitian_173	in, inside	i + r o t o	i + r o t o	c + c c c c	690 691
+1631	Rapanui_264	in, inside	r o t o	r o t o	c c c c	686
+1884	Mangareva_239	in, inside	r o t o	r o t o	c c c c	686
+3109	Sikaiana_243	in, inside	i + l o t o	i + l o t o	c + c c c c	690 691
+3333	NorthMarquesan_38	in, inside	ʔ o t o	ʔ o t o	c c c c	686
+4425	Austral_1213	in, inside	ɢ o t o	ɢ o t o	c c c c	686
+4618	Tuamotuan_246	in, inside	r o t o	r o t o	c c c c	686
+5140	Austral_128	in, inside	r o t o	r o t o	c c c c	686
+5652	Hawaiian_52	in, inside	l o k o	l o k o	c c c c	686
+#
+928	Maori_85	intestines	f eː + k a u	f eː + k a - u	c c + c c c	696 697
+1379	Tahitian_173	intestines	ʔ aː + ʔ a u	ʔ aː - - - + ʔ a - u	c c + c c c	693 697
+1825	Rapanui_264	intestines	k o + k o m a	k o - + k o m a	c c + c c c c	698 697
+2090	Mangareva_239	intestines	m a n a v a	m a n a v a	c c c c c c	695
+3274	Sikaiana_243	intestines	k a u + t a e	k a u + t a e	c c c + c c c	702 703
+3566	NorthMarquesan_38	intestines	k o e + k o e	k o e + k o - e	c c c + c c c	698 697
+4573	Austral_1213	intestines	ʔ a v i ɢ i	ʔ a v i ɢ i	c c c c c c	692
+4829	Tuamotuan_246	intestines	ŋ aː + k a u	ŋ aː - - - + k a - u	c c + c c c	693 697
+5337	Austral_128	intestines	ʔ aː ʔ a u	ʔ aː ʔ a u	c c c c c	693
+5825	Hawaiian_52	intestines	n a ʔ a u	n a ʔ a u	c c c c c	693
+#
+814	Maori_85	lake	r o t o	r o t o	c c c c	691
+1259	Tahitian_173	lake	r o t o	r o t o	c c c c	691
+1695	Rapanui_264	lake	r a n o	r a n o	c c c c	706
+1952	Mangareva_239	lake	r a n o	r a n o	c c c c	706
+3407	NorthMarquesan_38	lake	v a i + ʔ o t o	v a i + ʔ o t o	c c c + c c c c	708 709
+4684	Tuamotuan_246	lake	r o t o	r o t o	c c c c	691
+4685	Tuamotuan_246	lake	r a n o	r a n o	c c c c	706
+5197	Austral_128	lake	r o t o	r o t o	c c c c	691
+5705	Hawaiian_52	lake	l o k o	l o k o	c c c c	691
+#
+829	Maori_85	leaf	r a u	r a u	c c c	41
+1272	Tahitian_173	leaf	r a u + ʔ e r e	r a u + ʔ e r e	c c c + c c c c	41 713
+1709	Rapanui_264	leaf	r a u + p a	r a u + p a	c c c + c c	41 719
+1966	Mangareva_239	leaf	r a u	r a u	c c c	41
+3169	Sikaiana_243	leaf	l a u	l a u	c c c	41
+3423	NorthMarquesan_38	leaf	ʔ a u	ʔ a u	c c c	41
+4480	Austral_1213	leaf	ɢ a u + e ɢ e	ɢ a u + e ɢ e	c c c + c c c	41 711
+4699	Tuamotuan_246	leaf	r a u	r a u	c c c	41
+5211	Austral_128	leaf	r a u + ʔ e r e	r a u + ʔ e r e	c c c + c c c c	41 713
+5719	Hawaiian_52	leaf	l a u	l a u	c c c	41
+#
+943	Maori_85	left	m a u iː	m a u iː	c c c c	720
+1397	Tahitian_173	left	ʔ a u i	ʔ a u i	c c c c	720
+1845	Rapanui_264	left	m a u i	m a u i	c c c c	720
+2107	Mangareva_239	left	ʔ e m a	ʔ e m a	c c c c	722
+3290	Sikaiana_243	left	v a l e	v a l e	c c c c	729
+3583	NorthMarquesan_38	left	ʔ i m a + a ʔ e + a ʔ e	ʔ i m a + a ʔ e + a ʔ e	c c c c + c c c + c c c	722 726 727
+4586	Austral_1213	left	ʔ a u i	ʔ a u i	c c c c	720
+4846	Tuamotuan_246	left	h e m a	h e m a	c c c c	722
+5355	Austral_128	left	ʔ a u i	ʔ a u i	c c c c	720
+5841	Hawaiian_52	left	h e m a	h e m a	c c c c	722
+#
+940	Maori_85	leg/foot	w a e + w a e	w a e + w a e -	c c c + c c c	733 732
+1395	Tahitian_173	leg/foot	ʔ aː + v a e	- - - ʔ aː + v a e -	c c + c c c	730 732
+1843	Rapanui_264	leg/foot	v a ʔ e	v a ʔ e	c c c c	739
+2105	Mangareva_239	leg/foot	a ʔ a p e	a ʔ a p e	c c c c c	735
+3287	Sikaiana_243	leg/foot	v a e	v a e	c c c	733
+3288	Sikaiana_243	leg/foot	t a + p u a e	t a + p u a e	c c + c c c c	744 732
+3580	NorthMarquesan_38	leg/foot	v a e	v a e	c c c	733
+4584	Austral_1213	leg/foot	u m a h a	u m a h a	c c c c c	730
+4844	Tuamotuan_246	leg/foot	v a e	v a e	c c c	733
+5353	Austral_128	leg/foot	ʔ aː + v a e	- - - ʔ aː + v a e -	c c + c c c	730 732
+5839	Hawaiian_52	leg/foot	w aː + w a e	w aː - + w a e -	c c + c c c	733 732
+#
+805	Maori_85	lightning	u i r a	u i r a	c c c c	745
+1250	Tahitian_173	lightning	u i r a	u i r a	c c c c	745
+1685	Rapanui_264	lightning	u i r a	u i r a	c c c c	745
+1941	Mangareva_239	lightning	u i r a	u i r a	c c c c	745
+3149	Sikaiana_243	lightning	u i l a	u i l a	c c c c	745
+3398	NorthMarquesan_38	lightning	u i ʔ a	u i ʔ a	c c c c	745
+4464	Austral_1213	lightning	u i ɢ a	u i ɢ a	c c c c	745
+4670	Tuamotuan_246	lightning	u i r a	u i r a	c c c c	745
+4671	Tuamotuan_246	lightning	r a p a	r a p a	c c c c	755
+5188	Austral_128	lightning	u i r a	u i r a	c c c c	745
+5696	Hawaiian_52	lightning	u i l a	u i l a	c c c c	745
+#
+927	Maori_85	liver	a t e	a t e	c c c	757
+1378	Tahitian_173	liver	ʔ u p a ʔ a	ʔ u p a ʔ a	c c c c c c	756
+1824	Rapanui_264	liver	a t e	a t e	c c c	757
+2088	Mangareva_239	liver	k a k a + r o u m e i	k a k a + r o u m e i	c c c c + c c c c c c	759 760
+2089	Mangareva_239	liver	a t e	a t e	c c c	757
+3273	Sikaiana_243	liver	a t e	a t e	c c c	757
+3565	NorthMarquesan_38	liver	a t e	a t e	c c c	757
+4572	Austral_1213	liver	ʔ uː p a ʔ a	ʔ uː p a ʔ a	c c c c c c	756
+4828	Tuamotuan_246	liver	a t e	a t e	c c c	757
+5335	Austral_128	liver	a t e	a t e	c c c	757
+5336	Austral_128	liver	ʔ u p a ʔ a	ʔ u p a ʔ a	c c c c c c	756
+5824	Hawaiian_52	liver	a k e	a k e	c c c	757
+#
+783	Maori_85	long	r o a	r o a	c c c	761
+1228	Tahitian_173	long	r o a	r o a	c c c	761
+1657	Rapanui_264	long	r o a	r o a	c c c	761
+1908	Mangareva_239	long	r o a	r o a	c c c	761
+3127	Sikaiana_243	long	l o a	l o a	c c c	761
+3364	NorthMarquesan_38	long	ʔ o a	ʔ o a	c c c	761
+4444	Austral_1213	long	ɢ o a	ɢ o a	c c c	761
+4639	Tuamotuan_246	long	r o a	r o a	c c c	761
+5165	Austral_128	long	r o a	r o a	c c c	761
+5672	Hawaiian_52	long	l o a	l o a	c c c	761
+#
+835	Maori_85	louse	k u t u	k u t u	c c c c	766
+1278	Tahitian_173	louse	ʔ u t u	ʔ u t u	c c c c	766
+1716	Rapanui_264	louse	k u t u	k u t u	c c c c	766
+1973	Mangareva_239	louse	k u t u	k u t u	c c c c	766
+3178	Sikaiana_243	louse	k u t u	k u t u	c c c c	766
+3430	NorthMarquesan_38	louse	ʔ u t u	ʔ u t u	c c c c	766
+3431	NorthMarquesan_38	louse	k u t u + p a p a	k u t u + p a p a	c c c c + c c c c	2406 774
+4486	Austral_1213	louse	ʔ u t u + ʔ u	ʔ u t u + ʔ u	c c c c + c c	766 763
+4706	Tuamotuan_246	louse	k u t u	k u t u	c c c c	766
+5217	Austral_128	louse	ʔ u t u	ʔ u t u	c c c c	766
+5725	Hawaiian_52	louse	ʔ u k u	ʔ u k u	c c c c	766
+#
+890	Maori_85	man/male	t aː n e	t aː n e - -	c c c c	775
+1338	Tahitian_173	man/male	t aː n e	t aː n e - -	c c c c	775
+1784	Rapanui_264	man/male	t a n e	t a n e - -	c c c c	775
+2045	Mangareva_239	man/male	t a ŋ a t a	t a ŋ a t a	c c c c c c	775
+2046	Mangareva_239	man/male	t a m a + r o a	t a m a + r o a	c c c c + c c c	785 761
+3234	Sikaiana_243	man/male	t a n a t a	t a n a t a	c c c c c c	775
+3235	Sikaiana_243	man/male	t aː n e	t aː n e - -	c c c c	2407
+3516	NorthMarquesan_38	man/male	t o a	t o a	c c c	780
+3517	NorthMarquesan_38	man/male	h e k o	h e k o -	c c c c	787
+3518	NorthMarquesan_38	man/male	t a n e	t a n e - -	c c c c	775
+3519	NorthMarquesan_38	man/male	t a m a + ʔ o a	t a m a + ʔ o a	c c c c + c c c	785 761
+4535	Austral_1213	man/male	t aː n e	t aː n e - -	c c c c	775
+4780	Tuamotuan_246	man/male	t aː n e	t aː n e - -	c c c c	775
+4781	Tuamotuan_246	man/male	h aː k o i	h aː k o i	c c c c c	787
+5288	Austral_128	man/male	t aː n e	t aː n e - -	c c c c	775
+5783	Hawaiian_52	man/male	k aː n e	k aː n e - -	c c c c	775
+#
+840	Maori_85	meat/flesh	k i k o	k i k o	c c c c	788
+1285	Tahitian_173	meat/flesh	ʔ i ʔ o	ʔ i ʔ o	c c c c	788
+1720	Rapanui_264	meat/flesh	k i k o	k i k o	c c c c	788
+1980	Mangareva_239	meat/flesh	k i k o	k i k o	c c c c	788
+3182	Sikaiana_243	meat/flesh	i o	i o	c c	795
+3438	NorthMarquesan_38	meat/flesh	k i k o	k i k o	c c c c	788
+4489	Austral_1213	meat/flesh	ʔ i ʔ o	ʔ i ʔ o	c c c c	788
+4711	Tuamotuan_246	meat/flesh	k i k o	k i k o	c c c c	788
+5223	Austral_128	meat/flesh	ʔ i ʔ o	ʔ i ʔ o	c c c c	788
+5224	Austral_128	meat/flesh	ʔ iː n a + ʔ i	ʔ iː n a + ʔ i	c c c c + c c	798 799
+5730	Hawaiian_52	meat/flesh	ʔ i ʔ o	ʔ i ʔ o	c c c c	788
+#
+811	Maori_85	moon	m a r a m a	m a r a m a	c c c c c c	806
+1256	Tahitian_173	moon	ʔ aː v a ʔ e	ʔ aː v a ʔ e	c c c c c c	800
+1693	Rapanui_264	moon	m a + h i n a	m a + h i n a	c c + c c c c	802 803
+1947	Mangareva_239	moon	m a + ʔ i n a	m a + ʔ i n a	c c + c c c c	802 803
+1948	Mangareva_239	moon	m aː + ʔ i n a	m aː + ʔ i n a	c c + c c c c	802 2409
+3155	Sikaiana_243	moon	m a l a m a	m a l a m a	c c c c c c	806
+3404	NorthMarquesan_38	moon	m e ʔ a m a	m e ʔ a m a	c c c c c c	806
+4469	Austral_1213	moon	ʔ aː v a ʔ e	ʔ aː v a ʔ e	c c c c c c	800
+4679	Tuamotuan_246	moon	h i n a	h i n a	c c c c	812
+5194	Austral_128	moon	ʔ aː v a ʔ e	ʔ aː v a ʔ e	c c c c c c	800
+5702	Hawaiian_52	moon	m a + h i n a	m a + h i n a	c c + c c c c	802 803
+#
+834	Maori_85	mosquito	w a e r o a	w a e r o a	c c c c c c	819
+1277	Tahitian_173	mosquito	n a o + n a o	n a o + n a - o	c c c + c c c	813 814
+1715	Rapanui_264	mosquito	n a ʔ o + n a ʔ o	n a ʔ o + n a ʔ o	c c c c + c c c c	823 814
+1972	Mangareva_239	mosquito	k oː + m a n u	k oː + m a n u	c c + c c c c	817 818
+3177	Sikaiana_243	mosquito	n a m u	n a m u	c c c c	815
+3429	NorthMarquesan_38	mosquito	n o + n o + p u r u t i a	n o - + n o - - + p u r u t i a	c c + c c + c c c c c c c	813 814 822
+4485	Austral_1213	mosquito	n a o + n a o	n a o + n a - o	c c c + c c c	813 814
+4705	Tuamotuan_246	mosquito	n a m u	n a m u	c c c c	815
+5216	Austral_128	mosquito	r a m u	r a m u	c c c c	815
+5724	Hawaiian_52	mosquito	m a k i k a	m a k i k a	c c c c c c	816
+#
+885	Maori_85	mother	f a e a	f a e a	c c c c	831
+1332	Tahitian_173	mother	m e t u a + v a h i n e	m e t u a + v a h i n e	c c c c c + c c c c c c	463 825
+1333	Tahitian_173	mother	m aː m aː	m aː m aː	c c c c	839
+1777	Rapanui_264	mother	m a t u ʔ a	m a t u ʔ a	c c c c c c	833
+2037	Mangareva_239	mother	t i n a n a	t i n a n a	c c c c c c	830
+3230	Sikaiana_243	mother	t i n n a	t i n n a	c c c c c	834
+3510	NorthMarquesan_38	mother	k u i	k u i	c c c	832
+4530	Austral_1213	mother	m e t u a + v a h i n e	m e t u a + v a h i n e	c c c c c + c c c c c c	463 825
+4773	Tuamotuan_246	mother	m e t u a + v a h i n e	m e t u a + v a h i n e	c c c c c + c c c c c c	463 825
+5281	Austral_128	mother	m e t u a + v a ʔ i n e	m e t u a + v a ʔ i n e	c c c c c + c c c c c c	463 825
+5282	Austral_128	mother	m aː m aː	m aː m aː	c c c c	839
+5778	Hawaiian_52	mother	m a k u a + h i n e	m a k u a + h i n e	c c c c c + c c c c	463 829
+#
+914	Maori_85	mouth	w a h a	w a h a	c c c c	843
+1364	Tahitian_173	mouth	v a h a	v a h a	c c c c	843
+1808	Rapanui_264	mouth	g u t u	g u t u	c c c c	845
+1809	Rapanui_264	mouth	h a h a	h a h a	c c c c	843
+2074	Mangareva_239	mouth	ʔ a ʔ a	ʔ a ʔ a	c c c c	843
+3259	Sikaiana_243	mouth	p u k u a	p u k u a	c c c c c	847
+3547	NorthMarquesan_38	mouth	n u t u	n u t u	c c c c	845
+3548	NorthMarquesan_38	mouth	f a f a	f a f a	c c c c	843
+4559	Austral_1213	mouth	v a h a	v a h a	c c c c	843
+4808	Tuamotuan_246	mouth	ŋ u t u	ŋ u t u	c c c c	845
+4809	Tuamotuan_246	mouth	v a h a	v a h a	c c c c	843
+5318	Austral_128	mouth	v a ʔ a	v a ʔ a	c c c c	843
+5810	Hawaiian_52	mouth	w a h a	w a h a	c c c c	843
+#
+881	Maori_85	name	i ŋ o a	- i ŋ o a	c c c c	848
+1327	Tahitian_173	name	i ʔ o a	- i ʔ o a	c c c c	848
+1772	Rapanui_264	name	ʔ iː g o a	ʔ iː g o a	c c c c c	848
+2032	Mangareva_239	name	i ŋ o a	- i ŋ o a	c c c c	848
+3225	Sikaiana_243	name	m a l e	m a l e	c c c c	855
+3505	NorthMarquesan_38	name	i k o a	- i k o a	c c c c	848
+4526	Austral_1213	name	i ʔ o a	- i ʔ o a	c c c c	848
+4769	Tuamotuan_246	name	i ŋ o a	- i ŋ o a	c c c c	848
+5276	Austral_128	name	i ʔ o a	- i ʔ o a	c c c c	848
+5774	Hawaiian_52	name	i n o a	- i n o a	c c c c	848
+#
+780	Maori_85	narrow	f aː + i t i	f aː - - + i t i	c c + c c c	864 863
+1225	Tahitian_173	narrow	o a + o a	o a + o a	c c + c c	856 856
+1652	Rapanui_264	narrow	v a k a + v a k a	v a k a + v a k a	c c c c + c c c c	864 869
+1653	Rapanui_264	narrow	r i k i + r i k i	r i k i + r i k i	c c c c + c c c c	875 861
+1904	Mangareva_239	narrow	aː + i t i	- aː + i t i	c + c c c	860 863
+3124	Sikaiana_243	narrow	k o p i t i	k o p i t i	c c c c c c	870
+3359	NorthMarquesan_38	narrow	f a + i t i	f a - - + i t i	c c + c c c	864 863
+4441	Austral_1213	narrow	o a + o a	o a + o a	c c + c c	856 856
+4636	Tuamotuan_246	narrow	k o m a	k o m a	c c c c	873
+5161	Austral_128	narrow	o a + o a	o a + o a	c c + c c	856 856
+5162	Austral_128	narrow	p i r i	p i r i	c c c c	874
+5669	Hawaiian_52	narrow	l aː + ʔ i k i	l aː + ʔ i k i	c c + c c c c	860 861
+#
+756	Maori_85	near	t a + t a	- - t a - - + t a - -	c c + c c	876 877
+1202	Tahitian_173	near	f aː + t a + t a	f aː + t a - - + t a	c c + c c + c c	889 877 891
+1625	Rapanui_264	near	t u p u + a k i	t u p u + a k i	c c c c + c c c	885 886
+1626	Rapanui_264	near	h a h i n e	h a h i n e	c c c c c c	894
+1880	Mangareva_239	near	t a + t a	- - t a - - + t a - -	c c + c c	876 877
+3106	Sikaiana_243	near	t a u + p i l i	- - t a - u + p i l i	c c c + c c c c	876 888
+3328	NorthMarquesan_38	near	t a t a	- - t a t a	c c c c	876
+4613	Tuamotuan_246	near	t a + t a	- - t a - - + t a - -	c c + c c	876 877
+5135	Austral_128	near	ʔ a t a + t a	ʔ a t a - - + t a - -	c c c c + c c	876 877
+5644	Hawaiian_52	near	k o + k o k e	k o + k o k e	c c + c c c c	878 877
+#
+919	Maori_85	neck	u a	u a	c c	900
+1370	Tahitian_173	neck	ʔ a ʔ iː	ʔ a ʔ iː	c c c c	897
+1815	Rapanui_264	neck	g a o	g a o	c c c	902
+2079	Mangareva_239	neck	k a k i	k a k i	c c c c	897
+3265	Sikaiana_243	neck	u a	u a	c c	900
+3555	NorthMarquesan_38	neck	k aː k iː	k aː k iː	c c c c	897
+4564	Austral_1213	neck	ʔ a ɢ a + p o ʔ a	ʔ a ɢ a + p o ʔ a	c c c c + c c c c	895 896
+4817	Tuamotuan_246	neck	u a	u a	c c	900
+4818	Tuamotuan_246	neck	k aː k iː	k aː k iː	c c c c	897
+5323	Austral_128	neck	ʔ a ʔ iː	ʔ a ʔ iː	c c c c	897
+5816	Hawaiian_52	neck	ʔ aː ʔ iː	ʔ aː ʔ iː	c c c c	897
+#
+876	Maori_85	needle	ŋ i r a	ŋ i r a	c c c c	903
+1321	Tahitian_173	needle	n i r a	n i r a	c c c c	903
+1766	Rapanui_264	needle	i v i	i v i	c c c	909
+1767	Rapanui_264	needle	h i k a	h i k a	c c c c	910
+2024	Mangareva_239	needle	n i r a	n i r a	c c c c	903
+3220	Sikaiana_243	needle	s i k a	s i k a	c c c c	910
+3498	NorthMarquesan_38	needle	r i r a	r i r a	c c c c	908
+4521	Austral_1213	needle	n i r a	n i r a	c c c c	903
+4761	Tuamotuan_246	needle	h a u	h a u	c c c	912
+5269	Austral_128	needle	n i r a	n i r a	c c c c	903
+5769	Hawaiian_52	needle	k u i	k u i	c c c	905
+#
+775	Maori_85	new	h oː u	- - h oː u	c c c	915
+1219	Tahitian_173	new	ʔ aː p iː	ʔ aː p iː	c c c c	913
+1645	Rapanui_264	new	h o ʔ o u	h o ʔ o u	c c c c c	915
+1899	Mangareva_239	new	ʔ o u	- - ʔ o u	c c c	915
+3119	Sikaiana_243	new	h o u	- - h o u	c c c	915
+3352	NorthMarquesan_38	new	h o u	- - h o u	c c c	915
+4436	Austral_1213	new	aː p i	- aː p i	c c c	913
+4631	Tuamotuan_246	new	h oː u	- - h oː u	c c c	915
+5155	Austral_128	new	aː p iː	- aː p iː	c c c	913
+5664	Hawaiian_52	new	h o u	- - h o u	c c c	915
+#
+771	Maori_85	night	p oː	p oː	c c	916
+1214	Tahitian_173	night	p oː	p oː	c c	916
+1640	Rapanui_264	night	p oː	p oː	c c	916
+1893	Mangareva_239	night	p oː	p oː	c c	916
+3115	Sikaiana_243	night	p oː	p oː	c c	916
+3344	NorthMarquesan_38	night	p oː	p oː	c c	916
+4432	Austral_1213	night	p oː	p oː	c c	916
+4625	Tuamotuan_246	night	p oː	p oː	c c	916
+4626	Tuamotuan_246	night	r u k i	r u k i	c c c c	926
+5148	Austral_128	night	p oː	p oː	c c	916
+5660	Hawaiian_52	night	p oː	p oː	c c	916
+#
+734	Maori_85	no, not	k aː + h o r e	k aː - + h o r e	c c + c c c c	933 928
+1180	Tahitian_173	no, not	ʔ a i + t a	ʔ a i + t a	c c c + c c	940 941
+1604	Rapanui_264	no, not	i n a + k a i	i n a + k a i	c c c + c c c	936 937
+1605	Rapanui_264	no, not	t a ʔ e	t a ʔ e	c c c c	946
+1862	Mangareva_239	no, not	k o r e	k o r e	c c c c	931
+3085	Sikaiana_243	no, not	h e + a i	h e + a i	c c + c c	927 939
+3306	NorthMarquesan_38	no, not	t eː	t eː	c c	935
+3307	NorthMarquesan_38	no, not	i e + a i	i e + a i	c c + c c	944 939
+4404	Austral_1213	no, not	e + ʔ e r e	- e + ʔ e r e	c + c c c c	927 928
+4600	Tuamotuan_246	no, not	k a u + r a k a	k a u + r a k a	c c c + c c c c	933 943
+5111	Austral_128	no, not	e + ʔ o r e	- e + ʔ o r e	c + c c c c	927 928
+5623	Hawaiian_52	no, not	ʔ o l e	ʔ o l e	c c c c	931
+#
+917	Maori_85	nose	i h u	i h u	c c c	947
+1368	Tahitian_173	nose	i h u	i h u	c c c	947
+1812	Rapanui_264	nose	i h u	i h u	c c c	947
+2077	Mangareva_239	nose	i ʔ u	i ʔ u	c c c	947
+3263	Sikaiana_243	nose	k a i + u s u	k a i + u s u	c c c + c c c	955 956
+3552	NorthMarquesan_38	nose	i h u	i h u	c c c	947
+4562	Austral_1213	nose	i h u	i h u	c c c	947
+4814	Tuamotuan_246	nose	i h u	i h u	c c c	947
+5321	Austral_128	nose	p u t a + e ʔ u	p u t a + e ʔ u	c c c c + c c c	948 949
+5814	Hawaiian_52	nose	i h u	i h u	c c c	947
+#
+776	Maori_85	old	p a k e + k e	p a k e + k e	c c c c + c c	961 962
+1220	Tahitian_173	old	r uː ʔ a u	r uː ʔ a u	c c c c c	958
+1646	Rapanui_264	old	t u a i	- - t u a i	c c c c	964
+1647	Rapanui_264	old	k o r o h u a	k o r o h u a	c c c c c c c	969
+1900	Mangareva_239	old	t e ʔ i t o	t e ʔ i t o	c c c c c c	957
+3120	Sikaiana_243	old	m a t u a	m a t u a -	c c c c c	964
+3121	Sikaiana_243	old	m u a	m u a	c c c	970
+3353	NorthMarquesan_38	old	k a k i u	k a k i u	c c c c c	963
+3354	NorthMarquesan_38	old	t e h i t o	t e h i t o	c c c c c c	957
+3355	NorthMarquesan_38	old	k o u a	k o u a	c c c c	971
+4437	Austral_1213	old	t a h i t o	t a h i t o	c c c c c c	957
+4632	Tuamotuan_246	old	k o r o u	k o r o u	c c c c c	967
+5156	Austral_128	old	r uː ʔ a u	r uː ʔ a u	c c c c c	958
+5665	Hawaiian_52	old	k a h i k o	k a h i k o	c c c c c c	957
+#
+740	Maori_85	other	a t u	a t u	c c c	976
+1185	Tahitian_173	other	v e + t a h i	v e + t a h i	c c + c c c c	972 38
+1613	Rapanui_264	other	t a h i	t a h i	c c c c	978
+3312	NorthMarquesan_38	other	k e	k e	c c	974
+5117	Austral_128	other	v e + t a ʔ i	v e + t a ʔ i	c c + c c c c	972 38
+5628	Hawaiian_52	other	k e + k aː h i	k e + k aː h i	c c + c c c c	974 38
+#
+778	Maori_85	painful, sick	m aː + u i + u i	m aː - - + u - i + u - i	c c + c c + c c	979 984 984
+1222	Tahitian_173	painful, sick	m a ʔ i	m a ʔ i	c c c c	979
+1223	Tahitian_173	painful, sick	m a m a e	m a m a e	c c c c c	982
+1649	Rapanui_264	painful, sick	m a m a e	m a m a e	c c c c c	982
+1650	Rapanui_264	painful, sick	m a + u ʔ i + u ʔ i	m a - - + u ʔ i + u ʔ i	c c + c c c + c c c	979 984 984
+1902	Mangareva_239	painful, sick	m a m a e	m a m a e	c c c c c	982
+3122	Sikaiana_243	painful, sick	m a m a e	m a m a e	c c c c c	982
+3357	NorthMarquesan_38	painful, sick	m e m a e	m e m a e	c c c c c	982
+4439	Austral_1213	painful, sick	m a ʔ i	m a ʔ i	c c c c	979
+4633	Tuamotuan_246	painful, sick	m aː + u i + u i	m aː - - + u - i + u - i	c c + c c + c c	979 984 984
+4634	Tuamotuan_246	painful, sick	m a m a e	m a m a e	c c c c c	982
+5158	Austral_128	painful, sick	m a ʔ i	m a ʔ i	c c c c	979
+5159	Austral_128	painful, sick	p a ʔ o	p a ʔ o	c c c c	993
+5667	Hawaiian_52	painful, sick	m a ʔ i	m a ʔ i	c c c c	979
+#
+891	Maori_85	person/human being	t a ŋ a t a	t a ŋ a t a	c c c c c c	996
+1339	Tahitian_173	person/human being	t a ʔ a t a	t a ʔ a t a	c c c c c c	996
+1785	Rapanui_264	person/human being	t a g a t a	t a g a t a	c c c c c c	996
+2047	Mangareva_239	person/human being	t a ŋ a t a	t a ŋ a t a	c c c c c c	996
+3236	Sikaiana_243	person/human being	t a m a	t a m a	c c c c	1001
+3237	Sikaiana_243	person/human being	t a n a t a	t a n a t a	c c c c c c	996
+3520	NorthMarquesan_38	person/human being	k e n a n a	k e n a n a	c c c c c c	999
+3521	NorthMarquesan_38	person/human being	ʔ e n a t a	ʔ e n a t a	c c c c c c	2410
+4536	Austral_1213	person/human being	t a ʔ a t a	t a ʔ a t a	c c c c c c	996
+4782	Tuamotuan_246	person/human being	t a ŋ a t a	t a ŋ a t a	c c c c c c	996
+5289	Austral_128	person/human being	t a ʔ a t a	t a ʔ a t a	c c c c c c	996
+5784	Hawaiian_52	person/human being	k a n a k a	k a n a k a	c c c c c c	996
+#
+807	Maori_85	rain	u a	- u a	c c	1004
+1252	Tahitian_173	rain	u a	- u a	c c	1004
+1687	Rapanui_264	rain	ʔ uː a	ʔ uː a	c c c	1004
+1943	Mangareva_239	rain	u a	- u a	c c	1004
+3151	Sikaiana_243	rain	u a	- u a	c c	1004
+3400	NorthMarquesan_38	rain	u a	- u a	c c	1004
+4466	Austral_1213	rain	u a	- u a	c c	1004
+4673	Tuamotuan_246	rain	u a	- u a	c c	1004
+5190	Austral_128	rain	u a	- u a	c c	1004
+5698	Hawaiian_52	rain	u a	- u a	c c	1004
+#
+841	Maori_85	rat	k i o r e	k i o r e	c c c c c	1012
+1286	Tahitian_173	rat	ʔ i o r e	ʔ i o r e	c c c c c	1012
+1721	Rapanui_264	rat	k i o ʔ e	k i o ʔ e	c c c c c	1012
+1981	Mangareva_239	rat	k i o r e	k i o r e	c c c c c	1012
+3183	Sikaiana_243	rat	k i o l e	k i o l e	c c c c c	1012
+3439	NorthMarquesan_38	rat	k u m a + k u m a	k u m a + k u m a	c c c c + c c c c	1010 1011
+3440	NorthMarquesan_38	rat	k i o ʔ e	k i o ʔ e	c c c c c	1012
+4490	Austral_1213	rat	ʔ i o ɢ e	ʔ i o ɢ e	c c c c c	1012
+4712	Tuamotuan_246	rat	k i o r e	k i o r e	c c c c c	1012
+5225	Austral_128	rat	ʔ i o r e	ʔ i o r e	c c c c c	1012
+5731	Hawaiian_52	rat	ʔ i o l e	ʔ i o l e	c c c c c	1012
+#
+790	Maori_85	red	f e r o	f e r o	c c c c	1019
+1235	Tahitian_173	red	ʔ u t e + ʔ u t e	ʔ u t e + ʔ u t e	c c c c + c c c c	1013 1013
+1665	Rapanui_264	red	h e r o + h e r o	h e r o + h e r o	c c c c + c c c c	1019 1013
+1666	Rapanui_264	red	m e a	m e a	c c c	1024
+1917	Mangareva_239	red	k u r a	k u r a	c c c c	1015
+3133	Sikaiana_243	red	m e a	m e a	c c c	1024
+3375	NorthMarquesan_38	red	p u k i + k i	p u k i + k i	c c c c + c c	1020 1021
+3376	NorthMarquesan_38	red	k u w a	k u w a	c c c c	1028
+4450	Austral_1213	red	ʔ u t e + ʔ u t e	ʔ u t e + ʔ u t e	c c c c + c c c c	1013 1013
+4646	Tuamotuan_246	red	m e a	m e a	c c c	1024
+4647	Tuamotuan_246	red	k u r a	k u r a	c c c c	1015
+5171	Austral_128	red	ʔ u r a + ʔ u r a	ʔ u r a + ʔ u r a	c c c c + c c c c	1015 1013
+5678	Hawaiian_52	red	ʔ u l a	ʔ u l a	c c c c	1015
+#
+941	Maori_85	right	m a + t a u	- - m a + t a - u	c c + c c c	1035 1042
+942	Maori_85	right	k a + t a u	k a + t a - u	c c + c c c	3 2411
+1396	Tahitian_173	right	ʔ a + t a u	ʔ a + t a - u	c c + c c c	3 1042
+1844	Rapanui_264	right	m a + t a ʔ u	- - m a + t a ʔ u	c c + c c c c	1035 1042
+3289	Sikaiana_243	right	a t a + m a i	a t a + m a - i	c c c + c c c	1041 1042
+3581	NorthMarquesan_38	right	ʔ i m a + o k o	ʔ i m a + o k o	c c c c + c c c	1035 1038
+3582	NorthMarquesan_38	right	a t a + m a i	a t a + m a - i	c c c + c c c	1041 1042
+4585	Austral_1213	right	ʔ a + t a u	ʔ a + t a - u	c c + c c c	3 1042
+4845	Tuamotuan_246	right	k a + t a u	k a + t a - u	c c + c c c	3 1042
+5354	Austral_128	right	ʔ a + t a u	ʔ a + t a - u	c c + c c c	3 1042
+5840	Hawaiian_52	right	ʔ aː + k a u	ʔ aː + k a - u	c c + c c c	3 1042
+#
+938	Maori_85	road/path	a r a	a r a - -	c c c	1047
+1390	Tahitian_173	road/path	a r a	a r a - -	c c c	1047
+1391	Tahitian_173	road/path	ʔ eː ʔ a	ʔ eː ʔ a	c c c c	1058
+1392	Tahitian_173	road/path	p u r uː m u	p u r uː m u	c c c c c c	1046
+1841	Rapanui_264	road/path	a r a	a r a - -	c c c	1047
+2103	Mangareva_239	road/path	a r a	a r a - -	c c c	1047
+3285	Sikaiana_243	road/path	a l a	a l a - -	c c c	1047
+3578	NorthMarquesan_38	road/path	v a ʔ a	- v a ʔ a	c c c c	1047
+4582	Austral_1213	road/path	p u ɢ u m u	p u ɢ u m u	c c c c c c	1046
+4842	Tuamotuan_246	road/path	a r a	a r a - -	c c c	1047
+5348	Austral_128	road/path	a r a ʔ a + r a ʔ a	a r a ʔ a + r a ʔ a	c c c c c + c c c c	1047 1048
+5349	Austral_128	road/path	p u r uː m u	p u r uː m u	c c c c c c	1046
+5837	Hawaiian_52	road/path	a l a	a l a - -	c c c	1047
+#
+828	Maori_85	root	p a k i + a k a	p a k i + a k a	c c c c + c c c	1063 1064
+1271	Tahitian_173	root	a ʔ a	a ʔ a	c c c	1059
+1708	Rapanui_264	root	a k a	a k a	c c c	1059
+1965	Mangareva_239	root	a k a	a k a	c c c	1059
+3168	Sikaiana_243	root	p a t i + a k a	p a t i + a k a	c c c c + c c c	1063 1064
+3422	NorthMarquesan_38	root	a k a	a k a	c c c	1059
+4479	Austral_1213	root	a ʔ a	a ʔ a	c c c	1059
+4698	Tuamotuan_246	root	a k a	a k a	c c c	1059
+5210	Austral_128	root	a ʔ a	a ʔ a	c c c	1059
+5718	Hawaiian_52	root	a ʔ a	a ʔ a	c c c	1059
+#
+879	Maori_85	rope	t a u r a	t a u r a	c c c c c	1066
+1325	Tahitian_173	rope	t a u r a	t a u r a	c c c c c	1066
+1770	Rapanui_264	rope	t a u r a	t a u r a	c c c c c	1066
+2029	Mangareva_239	rope	k a + k a	k a + k a	c c + c c	1068 1069
+2030	Mangareva_239	rope	t o u r a	t o u r a	c c c c c	1066
+3223	Sikaiana_243	rope	m a e a	m a e a	c c c c	1073
+3502	NorthMarquesan_38	rope	t o u ʔ a	t o u ʔ a	c c c c c	1066
+4524	Austral_1213	rope	n a p e	n a p e	c c c c	1065
+4766	Tuamotuan_246	rope	t a u r a	t a u r a	c c c c c	1066
+4767	Tuamotuan_246	rope	p a + t o k o	p a + t o k o	c c + c c c c	1077 1078
+5274	Austral_128	rope	t a u r a	t a u r a	c c c c c	1066
+5772	Hawaiian_52	rope	k a u l a	k a u l a	c c c c c	1066
+#
+831	Maori_85	rotten	p i r a u	p i r a u	c c c c c	1082
+1274	Tahitian_173	rotten	ʔ oː p eː	ʔ oː p eː	c c c c	1085
+1712	Rapanui_264	rotten	p a r a	p a r a -	c c c c	1082
+1968	Mangareva_239	rotten	p a r a	p a r a -	c c c c	1082
+1969	Mangareva_239	rotten	p o + p o	p o + p o	c c + c c	1087 1087
+3171	Sikaiana_243	rotten	p o + p o	p o + p o	c c + c c	1087 1087
+3172	Sikaiana_243	rotten	p a l a	p a l a -	c c c c	1082
+3425	NorthMarquesan_38	rotten	p eː	- - p eː	c c	1085
+3426	NorthMarquesan_38	rotten	p a ʔ a	p a ʔ a -	c c c c	1082
+4482	Austral_1213	rotten	h e n o + h e n o	h e n o + h e n o	c c c c + c c c c	1079 1080
+4701	Tuamotuan_246	rotten	p o + p o	p o + p o	c c + c c	1087 1087
+4702	Tuamotuan_246	rotten	p a r a	p a r a -	c c c c	1082
+5213	Austral_128	rotten	p a r a	p a r a -	c c c c	1082
+5721	Hawaiian_52	rotten	p i l a u	p i l a u	c c c c c	1082
+#
+815	Maori_85	salt	t o t e	t o t e	c c c c	1095
+1260	Tahitian_173	salt	m i t i	m i t i	c c c c	1091
+1696	Rapanui_264	salt	m i t i	m i t i	c c c c	1091
+1953	Mangareva_239	salt	m i t i	m i t i	c c c c	1091
+3408	NorthMarquesan_38	salt	p a ʔ a + t a i	p a ʔ a + t a i	c c c c + c c c	1092 1093
+3409	NorthMarquesan_38	salt	p u h i + n a ʔ u	p u h i + n a ʔ u	c c c c + c c c c	2412 1102
+3410	NorthMarquesan_38	salt	k a n a + t a i	k a n a + t a i	c c c c + c c c	1103 2413
+4471	Austral_1213	salt	ʔ a v a + ʔ a v a	ʔ a v a + ʔ a v a	c c c c + c c c c	1089 1090
+4686	Tuamotuan_246	salt	m i t i	m i t i	c c c c	1091
+5198	Austral_128	salt	m i t i	m i t i	c c c c	1091
+5706	Hawaiian_52	salt	p a ʔ a + k a i	p a ʔ a + k a i	c c c c + c c c	1092 1093
+#
+820	Maori_85	sand	o n e	o n e	c c c	1106
+1265	Tahitian_173	sand	o n e	o n e	c c c	1106
+1701	Rapanui_264	sand	o n e	o n e	c c c	1106
+1958	Mangareva_239	sand	o n e	o n e	c c c	1106
+3162	Sikaiana_243	sand	o n e	o n e	c c c	1106
+3415	NorthMarquesan_38	sand	o n e	o n e	c c c	1106
+4475	Austral_1213	sand	o n e	o n e	c c c	1106
+4691	Tuamotuan_246	sand	o n e	o n e	c c c	1106
+5203	Austral_128	sand	o n e	o n e	c c c	1106
+5711	Hawaiian_52	sand	o n e	o n e	c c c	1106
+#
+816	Maori_85	sea	t a i	t a i	c c c	1093
+817	Maori_85	sea	m o a n a	m o a n a	c c c c c	1109
+1261	Tahitian_173	sea	m o a n a	m o a n a	c c c c c	1109
+1262	Tahitian_173	sea	m i t i	m i t i	c c c c	1107
+1697	Rapanui_264	sea	t a i	t a i	c c c	1093
+1698	Rapanui_264	sea	m o a n a	m o a n a	c c c c c	1109
+1954	Mangareva_239	sea	t a i	t a i	c c c	1093
+1955	Mangareva_239	sea	m o a n a	m o a n a	c c c c c	1109
+3159	Sikaiana_243	sea	m o a n a	m o a n a	c c c c c	1109
+3411	NorthMarquesan_38	sea	t a i	t a i	c c c	1093
+3412	NorthMarquesan_38	sea	m o a n a	m o a n a	c c c c c	1109
+4472	Austral_1213	sea	m i t i	m i t i	c c c c	1107
+4687	Tuamotuan_246	sea	t a i	t a i	c c c	1093
+4688	Tuamotuan_246	sea	m o a n a	m o a n a	c c c c c	1109
+5199	Austral_128	sea	m o a n a	m o a n a	c c c c c	1109
+5200	Austral_128	sea	t a i	t a i	c c c	1093
+5707	Hawaiian_52	sea	m o a n a	m o a n a	c c c c c	1109
+5708	Hawaiian_52	sea	k a i	k a i	c c c	1093
+#
+863	Maori_85	sharp	k o i	k o i	c c c	1114
+1307	Tahitian_173	sharp	ʔ o i	ʔ o i	c c c	1114
+1748	Rapanui_264	sharp	k a ʔ i	k a ʔ i	c c c c	1118
+2007	Mangareva_239	sharp	k o i + k o i	k o i + k o i	c c c + c c c	1114 1115
+3206	Sikaiana_243	sharp	k aː	k aː - -	c c	1118
+3474	NorthMarquesan_38	sharp	k o i	k o i	c c c	1114
+4510	Austral_1213	sharp	ʔ o i	ʔ o i	c c c	1114
+4738	Tuamotuan_246	sharp	p o + p o	p o + p o	c c + c c	1121 1122
+4739	Tuamotuan_246	sharp	k o i	k o i	c c c	1114
+5253	Austral_128	sharp	ʔ o i	ʔ o i	c c c	1114
+5754	Hawaiian_52	sharp	ʔ o i	ʔ o i	c c c	1114
+#
+784	Maori_85	short	p o t o	p o t o	c c c c	1123
+785	Maori_85	short	h a k a + h a k a	h a k a + h a k a	c c c c + c c c c	1134 1135
+1229	Tahitian_173	short	p o t o	p o t o	c c c c	1123
+1658	Rapanui_264	short	p o t o	p o t o	c c c c	1123
+1909	Mangareva_239	short	p o t o	p o t o	c c c c	1123
+3128	Sikaiana_243	short	p o t o	p o t o	c c c c	1123
+3365	NorthMarquesan_38	short	p o t o	p o t o	c c c c	1123
+3366	NorthMarquesan_38	short	n o h i + n o h i	n o h i + n o h i	c c c c + c c c c	1136 1137
+4445	Austral_1213	short	p o t o	p o t o	c c c c	1123
+4640	Tuamotuan_246	short	p o t o	p o t o	c c c c	1123
+5166	Austral_128	short	p o t o	p o t o	c c c c	1123
+5673	Hawaiian_52	short	p oː k o + l e	p oː k o + l e	c c c c + c c	1123 1126
+#
+925	Maori_85	shoulder	p a k i + h i w i	p a k i + h i w i	c c c c + c c c c	1138 1139
+1376	Tahitian_173	shoulder	t a p o n o	t a p o n o	c c c c c c	1153
+1822	Rapanui_264	shoulder	k a p u + h i v i	k a p u + h i v i	c c c c + c c c c	1151 1139
+2086	Mangareva_239	shoulder	p a k u + ʔ i v i	p a k u + ʔ i v i	c c c c + c c c c	1138 1139
+3562	NorthMarquesan_38	shoulder	p a u + f i + f i	p a u + f i + f i	c c c + c c + c c	1148 1149 1150
+4570	Austral_1213	shoulder	p a ʔ u + h i	p a ʔ u + h i - -	c c c c + c c	1138 1139
+4826	Tuamotuan_246	shoulder	p a k i + h u i	p a k i + h u - i	c c c c + c c c	1138 1139
+5332	Austral_128	shoulder	p a ʔ o + ʔ i	p a ʔ o + ʔ i - -	c c c c + c c	1138 1139
+5822	Hawaiian_52	shoulder	p o ʔ o + h i w i	p o ʔ o + h i w i	c c c c + c c c c	1138 1139
+#
+777	Maori_85	shy, ashamed	f a k a + m aː	f a k a + m aː - -	c c c c + c c	1156 1155
+1221	Tahitian_173	shy, ashamed	m aː + m a h u	m aː + m a h u	c c + c c c c	1154 1155
+1648	Rapanui_264	shy, ashamed	h aː	h aː - -	c c	1156
+1901	Mangareva_239	shy, ashamed	ʔ a k aː + m a	ʔ a k aː + m a - -	c c c c + c c	1156 1155
+3356	NorthMarquesan_38	shy, ashamed	h a k a + i k a	h a k a + i k a	c c c c + c c c	1156 1165
+4438	Austral_1213	shy, ashamed	m aː + m a h u	m aː + m a h u	c c + c c c c	1154 1155
+5157	Austral_128	shy, ashamed	ʔ a ʔ a + m aː	ʔ a ʔ a + m aː - -	c c c c + c c	1156 1155
+5666	Hawaiian_52	shy, ashamed	h i l a + h i l a	h i l a + h i l a	c c c c + c c c c	1158 1159
+#
+932	Maori_85	skin	k i r i	k i r i	c c c c	1166
+1383	Tahitian_173	skin	ʔ i r i	ʔ i r i	c c c c	1166
+1830	Rapanui_264	skin	k i r i	k i r i	c c c c	1166
+2096	Mangareva_239	skin	k i r i	k i r i	c c c c	1166
+3278	Sikaiana_243	skin	k i l i	k i l i	c c c c	1166
+3570	NorthMarquesan_38	skin	k i ʔ i	k i ʔ i	c c c c	1166
+4577	Austral_1213	skin	ʔ i ɢ i	ʔ i ɢ i	c c c c	1166
+4836	Tuamotuan_246	skin	k i r i	k i r i	c c c c	1166
+5341	Austral_128	skin	ʔ i r i	ʔ i r i	c c c c	1166
+5829	Hawaiian_52	skin	ʔ i l i	ʔ i l i	c c c c	1166
+#
+812	Maori_85	sky	r a ŋ i	r a ŋ i	c c c c	1167
+1257	Tahitian_173	sky	r a ʔ i	r a ʔ i	c c c c	1167
+1694	Rapanui_264	sky	r a g i	r a g i	c c c c	1167
+1949	Mangareva_239	sky	r a ŋ i	r a ŋ i	c c c c	1167
+3156	Sikaiana_243	sky	l a n i	l a n i	c c c c	1167
+3405	NorthMarquesan_38	sky	ʔ a ŋ i	ʔ a ŋ i	c c c c	1167
+4470	Austral_1213	sky	ɢ a ʔ i	ɢ a ʔ i	c c c c	1167
+4680	Tuamotuan_246	sky	r a ŋ i	r a ŋ i	c c c c	1167
+5195	Austral_128	sky	t u a + r a ʔ i	t u a + r a ʔ i	c c c + c c c c	1168 1169
+5703	Hawaiian_52	sky	l a n i	l a n i	c c c c	1167
+#
+787	Maori_85	small	i t i	i t i	c c c	863
+1231	Tahitian_173	small	n a ʔ i + n a ʔ i	n a ʔ i + n a ʔ i	c c c c + c c c c	1180 1181
+1661	Rapanui_264	small	p o t o	p o t o	c c c c	1123
+1662	Rapanui_264	small	i t i	i t i	c c c	863
+1912	Mangareva_239	small	n i ŋ o r e	n i ŋ o r e	c c c c c c	1175
+3130	Sikaiana_243	small	l i k i	l i k i	c c c c	259
+3369	NorthMarquesan_38	small	k a i u	k a i u	c c c c	1177
+3370	NorthMarquesan_38	small	p o t o	p o t o	c c c c	1123
+3371	NorthMarquesan_38	small	ʔ i k i	ʔ i k i	c c c c	259
+3372	NorthMarquesan_38	small	i t i	i t i	c c c	863
+4447	Austral_1213	small	i t i	i t i	c c c	863
+4642	Tuamotuan_246	small	r i k i	r i k i	c c c c	259
+4643	Tuamotuan_246	small	i t i	i t i	c c c	863
+5168	Austral_128	small	m aː + i t i + i t i	m aː + i t i + i t i	c c + c c c + c c c	1171 1172 1173
+5675	Hawaiian_52	small	l i ʔ i	l i ʔ i	c c c c	259
+#
+794	Maori_85	smoke	a u + a h i	a u + a h i	c c + c c c	496 500
+1239	Tahitian_173	smoke	a u + a u + a h i	a u + a - u + a h i	c c + c c + c c c	496 500 497
+1671	Rapanui_264	smoke	a u + a h i	a u + a h i	c c + c c c	496 500
+1923	Mangareva_239	smoke	a h i	a h i	c c c	1190
+3138	Sikaiana_243	smoke	a u	a u	c c	496
+3383	NorthMarquesan_38	smoke	a u + a h i	a u + a h i	c c + c c c	496 500
+4454	Austral_1213	smoke	a u + a u + a h i	a u + a - u + a h i	c c + c c + c c c	496 500 497
+4653	Tuamotuan_246	smoke	a u + a h i	a u + a h i	c c + c c c	496 500
+5175	Austral_128	smoke	a u + a u + a ʔ i	a u + a - u + a ʔ i	c c + c c + c c c	496 500 497
+5683	Hawaiian_52	smoke	u + a h i	- u + a h i	c + c c c	496 500
+#
+837	Maori_85	snake	n aː k a h i	n aː k a h i	c c c c c c	1193
+1280	Tahitian_173	snake	ʔ oː f iː	ʔ oː f iː	c c c c	1191
+3179	Sikaiana_243	snake	s i n e k i	s i n e k i	c c c c c c	1196
+3433	NorthMarquesan_38	snake	p u h i + h e n u a	p u h i + h e n u a	c c c c + c c c c c	1194 1195
+5219	Austral_128	snake	oː ʔ iː	- oː ʔ iː	c c c	1191
+5727	Hawaiian_52	snake	n a h e k a	n a h e k a	c c c c c c	1192
+#
+833	Maori_85	spider	p u ŋ aː + w e r e + w e r e	p u ŋ aː + w e r e + w e r e	c c c c + c c c c + c c c c	1202 1205 1205
+1276	Tahitian_173	spider	t uː + t uː r a + h o n u i	t uː - - + t uː r a + h o n u i	c c + c c c c + c c c c c	1197 1216 1217
+1714	Rapanui_264	spider	h o n u	h o n u	c c c c	1212
+1971	Mangareva_239	spider	p uː ŋ a + w e r e + w e r e	p uː ŋ a + w e r e + w e r e	c c c c + c c c c + c c c c	1202 1205 1205
+3176	Sikaiana_243	spider	v e l e + v e l e	v e l e + v e l e	c c c c + c c c c	1205 1205
+3428	NorthMarquesan_38	spider	v e ʔ e + v e ʔ e	v e ʔ e + v e ʔ e	c c c c + c c c c	1205 1205
+4484	Austral_1213	spider	t u ʔ u + n u i	t u ʔ u + n u i	c c c c + c c c	1197 1198
+4704	Tuamotuan_246	spider	t u k u + t u k u	t u k u + t u k u	c c c c + c c c c	1197 1216
+5215	Austral_128	spider	ʔ a p u a + m a ʔ a + m a ʔ a	ʔ a p u a + m a ʔ a + m a ʔ a	c c c c c + c c c c + c c c c	1199 1200 1201
+5723	Hawaiian_52	spider	l a n a + l a n a	l a n a + l a n a	c c c c + c c c c	1202 1203
+#
+810	Maori_85	star	f e t uː	f e t uː - -	c c c c	1218
+1255	Tahitian_173	star	f e t i ʔ a	f e t i ʔ a	c c c c c c	1218
+1692	Rapanui_264	star	h e t u ʔ u	h e t u ʔ u	c c c c c c	1218
+1946	Mangareva_239	star	ʔ e t u	ʔ e t u - -	c c c c	1218
+3154	Sikaiana_243	star	h e t uː	h e t uː - -	c c c c	1218
+3403	NorthMarquesan_38	star	f e t o e	f e t o e	c c c c c	1223
+4468	Austral_1213	star	h e t i ʔ a	h e t i ʔ a	c c c c c c	1218
+4678	Tuamotuan_246	star	h e t uː	h e t uː - -	c c c c	1218
+5193	Austral_128	star	f e t i ʔ a	f e t i ʔ a	c c c c c c	1218
+5701	Hawaiian_52	star	h oː k uː	h oː k uː	c c c c	1220
+#
+865	Maori_85	stick/wood	r aː + k a u	r aː + k a u	c c + c c c	234 1225
+1309	Tahitian_173	stick/wood	r aː + ʔ a u	r aː + ʔ a u	c c + c c c	234 1225
+1751	Rapanui_264	stick/wood	m i r o	m i r o	c c c c	1234
+2009	Mangareva_239	stick/wood	r a + k a u	r a + k a u	c c + c c c	234 1225
+3209	Sikaiana_243	stick/wood	l aː + k a u	l aː + k a u	c c + c c c	234 1225
+3476	NorthMarquesan_38	stick/wood	ʔ a + k a u	ʔ a + k a u	c c + c c c	234 1225
+4743	Tuamotuan_246	stick/wood	r aː + k a u	r aː + k a u	c c + c c c	234 1225
+5257	Austral_128	stick/wood	r aː + ʔ a u	r aː + ʔ a u	c c + c c c	234 1225
+5756	Hawaiian_52	stick/wood	l aː + ʔ a u	l aː + ʔ a u	c c + c c c	234 1225
+#
+821	Maori_85	stone	k oː + f a t u	k oː + f a t u	c c + c c c c	1242 1237
+1266	Tahitian_173	stone	ʔ oː f a ʔ i	ʔ oː f a ʔ i	c c c c c c	1247
+1702	Rapanui_264	stone	m a ʔ e a	m a ʔ e a	c c c c c	1245
+1959	Mangareva_239	stone	p o + ʔ a t u	p o + ʔ a t u	c c + c c c c	1236 1237
+3163	Sikaiana_243	stone	h a t u	h a t u	c c c c	1246
+3416	NorthMarquesan_38	stone	k e ʔ a	k e ʔ a -	c c c c	1244
+3417	NorthMarquesan_38	stone	h a t u + k e ʔ a a	h a t u + k e ʔ a a	c c c c + c c c c c	1246 2414
+4476	Austral_1213	stone	ʔ o h a i	ʔ o h a i	c c c c c	1235
+4692	Tuamotuan_246	stone	p oː + f a t u	p oː + f a t u	c c + c c c c	1236 1237
+4693	Tuamotuan_246	stone	h a t u	h a t u	c c c c	1246
+5204	Austral_128	stone	p o + ʔ a t u	p o + ʔ a t u	c c + c c c c	1236 1237
+5205	Austral_128	stone	ʔ oː ʔ a ʔ i	ʔ oː ʔ a ʔ i	c c c c c c	1247
+5712	Hawaiian_52	stone	p oː + h a k u	p oː + h a k u	c c + c c c c	1236 1237
+#
+838	Maori_85	tail	f i o r e	f i o r e	c c c c c	1251
+1281	Tahitian_173	tail	ʔ i t e r e	ʔ i t e r e	c c c c c c	1256
+1282	Tahitian_173	tail	h i ʔ u	h i ʔ u	c c c c	1253
+1283	Tahitian_173	tail	ʔ a e r o	ʔ a e r o	c c c c c	1249
+1718	Rapanui_264	tail	h i k u	h i k u	c c c c	1253
+1975	Mangareva_239	tail	a v e	a v e - -	c c c	1248
+1976	Mangareva_239	tail	v e r o	- v e r o	c c c c	2415
+1977	Mangareva_239	tail	ʔ i k u	ʔ i k u	c c c c	1253
+3180	Sikaiana_243	tail	m u i + s u k i	m u i + s u k i	c c c + c c c c	1254 1255
+3434	NorthMarquesan_38	tail	v e ʔ o	- v e ʔ o	c c c c	1248
+3435	NorthMarquesan_38	tail	h i k u	h i k u	c c c c	1253
+4708	Tuamotuan_246	tail	v a e r o	v a e r o	c c c c c	1249
+4709	Tuamotuan_246	tail	h i k u	h i k u	c c c c	1253
+5220	Austral_128	tail	v e r o	- v e r o	c c c c	1248
+5221	Austral_128	tail	ʔ u + ʔ u	ʔ u + ʔ u - -	c c + c c	1258 1255
+5728	Hawaiian_52	tail	h u e l o	h u e l o	c c c c c	1249
+#
+757	Maori_85	that	t eː + r aː	t eː + r aː	c c + c c	1259 1260
+758	Maori_85	that	t eː + n aː	t eː + n aː	c c + c c	2416 1273
+1203	Tahitian_173	that	t eː + r aː	t eː + r aː	c c + c c	1259 1260
+1627	Rapanui_264	that	e + r a	- e + r a	c + c c	1259 1260
+3329	NorthMarquesan_38	that	t e + ʔ aː	t e + ʔ aː	c c + c c	1259 1260
+4614	Tuamotuan_246	that	a u a	a u a	c c c	1270
+5136	Austral_128	that	t eː + r aː	t eː + r aː	c c + c c	1259 1260
+5645	Hawaiian_52	that	n a	n a	c c	1261
+5646	Hawaiian_52	that	l a	l a	c c	1271
+#
+882	Maori_85	thatch/roof	r a u + r a u	r a u + r a u	c c c + c c c	1281 1282
+1328	Tahitian_173	thatch/roof	t aː + p o ʔ i + f a r e	t aː + p o ʔ i + f a r e	c c + c c c c + c c c c	1276 1277 643
+1773	Rapanui_264	thatch/roof	a t o	- a t o	c c c	1279
+2033	Mangareva_239	thatch/roof	p a k u	p a k u	c c c c	1280
+2034	Mangareva_239	thatch/roof	a t o	- a t o	c c c	1279
+3226	Sikaiana_243	thatch/roof	a t o	- a t o	c c c	1279
+3227	Sikaiana_243	thatch/roof	i n a k i	i n a k i	c c c c c	1291
+3506	NorthMarquesan_38	thatch/roof	h a t u	h a t u	c c c c	1279
+4527	Austral_1213	thatch/roof	h a ɢ e + n i ʔ a u	h a ɢ e + n i ʔ a u	c c c c + c c c c c	1274 1275
+4770	Tuamotuan_246	thatch/roof	a t o	- a t o	c c c	1279
+5277	Austral_128	thatch/roof	t aː + p o ʔ i + ʔ a r e	t aː + p o ʔ i + ʔ a r e	c c + c c c c + c c c c	1276 1277 643
+5775	Hawaiian_52	thatch/roof	a k o	- a k o	c c c	1279
+#
+743	Maori_85	they	r aː + t o u	r aː + t o u	c c + c c c	1292 1293
+744	Maori_85	they	r aː + u a	r aː + u a	c c + c c	2421 900
+1188	Tahitian_173	they	r aː + t o u	r aː + t o u	c c + c c c	1292 1293
+1189	Tahitian_173	they	r aː + u a	r aː + u a	c c + c c	2423 900
+1616	Rapanui_264	they	r a + ʔ u a	r a + ʔ u a	c c + c c c	1292 1305
+1869	Mangareva_239	they	r aː + t o u	r aː + t o u	c c + c c c	1292 1293
+1870	Mangareva_239	they	r aː + u a	r aː + u a	c c + c c	2420 900
+3093	Sikaiana_243	they	l aː + u a	l aː + u a	c c + c c	1292 900
+3094	Sikaiana_243	they	l aː + t o u	l aː + t o u	c c + c c c	2422 1293
+3315	NorthMarquesan_38	they	ʔ a + t o u	ʔ a + t o u	c c + c c c	1292 1293
+4410	Austral_1213	they	ɢ aː + t o u	ɢ aː + t o u	c c + c c c	1292 1293
+4411	Austral_1213	they	ɢ aː + u a	ɢ aː + u a	c c + c c	2417 900
+5120	Austral_128	they	r aː + t o u	r aː + t o u	c c + c c c	1292 1293
+5121	Austral_128	they	r aː + u a	r aː + u a	c c + c c	2418 900
+5631	Hawaiian_52	they	l aː + k o u	l aː + k o u	c c + c c c	1292 1293
+5632	Hawaiian_52	they	l aː + u a	l aː + u a	c c + c c	2419 900
+#
+781	Maori_85	thick	m a + t o + t o r u	m a + t o - - + t o r u	c c + c c + c c c c	1312 1313 76
+1226	Tahitian_173	thick	m e ʔ u + m e ʔ u	m e ʔ u + m e ʔ u	c c c c + c c c c	1308 1308
+1655	Rapanui_264	thick	m a + t o r u	m a + t o r u	c c + c c c c	1312 1313
+1906	Mangareva_239	thick	m aː + t o r u	m aː + t o r u	c c + c c c c	1312 1313
+3125	Sikaiana_243	thick	m aː + t o r u	m aː + t o r u	c c + c c c c	1312 1325
+3360	NorthMarquesan_38	thick	m o + t o ʔ u	m o + t o ʔ u	c c + c c c c	1312 1313
+4442	Austral_1213	thick	m e ʔ u + m e ʔ u	m e ʔ u + m e ʔ u	c c c c + c c c c	1308 1308
+4637	Tuamotuan_246	thick	t u ʔ a + t u ʔ a	t u ʔ a + t u ʔ a	c c c c + c c c c	1328 1313
+5163	Austral_128	thick	t u e + t u e	t u e + t u - e	c c c + c c c	1310 1313
+5670	Hawaiian_52	thick	m aː + k o l u + k o l u	m aː + k o l u + k o l u	c c + c c c c + c c c c	1312 1313 76
+#
+782	Maori_85	thin	r a h i + r a h i	r a h i + r a h i	c c c c + c c c c	1333 1330
+1227	Tahitian_173	thin	r a i + r a i	r a i + r a - i	c c c + c c c	1329 1330
+1656	Rapanui_264	thin	r a ʔ i	r a ʔ i	c c c c	1333
+1907	Mangareva_239	thin	r i k i + r i k i	r i k i + r i k i	c c c c + c c c c	1334 1335
+3126	Sikaiana_243	thin	t u a + l i k i	t u a + l i k i	c c c + c c c c	1342 1335
+3361	NorthMarquesan_38	thin	p i + ʔ a h i + ʔ a h i	p i + ʔ a h i + ʔ a h i	c c + c c c c + c c c c	1338 1330 1340
+3362	NorthMarquesan_38	thin	ʔ a k i + a k i	ʔ a k i + a k i	c c c c + c c c	1334 1348
+3363	NorthMarquesan_38	thin	k a h i + k a h i	k a h i + k a h i	c c c c + c c c c	1333 2424
+4443	Austral_1213	thin	ɢ a i + ɢ a i	ɢ a i + ɢ a - i	c c c + c c c	1329 1330
+4638	Tuamotuan_246	thin	r a h i	r a h i	c c c c	1333
+5164	Austral_128	thin	r a i + r a i	r a i + r a - i	c c c + c c c	1329 1330
+5671	Hawaiian_52	thin	l a h i	l a h i	c c c c	1333
+#
+759	Maori_85	this	t eː + n e i	t eː + n e i	c c + c c c	1349 1353
+1204	Tahitian_173	this	t e + i e	t e + i e	c c + c c	1349 1350
+1628	Rapanui_264	this	n e i	n e i	c c c	1351
+1881	Mangareva_239	this	t e + n e i	t e + n e i	c c + c c c	1349 1353
+3107	Sikaiana_243	this	t e + n e i	t e + n e i	c c + c c c	1349 1353
+3330	NorthMarquesan_38	this	t e + n e i	t e + n e i	c c + c c c	1349 1353
+4615	Tuamotuan_246	this	t e	t e	c c	1349
+5137	Austral_128	this	t e + i e	t e + i e	c c + c c	1349 1350
+5647	Hawaiian_52	this	n e i	n e i	c c c	1351
+5648	Hawaiian_52	this	k eː + i a	k eː + i a	c c + c c	1349 1350
+#
+752	Maori_85	thou	k o e	k o e	c c c	1354
+1197	Tahitian_173	thou	ʔ o e	ʔ o e	c c c	1354
+1621	Rapanui_264	thou	k o u	k o u	c c c	1360
+1876	Mangareva_239	thou	k o e	k o e	c c c	1354
+3102	Sikaiana_243	thou	k o e	k o e	c c c	1354
+3322	NorthMarquesan_38	thou	ʔ o e	ʔ o e	c c c	1354
+4420	Austral_1213	thou	ʔ o e	ʔ o e	c c c	1354
+4608	Tuamotuan_246	thou	k o e	k o e	c c c	1354
+5130	Austral_128	thou	ʔ o e	ʔ o e	c c c	1354
+5640	Hawaiian_52	thou	ʔ o e	ʔ o e	c c c	1354
+#
+806	Maori_85	thunder	f a t i + t i r i	f a t i + t i r i	c c c c + c c c c	1367 1362
+1251	Tahitian_173	thunder	p aː + t i r i	p aː + t i r i	c c + c c c c	1361 1362
+1686	Rapanui_264	thunder	p a + t i r i	p a + t i r i	c c + c c c c	1361 1362
+1942	Mangareva_239	thunder	a t u + t i r i	- a t u + t i r i	c c c + c c c c	1367 1362
+3150	Sikaiana_243	thunder	m a n a	m a n a	c c c c	1376
+3399	NorthMarquesan_38	thunder	p h a + t oː + t eː	p h a + t oː - - + t eː	c c c + c c + c c	1371 1362 1373
+4465	Austral_1213	thunder	p aː + t i ɢ i	p aː + t i ɢ i	c c + c c c c	1361 1362
+4672	Tuamotuan_246	thunder	f a t u + t i r i	f a t u + t i r i	c c c c + c c c c	1367 1362
+5189	Austral_128	thunder	p aː + t i r i	p aː + t i r i	c c + c c c c	1361 1362
+5697	Hawaiian_52	thunder	h e + k i l i	h e + k i l i	c c + c c c c	1365 1362
+#
+903	Maori_85	to bite	ŋ a u	ŋ a u	c c c	1382
+1352	Tahitian_173	to bite	h o + h o n i	h o + h o n i	c c + c c c c	1377 1378
+1797	Rapanui_264	to bite	g a u	g a u	c c c	1382
+2062	Mangareva_239	to bite	e t i	e t i	c c c	1381
+3248	Sikaiana_243	to bite	n u n u	n u n u	c c c c	1385
+3534	NorthMarquesan_38	to bite	n a h u	n a h u	c c c c	1380
+4796	Tuamotuan_246	to bite	k a t i	k a t i	c c c c	1388
+5305	Austral_128	to bite	ʔ oː + ʔ i n i + ʔ i n i	ʔ oː + ʔ i n i + ʔ i n i	c c + c c c c + c c c c	1377 1378 1379
+5306	Austral_128	to bite	p a + ʔ a t i	p a + ʔ a t i	c c + c c c c	1389 1390
+5797	Hawaiian_52	to bite	n a h u	n a h u	c c c c	1380
+#
+802	Maori_85	to blow	p u + p u h i	p u - - + p u h i	c c + c c c c	1391 1392
+803	Maori_85	to blow	h u a	h u a	c c c	1407
+1247	Tahitian_173	to blow	p u h i	p u h i	c c c c	1391
+1248	Tahitian_173	to blow	f a r a + r a	f a r a + r a	c c c c + c c	1403 1404
+1681	Rapanui_264	to blow	p u h i	p u h i	c c c c	1391
+1937	Mangareva_239	to blow	p u ʔ i	p u ʔ i	c c c c	1391
+1938	Mangareva_239	to blow	a g i	a g i	c c c	1406
+3147	Sikaiana_243	to blow	a n i	a n i	c c c	1400
+3396	NorthMarquesan_38	to blow	p u h i	p u h i	c c c c	1391
+4462	Austral_1213	to blow	p u + p u h i	p u - - + p u h i	c c + c c c c	1391 1392
+4664	Tuamotuan_246	to blow	p u h i	p u h i	c c c c	1391
+4665	Tuamotuan_246	to blow	p aː	p aː	c c	1394
+4666	Tuamotuan_246	to blow	h a r a + r a	h a r a + r a	c c c c + c c	1403 1404
+4667	Tuamotuan_246	to blow	a ŋ i	a ŋ i	c c c	1400
+5185	Austral_128	to blow	p u ʔ i	p u ʔ i	c c c c	1391
+5186	Austral_128	to blow	f a r a + r a	f a r a + r a	c c c c + c c	1403 1404
+5693	Hawaiian_52	to blow	p aː	p aː	c c	1394
+5694	Hawaiian_52	to blow	p u h i	p u h i	c c c c	1391
+#
+916	Maori_85	to breathe	f a k a + h aː	f a k a + h aː	c c c c + c c	1417 1418
+1367	Tahitian_173	to breathe	h u t i + i + t e + a h o	h u t i + - i + t e + a h o	c c c c + c + c c + c c c	1408 1409 1349 1414
+1811	Rapanui_264	to breathe	h aː	h aː -	c c	1416
+2076	Mangareva_239	to breathe	ʔ a u	ʔ a u	c c c	1416
+3262	Sikaiana_243	to breathe	m aː n a v a	m aː n a v a	c c c c c c	1421
+3550	NorthMarquesan_38	to breathe	h a	h a -	c c	1416
+3551	NorthMarquesan_38	to breathe	m e n a v a	m e n a v a	c c c c c c	1421
+4561	Austral_1213	to breathe	h u t i + t e + a h o	h u t i + t e + a h o	c c c c + c c + c c c	1408 1409 1410
+4812	Tuamotuan_246	to breathe	m a n a v a	m a n a v a	c c c c c c	1421
+4813	Tuamotuan_246	to breathe	ŋ aː	ŋ aː	c c	1429
+5320	Austral_128	to breathe	ʔ u t i + i + t e + a ʔ o	ʔ u t i + - i + t e + a ʔ o	c c c c + c + c c + c c c	1408 1409 1349 1414
+5812	Hawaiian_52	to breathe	h a n u	h a n u	c c c c	1415
+5813	Hawaiian_52	to breathe	a h o	a h o	c c c	1427
+#
+795	Maori_85	to burn	t a h u	t a h u	c c c c	1436
+1240	Tahitian_173	to burn	t u + t u ʔ i	t u - - + t u ʔ i	c c + c c c c	1434 1431
+1672	Rapanui_264	to burn	t u + t u	t u - - + t u - -	c c + c c	1434 1431
+1924	Mangareva_239	to burn	k a ʔ a	k a ʔ a - -	c c c c	1432
+1925	Mangareva_239	to burn	t u t u	t u t u	c c c c	1434
+1926	Mangareva_239	to burn	t a ʔ u	t a ʔ u	c c c c	1436
+3139	Sikaiana_243	to burn	t u + t u	t u - - + t u - -	c c + c c	1434 1431
+3140	Sikaiana_243	to burn	t uː n i + a	t uː n i + - a - -	c c c c + c	1434 2426
+3384	NorthMarquesan_38	to burn	h a k a + u ʔ a	- - h a k a + u ʔ a	c c c c + c c c	1432 1438
+3385	NorthMarquesan_38	to burn	t u t u	t u t u	c c c c	1434
+4455	Austral_1213	to burn	t u + t u ʔ i	t u - - + t u ʔ i	c c + c c c c	1434 1431
+4654	Tuamotuan_246	to burn	t u ŋ i	t u ŋ i	c c c c	1434
+4655	Tuamotuan_246	to burn	t a h u	t a h u	c c c c	1436
+5176	Austral_128	to burn	ʔ a + ʔ a ʔ a m a	- - ʔ a - - + ʔ a ʔ a m a	c c + c c c c c c	1432 1433
+5684	Hawaiian_52	to burn	k u n i	k u n i	c c c c	1434
+5685	Hawaiian_52	to burn	ʔ aː	- - ʔ aː - -	c c	1432
+#
+853	Maori_85	to buy	h o k o	h o k o	c c c c	1439
+1297	Tahitian_173	to buy	h o ʔ o + m a i	h o ʔ o + m a i	c c c c + c c c	1439 1440
+1734	Rapanui_264	to buy	m o n o	m o n o	c c c c	1445
+1735	Rapanui_264	to buy	h o ʔ o	h o ʔ o	c c c c	1439
+1996	Mangareva_239	to buy	ʔ o k o	ʔ o k o	c c c c	1439
+3195	Sikaiana_243	to buy	s u i	s u i	c c c	1446
+3459	NorthMarquesan_38	to buy	h o ʔ o	h o ʔ o	c c c c	1439
+4728	Tuamotuan_246	to buy	h o k o	h o k o	c c c c	1439
+5240	Austral_128	to buy	ʔ o ʔ o + m a i	ʔ o ʔ o + m a i	c c c c + c c c	1439 1440
+5742	Hawaiian_52	to buy	k uː ʔ a i	k uː ʔ a i	c c c c c	1441
+#
+906	Maori_85	to chew	k a t i + k a t i	k a t i + k a t i	c c c c + c c c c	1455 1450
+1356	Tahitian_173	to chew	ʔ a u + ʔ a u	ʔ a u + ʔ a - u	c c c + c c c	1449 1450
+1800	Rapanui_264	to chew	m a + m a	- - m a + m a - -	c c + c c	1451 1448
+2065	Mangareva_239	to chew	ʔ a m a + m a	ʔ a m a + m a - -	c c c c + c c	1451 1448
+3251	Sikaiana_243	to chew	m aː + m aː	- - m aː + m aː - -	c c + c c	1451 1448
+4551	Austral_1213	to chew	ʔ a ʔ a + m a ɢ u	ʔ a ʔ a + m a ɢ u	c c c c + c c c c	1447 1448
+4799	Tuamotuan_246	to chew	ŋ a u	ŋ a u	c c c	1449
+5310	Austral_128	to chew	ʔ a u + ʔ a u	ʔ a u + ʔ a - u	c c c + c c c	1449 1450
+5800	Hawaiian_52	to chew	m a + m a	- - m a + m a - -	c c + c c	1451 1448
+#
+859	Maori_85	to choose	f i r i	f i r i	c c c c	1459
+1303	Tahitian_173	to choose	m a ʔ i t i	m a ʔ i t i	c c c c c c	1457
+1744	Rapanui_264	to choose	v a e	v a e	c c c	1458
+3202	Sikaiana_243	to choose	h i l i	h i l i	c c c c	1459
+3469	NorthMarquesan_38	to choose	v a e	v a e	c c c	1458
+4506	Austral_1213	to choose	p e ɢ e ɢ a u	p e ɢ e ɢ a u	c c c c c c c	1456
+4734	Tuamotuan_246	to choose	k o i + k o i	k o i + k o i	c c c + c c c	1464 1465
+5248	Austral_128	to choose	m a ʔ i t i	m a ʔ i t i	c c c c c c	1457
+5749	Hawaiian_52	to choose	w a e	w a e	c c c	1458
+5750	Hawaiian_52	to choose	k o h o	k o h o	c c c c	1466
+#
+765	Maori_85	to climb	p i k i	p i k i	c c c c	1470
+1209	Tahitian_173	to climb	t a ʔ u m a	t a ʔ u m a	c c c c c c	1475
+1634	Rapanui_264	to climb	e k e	- e k e	c c c	1473
+1886	Mangareva_239	to climb	p i k i	p i k i	c c c c	1470
+3111	Sikaiana_243	to climb	k a k e	k a k e	c c c c	1473
+3336	NorthMarquesan_38	to climb	h i t i	h i t i	c c c c	1472
+4427	Austral_1213	to climb	p i ʔ i	p i ʔ i	c c c c	1470
+4621	Tuamotuan_246	to climb	k a k e	k a k e	c c c c	1473
+5142	Austral_128	to climb	p i ʔ i	p i ʔ i	c c c c	1470
+5655	Hawaiian_52	to climb	p i ʔ i	p i ʔ i	c c c c	1470
+#
+937	Maori_85	to come	h a e r e + m a i	h a e r e + m a i	c c c c c + c c c	1476 1440
+1389	Tahitian_173	to come	h a e r e + m a i	h a e r e + m a i	c c c c c + c c c	1476 1440
+1840	Rapanui_264	to come	t u ʔ u	t u ʔ u	c c c c	1481
+2102	Mangareva_239	to come	a ʔ u	- a ʔ u	c c c	1481
+3284	Sikaiana_243	to come	h a l e + m a i	h a l e + m a i	c c c c + c c c	1484 1440
+3576	NorthMarquesan_38	to come	h e ʔ e + m a i	h e ʔ e + m a i	c c c c + c c c	1484 1440
+3577	NorthMarquesan_38	to come	t i h e	t i h e	c c c c	1494
+4581	Austral_1213	to come	h a e ɢ e + m a i	h a e ɢ e + m a i	c c c c c + c c c	1476 1440
+4841	Tuamotuan_246	to come	m a i	m a i	c c c	1480
+5346	Austral_128	to come	ʔ a e r e + m a i	ʔ a e r e + m a i	c c c c c + c c c	1476 1440
+5347	Austral_128	to come	ʔ a n o + m a i	ʔ a n o + m a i	c c c c + c c c	1492 2427
+5836	Hawaiian_52	to come	m a i	m a i	c c c	1480
+#
+905	Maori_85	to cook	t a o	t a o	c c c	1496
+1354	Tahitian_173	to cook	ʔ e u	ʔ e u	c c c	1504
+1355	Tahitian_173	to cook	t u n u	t u n u	c c c c	1495
+1799	Rapanui_264	to cook	t u n u	t u n u	c c c c	1495
+2064	Mangareva_239	to cook	t u n u	t u n u	c c c c	1495
+3250	Sikaiana_243	to cook	t a o	t a o	c c c	1496
+3536	NorthMarquesan_38	to cook	n u n u	n u n u	c c c c	1495
+3537	NorthMarquesan_38	to cook	t a o	t a o	c c c	1496
+4550	Austral_1213	to cook	t u n u	t u n u	c c c c	1495
+4798	Tuamotuan_246	to cook	t a o	t a o	c c c	1496
+5308	Austral_128	to cook	t a u	t a u	c c c	1496
+5309	Austral_128	to cook	t u n u	t u n u	c c c c	1495
+5799	Hawaiian_52	to cook	h o ʔ o + m o ʔ a	h o ʔ o + m o ʔ a	c c c c + c c c c	1497 1498
+#
+733	Maori_85	to count	t a + t a u	t a - - - + t a - u	c c + c c c	1505 1511
+1179	Tahitian_173	to count	t a i ʔ o	t a i ʔ o	c c c c c	1505
+1603	Rapanui_264	to count	t a + t a k u	t a - - - + t a k u	c c + c c c c	1505 1511
+1861	Mangareva_239	to count	t o u + ʔ a r a	t o u + ʔ a r a	c c c + c c c c	1508 1509
+3084	Sikaiana_243	to count	p a u	p a u	c c c	1515
+3305	NorthMarquesan_38	to count	t a u	t a u - -	c c c	1505
+4403	Austral_1213	to count	t a i ʔ o	t a i ʔ o	c c c c c	1505
+5110	Austral_128	to count	t a i ʔ o	t a i ʔ o	c c c c c	1505
+5622	Hawaiian_52	to count	h e l u	h e l u	c c c c	1507
+#
+910	Maori_85	to cry	t a ŋ i	t a ŋ i	c c c c	1518
+1360	Tahitian_173	to cry	t a ʔ i	t a ʔ i	c c c c	1518
+1804	Rapanui_264	to cry	t a ŋ i	t a ŋ i	c c c c	1518
+2070	Mangareva_239	to cry	k o a	k o a	c c c	1519
+3255	Sikaiana_243	to cry	t a n i	t a n i	c c c c	1518
+3542	NorthMarquesan_38	to cry	u e	u e	c c	1521
+3543	NorthMarquesan_38	to cry	t a n i	t a n i	c c c c	1518
+4555	Austral_1213	to cry	h e v a	h e v a	c c c c	1516
+4804	Tuamotuan_246	to cry	t a ŋ i	t a ŋ i	c c c c	1518
+5314	Austral_128	to cry	ʔ e v a	ʔ e v a	c c c c	1516
+5805	Hawaiian_52	to cry	k a n i	k a n i	c c c c	1518
+5806	Hawaiian_52	to cry	u w eː	u w eː	c c c	1526
+#
+866	Maori_85	to cut, hack	t aː	t aː - -	c c	1527
+1310	Tahitian_173	to cut, hack	t aː p uː	t aː p uː	c c c c	1527
+1752	Rapanui_264	to cut, hack	h o r e	h o r e	c c c c	1536
+1753	Rapanui_264	to cut, hack	a v a h i	a v a h i	c c c c c	1545
+1754	Rapanui_264	to cut, hack	t a r a i	t a r a i	c c c c c	1535
+1755	Rapanui_264	to cut, hack	m o t u	m o t u	c c c c	1531
+2010	Mangareva_239	to cut, hack	ʔ a k a + k i u+ k i u	ʔ a k a + k i u+ k i u	c c c c + c c c c c c	1532 1533
+2011	Mangareva_239	to cut, hack	t a r a i	t a r a i	c c c c c	1535
+3210	Sikaiana_243	to cut, hack	s e l e	s e l e	c c c c	1536
+3477	NorthMarquesan_38	to cut, hack	t a ʔ a i	t a ʔ a i	c c c c c	1535
+3478	NorthMarquesan_38	to cut, hack	k o + k o t i	k o + k o t i	c c + c c c c	1539 1540
+3479	NorthMarquesan_38	to cut, hack	ʔ i h i	ʔ i h i	c c c c	1546
+4512	Austral_1213	to cut, hack	t a p u + t e + ɢ a ʔ a u	t a p u + t e + ɢ a ʔ a u	c c c c + c c + c c c c c	1527 1528 1529
+4744	Tuamotuan_246	to cut, hack	k o + k o t i	k o + k o t i	c c + c c c c	1539 1540
+4745	Tuamotuan_246	to cut, hack	i h i	- i h i	c c c	1546
+5258	Austral_128	to cut, hack	t aː p uː	t aː p uː	c c c c	1527
+5757	Hawaiian_52	to cut, hack	m o k u	m o k u	c c c c	1531
+5758	Hawaiian_52	to cut, hack	ʔ o k i	ʔ o k i	c c c c	1541
+#
+869	Maori_85	to die, be dead	m a t e	m a t e	c c c c	1547
+1313	Tahitian_173	to die, be dead	p o h e	p o h e	c c c c	1555
+1759	Rapanui_264	to die, be dead	m a t e	m a t e	c c c c	1547
+2015	Mangareva_239	to die, be dead	m a t e	m a t e	c c c c	1547
+3213	Sikaiana_243	to die, be dead	m a t e	m a t e	c c c c	1547
+3482	NorthMarquesan_38	to die, be dead	k e ʔ o	k e ʔ o	c c c c	1552
+3483	NorthMarquesan_38	to die, be dead	m a t e	m a t e	c c c c	1547
+4515	Austral_1213	to die, be dead	m a t e	m a t e	c c c c	1547
+4748	Tuamotuan_246	to die, be dead	p o h e	p o h e	c c c c	1555
+4749	Tuamotuan_246	to die, be dead	m a t e	m a t e	c c c c	1547
+5261	Austral_128	to die, be dead	m a t e	m a t e	c c c c	1547
+5761	Hawaiian_52	to die, be dead	m a k e	m a k e	c c c c	1547
+#
+854	Maori_85	to dig	k e r i	k e r i	c c c c	1558
+1298	Tahitian_173	to dig	ʔ e r u	ʔ e r u	c c c c	1558
+1736	Rapanui_264	to dig	k a + k a r o	k a + k a r o	c c + c c c c	1563 1564
+1737	Rapanui_264	to dig	k e r i	k e r i	c c c c	1558
+1997	Mangareva_239	to dig	p o k o + p o k o	p o k o + p o k o	c c c c + c c c c	1559 1560
+1998	Mangareva_239	to dig	k e r i	k e r i	c c c c	1558
+3196	Sikaiana_243	to dig	k e l i	k e l i	c c c c	1558
+3460	NorthMarquesan_38	to dig	k e ʔ i	k e ʔ i	c c c c	1558
+4501	Austral_1213	to dig	ʔ oː	ʔ oː	c c	1556
+4729	Tuamotuan_246	to dig	k e r i	k e r i	c c c c	1558
+5241	Austral_128	to dig	p a ʔ i	p a ʔ i	c c c c	1557
+5242	Austral_128	to dig	ʔ i r i	ʔ i r i	c c c c	1558
+5743	Hawaiian_52	to dig	ʔ e l i	ʔ e l i	c c c c	1558
+#
+894	Maori_85	to dream	m o e + m o e + aː	m o e - - - + m o e + aː	c c c + c c c + c	1565 1566 1567
+1342	Tahitian_173	to dream	t a + ʔ o t o + ʔ o t o + aː	t a + ʔ o t o + ʔ o t o + aː	c c + c c c c + c c c c + c	1584 1569 1586 1587
+1343	Tahitian_173	to dream	m o e m o e + aː	m o e m o e + - aː - -	c c c c c c + c	1565 2429
+1788	Rapanui_264	to dream	m o e	m o e - - -	c c c	1565
+2050	Mangareva_239	to dream	m o e + m o e + a	m o e - - - + m o e + a	c c c + c c c + c	1565 1566 1567
+3524	NorthMarquesan_38	to dream	m o e + m o e + a	m o e - - - + m o e + a	c c c + c c c + c	1565 1566 1567
+4540	Austral_1213	to dream	m o e + m o e + aː	m o e - - - + m o e + aː	c c c + c c c + c	1565 1566 1567
+4785	Tuamotuan_246	to dream	m o e + m o e + aː	m o e - - - + m o e + aː	c c c + c c c + c	1565 1566 1567
+5293	Austral_128	to dream	ʔ a ʔ a + ʔ e i + m o e	ʔ a ʔ a + ʔ e - i + m o e	c c c c + c c c + c c c	1568 1569 1570
+5294	Austral_128	to dream	m o e + m o e + aː	m o e - - - + m o e + aː	c c c + c c c + c	1565 1566 1567
+5787	Hawaiian_52	to dream	m o e + m o e + aː	m o e - - - + m o e + aː	c c c + c c c + c	1565 1566 1567
+5788	Hawaiian_52	to dream	m o e + ʔ u h a n e	m o e - - - + ʔ u h a n e	c c c + c c c c c c	2428 1595
+#
+904	Maori_85	to drink	i n u	i n u	c c c	1597
+1353	Tahitian_173	to drink	i n u	i n u	c c c	1597
+1798	Rapanui_264	to drink	u n u	u n u	c c c	1597
+2063	Mangareva_239	to drink	i n u	i n u	c c c	1597
+3249	Sikaiana_243	to drink	u n u	u n u	c c c	1597
+3535	NorthMarquesan_38	to drink	i n u	i n u	c c c	1597
+4549	Austral_1213	to drink	i n u	i n u	c c c	1597
+4797	Tuamotuan_246	to drink	i n u	i n u	c c c	1597
+5307	Austral_128	to drink	u n u	u n u	c c c	1597
+5798	Hawaiian_52	to drink	i n u	i n u	c c c	1597
+#
+907	Maori_85	to eat	k a i	k a i	c c c	1599
+1357	Tahitian_173	to eat	ʔ a m u	ʔ a m u	c c c c	1598
+1801	Rapanui_264	to eat	k a i	k a i	c c c	1599
+2066	Mangareva_239	to eat	k a i	k a i	c c c	1599
+3252	Sikaiana_243	to eat	k a i	k a i	c c c	1599
+3539	NorthMarquesan_38	to eat	ʔ a i	ʔ a i	c c c	1599
+4552	Austral_1213	to eat	ʔ a m u	ʔ a m u	c c c c	1598
+4800	Tuamotuan_246	to eat	k a i	k a i	c c c	1599
+5311	Austral_128	to eat	ʔ a i	ʔ a i	c c c	1599
+5801	Hawaiian_52	to eat	ʔ a i	ʔ a i	c c c	1599
+#
+849	Maori_85	to fall	m a k e r e	m a k e r e	c c c c c c	1604
+1293	Tahitian_173	to fall	t o p a	t o p a	c c c c	1600
+1730	Rapanui_264	to fall	h i g a	h i g a	c c c c	1608
+1731	Rapanui_264	to fall	t o p a	t o p a	c c c c	1600
+1989	Mangareva_239	to fall	t o p a	t o p a	c c c c	1600
+1991	Mangareva_239	to fall	m a + r e + r e	m a - - - + r e + r e - - -	c c + c c + c c	1612 1614 1607
+3190	Sikaiana_243	to fall	s i n a	s i n a	c c c c	1608
+3448	NorthMarquesan_38	to fall	h uː + t e + h e n u a	- - - - h uː + t e + h e n u a	c c + c c + c c c c c	1605 1606 1607
+3449	NorthMarquesan_38	to fall	v i ʔ i	v i ʔ i	c c c c	1616
+3450	NorthMarquesan_38	to fall	t o p a	t o p a	c c c c	1600
+3451	NorthMarquesan_38	to fall	h i n a	h i n a	c c c c	1608
+3452	NorthMarquesan_38	to fall	m o k u ʔ u	m o k u ʔ u	c c c c c c	2430
+3453	NorthMarquesan_38	to fall	m e k e ʔ e	m e k e ʔ e	c c c c c c	1604
+4497	Austral_1213	to fall	t o p a	t o p a	c c c c	1600
+4719	Tuamotuan_246	to fall	t o p a	t o p a	c c c c	1600
+4720	Tuamotuan_246	to fall	h i ŋ a	h i ŋ a	c c c c	1608
+4721	Tuamotuan_246	to fall	m a + r e + r e	m a - - - + r e + r e - - -	c c + c c + c c	1612 1614 1607
+4722	Tuamotuan_246	to fall	m a k i r i	m a k i r i	c c c c c c	1604
+5233	Austral_128	to fall	t o p a	t o p a	c c c c	1600
+5234	Austral_128	to fall	m a r u a	m a r u a	c c c c c	1612
+5738	Hawaiian_52	to fall	h aː ʔ u l e	h aː ʔ u l e	c c c c c c	1602
+#
+922	Maori_85	to fear	m a t a k u	m a t a k u	c c c c c c	1622
+1373	Tahitian_173	to fear	r i ʔ a + r i ʔ a	r i ʔ a + r i ʔ a	c c c c + c c c c	1624 1624
+1818	Rapanui_264	to fear	m a t a k u	m a t a k u	c c c c c c	1622
+1819	Rapanui_264	to fear	r i a + r i a	r i a + r i - a	c c c + c c c	1617 1624
+2083	Mangareva_239	to fear	m a t a k u	m a t a k u	c c c c c c	1622
+3268	Sikaiana_243	to fear	m a t a k u	m a t a k u	c c c c c c	1622
+3559	NorthMarquesan_38	to fear	h a ʔ a + m e t a ʔ u	h a ʔ a + m e t a ʔ u	c c c c + c c c c c c	1624 1625
+4567	Austral_1213	to fear	ɢ i a + ɢ i a	ɢ i a + ɢ i - a	c c c + c c c	1617 1624
+4822	Tuamotuan_246	to fear	m a t a k u	m a t a k u	c c c c c c	1622
+5327	Austral_128	to fear	m e ʔ a + m e ʔ a	m e ʔ a + m e ʔ a	c c c c + c c c c	1619 1620
+5328	Austral_128	to fear	m a t a ʔ u	m a t a ʔ u	c c c c c c	1622
+5329	Austral_128	to fear	r i ʔ a + r i ʔ a	r i ʔ a + r i ʔ a	c c c c + c c c c	1624 1624
+5819	Hawaiian_52	to fear	m a k a ʔ u	m a k a ʔ u	c c c c c c	1622
+#
+818	Maori_85	to flow	t e r e	t e r e	c c c c	1630
+1263	Tahitian_173	to flow	t a h e	t a h e	c c c c	1626
+1699	Rapanui_264	to flow	t e h e	t e h e	c c c c	1626
+1956	Mangareva_239	to flow	t a ʔ e	t a ʔ e	c c c c	1626
+3160	Sikaiana_243	to flow	l e l e	l e l e	c c c c	1630
+3413	NorthMarquesan_38	to flow	t a h e	t a h e	c c c c	1626
+4473	Austral_1213	to flow	t a h e	t a h e	c c c c	1626
+4689	Tuamotuan_246	to flow	t a h e	t a h e	c c c c	1626
+5201	Austral_128	to flow	t a ʔ e	t a ʔ e	c c c c	1626
+5709	Hawaiian_52	to flow	k a h e	k a h e	c c c c	1626
+#
+842	Maori_85	to fly	r e r e	r e r e	c c c c	1631
+1287	Tahitian_173	to fly	r e r e	r e r e	c c c c	1631
+1722	Rapanui_264	to fly	r e r e	r e r e	c c c c	1631
+1982	Mangareva_239	to fly	r e r e	r e r e	c c c c	1631
+3184	Sikaiana_243	to fly	l e l e	l e l e	c c c c	1631
+3441	NorthMarquesan_38	to fly	o n a	o n a	c c c	1637
+4491	Austral_1213	to fly	ɢ e ɢ e	ɢ e ɢ e	c c c c	1631
+4713	Tuamotuan_246	to fly	r e r e	r e r e	c c c c	1631
+5226	Austral_128	to fly	ʔ a ʔ a + m a r a ʔ a	ʔ a ʔ a + m a r a ʔ a	c c c c + c c c c c c	1632 1633
+5227	Austral_128	to fly	r e r e	r e r e	c c c c	1631
+5732	Hawaiian_52	to fly	l e l e	l e l e	c c c c	1631
+#
+858	Maori_85	to grow	t u p u	t u p u	c c c c	1638
+1302	Tahitian_173	to grow	t u p u	t u p u	c c c c	1638
+1742	Rapanui_264	to grow	r i k u	r i k u	c c c c	1644
+1743	Rapanui_264	to grow	t u p u	t u p u	c c c c	1638
+2003	Mangareva_239	to grow	t u p u	t u p u	c c c c	1638
+3200	Sikaiana_243	to grow	t u p u	t u p u	c c c c	1638
+3201	Sikaiana_243	to grow	s o m o	s o m o	c c c c	1650
+3468	NorthMarquesan_38	to grow	t u p u	t u p u	c c c c	1638
+4505	Austral_1213	to grow	t u p u	t u p u	c c c c	1638
+4733	Tuamotuan_246	to grow	t u p u	t u p u	c c c c	1638
+5247	Austral_128	to grow	t u p u	t u p u	c c c c	1638
+5747	Hawaiian_52	to grow	k u p u	k u p u	c c c c	1638
+5748	Hawaiian_52	to grow	u l u	u l u	c c c	1648
+#
+900	Maori_85	to hear	r o ŋ o	r o ŋ o	c c c c	1659
+1349	Tahitian_173	to hear	f a ʔ a + r o ʔ o	f a ʔ a + r o ʔ o	c c c c + c c c c	1651 1656
+1794	Rapanui_264	to hear	g a r o ʔ a	g a r o ʔ a	c c c c c c	1653
+2057	Mangareva_239	to hear	ʔ a k a + r o ŋ o	ʔ a k a + r o ŋ o	c c c c + c c c c	1651 1656
+3244	Sikaiana_243	to hear	l o n o	l o n o	c c c c	1659
+3531	NorthMarquesan_38	to hear	ʔ o n o	ʔ o n o	c c c c	1659
+4546	Austral_1213	to hear	h a ʔ a + ɢ o ʔ o	h a ʔ a + ɢ o ʔ o	c c c c + c c c c	1651 1656
+4791	Tuamotuan_246	to hear	r o ŋ o	r o ŋ o	c c c c	1659
+5302	Austral_128	to hear	ʔ iː r o ʔ a + r o ʔ a	ʔ iː r o ʔ a + r o ʔ a	c c c c c c + c c c c	1653 1656
+5794	Hawaiian_52	to hear	h o ʔ o + l o n o	h o ʔ o + l o n o	c c c c + c c c c	1655 1656
+#
+766	Maori_85	to hide	h u n a	h u n a	c c c c	1663
+1210	Tahitian_173	to hide	t aː + p u n i	t aː + p u n i	c c + c c c c	1660 1661
+1635	Rapanui_264	to hide	r o m i	r o m i	c c c c	1670
+1887	Mangareva_239	to hide	p u + p u n i	p u + p u n i	c c + c c c c	1665 1661
+3337	NorthMarquesan_38	to hide	h a k a + n aː	h a k a + n aː	c c c c + c c	1668 1669
+4428	Austral_1213	to hide	t aː + p o n i + p o n i	t aː + p o n i + p o n i	c c + c c c c + c c c c	1660 1661 1662
+4622	Tuamotuan_246	to hide	t aː + h u n a	t aː + h u n a	c c + c c c c	1660 1661
+5143	Austral_128	to hide	ʔ u n a	ʔ u n a	c c c c	1663
+5656	Hawaiian_52	to hide	h uː n aː	h uː n aː	c c c c	1663
+#
+872	Maori_85	to hit	p a t u	p a t u	c c c c	1677
+1316	Tahitian_173	to hit	t aː + ʔ i r i	t aː + ʔ i r i	c c + c c c c	1276 1673
+1762	Rapanui_264	to hit	t u + t u	t u + t u	c c + c c	1276 1276
+2018	Mangareva_239	to hit	t a + t a	t a + t a	c c + c c	1276 1276
+2019	Mangareva_239	to hit	p a t u	p a t u	c c c c	1677
+2020	Mangareva_239	to hit	p a k i	p a k i	c c c c	1671
+3216	Sikaiana_243	to hit	t aː	t aː	c c	1276
+3489	NorthMarquesan_38	to hit	t a	t a	c c	1276
+3490	NorthMarquesan_38	to hit	p e h i	p e h i	c c c c	1671
+3491	NorthMarquesan_38	to hit	t u ʔ i	t u ʔ i	c c c c	1674
+3492	NorthMarquesan_38	to hit	p a t u	p a t u	c c c c	1677
+4517	Austral_1213	to hit	p a ʔ i	p a ʔ i	c c c c	1671
+4753	Tuamotuan_246	to hit	t u k i	t u k i	c c c c	1674
+4754	Tuamotuan_246	to hit	t aː	t aː	c c	1276
+4755	Tuamotuan_246	to hit	p a t u	p a t u	c c c c	1677
+4756	Tuamotuan_246	to hit	p a + p a k i	p a - - + p a k i	c c + c c c c	2431 1695
+5265	Austral_128	to hit	t aː + ʔ i r i	t aː + ʔ i r i	c c + c c c c	1276 1673
+5764	Hawaiian_52	to hit	k u ʔ i	k u ʔ i	c c c c	1674
+5765	Hawaiian_52	to hit	h a + h a u	h a + h a - u	c c + c c c	1685 1673
+#
+855	Maori_85	to hold	p u + p u r i	p u + p u r i	c c + c c c c	1702 1703
+1299	Tahitian_173	to hold	t aː + p e ʔ a	t aː - - + p e ʔ a	c c + c c c c	1697 1698
+1738	Rapanui_264	to hold	aː r u	aː r u	c c c	1705
+1739	Rapanui_264	to hold	k u + k u	k u + k u	c c + c c	1702 1714
+1999	Mangareva_239	to hold	t aː + m a u	t aː - - + m a u	c c + c c c	1697 1701
+3197	Sikaiana_243	to hold	t aː + o h i	t aː - - + o h i	c c + c c c	1697 1707
+3461	NorthMarquesan_38	to hold	m a u	m a u	c c c	1704
+3462	NorthMarquesan_38	to hold	ʔ i + ʔ i m a	ʔ i + ʔ i m a	c c + c c c c	1711 1712
+4502	Austral_1213	to hold	ɢ a v e	ɢ a v e	c c c c	1696
+4730	Tuamotuan_246	to hold	t a ŋ o	t a ŋ o	c c c c	1697
+5243	Austral_128	to hold	t aː + p e ʔ a	t aː - - + p e ʔ a	c c + c c c c	1697 1698
+5744	Hawaiian_52	to hold	p a ʔ a	p a ʔ a	c c c c	1699
+#
+875	Maori_85	to hunt	f a i + f a i	f a i + f a i	c c c + c c c	1723 1720
+1320	Tahitian_173	to hunt	a ʔ u a ʔ u	a ʔ u a ʔ u	c c c c c c	1715
+1765	Rapanui_264	to hunt	p o k o	p o k o	c c c c	1726
+2023	Mangareva_239	to hunt	a r u + a r u	a r u + a r u	c c c + c c c	1721 1716
+3219	Sikaiana_243	to hunt	s e s e	s e s e	c c c c	1727
+3497	NorthMarquesan_38	to hunt	t a t a i	t a t a i	c c c c c	1725
+4520	Austral_1213	to hunt	a ʔ u + a ʔ u	- - - a ʔ u + a ʔ u	c c c + c c c	1715 1716
+4760	Tuamotuan_246	to hunt	a k u + a k u	- - - a k u + a k u	c c c + c c c	1715 1716
+5268	Austral_128	to hunt	a ʔ u + a ʔ u	- - - a ʔ u + a ʔ u	c c c + c c c	1715 1716
+5768	Hawaiian_52	to hunt	h a + h a i	h a + h a i	c c + c c c	1719 1720
+#
+870	Maori_85	to kill	p a t u	p a t u	c c c c	1677
+1314	Tahitian_173	to kill	t a + p a r a h i	t a + p a r a h i	c c + c c c c c c	1728 1737
+1760	Rapanui_264	to kill	t i g a ʔ i	t i g a ʔ i	c c c c c c	1731
+2016	Mangareva_239	to kill	t i n a ʔ i	t i n a ʔ i	c c c c c c	1731
+3214	Sikaiana_243	to kill	t aː	t aː	c c	1728
+3484	NorthMarquesan_38	to kill	p e h i	p e h i	c c c c	1733
+3485	NorthMarquesan_38	to kill	k u + k u m i	k u + k u m i	c c + c c c c	1741 1742
+3486	NorthMarquesan_38	to kill	h a ʔ a + m a t e	h a ʔ a + m a t e	c c c c + c c c c	1729 1547
+4750	Tuamotuan_246	to kill	p a t u	p a t u	c c c c	1677
+4751	Tuamotuan_246	to kill	t a + p a r a h i	t a + p a r a h i	c c + c c c c c c	1728 1737
+5262	Austral_128	to kill	t a	t a	c c	1728
+5263	Austral_128	to kill	ʔ a ʔ a + m a t e	ʔ a ʔ a + m a t e	c c c c + c c c c	1729 1547
+5762	Hawaiian_52	to kill	h o ʔ o + m a k e	h o ʔ o + m a k e	c c c c + c c c c	1729 1547
+#
+924	Maori_85	to know, be knowledgeable	m oː h i o	m oː h i o	c c c c c	1747
+1375	Tahitian_173	to know, be knowledgeable	ʔ i t e	ʔ i t e	c c c c	1746
+1821	Rapanui_264	to know, be knowledgeable	a g i	a g i	c c c	1749
+2085	Mangareva_239	to know, be knowledgeable	k i t e	k i t e	c c c c	1746
+3270	Sikaiana_243	to know, be knowledgeable	a t a m a i	a t a m a i	c c c c c c	1750
+3271	Sikaiana_243	to know, be knowledgeable	i l o a	i l o a	c c c c	1754
+3561	NorthMarquesan_38	to know, be knowledgeable	h a n i	h a n i	c c c c	1748
+4569	Austral_1213	to know, be knowledgeable	ʔ i t e	ʔ i t e	c c c c	1746
+4824	Tuamotuan_246	to know, be knowledgeable	m aː + t a u	m aː + t a u	c c + c c c	1752 1753
+4825	Tuamotuan_246	to know, be knowledgeable	k i t e	k i t e	c c c c	1746
+5331	Austral_128	to know, be knowledgeable	ʔ i t e	ʔ i t e	c c c c	1746
+5821	Hawaiian_52	to know, be knowledgeable	ʔ i k e	ʔ i k e	c c c c	1746
+#
+911	Maori_85	to laugh	k a t a	k a t a	c c c c	1755
+1361	Tahitian_173	to laugh	ʔ a t a	ʔ a t a	c c c c	1755
+1805	Rapanui_264	to laugh	k a t a	k a t a	c c c c	1755
+2071	Mangareva_239	to laugh	k a t a	k a t a	c c c c	1755
+3256	Sikaiana_243	to laugh	k a t a	k a t a	c c c c	1755
+3544	NorthMarquesan_38	to laugh	ʔ a t a	ʔ a t a	c c c c	1755
+4556	Austral_1213	to laugh	ʔ a t a	ʔ a t a	c c c c	1755
+4805	Tuamotuan_246	to laugh	k a t a	k a t a	c c c c	1755
+5315	Austral_128	to laugh	a t a	- a t a	c c c	1755
+5807	Hawaiian_52	to laugh	ʔ a k a	ʔ a k a	c c c c	1755
+#
+895	Maori_85	to lie down	t a + k o t o	t a + k o t o	c c + c c c c	1756 1766
+1344	Tahitian_173	to lie down	t a + ʔ o t o	t a + ʔ o t o	c c + c c c c	1756 1766
+1789	Rapanui_264	to lie down	m o e	m o e	c c c	1767
+2051	Mangareva_239	to lie down	ʔ a k a + e a + r a ŋ a	ʔ a k a + e a + r a ŋ a	c c c c + c c + c c c c	1762 1763 1764
+3240	Sikaiana_243	to lie down	m o e	m o e	c c c	1767
+3525	NorthMarquesan_38	to lie down	m o e	m o e	c c c	1767
+4541	Austral_1213	to lie down	t iː + ɢ a h a	t iː + ɢ a h a	c c + c c c c	1756 1757
+4786	Tuamotuan_246	to lie down	t a + k o t o	t a + k o t o	c c + c c c c	1756 1766
+5295	Austral_128	to lie down	t aː + r a v a	t aː + r a v a	c c + c c c c	1756 1757
+5296	Austral_128	to lie down	t iː + p a p a	t iː + p a p a	c c + c c c c	2432 1775
+5297	Austral_128	to lie down	t iː + r a ʔ a	t iː + r a ʔ a	c c + c c c c	1756 2434
+5789	Hawaiian_52	to lie down	h i n a + m o e	h i n a + m o e	c c c c + c c c	1760 1761
+#
+868	Maori_85	to live, be alive	o r a	o r a	c c c	1778
+1312	Tahitian_173	to live, be alive	o r a	o r a	c c c	1778
+1758	Rapanui_264	to live, be alive	o r a	o r a	c c c	1778
+2014	Mangareva_239	to live, be alive	o r a	o r a	c c c	1778
+3212	Sikaiana_243	to live, be alive	o l a	o l a	c c c	1778
+3481	NorthMarquesan_38	to live, be alive	p o h u ʔ e	p o h u ʔ e	c c c c c c	1782
+4514	Austral_1213	to live, be alive	h a ʔ a + e a	h a ʔ a + e a	c c c c + c c	1776 1777
+4747	Tuamotuan_246	to live, be alive	o r a	o r a	c c c	1778
+5260	Austral_128	to live, be alive	o r a	o r a	c c c	1778
+5760	Hawaiian_52	to live, be alive	o l a	o l a	c c c	1778
+#
+852	Maori_85	to open, uncover	h u a k i	h u a k i	c c c c c	1784
+1296	Tahitian_173	to open, uncover	h u a ʔ i	h u a ʔ i	c c c c c	1784
+1733	Rapanui_264	to open, uncover	h a + h a t a	- h a + h a t a	c c + c c c c	1790 1791
+1995	Mangareva_239	to open, uncover	ʔ u + ʔ u r e	ʔ u - - - + ʔ u r e	c c + c c c c	1784 1787
+3193	Sikaiana_243	to open, uncover	t aː + l a k i	t aː + l a k i	c c + c c c c	1792 1793
+3194	Sikaiana_243	to open, uncover	aː h a	aː h a	c c c	1790
+3457	NorthMarquesan_38	to open, uncover	p e ʔ u a	p e ʔ u a	c c c c c	1789
+3458	NorthMarquesan_38	to open, uncover	p e + p e u	p e - - - + p e u	c c + c c c	2435 1798
+4500	Austral_1213	to open, uncover	ʔ i ɢ i t i	ʔ i ɢ i t i	c c c c c c	1783
+4727	Tuamotuan_246	to open, uncover	h e h e u	h e h e u	c c c c c	1795
+5238	Austral_128	to open, uncover	ʔ u a ʔ i	ʔ u a ʔ i	c c c c c	1784
+5239	Austral_128	to open, uncover	ʔ i r i t i	ʔ i r i t i	c c c c c c	1783
+5741	Hawaiian_52	to open, uncover	w e k e	w e k e	c c c c	1785
+#
+860	Maori_85	to plant	t oː	t oː	c c	1803
+1304	Tahitian_173	to plant	t a n u	t a n u	c c c c	1799
+1745	Rapanui_264	to plant	o k a	o k a	c c c	1805
+2004	Mangareva_239	to plant	t a n u	t a n u	c c c c	1799
+3203	Sikaiana_243	to plant	t oː	t oː	c c	1803
+3470	NorthMarquesan_38	to plant	n a n u	n a n u	c c c c	1799
+4507	Austral_1213	to plant	t a n u	t a n u	c c c c	1799
+4735	Tuamotuan_246	to plant	t a n u	t a n u	c c c c	1799
+5249	Austral_128	to plant	t a n u	t a n u	c c c c	1799
+5751	Hawaiian_52	to plant	k a n u	k a n u	c c c c	1799
+#
+851	Maori_85	to pound, beat	t u k i	t u k i	c c c c	1674
+1295	Tahitian_173	to pound, beat	p aː + p aː h i a	p aː - - + p aː h i a	c c + c c c c c	1807 1814
+1994	Mangareva_239	to pound, beat	t u k i	t u k i	c c c c	1674
+3192	Sikaiana_243	to pound, beat	t u k i	t u k i	c c c c	1674
+3456	NorthMarquesan_38	to pound, beat	t u ʔ i	t u ʔ i	c c c c	1674
+4499	Austral_1213	to pound, beat	o ɢ oː ɢ o	o ɢ oː ɢ o	c c c c c	1806
+4726	Tuamotuan_246	to pound, beat	t u k i	t u k i	c c c c	1674
+5236	Austral_128	to pound, beat	p a ʔ i	p a ʔ i	c c c c	1807
+5237	Austral_128	to pound, beat	t u ʔ i	t u ʔ i	c c c c	1674
+5740	Hawaiian_52	to pound, beat	k u ʔ i	k u ʔ i	c c c c	1674
+#
+880	Maori_85	to say	k oː r e r o	k oː r e r o	c c c c c c	1818
+1326	Tahitian_173	to say	p a r a u	p a r a u	c c c c c	1815
+1771	Rapanui_264	to say	k iː	k iː	c c	1819
+2031	Mangareva_239	to say	k i	k i	c c	1819
+3224	Sikaiana_243	to say	t aː + t a l a	t aː + t a l a	c c + c c c c	1823 1824
+3503	NorthMarquesan_38	to say	t e k a o	t e k a o	c c c c c	1821
+3504	NorthMarquesan_38	to say	p e ʔ a u	p e ʔ a u	c c c c c	1815
+4525	Austral_1213	to say	p a ɢ a u + p a ɢ a u	p a ɢ a u + p a ɢ a u	c c c c c + c c c c c	1815 1816
+4768	Tuamotuan_246	to say	p a r a u	p a r a u	c c c c c	1815
+5275	Austral_128	to say	p a r a u	p a r a u	c c c c c	1815
+5773	Hawaiian_52	to say	ʔ oː l e l o	ʔ oː l e l o	c c c c c c	1818
+#
+867	Maori_85	to scratch	r a k u + r a k u	r a k u + r a k u	c c c c + c c c c	1826 1826
+1311	Tahitian_173	to scratch	r a ʔ u + r a ʔ u	r a ʔ u + r a ʔ u	c c c c + c c c c	1826 1826
+1756	Rapanui_264	to scratch	r a k u	r a k u	c c c c	1826
+1757	Rapanui_264	to scratch	k a t i + k a t i	k a t i + k a t i	c c c c + c c c c	1838 1839
+2012	Mangareva_239	to scratch	k e n e ʔ u	k e n e ʔ u	c c c c c c	1829
+3211	Sikaiana_243	to scratch	l a k u	l a k u	c c c c	1826
+3480	NorthMarquesan_38	to scratch	t u v e ʔ e	t u v e ʔ e	c c c c c c	1832
+4513	Austral_1213	to scratch	m a ʔ e ɢ o	m a ʔ e ɢ o	c c c c c c	1825
+4746	Tuamotuan_246	to scratch	r a k u	r a k u	c c c c	1826
+5259	Austral_128	to scratch	r a ʔ u + r a ʔ u	r a ʔ u + r a ʔ u	c c c c + c c c c	1826 1826
+5759	Hawaiian_52	to scratch	w a l u	w a l u	c c c c	1828
+#
+898	Maori_85	to see	k i t e	k i t e	c c c c	1746
+1347	Tahitian_173	to see	ʔ i t e	ʔ i t e	c c c c	1746
+1792	Rapanui_264	to see	t i k e a	t i k e a	c c c c c	1848
+2055	Mangareva_239	to see	n a + n a	n a + n a	c c + c c	1841 1841
+3242	Sikaiana_243	to see	k i t e	k i t e	c c c c	1746
+3528	NorthMarquesan_38	to see	ʔ i t e	ʔ i t e	c c c c	1746
+4544	Austral_1213	to see	ʔ i t e	ʔ i t e	c c c c	1746
+4789	Tuamotuan_246	to see	k i t e	k i t e	c c c c	1746
+5300	Austral_128	to see	n aː + n aː	n aː + n aː	c c + c c	1841 1841
+5792	Hawaiian_52	to see	ʔ i k e	ʔ i k e	c c c c	1746
+#
+877	Maori_85	to sew	t u i	t u i	c c c	1853
+1322	Tahitian_173	to sew	n i r a	n i r a	c c c c	1849
+1323	Tahitian_173	to sew	a u	a u	c c	496
+1768	Rapanui_264	to sew	t u i	t u i	c c c	1853
+2025	Mangareva_239	to sew	t u e	t u e	c c c	1853
+3221	Sikaiana_243	to sew	t u i	t u i	c c c	1853
+3499	NorthMarquesan_38	to sew	t u i	t u i	c c c	1853
+4522	Austral_1213	to sew	n i ɢ a	n i ɢ a	c c c c	1849
+4762	Tuamotuan_246	to sew	t u i	t u i	c c c	1853
+5270	Austral_128	to sew	t iː ʔ a i	t iː ʔ a i	c c c c c	1850
+5271	Austral_128	to sew	n i r a	n i r a	c c c c	1849
+5272	Austral_128	to sew	a u	a u	c c	496
+5770	Hawaiian_52	to sew	h u m u + h u m u	h u m u + h u m u	c c c c + c c c c	1851 1852
+#
+874	Maori_85	to shoot	f a n a	f a n a	c c c c	1864
+1319	Tahitian_173	to shoot	t e ʔ a	t e ʔ a	c c c c	1862
+3495	NorthMarquesan_38	to shoot	p u h i	p u h i	c c c c	1866
+3496	NorthMarquesan_38	to shoot	t o i	t o i	c c c	1869
+4519	Austral_1213	to shoot	t e ʔ a	t e ʔ a	c c c c	1862
+4759	Tuamotuan_246	to shoot	h a n a	h a n a	c c c c	1864
+5267	Austral_128	to shoot	t e ʔ a	t e ʔ a	c c c c	1862
+5767	Hawaiian_52	to shoot	p a n a	p a n a	c c c c	1864
+#
+893	Maori_85	to sit	n o h o	n o h o - -	c c c c	1870
+1341	Tahitian_173	to sit	p aː r a h i	p aː r a h i	c c c c c c	1878
+1787	Rapanui_264	to sit	n o h o	n o h o - -	c c c c	1870
+2049	Mangareva_239	to sit	n o ʔ o	n o ʔ o - -	c c c c	1870
+3239	Sikaiana_243	to sit	n o h o	n o h o - -	c c c c	1870
+3523	NorthMarquesan_38	to sit	n o h o	n o h o - -	c c c c	1870
+4539	Austral_1213	to sit	n o h o t u	n o h o t u	c c c c c c	1870
+4784	Tuamotuan_246	to sit	n o h o	n o h o - -	c c c c	1870
+5291	Austral_128	to sit	n o ʔ o	n o ʔ o - -	c c c c	1870
+5292	Austral_128	to sit	a r a ʔ i	- a r a ʔ i	c c c c c	1878
+5786	Hawaiian_52	to sit	n o h o	n o h o - -	c c c c	1870
+#
+896	Maori_85	to sleep	m o e	m o e	c c c	1566
+1345	Tahitian_173	to sleep	t a ʔ o t o	t a ʔ o t o	c c c c c c	1888
+1790	Rapanui_264	to sleep	m o e	m o e	c c c	1566
+2052	Mangareva_239	to sleep	m o e	m o e	c c c	1566
+3241	Sikaiana_243	to sleep	m o e	m o e	c c c	1566
+3526	NorthMarquesan_38	to sleep	h i a + m o e	h i a + m o e	c c c + c c c	1884 1885
+4542	Austral_1213	to sleep	m o e	m o e	c c c	1566
+4787	Tuamotuan_246	to sleep	m o e	m o e	c c c	1566
+5298	Austral_128	to sleep	m o e	m o e	c c c	1566
+5790	Hawaiian_52	to sleep	m o e	m o e	c c c	1566
+#
+915	Maori_85	to sniff, smell	h o ŋ i	h o ŋ i	c c c c	1891
+1365	Tahitian_173	to sniff, smell	h o ʔ i	h o ʔ i	c c c c	1891
+1366	Tahitian_173	to sniff, smell	h a u ʔ a	h a u ʔ a	c c c c c	1889
+1810	Rapanui_264	to sniff, smell	h o g i	h o g i	c c c c	1891
+2075	Mangareva_239	to sniff, smell	ʔ o ŋ i	ʔ o ŋ i	c c c c	1891
+3260	Sikaiana_243	to sniff, smell	s a o n a	s a o n a	c c c c c	1889
+3261	Sikaiana_243	to sniff, smell	s u n u	s u n u	c c c c	1899
+3549	NorthMarquesan_38	to sniff, smell	h o n e	h o n e	c c c c	1891
+4560	Austral_1213	to sniff, smell	h a u ʔ a	h a u ʔ a	c c c c c	1889
+4810	Tuamotuan_246	to sniff, smell	h o ŋ i	h o ŋ i	c c c c	1891
+5319	Austral_128	to sniff, smell	ʔ a u ʔ a	ʔ a u ʔ a	c c c c c	1889
+5811	Hawaiian_52	to sniff, smell	h o n i	h o n i	c c c c	1891
+#
+908	Maori_85	to spit	t u h a	t u - - h a	c c c c	1904
+1358	Tahitian_173	to spit	t u t u h a	t u t u h a	c c c c c c	1904
+1802	Rapanui_264	to spit	aː n u	aː n u	c c c	284
+2067	Mangareva_239	to spit	k a e	k a e	c c c	1905
+2068	Mangareva_239	to spit	a n u + a n u	a n u + a n u	c c c + c c c	284 1915
+3253	Sikaiana_243	to spit	s aː v a l e	s aː v a l e	c c c c c c	1909
+3540	NorthMarquesan_38	to spit	t u f a	t u - - f a	c c c c	1904
+4553	Austral_1213	to spit	t uː + t u h a	t uː - - - - + t u h a	c c + c c c c	1904 1901
+4801	Tuamotuan_246	to spit	t u f a	t u - - f a	c c c c	1904
+4802	Tuamotuan_246	to spit	a n u	a n u	c c c	284
+5312	Austral_128	to spit	t u + t u ʔ a	t u - - - - + t u ʔ a	c c + c c c c	1904 1901
+5802	Hawaiian_52	to spit	k u h a	k u - - h a	c c c c	1904
+5803	Hawaiian_52	to spit	p u + p u h i	p u + p u h i	c c + c c c c	1912 1901
+#
+864	Maori_85	to split	w aː + w aː h i	w aː - + w aː h i	c c + c c c c	1921 1922
+1308	Tahitian_173	to split	v aː h i	v aː h i	c c c c	1917
+1749	Rapanui_264	to split	i h i	- i h i	c c c	1917
+1750	Rapanui_264	to split	g a h a	g a h a -	c c c c	1920
+2008	Mangareva_239	to split	a ʔ a e	- a ʔ a e	c c c c	1920
+3207	Sikaiana_243	to split	v a e	v a e	c c c	1921
+3208	Sikaiana_243	to split	h aː	- - h aː -	c c	1920
+3475	NorthMarquesan_38	to split	k o a v a	k o a v a	c c c c c	1923
+4511	Austral_1213	to split	p aː h a ɢ a	p aː h a ɢ a	c c c c c c	1916
+4740	Tuamotuan_246	to split	t a + p a h i	t a + p a h i	c c + c c c c	1927 1922
+4741	Tuamotuan_246	to split	m aː + t aː + t aː	m aː + t aː + t aː	c c + c c + c c	1932 1933 1934
+5254	Austral_128	to split	p i ʔ i + a i	p i ʔ i + a i	c c c c + c c	1917 1918
+5255	Austral_128	to split	n a ʔ a ʔ a	n a ʔ a ʔ a	c c c c c c	1929
+5256	Austral_128	to split	v aː + v aː ʔ i	v aː - + v aː ʔ i	c c + c c c c	1921 1922
+5755	Hawaiian_52	to split	w aː h i	w aː h i	c c c c	1917
+#
+856	Maori_85	to squeeze	k o t eː	k o t eː	c c c c	1935
+1300	Tahitian_173	to squeeze	ʔ u + ʔ u m u	ʔ u - - + ʔ u m u	c c + c c c c	1937 1936
+1740	Rapanui_264	to squeeze	g a t u	g a t u	c c c c	1944
+2000	Mangareva_239	to squeeze	k u + k u m u	k u - - + k u m u	c c + c c c c	1940 1936
+3198	Sikaiana_243	to squeeze	k u m i	k u m i	c c c c	1940
+3463	NorthMarquesan_38	to squeeze	ʔ o m i	ʔ o m i	c c c c	1943
+3464	NorthMarquesan_38	to squeeze	k o + k o	k o - - + k o - -	c c + c c	1935 1936
+3465	NorthMarquesan_38	to squeeze	h o t a	h o t a	c c c c	1954
+4503	Austral_1213	to squeeze	ɢ o + ɢ o m i	ɢ o - - + ɢ o m i	c c + c c c c	1935 1936
+4731	Tuamotuan_246	to squeeze	ŋ i + ŋ i t i	ŋ i + ŋ i t i	c c + c c c c	1948 1949
+5244	Austral_128	to squeeze	ʔ u + ʔ u m u	ʔ u - - + ʔ u m u	c c + c c c c	1937 1936
+5245	Austral_128	to squeeze	n e ʔ i + n e ʔ i	n e ʔ i + n e ʔ i	c c c c + c c c c	1950 1951
+5745	Hawaiian_52	to squeeze	ʔ u w iː	ʔ u w iː	c c c c	1937
+#
+873	Maori_85	to stab, pierce	o k a	- o k a -	c c c	1961
+1318	Tahitian_173	to stab, pierce	p aː + t i a	p aː + t i a	c c + c c c	1955 1958
+1763	Rapanui_264	to stab, pierce	o k a	- o k a -	c c c	1961
+1764	Rapanui_264	to stab, pierce	h u k i	h u k i	c c c c	1962
+2021	Mangareva_239	to stab, pierce	k o	k o -	c c	1959
+2022	Mangareva_239	to stab, pierce	ʔ u k i	ʔ u k i	c c c c	1962
+3217	Sikaiana_243	to stab, pierce	s u k i	s u k i	c c c c	1962
+3218	Sikaiana_243	to stab, pierce	s oː k a i	s oː k a i	c c c c c	1961
+3494	NorthMarquesan_38	to stab, pierce	h u k i	h u k i	c c c c	1962
+4518	Austral_1213	to stab, pierce	p i + p i h a	p i + p i h a	c c + c c c c	1955 1956
+4757	Tuamotuan_246	to stab, pierce	h u k i	h u k i	c c c c	1962
+4758	Tuamotuan_246	to stab, pierce	h o k a	h o k a -	c c c c	1961
+5266	Austral_128	to stab, pierce	p aː + t i a	p aː + t i a	c c + c c c	1955 1958
+5766	Hawaiian_52	to stab, pierce	h o u	h o u	c c c	1959
+#
+892	Maori_85	to stand	t uː	t uː - -	c c	1964
+1340	Tahitian_173	to stand	t i ʔ a	t i ʔ a	c c c c	1972
+1786	Rapanui_264	to stand	t u ʔ u	t u ʔ u	c c c c	1964
+2048	Mangareva_239	to stand	ʔ a k aː + t uː	ʔ a k aː + t uː	c c c c + c c	1966 1967
+3238	Sikaiana_243	to stand	t uː	t uː - -	c c	1964
+3522	NorthMarquesan_38	to stand	t uː	t uː - -	c c	1964
+4537	Austral_1213	to stand	t i a	t i a	c c c	1963
+4538	Austral_1213	to stand	t uː	t uː - -	c c	1964
+4783	Tuamotuan_246	to stand	t uː	t uː - -	c c	1964
+5290	Austral_128	to stand	t uː	t uː - -	c c	1964
+5785	Hawaiian_52	to stand	k u	k u - -	c c	1964
+#
+871	Maori_85	to steal	t aː + h a e	t aː + h a e	c c + c c c	1977 1978
+1315	Tahitian_173	to steal	ʔ e i aː	ʔ e i aː	c c c c	1981
+1761	Rapanui_264	to steal	k o r i	k o r i	c c c c	1980
+2017	Mangareva_239	to steal	k a m o	k a m o	c c c c	1976
+3215	Sikaiana_243	to steal	k a i aː	k a i aː	c c c c	1981
+3487	NorthMarquesan_38	to steal	k a m o	k a m o	c c c c	1976
+3488	NorthMarquesan_38	to steal	k a i + h u e	k a i - + h u e	c c c + c c c	1981 1978
+4516	Austral_1213	to steal	ʔ e i aː	ʔ e i aː	c c c c	1981
+4752	Tuamotuan_246	to steal	k e i aː	k e i aː	c c c c	1981
+5264	Austral_128	to steal	ʔ e i aː	ʔ e i aː	c c c c	1981
+5763	Hawaiian_52	to steal	ʔ a i h u e	ʔ a i h u e	c c c c c c	1975
+#
+902	Maori_85	to suck	ŋ o t e	ŋ o t e	c c c c	1982
+1351	Tahitian_173	to suck	ʔ o t e	ʔ o t e	c c c c	1982
+1796	Rapanui_264	to suck	o m o	- o m o	c c c	1984
+2059	Mangareva_239	to suck	o m o	- o m o	c c c	1984
+2060	Mangareva_239	to suck	m i t i	m - i t i	c c c c	1994
+3246	Sikaiana_243	to suck	u m i + u m i	- u m i + u m i	c c c + c c c	1984 1990
+3247	Sikaiana_243	to suck	m m i t i	m m i t i	c c c c c	1994
+3533	NorthMarquesan_38	to suck	o m o	- o m o	c c c	1984
+4548	Austral_1213	to suck	ʔ o t e	ʔ o t e	c c c c	1982
+4793	Tuamotuan_246	to suck	ŋ o + ŋ o	ŋ o + ŋ o	c c + c c	1992 1993
+4794	Tuamotuan_246	to suck	m o m i	m o m i	c c c c	1984
+4795	Tuamotuan_246	to suck	m i t i	m - i t i	c c c c	1994
+5304	Austral_128	to suck	ʔ o t e	ʔ o t e	c c c c	1982
+5796	Hawaiian_52	to suck	o m o	- o m o	c c c	1984
+#
+857	Maori_85	to swell	p u k u	- p u k u	c c c c	1995
+1301	Tahitian_173	to swell	ʔ o r u	ʔ o r u	c c c c	1997
+1741	Rapanui_264	to swell	a h u	a h u - -	c c c	1998
+2002	Mangareva_239	to swell	ʔ a k a + t e k i r e	ʔ a k a + t e k i r e	c c c c + c c c c c c	1999 2000
+3199	Sikaiana_243	to swell	h u l a	- h u l a	c c c c	1998
+3466	NorthMarquesan_38	to swell	h u + h u ʔ a	- h u - - + h u ʔ a	c c + c c c c	1998 2003
+3467	NorthMarquesan_38	to swell	h e t e	h e t e	c c c c	2010
+4504	Austral_1213	to swell	oː p u + p u	oː p u - - + p u	c c c + c c	1995 1996
+4732	Tuamotuan_246	to swell	k o r o + p uː + p uː	k o r o + p uː + p uː	c c c c + c c + c c	1997 1996 2009
+5246	Austral_128	to swell	ʔ o r u	ʔ o r u	c c c c	1997
+5746	Hawaiian_52	to swell	h uː	- h uː - -	c c	1998
+#
+935	Maori_85	to swim	k a u + h o e	k a u + h o e	c c c + c c c	2011 2016
+1387	Tahitian_173	to swim	ʔ a u	ʔ a u	c c c	2011
+1837	Rapanui_264	to swim	k a u	k a u	c c c	2011
+2100	Mangareva_239	to swim	k a u	k a u	c c c	2011
+3282	Sikaiana_243	to swim	k o u + k o u	k o u + k o u	c c c + c c c	2011 2016
+3574	NorthMarquesan_38	to swim	k a u	k a u	c c c	2011
+4579	Austral_1213	to swim	ʔ a u	ʔ a u	c c c	2011
+4839	Tuamotuan_246	to swim	k a u	k a u	c c c	2011
+5344	Austral_128	to swim	ʔ a u	ʔ a u	c c c	2011
+5833	Hawaiian_52	to swim	ʔ a u	ʔ a u	c c c	2011
+#
+923	Maori_85	to think	f a k a + a r o	f a k a + a r o	c c c c + c c c	2021 2022
+1374	Tahitian_173	to think	m a n a ʔ o	m a n a ʔ o	c c c c c c	2018
+1820	Rapanui_264	to think	m a n a ʔ u	m a n a ʔ u	c c c c c c	2018
+2084	Mangareva_239	to think	m a k a r a	m a k a r a	c c c c c c	2020
+3269	Sikaiana_243	to think	h a k a + t e l e + t e l e	h a k a + t e l e + t e l e	c c c c + c c c c + c c c c	2021 2027 2028
+3560	NorthMarquesan_38	to think	m a ʔ a + k a u	m a ʔ a - - + k a u	c c c c + c c c	2020 2024
+4568	Austral_1213	to think	h e ɢ u ɢ i	h e ɢ u ɢ i	c c c c c c	2017
+4823	Tuamotuan_246	to think	m a h a r a	m a h a r a	c c c c c c	2020
+5330	Austral_128	to think	m a n a ʔ o	m a n a ʔ o	c c c c c c	2018
+5820	Hawaiian_52	to think	m a n a ʔ o	m a n a ʔ o	c c c c c c	2018
+#
+850	Maori_85	to throw	p a ŋ a	p a ŋ a	c c c c	2036
+1294	Tahitian_173	to throw	t aː + o r a	t aː + o r a	c c + c c c	1276 1778
+1732	Rapanui_264	to throw	v e r o	v e r o	c c c c	2035
+1992	Mangareva_239	to throw	k e r o	k e r o	c c c c	2035
+1993	Mangareva_239	to throw	t i r i	t i r i	c c c c	2043
+3191	Sikaiana_243	to throw	p e h i	p e h i	c c c c	2039
+3454	NorthMarquesan_38	to throw	t i o ʔ a	t i o ʔ a	c c c c c	2037
+3455	NorthMarquesan_38	to throw	t i ʔ i	t i ʔ i	c c c c	2043
+4498	Austral_1213	to throw	t aː + o ɢ a	t aː + o ɢ a	c c + c c c	1276 1778
+4723	Tuamotuan_246	to throw	t o r o	t o r o	c c c c	2042
+4724	Tuamotuan_246	to throw	t i r i	t i r i	c c c c	2043
+4725	Tuamotuan_246	to throw	m a k a	m a k a	c c c c	2046
+5235	Austral_128	to throw	t aː + o r a	t aː + o r a	c c + c c c	1276 1778
+5739	Hawaiian_52	to throw	h o ʔ o + l e i	h o ʔ o + l e i	c c c c + c c c	2033 2034
+#
+878	Maori_85	to tie up, fasten	h e r e + h e r e	h e r e + h e r e	c c c c + c c c c	2054 2055
+1324	Tahitian_173	to tie up, fasten	t a + ʔ a m u	t a + ʔ a m u	c c + c c c c	2047 1598
+1769	Rapanui_264	to tie up, fasten	h a + h a ʔ u	h a - + h a ʔ u	c c + c c c c	2057 1598
+2026	Mangareva_239	to tie up, fasten	ʔ a k a + o k o + ŋ a	ʔ a k a + o k o + ŋ a	c c c c + c c c + c c	2051 2052 2053
+2027	Mangareva_239	to tie up, fasten	n a t i	n a t i	c c c c	2056
+2028	Mangareva_239	to tie up, fasten	r iː	r iː	c c	2065
+3222	Sikaiana_243	to tie up, fasten	h a u	h a u	c c c	2057
+3500	NorthMarquesan_38	to tie up, fasten	n a n i	n a n i	c c c c	2056
+3501	NorthMarquesan_38	to tie up, fasten	h i t i k i	h i t i k i	c c c c c c	2050
+4523	Austral_1213	to tie up, fasten	t aː + ʔ a m u	t aː + ʔ a m u	c c + c c c c	2047 1598
+4763	Tuamotuan_246	to tie up, fasten	h a u	h a u	c c c	2057
+4764	Tuamotuan_246	to tie up, fasten	r iː	r iː	c c	2065
+4765	Tuamotuan_246	to tie up, fasten	h iː t i k i	h iː t i k i	c c c c c c	2050
+5273	Austral_128	to tie up, fasten	p u r e i	p u r e i	c c c c c	2049
+5771	Hawaiian_52	to tie up, fasten	h iː k i ʔ i	h iː k i ʔ i	c c c c c c	2050
+#
+936	Maori_85	to turn	h u r i	h u r i	c c c c	2070
+1388	Tahitian_173	to turn	t iː + p u ʔ u	t iː + p u ʔ u	c c + c c c c	2068 2069
+1838	Rapanui_264	to turn	t a + v i r i	t a + v i r i	c c + c c c c	2068 2067
+1839	Rapanui_264	to turn	t e k a	t e k a	c c c c	2084
+2101	Mangareva_239	to turn	t iː + r o r i	t iː + r o r i	c c + c c c c	2068 2072
+3283	Sikaiana_243	to turn	t a + h u l i	t a + h u l i	c c + c c c c	2068 2079
+3575	NorthMarquesan_38	to turn	k a + v i ʔ i	k a + v i ʔ i	c c + c c c c	2074 2067
+4580	Austral_1213	to turn	t aː + v i ɢ i	t aː + v i ɢ i	c c + c c c c	2068 2067
+4840	Tuamotuan_246	to turn	h u r i	h u r i	c c c c	2070
+5345	Austral_128	to turn	t iː + p u ʔ u	t iː + p u ʔ u	c c + c c c c	2068 2069
+5834	Hawaiian_52	to turn	h u l i	h u l i	c c c c	2070
+5835	Hawaiian_52	to turn	w i l i	w i l i	c c c c	2083
+#
+909	Maori_85	to vomit	r u a + k i	r u a + k i	c c c + c c	2088 2087
+1359	Tahitian_173	to vomit	p i h a ʔ e	p i h a ʔ e	c c c c c c	2085
+1803	Rapanui_264	to vomit	r u a	r u a	c c c	2088
+2069	Mangareva_239	to vomit	r u a + k i	r u a + k i	c c c + c c	2088 2087
+3254	Sikaiana_243	to vomit	l u a	l u a	c c c	2088
+3541	NorthMarquesan_38	to vomit	ʔ u a	ʔ u a	c c c	2088
+4554	Austral_1213	to vomit	p i h a ʔ e	p i h a ʔ e	c c c c c c	2085
+4803	Tuamotuan_246	to vomit	r uː a	r uː a	c c c	2088
+5313	Austral_128	to vomit	r u ʔ a + ʔ i	r u ʔ a + ʔ i	c c c c + c c	2086 2087
+5804	Hawaiian_52	to vomit	l u a + ʔ i	l u a + ʔ i	c c c + c c	2088 2087
+#
+939	Maori_85	to walk	h a e r e + a + w a e w a e	h a e r e + a + w a e w a e	c c c c c + c + c c c c c c	1476 2096 2097
+1393	Tahitian_173	to walk	o r i	o r i - -	c c c	2101
+1394	Tahitian_173	to walk	h a e r e	h a e r e	c c c c c	1476
+1842	Rapanui_264	to walk	h a e r e	h a e r e	c c c c c	1476
+2104	Mangareva_239	to walk	ʔ e r e	ʔ e r e	c c c c	2093
+3286	Sikaiana_243	to walk	s a e l e	s a e l e	c c c c c	1476
+3579	NorthMarquesan_38	to walk	h e ʔ e	h e ʔ e	c c c c	2093
+4583	Austral_1213	to walk	h a e ɢ e	h a e ɢ e	c c c c c	1476
+4843	Tuamotuan_246	to walk	h a e r e	h a e r e	c c c c c	1476
+5350	Austral_128	to walk	ʔ a n o + r i m o + ʔ a e r e	ʔ a n o + r i m o + ʔ a e r e	c c c c + c c c c + c c c c c	2090 2091 2092
+5351	Austral_128	to walk	r i m o + r i m o	- r i m o + r i m o	c c c c + c c c c	2101 2437
+5352	Austral_128	to walk	ʔ a n o	ʔ a n o	c c c c	2436
+5838	Hawaiian_52	to walk	h e l e	h e l e	c c c c	2093
+#
+861	Maori_85	to work	m a h i	m a h i	c c c c	2106
+1305	Tahitian_173	to work	ʔ o h i p a	ʔ o h i p a	c c c c c c	2102
+1746	Rapanui_264	to work	a g a	a g a	c c c	2108
+2005	Mangareva_239	to work	ʔ a ŋ a	ʔ a ŋ a	c c c c	2104
+3204	Sikaiana_243	to work	h e k a u	h e k a u	c c c c c	2109
+3471	NorthMarquesan_38	to work	h a n a	h a n a	c c c c	2104
+4508	Austral_1213	to work	ʔ o h i p a	ʔ o h i p a	c c c c c c	2102
+4736	Tuamotuan_246	to work	h a ŋ a	h a ŋ a	c c c c	2104
+5250	Austral_128	to work	ʔ a t a p u	ʔ a t a p u	c c c c c c	2103
+5752	Hawaiian_52	to work	h a n a	h a n a	c c c c	2104
+#
+897	Maori_85	to yawn	h aː + m a + m a	h aː - - + m a + m a	c c + c c + c c	2110 19 19
+1346	Tahitian_173	to yawn	h aː + m a + m a	h aː - - + m a + m a	c c + c c + c c	2110 19 19
+1791	Rapanui_264	to yawn	h a k a	h a k a	c c c c	2110
+2053	Mangareva_239	to yawn	ʔ a + m a + m a	ʔ a - - + m a + m a	c c + c c + c c	2110 19 19
+2054	Mangareva_239	to yawn	n a r o	n a r o	c c c c	2136
+3527	NorthMarquesan_38	to yawn	m a + m a	m a + m a	c c + c c	2113 19
+4543	Austral_1213	to yawn	h aː + m a + m a + t e + v a h a	h aː - - + m a + m a + t e + v a h a	c c + c c + c c + c c + c c c c	2110 19 19 2113 2114
+4788	Tuamotuan_246	to yawn	h aː + m a + m a	h aː - - + m a + m a	c c + c c + c c	2110 19 19
+5299	Austral_128	to yawn	ʔ aː + m a + m a	ʔ aː - - + m a + m a	c c + c c + c c	2110 19 19
+5791	Hawaiian_52	to yawn	h aː + m a + m a	h aː - - + m a + m a	c c + c c + c c	2110 19 19
+#
+912	Maori_85	tongue	a r e r o	a r e r o	c c c c c	2137
+1362	Tahitian_173	tongue	a r e r o	a r e r o	c c c c c	2137
+1806	Rapanui_264	tongue	a r e r o	a r e r o	c c c c c	2137
+2072	Mangareva_239	tongue	a r e r o	a r e r o	c c c c c	2137
+3257	Sikaiana_243	tongue	a l e l o	a l e l o	c c c c c	2137
+3545	NorthMarquesan_38	tongue	a ʔ e ʔ o	a ʔ e ʔ o	c c c c c	2137
+4557	Austral_1213	tongue	a ɢ e ɢ o	a ɢ e ɢ o	c c c c c	2137
+4806	Tuamotuan_246	tongue	a r e r o	a r e r o	c c c c c	2137
+5316	Austral_128	tongue	a r e r o	a r e r o	c c c c c	2137
+5808	Hawaiian_52	tongue	a l e l o	a l e l o	c c c c c	2137
+#
+913	Maori_85	tooth	n i h o	n i h o	c c c c	2138
+1363	Tahitian_173	tooth	n i h o	n i h o	c c c c	2138
+1807	Rapanui_264	tooth	n i h o	n i h o	c c c c	2138
+2073	Mangareva_239	tooth	n i ʔ o	n i ʔ o	c c c c	2138
+3258	Sikaiana_243	tooth	n i h o	n i h o	c c c c	2138
+3546	NorthMarquesan_38	tooth	n i h o	n i h o	c c c c	2138
+4558	Austral_1213	tooth	n i h o	n i h o	c c c c	2138
+4807	Tuamotuan_246	tooth	n i h o	n i h o	c c c c	2138
+5317	Austral_128	tooth	n i ʔ o	n i ʔ o	c c c c	2138
+5809	Hawaiian_52	tooth	n i h o	n i h o	c c c c	2138
+#
+801	Maori_85	warm	m a + h a n a	m a + h a n a	c c + c c c c	802 2145
+1246	Tahitian_173	warm	m aː + h a n a + h a n a	m aː + h a n a + h a n a	c c + c c c c + c c c c	802 2145 2145
+1679	Rapanui_264	warm	m a + h a n a	m a + h a n a	c c + c c c c	802 2145
+1680	Rapanui_264	warm	h a n a	h a n a	c c c c	2148
+1936	Mangareva_239	warm	m a + ʔ a n a	m a + ʔ a n a	c c + c c c c	802 2145
+3146	Sikaiana_243	warm	m aː + h a n a	m aː + h a n a	c c + c c c c	802 2145
+3395	NorthMarquesan_38	warm	h a ʔ a + m aː + h a n a + h a n a	h a ʔ a + m aː + h a n a + h a n a	c c c c + c c + c c c c + c c c c	2148 2149 2145 2151
+4461	Austral_1213	warm	v e ʔ a + v e ʔ a	v e ʔ a + v e ʔ a	c c c c + c c c c	2139 2139
+4663	Tuamotuan_246	warm	m a + h a n a	m a + h a n a	c c + c c c c	802 2145
+5183	Austral_128	warm	v e r a + v e r a	v e r a + v e r a	c c c c + c c c c	2139 2139
+5184	Austral_128	warm	m aː + ʔ a n a + ʔ a n a	m aː + ʔ a n a + ʔ a n a	c c + c c c c + c c c c	802 2145 2145
+5691	Hawaiian_52	warm	w e l a	w e l a	c c c c	2139
+5692	Hawaiian_52	warm	h a + h a n a	h a - - + h a n a	c c + c c c c	2148 2145
+#
+819	Maori_85	water	w a i	w a i	c c c	2154
+1264	Tahitian_173	water	p a p e	p a p e	c c c c	2152
+1700	Rapanui_264	water	v a i	v a i	c c c	2154
+1957	Mangareva_239	water	v a i	v a i	c c c	2154
+3161	Sikaiana_243	water	v a i	v a i	c c c	2154
+3414	NorthMarquesan_38	water	v a i	v a i	c c c	2154
+4474	Austral_1213	water	p a p e + m aː ʔ a ɢ o	p a p e + m aː ʔ a ɢ o	c c c c + c c c c c c	2152 2153
+4690	Tuamotuan_246	water	v a i	v a i	c c c	2154
+5202	Austral_128	water	v a i	v a i	c c c	2154
+5710	Hawaiian_52	water	w a i	w a i	c c c	2154
+#
+747	Maori_85	we	m aː + t o u	m aː + t o u	c c + c c c	1154 1293
+748	Maori_85	we	m aː + u a	m aː + u a	c c + c c	2441 900
+749	Maori_85	we	t aː + t o u	t aː + t o u	c c + c c c	2195 2448
+750	Maori_85	we	t aː + u a	t aː + u a	c c + c c	2463 900
+1192	Tahitian_173	we	m aː + t o u	m aː + t o u	c c + c c c	1154 1293
+1193	Tahitian_173	we	m aː + u a	m aː + u a	c c + c c	2444 900
+1194	Tahitian_173	we	t aː + t o u	t aː + t o u	c c + c c c	2195 2452
+1195	Tahitian_173	we	t aː + u a	t aː + u a	c c + c c	2466 900
+1618	Rapanui_264	we	t a + t o u	t a + t o u	c c + c c c	2195 1293
+1619	Rapanui_264	we	m a + t o u	m a + t o u	c c + c c c	1154 2450
+1874	Mangareva_239	we	t aː + u a	t aː + u a	c c + c c	2195 900
+3097	Sikaiana_243	we	t aː + u a	t aː + u a	c c + c c	2195 900
+3098	Sikaiana_243	we	m aː + t o u	m aː + t o u	c c + c c c	1154 1293
+3099	Sikaiana_243	we	t aː + t o u	t aː + t o u	c c + c c c	2465 1293
+3100	Sikaiana_243	we	m aː + u a	m aː + u a	c c + c c	1154 2458
+3317	NorthMarquesan_38	we	t a + u a	t a + u a	c c + c c	2195 900
+3318	NorthMarquesan_38	we	m a + u a	m a + u a	c c + c c	1154 2457
+3319	NorthMarquesan_38	we	m a + t o u	m a + t o u	c c + c c c	2442 1293
+3320	NorthMarquesan_38	we	t a + t o u	t a + t o u	c c + c c c	2464 1293
+4414	Austral_1213	we	m aː + t o u	m aː + t o u	c c + c c c	1154 1293
+4415	Austral_1213	we	m aː + u a	m aː + u a	c c + c c	2438 900
+4416	Austral_1213	we	t aː + t o u	t aː + t o u	c c + c c c	2195 2445
+4417	Austral_1213	we	t aː + u a	t aː + u a	c c + c c	2460 900
+4606	Tuamotuan_246	we	t a + t o u	t a + t o u	c c + c c c	2195 1293
+5124	Austral_128	we	m aː + t o u	m aː + t o u	c c + c c c	1154 1293
+5125	Austral_128	we	m aː + u a	m aː + u a	c c + c c	2439 900
+5126	Austral_128	we	t aː + t o u	t aː + t o u	c c + c c c	2195 2446
+5127	Austral_128	we	t aː + u a	t aː + u a	c c + c c	2461 900
+5635	Hawaiian_52	we	m aː + k o u	m aː + k o u	c c + c c c	1154 1293
+5636	Hawaiian_52	we	m aː + u a	m aː + u a	c c + c c	2440 900
+5637	Hawaiian_52	we	k aː + k o u	k aː + k o u	c c + c c c	2195 2447
+5638	Hawaiian_52	we	k aː + u a	k aː + u a	c c + c c	2462 900
+#
+798	Maori_85	wet	m aː k uː	m aː k uː	c c c c	2196
+1243	Tahitian_173	wet	r a r i	r a r i	c c c c	2204
+1675	Rapanui_264	wet	h e h e	h e h e	c c c c	2202
+1676	Rapanui_264	wet	l a l i	l a l i	c c c c	2204
+1930	Mangareva_239	wet	r a ŋ a	r a ŋ a	c c c c	2199
+1931	Mangareva_239	wet	m a k u	m a k u	c c c c	2196
+1932	Mangareva_239	wet	r a r i	r a r i	c c c c	2204
+3143	Sikaiana_243	wet	s i u	s i u	c c c	2203
+3389	NorthMarquesan_38	wet	ʔ a u t a u	ʔ a u t a u	c c c c c c	2201
+4458	Austral_1213	wet	m a ʔ u	m a ʔ u	c c c c	2196
+4658	Tuamotuan_246	wet	r a r i	r a r i	c c c c	2204
+5179	Austral_128	wet	m a ʔ u	m a ʔ u	c c c c	2196
+5180	Austral_128	wet	r a r i	r a r i	c c c c	2204
+5688	Hawaiian_52	wet	p u l u	p u l u	c c c c	2198
+#
+742	Maori_85	what?	a h a	a h a	c c c	2205
+1187	Tahitian_173	what?	e + a h a	e + a h a	c + c c c	2213 2214
+1615	Rapanui_264	what?	a h a	a h a	c c c	2205
+1868	Mangareva_239	what?	a ʔ a	a ʔ a	c c c	2205
+3092	Sikaiana_243	what?	aː	aː	c	2212
+3314	NorthMarquesan_38	what?	a h a	a h a	c c c	2205
+4409	Austral_1213	what?	a h a	a h a	c c c	2205
+4603	Tuamotuan_246	what?	a h a	a h a	c c c	2205
+5119	Austral_128	what?	a ʔ a	a ʔ a	c c c	2205
+5630	Hawaiian_52	what?	a h a	a h a	c c c	2205
+#
+767	Maori_85	when?	aː + h e a	aː + h e a	c + c c c	2215 655
+1211	Tahitian_173	when?	i n aː + f e a	i n aː + f e a	c c c + c c c	2217 655
+1636	Rapanui_264	when?	a g a + h e	a g a + h e -	c c c + c c	2227 655
+1888	Mangareva_239	when?	a + ʔ e a	a + ʔ e a	c + c c c	2215 655
+3112	Sikaiana_243	when?	i t e + m o k o + a + h e a	i t e + m o k o + a + h e a	c c c + c c c c + c + c c c	2229 2230 2231 2232
+3339	NorthMarquesan_38	when?	aː + h e a	aː + h e a	c + c c c	2215 655
+4429	Austral_1213	when?	a + h e a	a + h e a	c + c c c	2215 655
+5144	Austral_128	when?	i n aː + ʔ e a	i n aː + ʔ e a	c c c + c c c	2217 655
+5657	Hawaiian_52	when?	i n aː + h e a	i n aː + h e a	c c c + c c c	2217 655
+#
+754	Maori_85	where?	f e a	f e a	c c c	2233
+1200	Tahitian_173	where?	h e a	h e a	c c c	2233
+1623	Rapanui_264	where?	h e	h e -	c c	2233
+1878	Mangareva_239	where?	ʔ e a	ʔ e a	c c c	2233
+3104	Sikaiana_243	where?	h e a	h e a	c c c	2233
+3326	NorthMarquesan_38	where?	h e a	h e a	c c c	2233
+4422	Austral_1213	where?	h e a	h e a	c c c	2233
+4611	Tuamotuan_246	where?	h e a	h e a	c c c	2233
+5133	Austral_128	where?	ʔ i a	ʔ i a	c c c	2233
+5642	Hawaiian_52	where?	a i a + i + h e a	a i a + i + h e a	c c c + c + c c c	2235 2236 2237
+#
+791	Maori_85	white	m aː	m aː	c c	2245
+1236	Tahitian_173	white	ʔ u o + ʔ u o	ʔ u o + ʔ u o	c c c + c c c	2238 2238
+1667	Rapanui_264	white	t e a + t e a	t e a + t e - a	c c c + c c c	2240 2241
+1918	Mangareva_239	white	t e a	t e a	c c c	2240
+3134	Sikaiana_243	white	t e a	t e a	c c c	2240
+3377	NorthMarquesan_38	white	t a + v a i ʔ e	t a + v a i ʔ e	c c + c c c c c	2246 2247
+3378	NorthMarquesan_38	white	t e k o	t e k o	c c c c	2242
+3379	NorthMarquesan_38	white	t e a	t e a	c c c	2240
+4451	Austral_1213	white	ʔ u o + ʔ u o	ʔ u o + ʔ u o	c c c + c c c	2238 2238
+4648	Tuamotuan_246	white	t e a	t e a	c c c	2240
+5172	Austral_128	white	t e a + t e a	t e a + t e - a	c c c + c c c	2240 2241
+5679	Hawaiian_52	white	k e ʔ o + k e ʔ o	k e ʔ o + k e ʔ o	c c c c + c c c c	2242 2241
+5680	Hawaiian_52	white	k e a	k e a	c c c	2240
+#
+741	Maori_85	who?	w a i	w a i	c c c	2251
+1186	Tahitian_173	who?	ʔ o + v a i	ʔ o + v a i	c c + c c c	2256 2257
+1614	Rapanui_264	who?	aː i	- aː i	c c	2251
+1866	Mangareva_239	who?	a i	- a i	c c	2251
+3091	Sikaiana_243	who?	a i	- a i	c c	2251
+3313	NorthMarquesan_38	who?	a i	- a i	c c	2251
+4408	Austral_1213	who?	v a i	v a i	c c c	2251
+4602	Tuamotuan_246	who?	a i	- a i	c c	2251
+5118	Austral_128	who?	v a i	v a i	c c c	2251
+5629	Hawaiian_52	who?	w a i	w a i	c c c	2251
+#
+779	Maori_85	wide	f aː n u i	f aː n u i	c c c c c	2265
+1224	Tahitian_173	wide	ʔ a + ʔ a n o	ʔ a - - + ʔ a n o	c c + c c c c	2260 2261
+1651	Rapanui_264	wide	k a u	k a u	c c c	2258
+1903	Mangareva_239	wide	ʔ a t a + ʔ a t a	ʔ a t a + ʔ a t a	c c c c + c c c c	2260 2264
+3123	Sikaiana_243	wide	l l a h a	l l a h a	c c c c c	2268
+3358	NorthMarquesan_38	wide	f a t e a	f a t e a	c c c c c	2262
+4440	Austral_1213	wide	ɢ a + ɢ a h i	ɢ a - + ɢ a h i	c c + c c c c	2258 2259
+4635	Tuamotuan_246	wide	r a h a	- r a h a	c c c c	2268
+5160	Austral_128	wide	ʔ a + ʔ a n o	ʔ a - - + ʔ a n o	c c + c c c c	2260 2261
+5668	Hawaiian_52	wide	aː k e a	- aː k e a	c c c c	2262
+#
+886	Maori_85	wife	w a + h i n e	w a + h i n e	c c + c c c c	2269 2274
+1334	Tahitian_173	wife	v a + h i n e	v a + h i n e	c c + c c c c	2269 2274
+1778	Rapanui_264	wife	v iː ʔ e	v iː ʔ e	c c c c	2281
+2038	Mangareva_239	wife	v e + ʔ i n e	v e + ʔ i n e	c c + c c c c	2269 2274
+2039	Mangareva_239	wife	a ʔ a n a	a ʔ a n a	c c c c c	2285
+3511	NorthMarquesan_38	wife	v e + h i n e	v e + h i n e	c c + c c c c	2269 2274
+4531	Austral_1213	wife	v a + h i n e	v a + h i n e	c c + c c c c	2269 2274
+4774	Tuamotuan_246	wife	m oː r i r e	m oː r i r e	c c c c c c	2284
+5283	Austral_128	wife	v a + ʔ i n e	v a + ʔ i n e	c c + c c c c	2269 2274
+5779	Hawaiian_52	wife	w a + h i n e	w a + h i n e	c c + c c c c	2269 2274
+#
+804	Maori_85	wind	h a u	h a u	c c c	2290
+1249	Tahitian_173	wind	m a t a ʔ i	m a t a ʔ i	c c c c c c	2286
+1682	Rapanui_264	wind	h a + h a u	h a - + h a u	c c + c c c	2290 2293
+1683	Rapanui_264	wind	t o k e r a u	t o k e r a u	c c c c c c c	2298
+1684	Rapanui_264	wind	m a t a g i	m a t a g i	c c c c c c	2286
+1939	Mangareva_239	wind	m a t a ŋ i	m a t a ŋ i	c c c c c c	2286
+1940	Mangareva_239	wind	h a u	h a u	c c c	2290
+3148	Sikaiana_243	wind	m a t a n i	m a t a n i	c c c c c c	2286
+3397	NorthMarquesan_38	wind	m e t a n i	m e t a n i	c c c c c c	2286
+4463	Austral_1213	wind	m a t a ʔ i	m a t a ʔ i	c c c c c c	2286
+4669	Tuamotuan_246	wind	m a t a ŋ i	m a t a ŋ i	c c c c c c	2286
+5187	Austral_128	wind	m a t a ʔ i	m a t a ʔ i	c c c c c c	2286
+5695	Hawaiian_52	wind	m a k a n i	m a k a n i	c c c c c c	2286
+#
+843	Maori_85	wing	p a r i r a u	p a r i r a u	c c c c c c c	2300
+1288	Tahitian_173	wing	p e r e r a u	p e r e r a u	c c c c c c c	2300
+1723	Rapanui_264	wing	k a r ʔ a	k a r ʔ a	c c c c c	2306
+1983	Mangareva_239	wing	p e r e r a u	p e r e r a u	c c c c c c c	2300
+1984	Mangareva_239	wing	p e + h a u	p e + h a u	c c + c c c	2304 2312
+3185	Sikaiana_243	wing	k a p a + k a u	k a p a + k a u	c c c c + c c c	2307 2305
+3442	NorthMarquesan_38	wing	p e + k e u	p e + k e u	c c + c c c	2304 2305
+4492	Austral_1213	wing	m a i t i	m a i t i	c c c c c	2299
+4714	Tuamotuan_246	wing	p e r e r a u	p e r e r a u	c c c c c c c	2300
+5228	Austral_128	wing	p e r e r a u	p e r e r a u	c c c c c c c	2300
+5733	Hawaiian_52	wing	ʔ eː h e u	ʔ eː h e u	c c c c c	2301
+#
+889	Maori_85	woman/female	w a + h i n e	w a + h i n e	c c + c c c c	2269 2274
+1337	Tahitian_173	woman/female	v a + h i n e	v a + h i n e	c c + c c c c	2269 2274
+1781	Rapanui_264	woman/female	t a m a	t a m a	c c c c	2324
+1783	Rapanui_264	woman/female	b a + h i n e	b a + h i n e	c c + c c c c	2332 2274
+2043	Mangareva_239	woman/female	ʔ a + ʔ i n e	ʔ a + ʔ i n e	c c + c c c c	2319 2274
+2044	Mangareva_239	woman/female	ʔ i n e	ʔ i n e	c c c c	2274
+3232	Sikaiana_243	woman/female	h i n e	h i n e	c c c c	2274
+3233	Sikaiana_243	woman/female	h a + h i n e	h a + h i n e	c c + c c c c	2319 2274
+3514	NorthMarquesan_38	woman/female	h i n e	h i n e	c c c c	2274
+3515	NorthMarquesan_38	woman/female	v e + h i n e	v e + h i n e	c c + c c c c	2269 2274
+4534	Austral_1213	woman/female	v a + h i n e	v a + h i n e	c c + c c c c	2269 2274
+4778	Tuamotuan_246	woman/female	h iː n e	h iː n e	c c c c	2274
+4779	Tuamotuan_246	woman/female	v a + h iː n e	v a + h iː n e	c c + c c c c	2269 2274
+5287	Austral_128	woman/female	v a + ʔ i n e	v a + ʔ i n e	c c + c c c c	2269 2274
+5782	Hawaiian_52	woman/female	w a + h i n e	w a + h i n e	c c + c c c c	2269 2274
+#
+813	Maori_85	woods/forest	ŋ a h e r e	ŋ a h e r e	c c c c c c	2338
+1258	Tahitian_173	woods/forest	u r u + r aː ʔ a u	u r u + r aː ʔ a u	c c c + c c c c c	2333 2334
+1950	Mangareva_239	woods/forest	v a o	v a o	c c c	2337
+1951	Mangareva_239	woods/forest	u l u	u l u	c c c	2344
+3157	Sikaiana_243	woods/forest	v a o	v a o	c c c	2337
+3406	NorthMarquesan_38	woods/forest	v a o	v a o	c c c	2337
+4681	Tuamotuan_246	woods/forest	v a o	v a o	c c c	2337
+4683	Tuamotuan_246	woods/forest	ŋ a h e r e	ŋ a h e r e	c c c c c c	2338
+5196	Austral_128	woods/forest	u r u + r aː ʔ a u	u r u + r aː ʔ a u	c c c + c c c c c	2333 2334
+5704	Hawaiian_52	woods/forest	u l u + l aː ʔ a u	u l u + l aː ʔ a u	c c c + c c c c c	2333 2334
+#
+836	Maori_85	worm (earthworm)	n o k e	n o k e	c c c c	282
+1279	Tahitian_173	worm (earthworm)	t o ʔ e	t o ʔ e	c c c c	282
+1717	Rapanui_264	worm (earthworm)	k o r e h a	k o r e h a	c c c c c c	2353
+1974	Mangareva_239	worm (earthworm)	i r i + t o k e	i r i + t o k e	c c c + c c c c	2349 2350
+3432	NorthMarquesan_38	worm (earthworm)	t o k e	t o k e	c c c c	282
+4487	Austral_1213	worm (earthworm)	t o ʔ e + ɢ e p o	t o ʔ e + ɢ e p o	c c c c + c c c c	282 2346
+4707	Tuamotuan_246	worm (earthworm)	t o k e	t o k e	c c c c	282
+5218	Austral_128	worm (earthworm)	t o ʔ e	t o ʔ e	c c c c	282
+5726	Hawaiian_52	worm (earthworm)	k o ʔ e	k o ʔ e	c c c c	282
+#
+768	Maori_85	year	t a u	t a u	c c c	2358
+1212	Tahitian_173	year	m a t a h i t i	m a t a h i t i	c c c c c c c c	2354
+1637	Rapanui_264	year	t a ʔ u	t a ʔ u	c c c c	2360
+1638	Rapanui_264	year	m a t a h i t i	m a t a h i t i	c c c c c c c c	2354
+1889	Mangareva_239	year	a n o	a n o	c c c	2357
+1890	Mangareva_239	year	t a u	t a u	c c c	2358
+3113	Sikaiana_243	year	t a u	t a u	c c c	2358
+3340	NorthMarquesan_38	year	h u a ʔ a	h u a ʔ a	c c c c c	2359
+3341	NorthMarquesan_38	year	t a u	t a u	c c c	2358
+4430	Austral_1213	year	m a t a h i t i	m a t a h i t i	c c c c c c c c	2354
+4623	Tuamotuan_246	year	t a u	t a u	c c c	2358
+5145	Austral_128	year	m a t a ʔ i t i	m a t a ʔ i t i	c c c c c c c c	2354
+5658	Hawaiian_52	year	m a k a h i k i	m a k a h i k i	c c c c c c c c	2354
+#
+789	Maori_85	yellow	k oː f a i	k oː f a i	c c c c c	2368
+1234	Tahitian_173	yellow	r e ʔ a + r e ʔ a	r e ʔ a + r e ʔ a	c c c c + c c c c	2361 2361
+1664	Rapanui_264	yellow	p a r a	p a r a	c c c c	2371
+1916	Mangareva_239	yellow	r e ŋ a + r e ŋ a	r e ŋ a + r e ŋ a	c c c c + c c c c	2361 2361
+3132	Sikaiana_243	yellow	f e l o	f e l o	c c c c	2372
+3374	NorthMarquesan_38	yellow	t o k a + t o k a	t o k a + t o k a	c c c c + c c c c	2369 2370
+4449	Austral_1213	yellow	ɢ e ʔ a + ɢ e ʔ a	ɢ e ʔ a + ɢ e ʔ a	c c c c + c c c c	2361 2361
+4645	Tuamotuan_246	yellow	r e ŋ a + r e ŋ a	r e ŋ a + r e ŋ a	c c c c + c c c c	2361 2361
+5170	Austral_128	yellow	r e ʔ a + r e ʔ a	r e ʔ a + r e ʔ a	c c c c + c c c c	2361 2361
+5677	Hawaiian_52	yellow	l e n a	l e n a	c c c c	2361
+#
+745	Maori_85	you	k o u + t o u	k o u + t o u	c c c + c c c	2373 1293
+746	Maori_85	you	k oː + r u a	k oː - + r u a	c c + c c c	2471 87
+1190	Tahitian_173	you	ʔ o u + t o u	ʔ o u + t o u	c c c + c c c	2373 1293
+1191	Tahitian_173	you	ʔ oː + r u a	ʔ oː - + r u a	c c + c c c	2473 87
+1617	Rapanui_264	you	k o r u a	k o r u a	c c c c c	2385
+1871	Mangareva_239	you	k oː + t o u	k oː - + t o u	c c + c c c	2373 1293
+1872	Mangareva_239	you	k oː + r u a	k oː - + r u a	c c + c c c	2469 87
+1873	Mangareva_239	you	k o + r u a	k o - + r u a	c c + c c c	2373 2475
+3095	Sikaiana_243	you	k o u + t o u	k o u + t o u	c c c + c c c	2373 1293
+3096	Sikaiana_243	you	k o u + l u a	k o u + l u a	c c c + c c c	2472 87
+3316	NorthMarquesan_38	you	k o + t o u	k o - + t o u	c c + c c c	2373 1293
+4412	Austral_1213	you	ʔ o u + t o u	ʔ o u + t o u	c c c + c c c	2373 1293
+4413	Austral_1213	you	ʔ oː + ɢ u a	ʔ oː - + ɢ u a	c c + c c c	2467 87
+4604	Tuamotuan_246	you	k o u + t o u	k o u + t o u	c c c + c c c	2373 1293
+4605	Tuamotuan_246	you	k oː + r u a	k oː - + r u a	c c + c c c	2474 87
+5122	Austral_128	you	ʔ o u + t o u	ʔ o u + t o u	c c c + c c c	2373 1293
+5123	Austral_128	you	ʔ uː + r u a	ʔ uː + r u a	c c + c c c	2394 87
+5633	Hawaiian_52	you	ʔ o u + k o u	ʔ o u + k o u	c c c + c c c	2373 1293
+5634	Hawaiian_52	you	ʔ o + l u a	ʔ o - + l u a	c c + c c c	2468 87

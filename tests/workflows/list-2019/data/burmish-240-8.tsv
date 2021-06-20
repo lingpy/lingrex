@@ -1,0 +1,1842 @@
+ID	DOCULECT	CONCEPT	SEGMENTS	ALIGNMENT	STRUCTURE	CROSSIDS
+6187	Rangoon	I [first person singular]	ŋ ɑ ²²	ŋ ɑ ²²	i n t	97
+6259	Atsi	I [first person singular]	ŋ o ⁵¹	ŋ o ⁵¹	i n t	97
+6348	Maru	I [first person singular]	ŋ ɔ ³¹	ŋ ɔ ³¹	i n t	97
+6432	Lashi	I [first person singular]	ŋ o ³¹	ŋ o ³¹	i n t	97
+6489	Xiandao	I [first person singular]	ŋ ɔ ⁵⁵	ŋ ɔ ⁵⁵	i n t	97
+6549	Bola	I [first person singular]	ŋ a ⁵⁵	ŋ a ⁵⁵	i n t	97
+6631	Achang_Longchuan	I [first person singular]	ŋ ɔ ⁵⁵	ŋ ɔ ⁵⁵	i n t	97
+7149	Old_Burmese	I [first person singular]	ŋ a ²²	ŋ a ²²	i n t	97
+6324	Atsi	above	tʰ o ʔ ⁵⁵ + m ai ²¹	tʰ o ʔ ⁵⁵ + m ai ²¹	i n c t + i n t	3 4
+6414	Rangoon	above	ɑ ⁵³ + tʰ ɛ ʔ	ɑ ⁵³ + tʰ ɛ ʔ -	n t + i n c	1 3
+6450	Bola	above	a ³¹ + tʰ a ʔ ⁵⁵	a ³¹ + tʰ a ʔ ⁵⁵	n t + i n c t	1 3
+6523	Achang_Longchuan	above	a ³¹ + l u m ³¹	a ³¹ + l u m ³¹	n t + i n c t	1 2
+6583	Maru	above	tʰ ɔ ʔ ⁵⁵ + m ɛ ³¹	tʰ ɔ ʔ ⁵⁵ + m ɛ ³¹	i n c t + i n t	3 4
+7095	Old_Burmese	above	a + tʰ a k	a - + tʰ a k -	n + i n c	1 3
+2	Achang_Longchuan	all	p ʐ a ⁵⁵ + p ʐ a ⁵⁵	p ʐ a ⁵⁵ + p ʐ a ⁵⁵	i m n t + i m n t	480 836
+9	Lashi	all	p a n ³¹ + ʃ ɔ̰/ɔ ʔ ⁵⁵	p a n ³¹ + ʃ ɔ̰/ɔ ʔ ⁵⁵	i n c t + i n c t	6 10
+10	Maru	all	p ə ŋ ³¹ + ʃ ɔ ʔ ⁵⁵	p ə ŋ ³¹ + ʃ ɔ ʔ ⁵⁵	i n c t + i n c t	6 10
+12	Xiandao	all	cʰ o t ⁵⁵	cʰ o t ⁵⁵	i n c t	477
+13	Atsi	all	l ṵ/u ŋ ⁵⁵ + l a̰/a ŋ ⁵⁵	l ṵ/u ŋ ⁵⁵ + l a̰/a ŋ ⁵⁵	i n c t + i n c t	479 7
+14	Bola	all	a ³¹ + l a̰/a p ⁵⁵	a ³¹ + l a̰/a p ⁵⁵	n t + i n c t	1 8
+5656	Rangoon	all	m̥ ɑ̃/ɑ ∼ ²² + tθ ɑ ⁵³ + m̥ j ɑ ⁵³	m̥ ɑ̃/ɑ ∼ ²² + tθ ɑ ⁵³ + m̥ j ɑ ⁵³	i n c t + i n t + i m n t	12 11 5
+7097	Old_Burmese	all	a + k u n	a - + k u n	n + i n c	1 837
+129	Achang_Longchuan	bad	tɕ a ⁵⁵	tɕ a ⁵⁵	i n t	512
+131	Atsi	bad	tʰ e n ²¹	tʰ e n ²¹	i n c t	511
+132	Bola	bad	a ³¹ + k ai ⁵⁵	a ³¹ + k ai ⁵⁵	n t + i n t	509 485
+135	Lashi	bad	p j ɔː/ɔ ʔ ³¹	p j ɔː/ɔ ʔ ³¹	i m n c t	521
+136	Maru	bad	k ɔi ³⁵	k ɔi ³⁵	i n t	485
+137	Xiandao	bad	n ³¹ + c ɛ ⁵⁵	n ³¹ + c ɛ ⁵⁵	n t + i n t	63 513
+5367	Rangoon	bad	sʰ o ⁵⁵	sʰ o - ⁵⁵	i n t	64
+5368	Rangoon	bad	nʲ ɑ̃/ɑ ∼ ⁵³	nʲ ɑ̃/ɑ ∼ ⁵³	i n c t	486
+7099	Old_Burmese	bad	tsʰ ə w ⁵⁵	tsʰ ə w ⁵⁵	i n c t	64
+6326	Atsi	below, under	o̰/o ⁵¹ + m ai ²¹	- o̰/o - ⁵¹ + m ai ²¹	n t + i n t	74 4
+6451	Bola	below, under	a ³¹ + a ⁵⁵	a ³¹ + a ⁵⁵	n t + n t	774 775
+6524	Achang_Longchuan	below, under	a ³¹ + tʰ e ⁵¹	a ³¹ + tʰ e ⁵¹	n t + i n t	774 776
+6584	Maru	below, under	ɔ ³¹ + m ɛ ³¹	- ɔ - ³¹ + m ɛ ³¹	n t + i n t	74 4
+6618	Rangoon	below, under	ɑ u ʔ ⁴	ɑ u ʔ ⁴	m n c t	74
+7101	Old_Burmese	below, under	ʊ k	- ʊ k -	n c	74
+310	Achang_Longchuan	big	k ʐ ə ³¹	k ʐ ə ³¹	i m n t	92
+312	Atsi	big	k o̰/o ²¹	k - o̰/o ²¹	i n t	92
+313	Bola	big	k ɔ̰/ɔ ³⁵	k - ɔ̰/ɔ ³⁵	i n t	92
+316	Lashi	big	k j iː/i ³³	k j iː/i ³³	i m n t	92
+317	Maru	big	ɣ ə ³⁵	ɣ - ə ³⁵	i n t	92
+319	Xiandao	big	k ɯ ³¹	k - ɯ ³¹	i n t	92
+5671	Rangoon	big	tɕ i ⁵⁵	tɕ - i ⁵⁵	i n t	92
+7103	Old_Burmese	big	k r i ⁵⁵	k r i ⁵⁵	i m n t	92
+367	Achang_Longchuan	black	l ɔ k ⁵⁵	l ɔ k ⁵⁵	i n c t	99
+369	Atsi	black	n o ʔ ²¹	n o ʔ ²¹	i n c t	99
+370	Bola	black	n a ʔ ³¹	n a ʔ ³¹	i n c t	99
+373	Lashi	black	n ɔː/ɔ ʔ ³¹	n ɔː/ɔ ʔ ³¹	i n c t	99
+374	Maru	black	n ɔ ʔ ³¹	n ɔ ʔ ³¹	i n c t	99
+375	Xiandao	black	n ɔ ʔ ⁵⁵	n ɔ ʔ ⁵⁵	i n c t	99
+5528	Rangoon	black	n ɛ ʔ ⁴	n ɛ ʔ ⁴	i n c t	99
+7105	Old_Burmese	black	n a k	n a k -	i n c	99
+672	Achang_Longchuan	cold (of temperature)	k ʐ ua t ⁵⁵	k ʐ ua t ⁵⁵	i m n c t	155
+674	Atsi	cold (of temperature)	k j o ʔ ²¹	k j o ʔ ²¹	i m n c t	155
+675	Bola	cold (of temperature)	k j a ʔ ³¹	k j a ʔ ³¹	i m n c t	155
+676	Lashi	cold (of temperature)	ŋ aː/a m ⁵⁵	ŋ aː/a m ⁵⁵	i n c t	529
+677	Maru	cold (of temperature)	k j ɔ ʔ ³¹	k j ɔ ʔ ³¹	i m n c t	155
+678	Xiandao	cold (of temperature)	k ʐ o t ⁵⁵	k ʐ o t ⁵⁵	i m n c t	155
+5630	Rangoon	cold (of temperature)	tɕʰ ɑ̃/ɑ ∼ ⁵⁵	tɕʰ ɑ̃/ɑ ∼ ⁵⁵	i n c t	156
+5650	Rangoon	cold (of temperature)	e ⁵⁵	e - ⁵⁵	n t	154
+7107	Old_Burmese	cold (of temperature)	i j ⁵⁵	i j ⁵⁵	n c t	154
+3334	Achang_Longchuan	correct (right)	ts ɿ ⁵⁵	ts ɿ ⁵⁵	i n t	319
+3337	Atsi	correct (right)	tʃ o ²¹	tʃ o ²¹	i n t	319
+3339	Bola	correct (right)	tʃ ɔ ³¹	tʃ ɔ ³¹	i n t	319
+3342	Lashi	correct (right)	k ɛː/ɛ ³¹	k ɛː/ɛ ³¹	i n t	625
+3343	Maru	correct (right)	tʃ ɔ ³¹	tʃ ɔ ³¹	i n t	319
+3344	Xiandao	correct (right)	c ɛ ⁵⁵	c ɛ ⁵⁵	i n t	625
+5251	Rangoon	correct (right)	m̥ ɑ̃/ɑ ∼ ²²	m̥ ɑ̃/ɑ ∼ ²²	i n c t	318
+7109	Old_Burmese	correct (right)	m̥ a n	m̥ a n -	i n c	318
+6142	Achang_Longchuan	dark	ɕ i n ⁵⁵	ɕ i n ⁵⁵	i n c t	734
+6201	Maru	dark	n ɔ ʔ ³¹	n ɔ ʔ ³¹	i n c t	99
+6237	Rangoon	dark	m̥ ɑ̃/ɑu ∼ ²²	m̥ ɑ̃/ɑu ∼ ²²	i n c t	37
+6304	Atsi	dark	n o ʔ ²¹	n o ʔ ²¹	i n c t	99
+6430	Bola	dark	n a ʔ ³¹	n a ʔ ³¹	i n c t	99
+6593	Xiandao	dark	k ɯ n ⁵⁵	k ɯ n ⁵⁵	i n c t	735
+7111	Old_Burmese	dark	m̥ ʊ ŋ	m̥ ʊ ŋ -	i n c	37
+936	Achang_Longchuan	dirty	ə k ³⁵	ə k ³⁵	n c t	167
+938	Atsi	dirty	tʃʰ a ʔ ⁵⁵	tʃʰ a ʔ ⁵⁵	i n c t	530
+940	Bola	dirty	l ṵ/u ³⁵	l ṵ/u ³⁵	i n t	18
+942	Lashi	dirty	a ³¹ + s a n ⁵⁵	a ³¹ + s a n ⁵⁵	n t + i n c t	531 532
+943	Maru	dirty	l a̰/au ³⁵	l a̰/au ³⁵	i n t	18
+944	Xiandao	dirty	ɤ k ³⁵	ɤ k ³⁵	n c t	167
+5459	Rangoon	dirty	nʲ i ʔ ⁴ + p ɑ ʔ ⁴	nʲ i ʔ ⁴ + p ɑ ʔ ⁴	i n c t + i n c t	165 166
+7113	Old_Burmese	dirty	nʲ a ts + p a t	nʲ a ts - + p a t -	i n c + i n c	165 166
+1037	Achang_Longchuan	dry	s ə ʔ ⁵⁵	s ə ʔ ⁵⁵	i n c t	534
+1039	Atsi	dry	x ui ⁵⁵	x ui ⁵⁵	i n t	174
+1040	Bola	dry	k j a̰/au ʔ ⁵⁵	k j a̰/au ʔ ⁵⁵	i m n c t	173
+1043	Lashi	dry	k j ṵː/u ʔ ⁵⁵	k j ṵː/u ʔ ⁵⁵	i m n c t	173
+1044	Maru	dry	f ai ⁵⁵	f ai ⁵⁵	i n t	174
+1046	Xiandao	dry	ts ui ³⁵	ts ui ³⁵	i n t	535
+5416	Rangoon	dry	tɕʰ ɑu ʔ ⁴	tɕʰ - ɑu ʔ ⁴	i n c t	173
+7115	Old_Burmese	dry	kʰ r ʊ k	kʰ r ʊ k -	i m n c	173
+6144	Achang_Longchuan	early	n ɔ ʔ ⁵⁵	n ɔ ʔ ⁵⁵	i n c t	38
+6202	Maru	early	n ɔ ʔ ⁵⁵	n ɔ ʔ ⁵⁵	i n c t	38
+6239	Rangoon	early	s ɔ ⁵⁵	s ɔ ⁵⁵	i n t	39
+6307	Atsi	early	n o ʔ ²¹	n o ʔ ²¹	i n c t	38
+6474	Lashi	early	n ɔː/ɔ ʔ ⁵⁵	n ɔː/ɔ ʔ ⁵⁵	i n c t	38
+6536	Xiandao	early	n ɔ ʔ ⁵⁵	n ɔ ʔ ⁵⁵	i n c t	38
+6604	Bola	early	n a ʔ ⁵⁵	n a ʔ ⁵⁵	i n c t	38
+1150	Achang_Longchuan	eight	ɕ e t ⁵⁵	ɕ - e t ⁵⁵	i n c t	182
+1152	Atsi	eight	ʃ i t ⁵⁵	ʃ - i t ⁵⁵	i n c t	182
+1153	Bola	eight	ʃ ɛ ʔ ⁵⁵	ʃ - ɛ ʔ ⁵⁵	i n c t	182
+1156	Lashi	eight	ʃ ɛ̰/ɛ t ⁵⁵	ʃ - ɛ̰/ɛ t ⁵⁵	i n c t	182
+1157	Maru	eight	ʃ ɛ ʔ ⁵⁵	ʃ - ɛ ʔ ⁵⁵	i n c t	182
+1158	Xiandao	eight	ç/ç ɛ ʈ ⁵⁵	ç/ç - ɛ ʈ ⁵⁵	i n c t	182
+5575	Rangoon	eight	ɕ i ʔ ⁴	ɕ - i ʔ ⁴	i n c t	182
+7117	Old_Burmese	eight	r̥ j a t	r̥ j a t -	i m n c	182
+1241	Achang_Longchuan	far	v e ³¹	v e - ³¹	i n t	185
+1243	Atsi	far	v e ²¹	v e - ²¹	i n t	185
+1244	Bola	far	v ɛ ³¹	v ɛ - ³¹	i n t	185
+1247	Lashi	far	v ɛː/ɛ ³³	v ɛː/ɛ - ³³	i n t	185
+1248	Maru	far	v a ³⁵	v a - ³⁵	i n t	185
+1249	Xiandao	far	v ɛ ³¹	v ɛ - ³¹	i n t	185
+5272	Rangoon	far	w e ⁵⁵	w e - ⁵⁵	i n t	185
+7119	Old_Burmese	far	w i j ⁵⁵	w i j ⁵⁵	i n c t	185
+6182	Maru	firewood	tʰ ɔ̃/ɔ ∼ ³⁵	tʰ ɔ̃/ɔ ∼ ³⁵	i n c t	88
+6223	Lashi	firewood	tʰ a ŋ ⁵⁵	tʰ a ŋ ⁵⁵	i n c t	88
+6281	Xiandao	firewood	tʰ ɔ ŋ ³¹	tʰ ɔ ŋ ³¹	i n c t	88
+6346	Bola	firewood	tʰ ɔ̃/ɔ ∼ ³⁵	tʰ ɔ̃/ɔ ∼ ³⁵	i n c t	88
+6428	Achang_Longchuan	firewood	tʰ ua ŋ ³¹	tʰ ua ŋ ³¹	i n c t	88
+6501	Rangoon	firewood	tʰ ĩ/i ∼ ⁵⁵	tʰ ĩ/i ∼ ⁵⁵	i n c t	88
+6576	Atsi	firewood	tʰ a ŋ ²¹	tʰ a ŋ ²¹	i n c t	88
+7121	Old_Burmese	firewood	tʰ a ŋ ⁵⁵	tʰ a ŋ ⁵⁵	i n c t	88
+1421	Achang_Longchuan	five	ŋ ɔ ³¹	ŋ ɔ ³¹	i n t	197
+1423	Atsi	five	ŋ o ²¹	ŋ o ²¹	i n t	197
+1424	Bola	five	ŋ a ³¹	ŋ a ³¹	i n t	197
+1427	Lashi	five	ŋ ³³	- ŋ ³³	n t	197
+1428	Maru	five	ŋ ɔ ⁵⁵	ŋ ɔ ⁵⁵	i n t	197
+1429	Xiandao	five	ŋ ɔ ³¹	ŋ ɔ ³¹	i n t	197
+5524	Rangoon	five	ŋ ɑ ⁵⁵	ŋ ɑ ⁵⁵	i n t	197
+7123	Old_Burmese	five	ŋ a ⁵⁵	ŋ a ⁵⁵	i n t	197
+1531	Achang_Longchuan	four	m i ³¹	m - i - ³¹	i n t	211
+1533	Atsi	four	m j i ²¹	m j i - ²¹	i m n t	211
+1534	Bola	four	m əi ³¹	m - əi - ³¹	i n t	211
+1537	Lashi	four	m ei ³³	m - ei - ³³	i n t	211
+1538	Maru	four	p j i k ³¹	p j i k ³¹	i m n c t	211
+1539	Xiandao	four	m i ⁵⁵	m - i - ⁵⁵	i n t	211
+5418	Rangoon	four	l e ⁵⁵	l - e - ⁵⁵	i n t	211
+7125	Old_Burmese	four	l i j ⁵⁵	l - i j ⁵⁵	i n c t	211
+1581	Achang_Longchuan	full	p ʐ ə ŋ ³⁵	p ʐ ə ŋ ³⁵	i m n c t	215
+1584	Atsi	full	p j i ŋ ⁵⁵	p j i ŋ ⁵⁵	i m n c t	215
+1586	Bola	full	p j a ŋ ³⁵	p j a ŋ ³⁵	i m n c t	215
+1589	Lashi	full	p j əː/ə ŋ ⁵⁵	p j əː/ə ŋ ⁵⁵	i m n c t	215
+1590	Maru	full	p j a ŋ ⁵⁵	p j a ŋ ⁵⁵	i m n c t	215
+1592	Xiandao	full	p ɯ ŋ ³⁵	p - ɯ ŋ ³⁵	i n c t	215
+5372	Rangoon	full	p j e ⁵³	p j e - ⁵³	i m n t	215
+7127	Old_Burmese	full	p l a nʲ ⁵³	p l a nʲ ⁵³	i m n c t	215
+1653	Achang_Longchuan	good	tɕ i ⁵⁵	tɕ i ⁵⁵	i n t	219
+1655	Atsi	good	k e ⁵¹	k e ⁵¹	i n t	219
+1656	Bola	good	k ai ⁵⁵	k ai ⁵⁵	i n t	219
+1659	Lashi	good	k ɛː/ɛ ³¹	k ɛː/ɛ ³¹	i n t	219
+1660	Maru	good	k ai ³¹	k ai ³¹	i n t	219
+1661	Xiandao	good	ɕ ɛ ⁵⁵	ɕ ɛ ⁵⁵	i n t	219
+5502	Rangoon	good	k ɑ̃/ɑu ∼ ⁵⁵	k ɑ̃/ɑu ∼ ⁵⁵	i n c t	218
+7129	Old_Burmese	good	k ʊ ŋ ⁵⁵	k ʊ ŋ ⁵⁵	i n c t	218
+1684	Achang_Longchuan	green	nʲ au ⁵⁵	nʲ - au - ⁵⁵	i n t	222
+1686	Atsi	green	ŋ j ui ⁵¹	ŋ j ui - ⁵¹	i m n t	222
+1687	Bola	green	ŋ j u ŋ ⁵⁵	ŋ j u ŋ ⁵⁵	i m n c t	222
+1690	Lashi	green	ŋ j aː/au ³¹	ŋ j aː/au - ³¹	i m n t	222
+1691	Maru	green	ŋ j u k ³¹	ŋ j u k ³¹	i m n c t	222
+1692	Xiandao	green	ɲ au ⁵⁵	ɲ - au - ⁵⁵	i n t	222
+5614	Rangoon	green	s ẽ/e ∼ ⁵⁵	s ẽ/e ∼ ⁵⁵	i n c t	223
+7131	Old_Burmese	green	ts i m ⁵⁵	ts i m ⁵⁵	i n c t	223
+7133	Old_Burmese	green	nʲ ə w	nʲ - ə w -	i n c	222
+6156	Achang_Longchuan	hard	k ʐ a k ⁵⁵	k ʐ a k ⁵⁵	i m n c t	51
+6210	Maru	hard	ɣ ɔ̃/ɔ ∼ ³¹	ɣ ɔ̃/ɔ ∼ ³¹	i n c t	52
+6262	Atsi	hard	tʰ a n ⁵¹	tʰ a n ⁵¹	i n c t	751
+6375	Rangoon	hard	m ɑ ²²	m ɑ ²²	i n t	50
+6483	Lashi	hard	k j ṵː/u ŋ ³³	k j ṵː/u ŋ ³³	i m n c t	750
+6547	Xiandao	hard	k ʐ a k ⁵⁵	k ʐ a k ⁵⁵	i m n c t	51
+6613	Bola	hard	ɣ ɔ̃/ɔ ∼ ⁵⁵	ɣ ɔ̃/ɔ ∼ ⁵⁵	i n c t	52
+7135	Old_Burmese	hard	m a ²²	m a ²²	i n t	50
+6160	Maru	he or she [third person singular]	j ɔ̃/ɔ ∼ ³⁵	j - ɔ̃/ɔ ∼ ³⁵	i n c t	65
+6213	Rangoon	he or she [third person singular]	tθ u ²²	tθ u ²²	i n t	424
+6264	Atsi	he or she [third person singular]	j a̰/a ŋ ²¹	j - a̰/a ŋ ²¹	i n c t	65
+6437	Lashi	he or she [third person singular]	ŋ j a ŋ ³³	ŋ j a ŋ ³³	i m n c t	65
+6492	Xiandao	he or she [third person singular]	ɲ̊ a ŋ ³¹	ɲ̊ - a ŋ ³¹	i n c t	65
+6552	Bola	he or she [third person singular]	j ɔ̃/ɔ ∼ ³¹	j - ɔ̃/ɔ ∼ ³¹	i n c t	65
+6635	Achang_Longchuan	he or she [third person singular]	n̥ʲ a ŋ ³¹	n̥ʲ - a ŋ ³¹	i n c t	65
+1841	Achang_Longchuan	heavy	l i ³¹	l i - ³¹	i n t	237
+1843	Atsi	heavy	l ai ²¹	l ai - ²¹	i n t	237
+1844	Bola	heavy	l i ³¹	l i - ³¹	i n t	237
+1847	Lashi	heavy	l aː/ai ³³	l aː/ai - ³³	i n t	237
+1848	Maru	heavy	l a ³⁵	l a - ³⁵	i n t	237
+1849	Xiandao	heavy	l ai ³¹	l ai - ³¹	i n t	237
+5664	Rangoon	heavy	l e ⁵⁵	l e - ⁵⁵	i n t	237
+7137	Old_Burmese	heavy	l i j ⁵⁵	l i j ⁵⁵	i n c t	237
+1853	Achang_Longchuan	here	x ai ⁵⁵ + tʰ ɔ ʔ ⁵⁵	x - ai ⁵⁵ + tʰ ɔ ʔ ⁵⁵	i n t + i n c t	238 565
+1856	Atsi	here	x j i ⁵¹ + m a ⁵⁵	x j i ⁵¹ + m a ⁵⁵	i m n t + i n t	238 566
+1858	Bola	here	tʃʰ ə̆ ⁵⁵ + m ɛ̃/ɛ ∼ ⁵⁵	tʃʰ ə̆ ⁵⁵ + m ɛ̃/ɛ ∼ ⁵⁵	i n t + i n c t	567 568
+1860	Lashi	here	x j ɛ ³³ + m ŏ/ŏ ³³	x j ɛ ³³ + m ŏ/ŏ ³³	i m n t + i n t	238 566
+1861	Maru	here	tʃʰ ɛ̆ ³¹ + m ɛ ³¹	tʃʰ ɛ̆ ³¹ + m ɛ - ³¹	i n t + i n t	567 568
+1863	Xiandao	here	x ai ⁵⁵ + tʰ ɔ ʔ ⁵⁵	x - ai ⁵⁵ + tʰ ɔ ʔ ⁵⁵	i n t + i n c t	238 565
+5491	Rangoon	here	i ²² + t w ĩ/i ∼ ²²	i ²² + t w ĩ/i ∼ ²²	n t + i m n c t	569 239
+7139	Old_Burmese	here	s a nʲ + t o ŋ	s a nʲ + t - o ŋ -	i n c + i n c	840 239
+4242	Achang_Longchuan	high / tall	m̥ ʐ a ŋ ⁵⁵	m̥ ʐ a ŋ ⁵⁵	i m n c t	385
+4244	Atsi	high / tall	m j a̰/a ŋ ⁵¹	m j a̰/a ŋ ⁵¹	i m n c t	385
+4245	Bola	high / tall	m j ɔ̰̃/ɔ ∼ ⁵⁵	m j ɔ̰̃/ɔ ∼ ⁵⁵	i m n c t	385
+4248	Lashi	high / tall	m j a̰ː/a ŋ ³³	m j a̰ː/a ŋ ³³	i m n c t	385
+4249	Maru	high / tall	m j ɔ̃/ɔ ∼ ³¹	m j ɔ̃/ɔ ∼ ³¹	i m n c t	385
+4251	Xiandao	high / tall	m̥ ʐ a ŋ ⁵⁵	m̥ ʐ a ŋ ⁵⁵	i m n c t	385
+5498	Rangoon	high / tall	m j ĩ/i ∼ ⁵³	m j ĩ/i ∼ ⁵³	i m n c t	385
+7141	Old_Burmese	high / tall	m r a ŋ ⁵³	m r a ŋ ⁵³	i m n c t	385
+6135	Achang_Longchuan	horizontal	x a ŋ ³¹	x a ŋ ³¹	i n c t	474
+6195	Maru	horizontal	p j ḭ/i ³¹	p j ḭ/i ³¹	i m n t	473
+6299	Atsi	horizontal	a ²¹ + p j ḭ/i ⁵¹	a ²¹ + p j ḭ/i ⁵¹	n t + i m n t	724 473
+6302	Bola	horizontal	p ḭ/i ⁵⁵	p - ḭ/i ⁵⁵	i n t	473
+6334	Rangoon	horizontal	k ɑ̃/ɑ ∼ ⁵³ + l ɑ̃/ɑ ∼ ⁵³	k ɑ̃/ɑ ∼ ⁵³ + l ɑ̃/ɑ ∼ ⁵³	i n c t + i n c t	725 830
+6467	Lashi	horizontal	p j ḭː/i ³³	p j ḭː/i ³³	i m n t	473
+6526	Xiandao	horizontal	a ³¹ + f a ŋ ³¹	a ³¹ + f a ŋ ³¹	n t + i n c t	724 726
+7143	Old_Burmese	horizontal	k a n ⁵³ + l a n ⁵³	k a n ⁵³ + l a n ⁵³	i n c t + i n c t	725 830
+6172	Achang_Longchuan	hot	p u ⁵⁵	p u ⁵⁵	i n t	75
+6220	Maru	hot	l au ŋ ³¹	l au ŋ ³¹	i n c t	76
+6228	Xiandao	hot	p u ⁵⁵	p u ⁵⁵	i n t	75
+6362	Atsi	hot	ŋ j e ⁵⁵	ŋ j e ⁵⁵	i m n t	78
+6539	Lashi	hot	ŋ ɛː/ɛ ⁵⁵	ŋ - ɛː/ɛ ⁵⁵	i n t	78
+6578	Rangoon	hot	ɑ i ʔ ⁴	ɑ i ʔ ⁴	m n c t	77
+6627	Bola	hot	l au ŋ ⁵⁵	l au ŋ ⁵⁵	i n c t	76
+7145	Old_Burmese	hot	n u j ⁵⁵	n u j ⁵⁵	i n c t	853
+2048	Achang_Longchuan	hundred	p a k ³⁵	p a k ³⁵	i n c t	573
+2050	Atsi	hundred	ʃ o ⁵¹	ʃ o ⁵¹	i n t	572
+2052	Bola	hundred	j a ⁵⁵	j - a ⁵⁵	i n t	247
+2056	Lashi	hundred	ʃ o̰/o ³³	ʃ o̰/o ³³	i n t	572
+2058	Maru	hundred	j ɔ ³¹	j - ɔ ³¹	i n t	247
+2059	Xiandao	hundred	p a k ³⁵	p a k ³⁵	i n c t	573
+5284	Rangoon	hundred	t i ʔ ⁴ + j ɑ ²²	t i ʔ ⁴ + j - ɑ ²²	i n c t + i n t	248 247
+7147	Old_Burmese	hundred	r j a ²²	r j a ²²	i m n t	247
+6322	Lashi	inside	a ³³ + kʰ ou ³³	a ³³ + kʰ ou - ³³	n t + i n t	774 824
+6381	Bola	inside	a ³¹ + kʰ au ⁵⁵	a ³¹ + kʰ au - ⁵⁵	n t + i n t	774 824
+6391	Xiandao	inside	a ³¹ + x au ⁵⁵	a ³¹ + x au - ⁵⁵	n t + i n t	774 824
+6469	Atsi	inside	a ²¹ + kʰ au ⁵¹	a ²¹ + kʰ au - ⁵¹	n t + i n t	774 824
+6515	Achang_Longchuan	inside	a ³¹ + x au ⁵⁵	a ³¹ + x au - ⁵⁵	n t + i n t	774 824
+6575	Maru	inside	a ³¹ + kʰ u k ³¹	a ³¹ + kʰ u k ³¹	n t + i n c t	774 824
+6608	Rangoon	inside	ɑ ⁵³ + tʰ ɛ ⁵⁵	ɑ ⁵³ + tʰ ɛ ⁵⁵	n t + i n t	774 515
+7151	Old_Burmese	inside	a + t o ŋ ⁵⁵	a - + t o ŋ ⁵⁵	n + i n c t	774 855
+6145	Achang_Longchuan	late	l̥ ɔ ³¹	l̥ ɔ ³¹	i n t	742
+6203	Maru	late	k j a m ³¹	k j a m ³¹	i m n c t	744
+6214	Atsi	late	tʰ a ŋ ⁵¹ + k j o ⁵⁵	tʰ a ŋ ⁵¹ + k j o ⁵⁵	i n c t + i m n t	743 40
+6240	Rangoon	late	n ɑu ʔ ⁴ + tɕ ɑ ⁵³	n ɑu ʔ ⁴ + tɕ - ɑ ⁵³	i n c t + i n t	41 40
+6475	Lashi	late	n ɛː/ɛ ⁵⁵	n ɛː/ɛ ⁵⁵	i n t	745
+6537	Xiandao	late	k ɯ m ⁵⁵	k - ɯ m ⁵⁵	i n c t	744
+6605	Bola	late	tʰ ɔ̃/ɔ ∼ ⁵⁵ + k j a ³⁵	tʰ ɔ̃/ɔ ∼ ⁵⁵ + k j a ³⁵	i n c t + i m n t	743 40
+7154	Old_Burmese	late	n ʊ k + k j a	n ʊ k - + k j a -	i n c + i m n	41 40
+2299	Achang_Longchuan	left	l ɔ ʔ ³¹ + n a m ³¹ + p a ³¹	l ɔ ʔ ³¹ + n a m ³¹ + p a ³¹	i n c t + i n c t + i n t	563 596 266
+2301	Atsi	left	l o ʔ ²¹ + p a̰/ai ²¹	l o ʔ ²¹ + p a̰/ai ²¹	i n c t + i n t	563 266
+2303	Bola	left	l a ʔ ³¹ + k a̰/au ŋ ³⁵	l a ʔ ³¹ + k a̰/au ŋ ³⁵	i n c t + i n c t	563 265
+2307	Lashi	left	l ɔ ʔ ³¹ + p ḛ/ei ⁵⁵	l ɔ ʔ ³¹ + p ḛ/ei ⁵⁵	i n c t + i n t	563 266
+2308	Maru	left	l ɔ ʔ ³¹ + k a̰/au ŋ ³⁵	l ɔ ʔ ³¹ + k a̰/au ŋ ³⁵	i n c t + i n c t	563 265
+2310	Xiandao	left	l ɔ ʔ ⁵⁵ + x a ⁵⁵	l ɔ ʔ ⁵⁵ + x a ⁵⁵	i n c t + i n t	563 597
+5605	Rangoon	left	w ɛ ⁵⁵	w ɛ ⁵⁵	i n t	264
+5606	Rangoon	left	b ɛ ²²	b ɛ ²²	i n t	263
+7156	Old_Burmese	left	w aj	w aj -	i n	264
+2393	Achang_Longchuan	light (of weight)	ʑ a ŋ ⁵⁵	ʑ a ŋ ⁵⁵	i n c t	23
+2394	Atsi	light (of weight)	s o m ²¹	s o m ²¹	i n c t	269
+2395	Bola	light (of weight)	s ø̃/ø ∼ ³⁵	s ø̃/ø ∼ ³⁵	i n c t	269
+2396	Lashi	light (of weight)	s uː/u m ⁵⁵	s uː/u m ⁵⁵	i n c t	269
+2397	Maru	light (of weight)	s u m ³⁵	s u m ³⁵	i n c t	269
+2398	Xiandao	light (of weight)	j a ŋ ⁵⁵	j a ŋ ⁵⁵	i n c t	23
+5482	Rangoon	light (of weight)	p ɔ ⁵³	p ɔ ⁵³	i n t	270
+2444	Achang_Longchuan	long	s ə ŋ ⁵⁵	s ə ŋ ⁵⁵	i n c t	272
+2447	Atsi	long	x i ŋ ⁵¹	x i ŋ ⁵¹	i n c t	272
+2449	Bola	long	x a ŋ ⁵⁵	x a ŋ ⁵⁵	i n c t	272
+2452	Lashi	long	ʃ ə̰ː/ə ŋ ³³	ʃ ə̰ː/ə ŋ ³³	i n c t	272
+2453	Maru	long	x a ŋ ³¹	x a ŋ ³¹	i n c t	272
+2455	Xiandao	long	s ɤ ŋ ⁵⁵	s ɤ ŋ ⁵⁵	i n c t	272
+5612	Rangoon	long	ɕ e ²²	ɕ e - ²²	i n t	272
+7159	Old_Burmese	long	r̥ a nʲ	r̥ a nʲ -	i n c	272
+2504	Achang_Longchuan	many	nʲ ɔ ³¹	nʲ - ɔ ³¹	i n t	276
+2507	Atsi	many	m j o ²¹	m j o ²¹	i m n t	276
+2509	Bola	many	m j a ³¹	m j a ³¹	i m n t	276
+2512	Lashi	many	m j ɔː/ɔ ³³	m j ɔː/ɔ ³³	i m n t	276
+2513	Maru	many	m j ɔ ³⁵	m j ɔ ³⁵	i m n t	276
+2515	Xiandao	many	nʲ ɔ ³¹	nʲ - ɔ ³¹	i n t	276
+5269	Rangoon	many	m j ɑ ⁵⁵	m j ɑ ⁵⁵	i m n t	276
+7161	Old_Burmese	many	m j a ⁵⁵	m j a ⁵⁵	i m n t	276
+6136	Atsi	middle	k u ŋ ²¹ + k u ŋ ⁵¹	k u ŋ ²¹ + k u ŋ ⁵¹	i n c t + i n c t	475 728
+6314	Lashi	middle	a ³¹ + k u ŋ ³¹	a ³¹ + k u ŋ ³¹	n t + i n c t	1 475
+6315	Lashi	middle	a ³¹ + k j o ³³	a ³¹ + k j o ³³	n t + i m n t	42 850
+6386	Xiandao	middle	a ³¹ + k o ŋ ⁵⁵	a ³¹ + k o ŋ ⁵⁵	n t + i n c t	1 475
+6427	Bola	middle	a ³¹ + k au ŋ ³¹	a ³¹ + k au ŋ ³¹	n t + i n c t	1 475
+6510	Achang_Longchuan	middle	a ³¹ + k u ŋ ⁵⁵	a ³¹ + k u ŋ ⁵⁵	n t + i n c t	1 475
+6571	Maru	middle	a ³¹ + k au ŋ ³⁵	a ³¹ + k au ŋ ³⁵	n t + i n c t	1 475
+6603	Rangoon	middle	ɑ ⁵³ + l ɛ ²²	ɑ ⁵³ + l ɛ ²²	n t + i n t	1 110
+7163	Old_Burmese	middle	k r a ⁵⁵	k r a ⁵⁵	i m n t	850
+6164	Atsi	morning	n a p ²¹ + k j o̰/o ⁵⁵	n a p ²¹ + k j o̰/o - ⁵⁵	i n c t + i m n t	56 767
+6317	Maru	morning	n ɛ ʔ ³¹ + s u m ³¹	n ɛ ʔ ³¹ + s u m ³¹	i n c t + i n c t	56 834
+6410	Xiandao	morning	n a p ⁵⁵ + m ɔ ⁵¹	n a p ⁵⁵ + m ɔ ⁵¹	i n c t + i n t	56 60
+6459	Bola	morning	n ɛ ʔ ³¹ + k ɔ̃/ɔ ∼ ⁵⁵	n ɛ ʔ ³¹ + k - ɔ̃/ɔ ∼ ⁵⁵	i n c t + i n c t	56 767
+6534	Achang_Longchuan	morning	n i ³¹ + ʐ u a ³¹	n i ³¹ + ʐ u a ³¹	i n t + i m n t	378 769
+6553	Lashi	morning	n a p ³¹ + s ɔ n ⁵⁵	n a p ³¹ + s ɔ n ⁵⁵	i n c t + i n c t	56 834
+6628	Rangoon	morning	n ɑ̃/ɑ ∼ ²² + n ɛ ʔ ⁴	n ɑ̃/ɑ ∼ ²² + n ɛ ʔ ⁴	i n c t + i n c t	68 56
+7165	Old_Burmese	morning	n a m + n a k	n a m - + n a k	i n c + i n c	68 768
+2740	Xiandao	narrow	ɲ̊ a p ⁵⁵	ɲ̊ a p ⁵⁵	i n c t	290
+2741	Achang_Longchuan	narrow	n̥ʲ a p ⁵⁵	n̥ʲ a p ⁵⁵	i n c t	290
+2742	Atsi	narrow	tʃ a̰/a p ⁵⁵	tʃ a̰/a p ⁵⁵	i n c t	288
+2743	Bola	narrow	tʃ ɛ̰/ɛ ʔ ⁵⁵	tʃ ɛ̰/ɛ ʔ ⁵⁵	i n c t	288
+2744	Lashi	narrow	tʃ a̰ː/a p ⁵⁵	tʃ a̰ː/a p ⁵⁵	i n c t	288
+2745	Maru	narrow	tʃ ɛ̰/ɛ ʔ ⁵⁵	tʃ ɛ̰/ɛ ʔ ⁵⁵	i n c t	288
+5379	Rangoon	narrow	tɕ ĩ/i ∼ ⁵⁵	tɕ - ĩ/i ∼ ⁵⁵	i n c t	289
+7167	Old_Burmese	narrow	k j a n ⁵⁵	k j a n ⁵⁵	i m n c t	289
+2767	Bola	near	tʃ ɔ̰̃/ɔ ∼ ³⁵	tʃ ɔ̰̃/ɔ ∼ ³⁵	i n c t	292
+2770	Lashi	near	tʃ aː/a ŋ ⁵³	tʃ aː/a ŋ ⁵³	i n c t	292
+2773	Xiandao	near	n ɛ ³¹	n ɛ ³¹	i n t	291
+2774	Achang_Longchuan	near	n e ³¹	n e ³¹	i n t	291
+2775	Atsi	near	tʃ a̰/a ŋ ⁵⁵	tʃ a̰/a ŋ ⁵⁵	i n c t	292
+2777	Maru	near	tʃ ɔ̃/ɔ ∼ ³⁵	tʃ ɔ̃/ɔ ∼ ³⁵	i n c t	292
+5623	Rangoon	near	n i ⁵⁵	n i ⁵⁵	i n t	291
+7169	Old_Burmese	near	n i ⁵⁵	n i ⁵⁵	i n t	291
+2810	Achang_Longchuan	new	ʂ ə k ⁵⁵	ʂ ə k ⁵⁵	i n c t	123
+2812	Atsi	new	a ²¹ + s i k ⁵⁵	a ²¹ + s i k ⁵⁵	n t + i n c t	611 123
+2814	Bola	new	s a k ⁵⁵	s a k ⁵⁵	i n c t	123
+2817	Lashi	new	s ə̰ː/ə k ⁵⁵	s ə̰ː/ə k ⁵⁵	i n c t	123
+2818	Maru	new	s a̰/a k ⁵⁵	s a̰/a k ⁵⁵	i n c t	123
+2820	Xiandao	new	ʂ ɯ k ⁵⁵	ʂ ɯ k ⁵⁵	i n c t	123
+5404	Rangoon	new	tθ i ʔ ⁴	tθ i ʔ ⁴	i n c t	123
+7171	Old_Burmese	new	s a ts	s a ts -	i n c	123
+2842	Achang_Longchuan	nine	k au ³¹	k au - ³¹	i n t	298
+2844	Atsi	nine	k au ²¹	k au - ²¹	i n t	298
+2845	Bola	nine	k au ³¹	k au - ³¹	i n t	298
+2848	Lashi	nine	k ou ³³	k ou - ³³	i n t	298
+2849	Maru	nine	k u k ³¹	k u k ³¹	i n c t	298
+2850	Xiandao	nine	k au ³¹	k au - ³¹	i n t	298
+5645	Rangoon	nine	k o ⁵⁵	k o - ⁵⁵	i n t	298
+7173	Old_Burmese	nine	k ə w ⁵⁵	k ə w ⁵⁵	i n c t	298
+6165	Atsi	noon	ŋ j i ⁵⁵ + k u ŋ ⁵¹ + t ṵ/u ²¹	ŋ j i - ⁵⁵ + k u ŋ ⁵¹ + t ṵ/u ²¹	i m n t + i n c t + i n t	380 476 70
+6342	Lashi	noon	ŋ j ei ⁵⁵ + k u ŋ ³¹	ŋ j ei - ⁵⁵ + k u ŋ ³¹	i m n t + i n c t	380 476
+6411	Xiandao	noon	c ɔ ⁵⁵ + c ɔ ³¹ + j ɔ ʔ ³⁵	c ɔ ⁵⁵ + c ɔ ³¹ + j ɔ ʔ ³⁵	i n t + i n t + i n c t	770 771 772
+6460	Bola	noon	ŋ j i ³⁵ + k au ŋ ³¹ + t ṵ/u ⁵⁵	ŋ j i - ³⁵ + k au ŋ ³¹ + t ṵ/u ⁵⁵	i m n t + i n c t + i n t	380 476 70
+6498	Rangoon	noon	n e ⁵³ + l ɛ ²² + p ɑ̃/ɑi ∼ ⁵⁵	n - e - ⁵³ + l ɛ - ²² + p ɑ̃/ɑi ∼ ⁵⁵	i n t + i n t + i n c t	380 71 72
+6535	Achang_Longchuan	noon	n i ³¹ + k u ŋ ⁵⁵	n - i - ³¹ + k u ŋ ⁵⁵	i n t + i n c t	380 476
+6598	Maru	noon	n a ⁵⁵ + k au ŋ ³⁵	n - a - ⁵⁵ + k au ŋ ³⁵	i n t + i n c t	380 476
+7175	Old_Burmese	noon	m o n ⁵⁵ + t a nʲ ⁵³	m o n ⁵⁵ + t a nʲ ⁵³	i n c t + i n c t	59 67
+7177	Old_Burmese	noon	n i j ⁵³ + l a nʲ	n - i j ⁵³ + l a nʲ -	i n c t + i n c	380 71
+2880	Achang_Longchuan	old (of person)	m ua ŋ ³¹	m ua ŋ ³¹	i n c t	301
+2883	Atsi	old (of person)	m a ŋ ²¹	m a ŋ ²¹	i n c t	301
+2885	Bola	old (of person)	m ɔ̃/ɔ ∼ ³¹	m ɔ̃/ɔ ∼ ³¹	i n c t	301
+2888	Lashi	old (of person)	m a ŋ ³³ + ts o ⁵⁵	m a ŋ ³³ + ts o ⁵⁵	i n c t + i n t	301 612
+2889	Maru	old (of person)	m ɔ̃/ɔ ∼ ³⁵	m ɔ̃/ɔ ∼ ³⁵	i n c t	301
+2891	Xiandao	old (of person)	m ɔ ŋ ³¹	m ɔ ŋ ³¹	i n c t	301
+5300	Rangoon	old (of person)	o ²²	o - ²²	n t	302
+7179	Old_Burmese	old (of person)	ə w	ə w -	n c	302
+2937	Achang_Longchuan	one	t a ³¹	t a - ³¹	i n t	613
+2940	Atsi	one	l ă/ă ²¹	l ă/ă - ²¹	i n t	613
+2942	Bola	one	t a ³¹	t a - ³¹	i n t	613
+2945	Lashi	one	t a ³¹	t a - ³¹	i n t	613
+2946	Maru	one	t a ³¹	t a - ³¹	i n t	613
+2948	Xiandao	one	t a ³¹	t a - ³¹	i n t	613
+5620	Rangoon	one	t i ʔ ⁴	t i ʔ ⁴	i n c t	613
+7181	Old_Burmese	one	t a ts	t a ts -	i n c	613
+6215	Maru	outside	v ə̆ ³¹ + k au ŋ ³⁵	v ə̆ ³¹ + k au ŋ ³⁵	i n t + i n c t	109 476
+6258	Atsi	outside	ʃ i ŋ ²¹ + k a̰/a n ²¹	ʃ i ŋ ²¹ + k a̰/a n ²¹	i n c t + i n c t	797 798
+6390	Xiandao	outside	a ³¹ + n o ʔ ⁵⁵	a ³¹ + n o ʔ ⁵⁵	n t + i n c t	1 800
+6441	Bola	outside	v ə̆ ³¹ + k au ŋ ³¹	v ə̆ ³¹ + k au ŋ ³¹	i n t + i n c t	109 476
+6514	Achang_Longchuan	outside	a ³¹ + n ɔ k ⁵⁵	a ³¹ + n ɔ k ⁵⁵	n t + i n c t	1 800
+6607	Rangoon	outside	ɑ ⁵³ + p j ĩ/i ∼ ²²	ɑ ⁵³ + p j ĩ/i ∼ ²²	n t + i m n c t	1 111
+7183	Old_Burmese	outside	a + p r a ŋ	a - + p r a ŋ -	n + i m n c	1 111
+3281	Achang_Longchuan	red	n a ⁵⁵	n a ⁵⁵	i n t	314
+3283	Atsi	red	n e ⁵¹	n e ⁵¹	i n t	314
+3285	Bola	red	n ɛ ⁵⁵	n ɛ ⁵⁵	i n t	314
+3289	Lashi	red	n ɛː/ɛ ³¹	n ɛː/ɛ ³¹	i n t	314
+3291	Maru	red	n ɛ ³¹	n ɛ ³¹	i n t	314
+3292	Xiandao	red	n a ⁵⁵	n a ⁵⁵	i n t	314
+5424	Rangoon	red	n i ²²	n i ²²	i n t	314
+7185	Old_Burmese	red	n i	n i -	i n	314
+6137	Atsi	right	l o ʔ ²¹ + j o ⁵¹	l o ʔ ²¹ + j o ⁵¹	i n c t + i n t	563 209
+6318	Lashi	right	l ɔ ʔ ³¹ + j o ³¹	l ɔ ʔ ³¹ + j o ³¹	i n c t + i n t	563 209
+6361	Rangoon	right	nʲ ɑ ²²	nʲ ɑ ²²	i n t	729
+6364	Rangoon	right	j ɑ ²²	j ɑ ²²	i n t	209
+6387	Xiandao	right	l ɔ ʔ ⁵⁵ + j ɔ ⁵⁵	l ɔ ʔ ⁵⁵ + j ɔ ⁵⁵	i n c t + i n t	563 209
+6438	Bola	right	l a ʔ ³¹ + j a ⁵⁵	l a ʔ ³¹ + j a ⁵⁵	i n c t + i n t	563 209
+6512	Achang_Longchuan	right	l ɔ ʔ ³¹ + ʑ ɔ ⁵⁵ + p a ³¹	l ɔ ʔ ³¹ + ʑ ɔ ⁵⁵ + p a ³¹	i n c t + i n t + i n t	563 209 730
+6572	Maru	right	l ɔ ʔ ³¹ + j ɔ ³¹	l ɔ ʔ ³¹ + j ɔ ³¹	i n c t + i n t	563 209
+7187	Old_Burmese	right	j a ²²	j a ²²	i n t	209
+6128	Achang_Longchuan	round	l u m ³¹	l u m ³¹	i n c t	461
+6188	Maru	round	l a ŋ ⁵⁵	l a ŋ ⁵⁵	i n c t	344
+6222	Rangoon	round	w ɑ̃/ɑi ∼ ⁵⁵	w ɑ̃/ɑi ∼ ⁵⁵	i n c t	31
+6291	Atsi	round	l i ŋ ⁵⁵	l i ŋ ⁵⁵	i n c t	344
+6464	Lashi	round	l əː/ə ŋ ⁵⁵	l əː/ə ŋ ⁵⁵	i n c t	344
+6521	Xiandao	round	l u m ³¹	l u m ³¹	i n c t	461
+6561	Bola	round	l a m ³¹	l a m ³¹	i n c t	461
+6585	Bola	round	l a ŋ ³⁵	l a ŋ ³⁵	i n c t	344
+7189	Old_Burmese	round	l u m ⁵⁵	l u m ⁵⁵	i n c t	461
+6180	Achang_Longchuan	salty	x ɔ ³¹	x ɔ ³¹	i n t	86
+6232	Maru	salty	kʰ ɔ ³⁵	kʰ ɔ ³⁵	i n t	86
+6273	Rangoon	salty	ŋ ɑ̃/ɑ ∼ ²²	ŋ ɑ̃/ɑ ∼ ²²	i n c t	87
+6412	Atsi	salty	i ²¹ + tʃ u m ²¹ + kʰ o ²¹	i ²¹ + tʃ u m ²¹ + kʰ o ²¹	n t + i n c t + i n t	783 782 86
+6499	Lashi	salty	kʰ ɔː/ɔ ⁵⁵	kʰ ɔː/ɔ ⁵⁵	i n t	86
+6567	Xiandao	salty	x ɔ ³¹	x ɔ ³¹	i n t	86
+6632	Bola	salty	ŋ ɛ̃/ɛ ∼ ⁵⁵	ŋ ɛ̃/ɛ ∼ ⁵⁵	i n c t	87
+7191	Old_Burmese	salty	ŋ a n	ŋ a n -	i n c	87
+3605	Achang_Longchuan	seven	nʲ i t ⁵⁵	nʲ - i t ⁵⁵	i n c t	340
+3608	Atsi	seven	ŋ j i t ⁵⁵	ŋ j i t ⁵⁵	i m n c t	340
+3610	Bola	seven	n ɔ̰/ɔ t ⁵⁵	n - ɔ̰/ɔ t ⁵⁵	i n c t	340
+3613	Lashi	seven	ŋ j ɛ̰/ɛ t ⁵⁵	ŋ j ɛ̰/ɛ t ⁵⁵	i m n c t	340
+3614	Maru	seven	n a̰/a t ⁵⁵	n - a̰/a t ⁵⁵	i n c t	340
+3616	Xiandao	seven	n i t ⁵⁵	n - i t ⁵⁵	i n c t	340
+5437	Rangoon	seven	kʰ u ⁵³ + n̥ i ʔ ⁴	kʰ u ⁵³ + n̥ - i ʔ ⁴	i n t + i n c t	341 340
+7193	Old_Burmese	seven	kʰ u + n a ts	kʰ u - + n - a ts -	i n + i n c	341 340
+3649	Achang_Longchuan	sharp	tʰ ɔ ʔ ⁵⁵	tʰ ɔ ʔ ⁵⁵	i n c t	342
+3655	Lashi	sharp	tʰ ɔː/ɔ ʔ ⁵⁵	tʰ ɔː/ɔ ʔ ⁵⁵	i n c t	342
+3657	Xiandao	sharp	m a t ³⁵	m a t ³⁵	i n c t	645
+3658	Atsi	sharp	tʰ o ʔ ⁵⁵	tʰ o ʔ ⁵⁵	i n c t	342
+3659	Bola	sharp	tʰ a ʔ ⁵⁵	tʰ a ʔ ⁵⁵	i n c t	342
+3660	Maru	sharp	tʰ ɔ ʔ ⁵⁵	tʰ ɔ ʔ ⁵⁵	i n c t	342
+5398	Rangoon	sharp	tʰ ɛ ʔ ⁴	tʰ ɛ ʔ ⁴	i n c t	342
+7195	Old_Burmese	sharp	tʰ a k	tʰ a k -	i n c	342
+3699	Achang_Longchuan	short	ʑ ɔ ŋ ³¹	ʑ ɔ ŋ ³¹	i n c t	825
+3700	Atsi	short	t o̰/o t ²¹	t o̰/o t ²¹	i n c t	646
+3701	Bola	short	l a ŋ ³⁵	l a ŋ ³⁵	i n c t	344
+3702	Lashi	short	ʃ ə̰ː/ə ŋ ³³	ʃ ə̰ː/ə ŋ ³³	i n c t	825
+3703	Maru	short	l a ŋ ⁵⁵	l a ŋ ⁵⁵	i n c t	344
+3704	Xiandao	short	t ɔ k ⁵⁵	t ɔ k ⁵⁵	i n c t	646
+5567	Rangoon	short	t o ²²	t o - ²²	i n t	343
+7197	Old_Burmese	short	t ə w	t ə w -	i n c	343
+6154	Xiandao	shy	ɲ ɔ ʔ ⁵⁵ + s ɔ ʔ ⁵⁵	ɲ ɔ ʔ ⁵⁵ + s ɔ ʔ ⁵⁵	i n c t + i n c t	32 49
+6316	Achang_Longchuan	shy	nʲ ɔ ʔ ³¹ + s ɔ ʔ ⁵⁵	nʲ ɔ ʔ ³¹ + s ɔ ʔ ⁵⁵	i n c t + i n c t	32 49
+6495	Atsi	shy	x o ʔ ⁵⁵	x o ʔ ⁵⁵	i n c t	49
+6506	Maru	shy	x ɔ ʔ ⁵⁵	x ɔ ʔ ⁵⁵	i n c t	49
+6511	Bola	shy	x a ʔ ⁵⁵	x a ʔ ⁵⁵	i n c t	49
+6565	Rangoon	shy	ɕ ɛ ʔ ⁴	ɕ ɛ ʔ ⁴	i n c t	49
+6626	Lashi	shy	ʃ ɔ̰ː/ɔ ʔ ⁵⁵	ʃ ɔ̰ː/ɔ ʔ ⁵⁵	i n c t	49
+7199	Old_Burmese	shy	r̥ a k	r̥ a k -	i n c	49
+3752	Achang_Longchuan	six	x ʐ o ʔ ⁵⁵	x ʐ o ʔ ⁵⁵	i m n c t	347
+3755	Atsi	six	kʰ j u ʔ ⁵⁵	kʰ j u ʔ ⁵⁵	i m n c t	347
+3757	Bola	six	kʰ j au ʔ ⁵⁵	kʰ j au ʔ ⁵⁵	i m n c t	347
+3760	Lashi	six	kʰ j u k ⁵⁵	kʰ j u k ⁵⁵	i m n c t	347
+3761	Maru	six	kʰ j au k ⁵⁵	kʰ j au k ⁵⁵	i m n c t	347
+3764	Xiandao	six	cʰ u ʔ ⁵⁵	cʰ - u ʔ ⁵⁵	i n c t	347
+5618	Rangoon	six	tɕʰ ɑu ʔ ⁴	tɕʰ - ɑu ʔ ⁴	i n c t	347
+7201	Old_Burmese	six	kʰ r ʊ k	kʰ r ʊ k -	i m n c	347
+3821	Achang_Longchuan	small	nʲ i ⁵⁵	nʲ i - ⁵⁵	i n t	350
+3823	Atsi	small	t ḭ/i ʔ ⁵⁵	t ḭ/i ʔ ⁵⁵	i n c t	115
+3824	Bola	small	ŋ ai ⁵⁵	ŋ ai - ⁵⁵	i n t	350
+3827	Lashi	small	ŋ ɛː/ɛ ³¹	ŋ ɛː/ɛ - ³¹	i n t	350
+3828	Maru	small	ŋ ai ³¹	ŋ ai - ³¹	i n t	350
+3829	Xiandao	small	ɲ ɛ ⁵¹	ɲ ɛ - ⁵¹	i n t	350
+5365	Rangoon	small	ŋ ɛ ²²	ŋ ɛ - ²²	i n t	350
+7203	Old_Burmese	small	ŋ a j	ŋ a j -	i n c	350
+3867	Achang_Longchuan	smooth	n e ʔ ³⁵	n e ʔ ³⁵	i n c t	651
+3868	Atsi	smooth	tʃ ṵ/u t ⁵⁵	tʃ ṵ/u t ⁵⁵	i n c t	353
+3870	Bola	smooth	t au ʔ ³¹ + tʃ ɔ̰/ɔ t ⁵⁵	t au ʔ ³¹ + tʃ ɔ̰/ɔ t ⁵⁵	i n c t + i n c t	650 353
+3872	Lashi	smooth	tʃ ṵː/u t ⁵⁵	tʃ ṵː/u t ⁵⁵	i n c t	353
+3873	Maru	smooth	tʃ a̰/a t ⁵⁵	tʃ a̰/a t ⁵⁵	i n c t	353
+3875	Xiandao	smooth	cʰ ɔ t ³⁵	cʰ ɔ t ³⁵	i n c t	353
+5342	Rangoon	smooth	tɕʰ ɔ ⁵⁵	tɕʰ ɔ ⁵⁵	i n t	652
+7205	Old_Burmese	smooth	p j ʊ ⁵³	p j ʊ ⁵³	i m n t	357
+3908	Achang_Longchuan	soft	nʲ ɔ t ⁵⁵	nʲ ɔ t ⁵⁵	i n c t	359
+3910	Atsi	soft	ŋ j o̰/o m ⁵⁵	ŋ j o̰/o m ⁵⁵	i m n c t	360
+3911	Bola	soft	n ɛ̃/ɛ ∼ ³⁵	n - ɛ̃/ɛ ∼ ³⁵	i n c t	360
+3914	Lashi	soft	n ə̰ː/ə ⁵³	n - ə̰ː/ə - ⁵³	i n t	360
+3915	Maru	soft	n ɛ̰̃/ɛ ∼ ⁵⁵	n - ɛ̰̃/ɛ ∼ ⁵⁵	i n c t	360
+3916	Xiandao	soft	ɲ ɔ t ³¹	ɲ ɔ t ³¹	i n c t	359
+5660	Rangoon	soft	p j ɔ ⁵³	p j ɔ ⁵³	i m n t	358
+7207	Old_Burmese	soft	p j ʊ ⁵³	p j ʊ ⁵³	i m n t	358
+4112	Achang_Longchuan	straight	t a n ³¹	t a n ³¹	i n c t	376
+4114	Atsi	straight	ŋ j a ŋ ⁵¹	ŋ j a ŋ ⁵¹	i m n c t	662
+4115	Bola	straight	t ɛ̃/ɛ ∼ ³⁵	t ɛ̃/ɛ ∼ ³⁵	i n c t	376
+4118	Lashi	straight	t aː/a n ³³	t aː/a n ³³	i n c t	376
+4119	Maru	straight	ŋ iɔ̃/ɔ ∼ ⁵⁵	ŋ - iɔ̃/ɔ ∼ ⁵⁵	i n c t	662
+4121	Xiandao	straight	ʂ a ³¹	ʂ a ³¹	i n t	663
+5363	Rangoon	straight	m ɑ ʔ ⁴	m ɑ ʔ ⁴	i n c t	25
+5537	Rangoon	straight	pʰ j ɑ̃/ɑu ∼ ⁵³	pʰ j ɑ̃/ɑu ∼ ⁵³	i m n c t	375
+7209	Old_Burmese	straight	pʰ r ʊ ŋ ⁵³	pʰ r ʊ ŋ ⁵³	i m n c t	375
+4255	Achang_Longchuan	ten	tɕʰ e ⁵⁵	tɕʰ e - ⁵⁵	i n t	669
+4258	Atsi	ten	tsʰ e ⁵¹	tsʰ e - ⁵¹	i n t	669
+4260	Bola	ten	t ă/ă ³¹ + tʰ ai ⁵⁵	t ă/ă ³¹ + tʰ ai - ⁵⁵	i n t + i n t	303 670
+4263	Lashi	ten	t ă/ă ³¹ + tsʰ e ³³	t ă/ă ³¹ + tsʰ e - ³³	i n t + i n t	303 670
+4264	Maru	ten	tsʰ ɛ ³¹	tsʰ ɛ ³¹	i n t	386
+4266	Xiandao	ten	t a ³¹ + tsʰ i ⁵⁵	t a ³¹ + tsʰ i - ⁵⁵	i n t + i n t	303 670
+5290	Rangoon	ten	sʰ ɛ ²²	sʰ ɛ - ²²	i n t	669
+7211	Old_Burmese	ten	t a + tsʰ a j	t a - + tsʰ a j -	i n + i n c	303 669
+4283	Bola	that	x u ⁵¹	x - u ⁵¹	i n t	387
+4290	Achang_Longchuan	that	tʰ e ⁵⁵	tʰ e - ⁵⁵	i n t	388
+4291	Atsi	that	x j e ⁵¹	x j e ⁵¹	i m n t	387
+4292	Lashi	that	tʰ ə ³³	tʰ ə - ³³	i n t	388
+4293	Maru	that	tʰ ø ³¹	tʰ ø - ³¹	i n t	388
+4294	Xiandao	that	tʰ ɛ ⁵⁵	tʰ ɛ - ⁵⁵	i n t	388
+5564	Rangoon	that	h o ²²	h o ²²	i n t	389
+5565	Rangoon	that	tʰ o ²²	tʰ o - ²²	i n t	388
+7213	Old_Burmese	that	tʰ ə w	tʰ ə w -	i n c	388
+22	Achang_Longchuan	the ant	tɕʰ i ⁵⁵ + m a n ⁵⁵	tɕʰ i ⁵⁵ + m a n ⁵⁵	i n t + i n c t	482 478
+24	Atsi	the ant	p au ⁵¹ + v o ʔ ⁵⁵	p au ⁵¹ + v - o ʔ ⁵⁵	i n t + i n c t	16 15
+25	Bola	the ant	pʰ ə̆ ³¹ + ɣ ɔ ʔ ³¹	pʰ ə̆ ³¹ + ɣ - ɔ ʔ ³¹	i n t + i n c t	16 15
+28	Lashi	the ant	l a ³¹ + j ɛ t ³¹	l a ³¹ + j ɛ t ³¹	i n t + i n c t	483 484
+29	Maru	the ant	pʰ ə̆ ³¹ + ɣ u k ³¹	pʰ ə̆ ³¹ + ɣ - u k ³¹	i n t + i n c t	16 15
+30	Xiandao	the ant	cʰ a ŋ ³¹ + m̥ a n ⁵⁵	cʰ a ŋ ³¹ + m̥ a n ⁵⁵	i n c t + i n c t	481 478
+5277	Rangoon	the ant	p ɑ ⁵³ + j w ɛ ʔ ⁴ + sʰ e ʔ ⁴	p ɑ ⁵³ + j w ɛ ʔ ⁴ + sʰ e ʔ ⁴	i n t + i m n c t + i n c t	16 15 14
+7215	Old_Burmese	the ant	p u + r o k + tsʰ i p	p u - + r - o k - + tsʰ i p -	i n + i n c + i n c	16 15 14
+6193	Achang_Longchuan	the armpit	k ă/ă ³¹ + l i ŋ ³⁵ + ʈʂʰ ua ʔ ⁵⁵	k ă/ă ³¹ + l i ŋ ³⁵ + ʈʂʰ - ua ʔ ⁵⁵	i n t + i n c t + i n c t	786 787 102
+6270	Rangoon	the armpit	tɕʰ ɑ̃/ɑi ∼ ⁵⁵	tɕʰ - ɑ̃/ɑi ∼ ⁵⁵	i n c t	103
+6345	Atsi	the armpit	k ă/ă ²¹ + tʃ o̰/o k ⁵⁵ + kʰ o ŋ ²¹	k ă/ă ²¹ + tʃ o̰/o k ⁵⁵ + kʰ - o ŋ ²¹	i n t + i n c t + i n c t	786 788 103
+6394	Maru	the armpit	l ɔ ʔ ³¹ + tʃʰ ɛ ʔ ⁵⁵	l ɔ ʔ ³¹ + tʃʰ ɛ ʔ ⁵⁵	i n c t + i n c t	229 104
+6444	Lashi	the armpit	l ɔ ʔ ³¹ + tʃʰ a p ⁵⁵	l ɔ ʔ ³¹ + tʃʰ a p ⁵⁵	i n c t + i n c t	229 104
+6581	Xiandao	the armpit	l ɔ ʔ ³¹ + s a n ⁵⁵ + kʰ ʐ o ʔ ⁵⁵	l ɔ ʔ ³¹ + s a n ⁵⁵ + kʰ ʐ o ʔ ⁵⁵	i n c t + i n c t + i m n c t	229 789 102
+6641	Bola	the armpit	l a ʔ ³¹ + tʃʰ ɛ ʔ ⁵⁵	l a ʔ ³¹ + tʃʰ ɛ ʔ ⁵⁵	i n c t + i n c t	229 104
+7217	Old_Burmese	the armpit	kʰ j o ŋ ⁵⁵	kʰ j o ŋ ⁵⁵	i m n c t	103
+141	Achang_Longchuan	the bamboo	o ³¹	- o ³¹	n t	81
+143	Atsi	the bamboo	v a ²¹	v a ²¹	i n t	81
+144	Bola	the bamboo	v a ³¹	v a ³¹	i n t	81
+147	Lashi	the bamboo	w o ³³	w o ³³	i n t	81
+148	Maru	the bamboo	v ɔ ³⁵	v ɔ ³⁵	i n t	81
+149	Xiandao	the bamboo	o ³¹	- o ³¹	n t	81
+5518	Rangoon	the bamboo	w ɑ ⁵⁵	w ɑ ⁵⁵	i n t	81
+7219	Old_Burmese	the bamboo	w a ⁵⁵	w a ⁵⁵	i n t	81
+6275	Bola	the barley (tibetan or highland)	m ɛ ³¹ + j a ⁵¹	m ɛ ³¹ + j a ⁵¹	i n t + i n t	819 820
+6286	Atsi	the barley (tibetan or highland)	m ə ⁵⁵ + j a ²¹ + s a t ⁵⁵	m ə ⁵⁵ + j a ²¹ + s a t ⁵⁵	i n t + i n t + i n c t	819 820 821
+6446	Rangoon	the barley (tibetan or highland)	b ɑ ²² + l i ²²	b ɑ ²² + l i ²²	i n t + i n t	822 823
+299	Bola	the belly	v ɛ ³¹ + t au ³¹	v ɛ ³¹ + t au - ³¹	i n t + i n t	89 91
+302	Maru	the belly	v ẽ/e ³⁵ + t u k ³¹	v ẽ/e ³⁵ + t u k ³¹	i n t + i n c t	89 91
+5652	Rangoon	the belly	b ɑi ʔ ⁴	b ɑi ʔ ⁴	i n c t	90
+7221	Old_Burmese	the belly	p ə k	p ə k -	i n c	90
+325	Achang_Longchuan	the bird	m̥ ɔ ʔ ⁵⁵	m̥ ɔ ʔ ⁵⁵	i n c t	93
+327	Atsi	the bird	ŋ o̰/o ʔ ⁵⁵	ŋ o̰/o ʔ ⁵⁵	i n c t	93
+328	Bola	the bird	ŋ a̰/a ʔ ⁵⁵	ŋ a̰/a ʔ ⁵⁵	i n c t	93
+331	Lashi	the bird	ŋ ɔ̰/ɔ ʔ ⁵⁵	ŋ ɔ̰/ɔ ʔ ⁵⁵	i n c t	93
+332	Maru	the bird	ŋ ɔ̰/ɔ ʔ ⁵⁵	ŋ ɔ̰/ɔ ʔ ⁵⁵	i n c t	93
+334	Xiandao	the bird	ŋ̊ ɔ ʔ ⁵⁵	ŋ̊ ɔ ʔ ⁵⁵	i n c t	93
+5545	Rangoon	the bird	ŋ̊ ɛ ʔ ⁴	ŋ̊ ɛ ʔ ⁴	i n c t	93
+7223	Old_Burmese	the bird	ŋ̊ a k	ŋ̊ a k -	i n c	93
+383	Bola	the blood	s ui ³⁵	s - ui - ³⁵	i n t	101
+389	Maru	the blood	s a ³⁵	s - a - ³⁵	i n t	101
+5597	Rangoon	the blood	tθ w e ⁵⁵	tθ w e - ⁵⁵	i m n t	101
+7225	Old_Burmese	the blood	s u j ⁵⁵	s - u j ⁵⁵	i n c t	101
+1726	Achang_Longchuan	the body hair (hair or fur)	a ³¹ + m ui ³¹	a ³¹ + m - ui - ³¹	n t + i n t	190 541
+1728	Atsi	the body hair (hair or fur)	ʃ ŏ/ŏ ²¹ + m au ⁵⁵	ʃ ŏ/ŏ ²¹ + m - au - ⁵⁵	i n t + i n t	561 541
+1730	Bola	the body hair (hair or fur)	ʃ ă/ă ³⁵ + m au ³⁵	ʃ ă/ă ³⁵ + m - au - ³⁵	i n t + i n t	561 541
+1734	Lashi	the body hair (hair or fur)	ʃ ŏ/ŏ ⁵⁵ + m ou ⁵⁵	ʃ ŏ/ŏ ⁵⁵ + m - ou - ⁵⁵	i n t + i n t	561 541
+1735	Maru	the body hair (hair or fur)	ʃ ɔ̆ ³⁵ + m u k ⁵⁵	ʃ ɔ̆ ³⁵ + m - u k ⁵⁵	i n t + i n c t	561 541
+1737	Xiandao	the body hair (hair or fur)	m ui ³¹	m - ui - ³¹	i n t	541
+5639	Rangoon	the body hair (hair or fur)	ɑ ⁵³ + m w e ⁵⁵	ɑ ⁵³ + m w e - ⁵⁵	n t + i m n t	190 541
+7227	Old_Burmese	the body hair (hair or fur)	m u j ⁵⁵	m - u j ⁵⁵	i n c t	541
+487	Bola	the bone	ʃ ă/ă ³⁵ + u ³¹	ʃ ă/ă ³⁵ + - u - ³¹	i n t + n t	117 119
+490	Lashi	the bone	ʃ ŏ/ŏ ⁵⁵ + j ou ³³	ʃ ŏ/ŏ ⁵⁵ + j ou - ³³	i n t + i n t	117 119
+493	Maru	the bone	ʃ ŏ/ŏ ³⁵ + ɣ u k ⁵⁵	ʃ ŏ/ŏ ³⁵ + ɣ u k ⁵⁵	i n t + i n c t	117 119
+5668	Rangoon	the bone	ɑ ⁵³ + j o ⁵⁵	ɑ ⁵³ + j o - ⁵⁵	n t + i n t	118 119
+7229	Old_Burmese	the bone	r ə w ⁵⁵	r ə w ⁵⁵	i n c t	119
+526	Achang_Longchuan	the branch	ʂ ə k ⁵⁵ + k ʐ a ŋ ⁵⁵	ʂ ə k ⁵⁵ + k ʐ a ŋ ⁵⁵	i n c t + i m n c t	123 126
+528	Atsi	the branch	s i k ⁵⁵ + k j a̰/a ŋ ⁵¹	s i k ⁵⁵ + k j a̰/a ŋ ⁵¹	i n c t + i m n c t	123 126
+529	Bola	the branch	s a k ⁵⁵ + k a̰/a ʔ ⁵⁵	s a k ⁵⁵ + k a̰/a ʔ ⁵⁵	i n c t + i n c t	123 125
+532	Lashi	the branch	s ə̰/ə k ⁵⁵ + k ɔ̰/ɔ ʔ ⁵⁵	s ə̰/ə k ⁵⁵ + k ɔ̰/ɔ ʔ ⁵⁵	i n c t + i n c t	123 125
+533	Maru	the branch	s a̰/a k ⁵⁵ + k ɔ̰/ɔ ʔ ⁵⁵	s a̰/a k ⁵⁵ + k ɔ̰/ɔ ʔ ⁵⁵	i n c t + i n c t	123 125
+534	Xiandao	the branch	ʂ ɯ k ⁵⁵ + x ɔ ʔ ⁵⁵	ʂ ɯ k ⁵⁵ + x ɔ ʔ ⁵⁵	i n c t + i n c t	123 125
+5511	Rangoon	the branch	ɑ ⁵³ + k ɑ̃/ɑi ∼ ⁵⁵ + ɑ ⁵³ + kʰ ɛ ʔ ⁴	ɑ ⁵³ + k ɑ̃/ɑi ∼ ⁵⁵ + ɑ ⁵³ + kʰ ɛ ʔ ⁴	n t + i n c t + n t + i n c t	851 524 143 125
+7231	Old_Burmese	the branch	a + kʰ a k	a - + kʰ a k -	n + i n c	143 125
+545	Bola	the breast (female)	n au ³⁵	n au - ³⁵	i n t	127
+551	Maru	the breast (female)	n u k ⁵⁵	n u k ⁵⁵	i n c t	127
+5600	Rangoon	the breast (female)	n o ⁵³ + õ/o ∼ ²²	n o - ⁵³ + õ/o ∼ ²²	i n t + n c t	127 128
+7233	Old_Burmese	the breast (female)	n ə w ⁵³	n ə w ⁵³	i n c t	127
+627	Achang_Longchuan	the child (young human)	ts ă/ă ³¹ + oi ³¹	ts ă/ă ³¹ + oi ³¹	i n t + n t	145 146
+629	Atsi	the child (young human)	ts ŏ/ŏ ²¹ + ʃ a ŋ ⁵¹	ts ŏ/ŏ ²¹ + ʃ a ŋ ⁵¹	i n t + i n c t	145 147
+630	Bola	the child (young human)	t ă/ă ³¹ + ʃ ɔ̃/ɔ ∼ ⁵⁵	t ă/ă ³¹ + ʃ ɔ̃/ɔ ∼ ⁵⁵	i n t + i n c t	145 147
+633	Maru	the child (young human)	ts ɔ̆ ³⁵ + ʃ ɔ̃/ɔ ∼ ³¹	ts ɔ̆ ³⁵ + ʃ ɔ̃/ɔ ∼ ³¹	i n t + i n c t	145 147
+634	Xiandao	the child (young human)	ts ɔ ³¹ + ui ³¹	ts ɔ ³¹ + ui ³¹	i n t + n t	145 146
+5577	Rangoon	the child (young human)	k ɑ ⁵³ + l e ⁵⁵	k ɑ ⁵³ + l e ⁵⁵	i n t + i n t	525 526
+660	Achang_Longchuan	the cloud	x a n ³¹ + tɕ i n ³¹	x a n ³¹ + tɕ i n ³¹	i n c t + i n c t	152 153
+663	Atsi	the cloud	m ṵ/u t ⁵⁵ + m au ⁵⁵	m ṵ/u t ⁵⁵ + m au ⁵⁵	i n c t + i n t	527 311
+664	Bola	the cloud	tʃ a̰/a m ⁵⁵	tʃ a̰/a m ⁵⁵	i n c t	150
+666	Lashi	the cloud	ts ɔ̰/ɔ m ⁵⁵ + m ou ⁵⁵	ts ɔ̰/ɔ m ⁵⁵ + m ou ⁵⁵	i n c t + i n t	150 311
+667	Maru	the cloud	tʃ a̰/a m ³¹ + tʰ ɔi ³⁵	tʃ a̰/a m ³¹ + tʰ ɔi ³⁵	i n c t + i n t	150 528
+668	Xiandao	the cloud	ç/ç a ŋ ⁵⁵ + c i n ³¹	ç/ç a ŋ ⁵⁵ + c i n ³¹	i n c t + i n c t	152 153
+5276	Rangoon	the cloud	t ẽ/e ∼ ²²	t ẽ/e ∼ ²²	i n c t	151
+7235	Old_Burmese	the cloud	t i m	t i m -	i n c	151
+6123	Xiandao	the daughter	j i ³¹ + ɲ ɔ ³¹ + ts ɔ ³¹	j i ³¹ + ɲ ɔ ³¹ + ts ɔ ³¹	i n t + i n t + i n t	710 711 714
+6179	Bola	the daughter	t a ³¹	t a ³¹	i n t	365
+6256	Achang_Longchuan	the daughter	ts a ŋ ³¹ + ʑ i ³¹	ts a ŋ ³¹ + ʑ i ³¹	i n c t + i n t	712 713
+6257	Maru	the daughter	ts o	ts o -	i n	714
+6320	Maru	the daughter	m j i ³⁵ + ɣ ɛ ³⁵ + ts ɔ ³⁵	m j i ³⁵ + ɣ ɛ ³⁵ + ts ɔ ³⁵	i m n t + i n t + i n t	426 436 852
+6415	Atsi	the daughter	m j i ²¹ + v e ²¹ + ts o ²¹	m j i ²¹ + v e ²¹ + ts o ²¹	i m n t + i n t + i n t	426 436 714
+6559	Rangoon	the daughter	tθ ɑ ⁵³ + m i ⁵⁵	tθ ɑ ⁵³ + m - i ⁵⁵	i n t + i n t	714 426
+6596	Lashi	the daughter	m j i ³³ + ts o ³³	m j i ³³ + ts o ³³	i m n t + i n t	426 714
+7237	Old_Burmese	the daughter	s a + m i ⁵⁵	s a - + m - i ⁵⁵	i n + i n t	714 426
+6212	Maru	the dew	ŋ a̰/a ŋ ³¹	ŋ a̰/a ŋ ³¹	i n c t	583
+6233	Rangoon	the dew	n̥ ɪ̃/ɪ ∼ ⁵⁵	n̥ ɪ̃/ɪ ∼ ⁵⁵	i n c t	583
+6268	Achang_Longchuan	the dew	tsʰ e ³¹	tsʰ e ³¹	i n t	108
+6298	Atsi	the dew	ŋ a̰/a n ⁵¹	ŋ a̰/a n ⁵¹	i n c t	583
+6487	Lashi	the dew	ŋ a̰/a n ³³ + tʃ u ⁵⁵	ŋ a̰/a n ³³ + tʃ u ⁵⁵	i n c t + i n t	583 796
+6544	Xiandao	the dew	tsʰ ɛ ³¹	tsʰ ɛ ³¹	i n t	108
+6599	Bola	the dew	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	i n c t	583
+7239	Old_Burmese	the dew	n̥ a ŋ ⁵⁵	n̥ a ŋ ⁵⁵	i n c t	583
+955	Achang_Longchuan	the dog	x ui ³¹	x - ui - ³¹	i n t	169
+957	Atsi	the dog	kʰ ui ²¹	kʰ - ui - ²¹	i n t	169
+958	Bola	the dog	kʰ ui ³⁵	kʰ - ui - ³⁵	i n t	169
+961	Lashi	the dog	kʰ ui ⁵⁵	kʰ - ui - ⁵⁵	i n t	169
+962	Maru	the dog	l ə̆ ³¹ + kʰ a ³⁵	l ə̆ ³¹ + kʰ - a - ³⁵	i n t + i n t	533 169
+964	Xiandao	the dog	f ui ³¹	f - ui - ³¹	i n t	169
+5406	Rangoon	the dog	kʰ w e ⁵⁵	kʰ w e - ⁵⁵	i m n t	169
+7241	Old_Burmese	the dog	kʰ u j ⁵⁵	kʰ - u j ⁵⁵	i n c t	169
+980	Achang_Longchuan	the dream	i t ⁵⁵ + m ɔ ʔ ⁵⁵	- i t ⁵⁵ + m ɔ ʔ ⁵⁵	n c t + i n c t	171 170
+981	Atsi	the dream	j ṵ/u p ⁵⁵ + m o ʔ ²¹	j ṵ/u p ⁵⁵ + m o ʔ ²¹	i n c t + i n c t	171 170
+982	Bola	the dream	j a̰/a p ⁵⁵ + m a ʔ ⁵⁵	j a̰/a p ⁵⁵ + m a ʔ ⁵⁵	i n c t + i n c t	171 170
+983	Lashi	the dream	j ɔ̰/ɔ p ⁵⁵ + m ɔ ʔ ³¹	j ɔ̰/ɔ p ⁵⁵ + m ɔ ʔ ³¹	i n c t + i n c t	171 170
+984	Maru	the dream	j a̰/a p ³¹ + m ɔ ʔ ³¹	j a̰/a p ³¹ + m ɔ ʔ ³¹	i n c t + i n c t	171 170
+985	Xiandao	the dream	i n ³¹ + m ɔ ʔ ⁵⁵	- i n ³¹ + m ɔ ʔ ⁵⁵	n c t + i n c t	171 170
+5255	Rangoon	the dream	e ʔ ⁴ + m ɛ ʔ ⁴	- e ʔ ⁴ + m ɛ ʔ ⁴	n c t + i n c t	171 170
+7243	Old_Burmese	the dream	i p + m a k	- i p - + m a k -	n c + i n c	171 170
+1089	Achang_Longchuan	the dust	n̥ʲ o n ⁵⁵ + m ɔ k ³⁵	n̥ʲ o n ⁵⁵ + m ɔ k ³⁵	i n c t + i n c t	536 537
+1091	Atsi	the dust	pʰ ui ²¹ + l a̰/au ⁵¹	pʰ ui - ²¹ + l a̰/au - ⁵¹	i n t + i n t	175 176
+1092	Bola	the dust	pʰ ə̆ ³¹ + l au ⁵⁵	pʰ ə̆ - ³¹ + l au - ⁵⁵	i n t + i n t	175 176
+1093	Lashi	the dust	pʰ ə̆ ⁵⁵ + l o̰/ou ³³	pʰ ə̆ - ⁵⁵ + l o̰/ou - ³³	i n t + i n t	175 176
+1094	Maru	the dust	pʰ ɔ̆i ³⁵ + l ṵ/u k ³¹	pʰ ɔ̆i - ³⁵ + l ṵ/u k ³¹	i n t + i n c t	175 176
+5441	Rangoon	the dust	pʰ õ/o ∼ ²²	pʰ õ/o ∼ ²²	i n c t	175
+7245	Old_Burmese	the dust	pʰ u n	pʰ u n -	i n c	175
+1097	Achang_Longchuan	the ear	n i ³¹ + ʈʂʰ u a ³¹	n i ³¹ + ʈʂʰ u a ³¹	i n t + i m n t	177 179
+1100	Atsi	the ear	n ŏ/ŏ ²¹ + pʰ j o ²¹	n ŏ/ŏ ²¹ + pʰ j o ²¹	i n t + i m n t	177 538
+1103	Bola	the ear	n ə̆ ³¹ + kʰ j ɛ ʔ ⁵⁵	n ə̆ ³¹ + kʰ j ɛ ʔ ⁵⁵	i n t + i m n c t	177 178
+1108	Lashi	the ear	n ə̆ ³³ + kʰ j a p ⁵⁵	n ə̆ ³³ + kʰ j a p ⁵⁵	i n t + i m n c t	177 178
+1111	Maru	the ear	n ə̆ ³¹ + kʰ j ɛ ʔ ⁵⁵	n ə̆ ³¹ + kʰ j ɛ ʔ ⁵⁵	i n t + i m n c t	177 178
+1113	Xiandao	the ear	n̥ a ³¹ + ʈʂʰ ɔ ³¹	n̥ a ³¹ + ʈʂʰ - ɔ ³¹	i n t + i n t	177 179
+5556	Rangoon	the ear	n ɑ ⁵⁵	n ɑ ⁵⁵	i n t	177
+7247	Old_Burmese	the ear	n a ⁵⁵ + r o k	n a ⁵⁵ + r o k	i n t + i n c	177 839
+3919	Achang_Longchuan	the earth (soil)	m i ⁵⁵	m - i - ⁵⁵	i n t	657
+3920	Atsi	the earth (soil)	m j i ⁵⁵ + ts ḛ/e ²¹	m j i - ⁵⁵ + ts ḛ/e ²¹	i m n t + i n t	657 363
+3921	Bola	the earth (soil)	m i ⁵⁵ + k au ŋ ⁵⁵	m - i - ⁵⁵ + k au ŋ ⁵⁵	i n t + i n c t	657 656
+3922	Lashi	the earth (soil)	m j ḭ/i ³¹ + ts ei ⁵⁵	m j ḭ/i - ³¹ + ts ei ⁵⁵	i m n t + i n t	657 363
+3923	Maru	the earth (soil)	m j i k ³¹ + ts a̰/ai ³⁵	m j i k ³¹ + ts a̰/ai ³⁵	i m n c t + i n t	657 363
+3924	Xiandao	the earth (soil)	m̥ i ⁵⁵	m̥ - i - ⁵⁵	i n t	657
+5619	Rangoon	the earth (soil)	m j e ²²	m j e - ²²	i m n t	657
+7249	Old_Burmese	the earth (soil)	m l i j	m l i j -	i m n c	657
+6134	Lashi	the earthworm	v u ʔ ³¹ + t i ³¹	v u ʔ ³¹ + t i ³¹	i n c t + i n t	472 471
+6196	Xiandao	the earthworm	t a ⁵⁵	t a ⁵⁵	i n t	471
+6249	Bola	the earthworm	v a ʔ ³¹ + t ai ⁵⁵	v a ʔ ³¹ + t ai ⁵⁵	i n c t + i n t	472 471
+6406	Maru	the earthworm	v ɔ ʔ ³¹ + t ɔi ³¹	v ɔ ʔ ³¹ + t ɔi ³¹	i n c t + i n t	472 471
+6421	Rangoon	the earthworm	t i ²²	t i ²²	i n t	471
+6638	Achang_Longchuan	the earthworm	t a ⁵⁵	t a ⁵⁵	i n t	471
+6646	Atsi	the earthworm	tʃ ḭ/i ⁵⁵ + tʃ ḭ/i n ⁵⁵	tʃ ḭ/i ⁵⁵ + tʃ ḭ/i n ⁵⁵	i n t + i n c t	722 723
+1140	Bola	the egg	ṵ/u ³⁵	ṵ/u ³⁵	n t	181
+1144	Maru	the egg	a̰/au ⁵⁵	a̰/au ⁵⁵	n t	181
+5427	Rangoon	the egg	u ⁵³	u ⁵³	n t	181
+7251	Old_Burmese	the egg	u	u -	n	181
+1177	Bola	the eye	m j a ʔ ³¹ + tʃ ɿ ³⁵	m j a ʔ ³¹ + tʃ ɿ - ³⁵	i m n c t + i n t	183 539
+1184	Maru	the eye	m j ɔ ʔ ³¹ + tʃ i k ⁵⁵	m j ɔ ʔ ³¹ + tʃ i k ⁵⁵	i m n c t + i n c t	183 539
+5494	Rangoon	the eye	m j ɛ ʔ ⁴ + s i ⁵³	m j ɛ ʔ ⁴ + s i - ⁵³	i m n c t + i n t	183 539
+7253	Old_Burmese	the eye	m j a k	m j a k -	i m n c	183
+1273	Achang_Longchuan	the father	t e ʔ ⁵⁵	t e ʔ ⁵⁵	i n c t	540
+1276	Atsi	the father	a ⁵⁵ + v a ²¹	a ⁵⁵ + v a ²¹	n t + i n t	143 188
+1277	Bola	the father	a ³¹ + v a ⁵⁵	a ³¹ + v a ⁵⁵	n t + i n t	143 188
+1280	Lashi	the father	a ⁵⁵ + pʰ o ⁵³	a ⁵⁵ + pʰ o - ⁵³	n t + i n t	143 187
+1281	Maru	the father	a ⁵⁵ + pʰ ɔ ⁵⁵	a ⁵⁵ + pʰ ɔ - ⁵⁵	n t + i n t	143 187
+1283	Xiandao	the father	p o ³¹	p o - ³¹	i n t	187
+5527	Rangoon	the father	ɑ ⁵³ + pʰ e ²²	ɑ ⁵³ + pʰ e - ²²	n t + i n t	143 187
+7255	Old_Burmese	the father	a + pʰ i j	a - + pʰ i j -	n + i n c	143 187
+1298	Achang_Longchuan	the feather	a ³¹ + m ui ³¹	a ³¹ + m - ui - ³¹	n t + i n t	1 541
+1299	Atsi	the feather	ʃ ŏ/ŏ ²¹ + m au ⁵⁵	ʃ ŏ/ŏ ²¹ + m - au - ⁵⁵	i n t + i n t	544 541
+1301	Bola	the feather	a ³¹ + m au ³⁵	a ³¹ + m - au - ³⁵	n t + i n t	1 541
+1303	Lashi	the feather	s ŏ/ŏ ⁵⁵ + m ou ⁵⁵	s ŏ/ŏ ⁵⁵ + m - ou - ⁵⁵	i n t + i n t	544 541
+1305	Maru	the feather	ʃ ɔ̆ ³⁵ + m u k ⁵⁵	ʃ ɔ̆ ³⁵ + m - u k ⁵⁵	i n t + i n c t	544 541
+5607	Rangoon	the feather	ŋ̊ ɛ ʔ ⁴ + m w e ⁵⁵	ŋ̊ ɛ ʔ ⁴ + m w e - ⁵⁵	i n c t + i m n t	543 541
+7257	Old_Burmese	the feather	a + m u j ⁵⁵	a - + m - u j ⁵⁵	n + i n c t	1 541
+1394	Achang_Longchuan	the fire	p oi ³¹	p oi ³¹	i n t	194
+1396	Atsi	the fire	m j i ²¹	m j i ²¹	i m n t	426
+1397	Bola	the fire	m i ³¹	m - i ³¹	i n t	426
+1400	Lashi	the fire	m j i ³³	m j i ³³	i m n t	426
+1401	Maru	the fire	m j i ³⁵	m j i ³⁵	i m n t	426
+1402	Xiandao	the fire	n̩ ⁵⁵ + p ui ³¹	n̩ ⁵⁵ + p ui ³¹	n t + i n t	546 194
+1403	Xiandao	the fire	n̩ ⁵⁵ + p ui ³¹	n̩ ⁵⁵ + p ui ³¹	n t + i n t	34 194
+5301	Rangoon	the fire	m i ⁵⁵	m - i ⁵⁵	i n t	426
+7259	Old_Burmese	the fire	m i ⁵⁵	m - i ⁵⁵	i n t	426
+1407	Achang_Longchuan	the fish	ŋ a ³¹ + ʂ u a ³¹	ŋ a ³¹ + ʂ u a ³¹	i n t + i m n t	195 547
+1410	Atsi	the fish	ŋ ŏ/ŏ ²¹ + ts o ²¹	ŋ ŏ/ŏ ²¹ + ts o ²¹	i n t + i n t	195 196
+1411	Bola	the fish	ŋ ə̆ ³¹ + t a ³¹	ŋ ə̆ ³¹ + t a ³¹	i n t + i n t	195 196
+1414	Lashi	the fish	ŋ ə̆ ³¹ + ts o ³³	ŋ ə̆ ³¹ + ts o ³³	i n t + i n t	195 196
+1415	Maru	the fish	ŋ ə̆ ³¹ + ts ɔ ³¹	ŋ ə̆ ³¹ + ts ɔ ³¹	i n t + i n t	195 196
+1417	Xiandao	the fish	ŋ̊ ɔ̆ ³¹ + ʂ ɔ ³¹	ŋ̊ ɔ̆ ³¹ + ʂ - ɔ ³¹	i n t + i n t	195 547
+5299	Rangoon	the fish	ŋ ɑ ⁵⁵	ŋ ɑ ⁵⁵	i n t	195
+7261	Old_Burmese	the fish	ŋ a ⁵⁵	ŋ a ⁵⁵	i n t	195
+6129	Lashi	the flea	kʰ u k ⁵⁵ + l ḛ/ei ⁵⁵	kʰ u k ⁵⁵ + l ḛ/ei - ⁵⁵	i n c t + i n t	720 463
+6190	Xiandao	the flea	f u ³¹ + l ai ³¹	f u ³¹ + l ai - ³¹	i n t + i n t	719 463
+6243	Bola	the flea	kʰ ə̆ ³¹ + l ṵ/ui ³⁵	kʰ ə̆ - ³¹ + l ṵ/ui - ³⁵	i n t + i n t	720 463
+6340	Achang_Longchuan	the flea	l̥ i ³¹	l̥ i - ³¹	i n t	463
+6399	Maru	the flea	kʰ ə̆ ³¹ + l a̰/a ³⁵	kʰ ə̆ - ³¹ + l a̰/a - ³⁵	i n t + i n t	720 463
+6416	Rangoon	the flea	ɬ e ⁵⁵	ɬ e - ⁵⁵	i n t	463
+6478	Atsi	the flea	kʰ ĕ/ĕ ⁵⁵ + l a̰/ai ²¹	kʰ ĕ/ĕ - ⁵⁵ + l a̰/ai - ²¹	i n t + i n t	720 463
+7263	Old_Burmese	the flea	l̥ i j ⁵⁵	l̥ i j ⁵⁵	i n c t	463
+1456	Achang_Longchuan	the flower	k ă/ă n ⁵⁵ + t a m ³¹	k ă/ă n ⁵⁵ + t a m ³¹	i n c t + i n c t	551 204
+1458	Atsi	the flower	p a n ²¹	p - a n ²¹	i n c t	203
+1459	Bola	the flower	p ɛ̃/ɛ ∼ ³¹ + p ɔ ³⁵	p - ɛ̃/ɛ ∼ ³¹ + p ɔ ³⁵	i n c t + i n t	203 549
+1462	Lashi	the flower	p a n ³³	p - a n ³³	i n c t	203
+1463	Maru	the flower	p ə ŋ ³⁵	p - ə ŋ ³⁵	i n c t	203
+1464	Xiandao	the flower	p a n ⁵⁵ + t a m ³¹	p - a n ⁵⁵ + t a m ³¹	i n c t + i n c t	203 204
+5386	Rangoon	the flower	ɑ ⁵³ + p w ĩ/i ∼ ⁵³	ɑ ⁵³ + p w ĩ/i ∼ ⁵³	n t + i m n c t	143 203
+7265	Old_Burmese	the flower	a + p o ŋ ⁵³	a - + p - o ŋ ⁵³	n + i n c t	143 203
+1483	Achang_Longchuan	the fog	m au ³¹ + t u m ⁵⁵	m au ³¹ + t u m ⁵⁵	i n t + i n c t	553 554
+1486	Atsi	the fog	s ai ⁵⁵ + v o n ²¹	s ai ⁵⁵ + v o n ²¹	i n t + i n c t	207 208
+1487	Bola	the fog	s ai ³⁵ + v u n ³¹	s ai ³⁵ + v u n ³¹	i n t + i n c t	207 208
+1489	Lashi	the fog	s a̰/ai ³³ + w a n ³¹	s a̰/ai ³³ + w a n ³¹	i n t + i n c t	207 208
+1490	Maru	the fog	tʃ a m ³¹ + tʰ ɔi ³⁵	tʃ a m ³¹ + tʰ ɔi ³⁵	i n c t + i n t	492 829
+1491	Xiandao	the fog	ç/ç a ŋ ⁵⁵ + c i n ³¹	ç/ç a ŋ ⁵⁵ + c i n ³¹	i n c t + i n c t	492 555
+5499	Rangoon	the fog	m j u ²²	m j u ²²	i m n t	491
+7267	Old_Burmese	the fog	n̥ a ŋ ⁵⁵	n̥ a ŋ ⁵⁵	i n c t	749
+6254	Maru	the foot	kʰ j i k ³¹	kʰ j i k ³¹	i m n c t	19
+6278	Rangoon	the foot	tɕʰ e ²² + tʰ ɑu ʔ ⁴	tɕʰ - e - ²² + tʰ ɑu ʔ ⁴	i n t + i n c t	19 141
+6280	Xiandao	the foot	cʰ i ⁵⁵	cʰ - i - ⁵⁵	i n t	19
+6420	Achang_Longchuan	the foot	tɕʰ i ⁵⁵	tɕʰ - i - ⁵⁵	i n t	19
+6429	Atsi	the foot	kʰ j i ⁵¹	kʰ j i - ⁵¹	i m n t	19
+6472	Lashi	the foot	kʰ j ei ³³	kʰ j ei - ³³	i m n t	19
+6645	Bola	the foot	kʰ j i ⁵³	kʰ j i - ⁵³	i m n t	19
+7269	Old_Burmese	the foot	kʰ r i j	kʰ r i j -	i m n c	19
+1512	Atsi	the forest	s i k ⁵⁵ + p ṵ/u ŋ ⁵⁵	s i k ⁵⁵ + p - ṵ/u ŋ ⁵⁵	i n c t + i n c t	124 556
+1513	Bola	the forest	s a k ⁵⁵ + j a ⁵⁵	s a k ⁵⁵ + j a ⁵⁵	i n c t + i n t	124 209
+1514	Lashi	the forest	s ə̰/ə k + j o ³¹	s ə̰/ə k - + j o ³¹	i n c + i n t	124 209
+1515	Maru	the forest	s a̰/a k ⁵⁵ + j ɔ ³¹	s a̰/a k ⁵⁵ + j ɔ ³¹	i n c t + i n t	124 209
+1516	Xiandao	the forest	k ʐ o m ⁵⁵	k ʐ o m ⁵⁵	i m n c t	556
+5258	Rangoon	the forest	t ɔ ⁵⁵	t ɔ ⁵⁵	i n t	210
+6409	Rangoon	the fox	m j e ²² + kʰ w e ⁵⁵	m j e - ²² + kʰ w e - ⁵⁵	i m n t + i m n t	361 169
+6550	Atsi	the fox	t a n ⁵⁵ + kʰ ui ²¹	t a n ⁵⁵ + kʰ - ui - ²¹	i n c t + i n t	732 169
+7271	Old_Burmese	the fox	m r i j + kʰ u j ⁵⁵	m r i j - + kʰ - u j ⁵⁵	i m n c + i n c t	361 169
+1555	Achang_Longchuan	the frog	pʰ ɔ ³¹	pʰ ɔ ³¹	i n t	212
+1557	Atsi	the frog	p ŏ̰/ŏ ²¹ + k j ḛ/e k ⁵⁵	p ŏ̰/ŏ ²¹ + k j ḛ/e k ⁵⁵	i n t + i m n c t	212 213
+1558	Bola	the frog	p a̰/a ³⁵	p a̰/a ³⁵	i n t	212
+1561	Lashi	the frog	p ɑ̰/ɑ ⁵⁵	p ɑ̰/ɑ ⁵⁵	i n t	212
+1562	Maru	the frog	p ɔ̰/ɔ ³⁵	p ɔ̰/ɔ ³⁵	i n t	212
+1563	Xiandao	the frog	pʰ ă/ă ³¹ + c a k ³⁵	pʰ ă/ă ³¹ + c - a k ³⁵	i n t + i n c t	212 213
+5604	Rangoon	the frog	pʰ a ⁵⁵	pʰ a ⁵⁵	i n t	212
+7273	Old_Burmese	the frog	pʰ a ⁵⁵	pʰ a ⁵⁵	i n t	212
+6138	Atsi	the front (front side)	x i ⁵⁵	x i - ⁵⁵	i n t	731
+6388	Xiandao	the front (front side)	ɲ ɔ ʔ ⁵⁵ + s ai ³⁵	ɲ ɔ ʔ ⁵⁵ + s ai - ³⁵	i n c t + i n t	33 731
+6439	Bola	the front (front side)	x əi ³⁵	x əi - ³⁵	i n t	731
+6503	Lashi	the front (front side)	ʃ ə̰/ə k ⁵⁵	ʃ ə̰/ə k ⁵⁵	i n c t	731
+6513	Achang_Longchuan	the front (front side)	nʲ ɔ ʔ ⁵⁵ + s i ʔ ³¹	nʲ ɔ ʔ ⁵⁵ + s i ʔ ³¹	i n c t + i n c t	33 731
+6573	Maru	the front (front side)	x a k ⁵⁵	x a k ⁵⁵	i n c t	731
+6606	Rangoon	the front (front side)	ɕ e ⁵³	ɕ e - ⁵³	i n t	731
+6153	Achang_Longchuan	the frost	ŋ̊ a n ⁵⁵	ŋ̊ a n ⁵⁵	i n c t	253
+6211	Maru	the frost	ŋ a̰/a ŋ ³¹	ŋ a̰/a ŋ ³¹	i n c t	253
+6297	Atsi	the frost	ŋ a̰/a n ⁵¹ + pʰ j u ⁵¹	ŋ a̰/a n ⁵¹ + pʰ j u ⁵¹	i n c t + i m n t	253 423
+6323	Bola	the frost	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	i n c t	253
+6486	Lashi	the frost	ŋ a̰/a n ³³ + pʰ i u ³³	ŋ a̰/a n ³³ + pʰ i u ³³	i n c t + i m n t	253 423
+6543	Xiandao	the frost	ŋ̊ a n ⁵⁵	ŋ̊ a n ⁵⁵	i n c t	253
+6592	Rangoon	the frost	n̥ ĩ/i ∼ ⁵⁵ + kʰ ɛ ⁵⁵	n̥ ĩ/i ∼ ⁵⁵ + kʰ ɛ ⁵⁵	i n c t + i n t	253 254
+7276	Old_Burmese	the frost	n̥ a ŋ ⁵⁵	n̥ a ŋ ⁵⁵	i n c t	253
+1569	Achang_Longchuan	the fruit	ʂ ə ³¹	ʂ ə ³¹	i n t	465
+1571	Atsi	the fruit	ʃ i ²¹	ʃ i ²¹	i n t	465
+1572	Bola	the fruit	ʃ ɿ ³⁵	ʃ ɿ ³⁵	i n t	465
+1575	Lashi	the fruit	ʃ ɿ ⁵⁵	ʃ ɿ ⁵⁵	i n t	465
+1576	Maru	the fruit	ʃ i ³⁵	ʃ i ³⁵	i n t	465
+1577	Xiandao	the fruit	ʂ ɿ ³¹	ʂ ɿ ³¹	i n t	465
+5334	Rangoon	the fruit	ɑ ⁵³ + tθ i ⁵⁵	ɑ ⁵³ + tθ i ⁵⁵	n t + i n t	557 465
+7278	Old_Burmese	the fruit	s a ts + s i ⁵⁵	s a ts + s i ⁵⁵	i n c + i n t	677 465
+6205	Bola	the goat	j ɔ̃/ɔ ∼ ⁵⁵	j ɔ̃/ɔ ∼ ⁵⁵	i n c t	792
+6288	Achang_Longchuan	the goat	p a ʔ ⁵⁵	p a ʔ ⁵⁵	i n c t	794
+6352	Maru	the goat	tʃʰ a t ⁵⁵ + p ɛ̰/ɛ ʔ ⁵⁵	tʃʰ a t ⁵⁵ + p ɛ̰/ɛ ʔ ⁵⁵	i n c t + i n c t	795 794
+6379	Rangoon	the goat	sʰ e ʔ ⁴	sʰ e ʔ ⁴	i n c t	795
+6443	Atsi	the goat	p ai ²¹ + n a m ⁵⁵	p ai - ²¹ + n a m ⁵⁵	i n t + i n c t	794 793
+6594	Xiandao	the goat	p a ʔ ³¹	p a ʔ ³¹	i n c t	794
+7280	Old_Burmese	the goat	tsʰ i t	tsʰ i t -	i n c	795
+1667	Achang_Longchuan	the grass	s a ⁵⁵	s a ⁵⁵	i n t	221
+1669	Atsi	the grass	n a̰/a m ²¹	n a̰/a m ²¹	i n c t	558
+1671	Bola	the grass	m ɛ̰̃/ɛ ∼ ³⁵	m ɛ̰̃/ɛ ∼ ³⁵	i n c t	220
+1674	Lashi	the grass	m a̰/a n ⁵⁵	m a̰/a n ⁵⁵	i n c t	220
+1675	Maru	the grass	m a̰/a ŋ ³⁵	m a̰/a ŋ ³⁵	i n c t	220
+1677	Xiandao	the grass	s a ⁵⁵	s a ⁵⁵	i n t	221
+5651	Rangoon	the grass	m j ɛ ʔ ⁴	m j ɛ ʔ ⁴	i m n c t	559
+7282	Old_Burmese	the grass	m r a k	m r a k -	i m n c	559
+6130	Maru	the hail	l a k ³¹ + ɣ u ³¹	l a k ³¹ + ɣ u ³¹	i n c t + i n t	464 313
+6152	Achang_Longchuan	the hail	l̥ i ³¹ + ʐ o ⁵⁵	l̥ i - ³¹ + ʐ o ⁵⁵	i n t + i n t	464 313
+6231	Rangoon	the hail	m o ⁵⁵ + tθ i ⁵⁵	m o - ⁵⁵ + tθ i ⁵⁵	i n t + i n t	312 465
+6392	Atsi	the hail	l i k ²¹ + v o ⁵¹	l i k ²¹ + v o ⁵¹	i n c t + i n t	464 313
+6485	Lashi	the hail	l ə k ³¹	l ə k ³¹	i n c t	464
+6542	Xiandao	the hail	n i ʔ ³¹	n i ʔ ³¹	i n c t	464
+6597	Bola	the hail	l a k ³¹ + ɣ ɔ ⁵⁵	l a k ³¹ + ɣ ɔ ⁵⁵	i n c t + i n t	464 313
+7284	Old_Burmese	the hail	m ə w ⁵⁵ + s i ⁵⁵	m ə w ⁵⁵ + s i ⁵⁵	i n c t + i n t	312 465
+1714	Achang_Longchuan	the hair (of the head)	u ³¹ + m ui ³¹	u ³¹ + m ui ³¹	n t + i n t	224 189
+1717	Atsi	the hair (of the head)	u ²¹ + tsʰ a m ⁵¹	u ²¹ + tsʰ a m ⁵¹	n t + i n c t	224 225
+1718	Bola	the hair (of the head)	tsʰ ɛ̃/ɛ ∼ ⁵⁵	tsʰ ɛ̃/ɛ ∼ ⁵⁵	i n c t	225
+1720	Lashi	the hair (of the head)	tsʰ a m ³³	tsʰ a m ³³	i n c t	225
+1722	Maru	the hair (of the head)	tsʰ ɛ̃/ɛ ∼ ³¹	tsʰ ɛ̃/ɛ ∼ ³¹	i n c t	225
+1724	Xiandao	the hair (of the head)	u ³¹	u ³¹	n t	224
+5326	Rangoon	the hair (of the head)	sʰ ɑ̃/ɑ ∼ ²² + p ĩ/i ∼ ²²	sʰ ɑ̃/ɑ ∼ ²² + p ĩ/i ∼ ²²	i n c t + i n c t	225 226
+7286	Old_Burmese	the hair (of the head)	tsʰ a m	tsʰ a m -	i n c	225
+1746	Bola	the hand	l a ʔ ³¹	l a ʔ ³¹	i n c t	563
+1752	Maru	the hand	l ɔ ʔ ³¹	l ɔ ʔ ³¹	i n c t	563
+1754	Xiandao	the hand	l ɔ ʔ ⁵⁵ + n̥ au ³¹	l ɔ ʔ ⁵⁵ + n̥ au ³¹	i n c t + i n t	563 562
+5627	Rangoon	the hand	l ɛ ʔ ⁴	l ɛ ʔ ⁴	i n c t	563
+7288	Old_Burmese	the hand	l a k	l a k -	i n c	563
+1773	Achang_Longchuan	the head	n i ³¹ + k ua ŋ ³¹	n i ³¹ + k ua ŋ ³¹	i n t + i n c t	564 232
+1776	Atsi	the head	u ²¹ + l ṵ/u m ²¹	- u ²¹ + l ṵ/u m ²¹	n t + i n c t	230 231
+1778	Bola	the head	ṵ/u ³⁵ + l a m ³¹	- ṵ/u ³⁵ + l a m ³¹	n t + i n c t	230 231
+1782	Lashi	the head	w o̰/o ⁵⁵ + l ɔ̰/ɔ m ⁵³	w o̰/o ⁵⁵ + l ɔ̰/ɔ m ⁵³	i n t + i n c t	230 231
+1784	Maru	the head	au ³⁵ + l a m ³⁵	- au ³⁵ + l a m ³⁵	n t + i n c t	230 231
+1787	Xiandao	the head	u ³¹ + k ɔ ŋ ³¹	- u ³¹ + k ɔ ŋ ³¹	n t + i n c t	230 232
+5310	Rangoon	the head	kʰ ɑ̃/ɑu ∼ ⁵⁵	kʰ ɑ̃/ɑu ∼ ⁵⁵	i n c t	232
+5311	Rangoon	the head	g ɑ̃/ɑu ∼ ⁵⁵	g ɑ̃/ɑu ∼ ⁵⁵	i n c t	855
+7290	Old_Burmese	the head	kʰ ʊ ŋ ⁵⁵	kʰ ʊ ŋ ⁵⁵	i n c t	232
+1819	Achang_Longchuan	the heart	n̥ʲ a ⁵⁵ + l u m ³¹	n̥ʲ a - ⁵⁵ + l u m ³¹	i n t + i n c t	235 461
+1822	Atsi	the heart	n ḭ/i k ⁵⁵ + l ṵ/u m ²¹	n ḭ/i k ⁵⁵ + l ṵ/u m ²¹	i n c t + i n c t	235 461
+1825	Bola	the heart	n a̰/a k ⁵⁵ + l a m ³¹	n a̰/a k ⁵⁵ + l a m ³¹	i n c t + i n c t	235 461
+1830	Lashi	the heart	n ə̰/ə k ⁵⁵ + l ɔ m ³³	n ə̰/ə k ⁵⁵ + l ɔ m ³³	i n c t + i n c t	235 461
+1833	Maru	the heart	n a̰/a k ⁵⁵ + l a m ³⁵	n a̰/a k ⁵⁵ + l a m ³⁵	i n c t + i n c t	235 461
+1836	Xiandao	the heart	n̥ ɔ ʔ ³¹ + l u m ³¹	n̥ ɔ ʔ ³¹ + l u m ³¹	i n c t + i n c t	235 461
+5665	Rangoon	the heart	n̥ ɑ ⁵³ + l õ/o ∼ ⁵⁵	n̥ ɑ - ⁵³ + l õ/o ∼ ⁵⁵	i n t + i n c t	235 461
+7292	Old_Burmese	the heart	n̥ a + l u m ⁵⁵	n̥ a - - + l u m ⁵⁵	i n + i n c t	235 461
+6141	Xiandao	the hoof	cʰ i ⁵⁵	cʰ - i - ⁵⁵	i n t	20
+6199	Bola	the hoof	kʰ j i ⁵⁵ + s a ŋ ³⁵	kʰ j i - ⁵⁵ + s a ŋ ³⁵	i m n t + i n c t	20 149
+6282	Achang_Longchuan	the hoof	tɕʰ i ⁵⁵ + x o ⁵⁵	tɕʰ - i - ⁵⁵ + x o ⁵⁵	i n t + i n t	20 733
+6372	Rangoon	the hoof	kʰ w ɑ ²²	kʰ w ɑ ²²	i m n t	36
+6389	Lashi	the hoof	kʰ j ei ³³ + s ə ŋ ⁵⁵	kʰ j ei - ³³ + s ə ŋ ⁵⁵	i m n t + i n c t	20 149
+6405	Maru	the hoof	kʰ j u k ⁵⁵ + s a ŋ ³⁵	kʰ j u k ⁵⁵ + s a ŋ ³⁵	i m n c t + i n c t	20 149
+6433	Atsi	the hoof	kʰ j i ⁵¹ + s i ŋ ²¹	kʰ j i - ⁵¹ + s i ŋ ²¹	i m n t + i n c t	20 149
+7294	Old_Burmese	the hoof	kʰ o ²²	kʰ - o ²²	i n t	36
+1986	Bola	the horn (keratinized skin)	kʰ j u ⁵⁵	kʰ j u - ⁵⁵	i m n t	244
+1990	Maru	the horn (keratinized skin)	kʰ j u k ³¹	kʰ j u k ³¹	i m n c t	244
+5581	Rangoon	the horn (keratinized skin)	tɕʰ o ²²	tɕʰ - o - ²²	i n t	244
+5582	Rangoon	the horn (keratinized skin)	dʑ o ²²	dʑ - o - ²²	i n t	856
+7296	Old_Burmese	the horn (keratinized skin)	kʰ j ə w	kʰ j ə w -	i m n c	244
+1996	Achang_Longchuan	the horse	m̥ ʐ a ŋ ³¹	m̥ ʐ a ŋ ³¹	i m n c t	245
+1998	Atsi	the horse	m j a ŋ ²¹	m j a ŋ ²¹	i m n c t	245
+1999	Bola	the horse	m j ɔ̃/ɔ ∼ ³¹	m j ɔ̃/ɔ ∼ ³¹	i m n c t	245
+2002	Lashi	the horse	m j a ŋ ³³	m j a ŋ ³³	i m n c t	245
+2003	Maru	the horse	m j ɔ̃/ɔ ∼ ³⁵	m j ɔ̃/ɔ ∼ ³⁵	i m n c t	245
+5466	Rangoon	the horse	m j ĩ/i ⁵⁵	m j ĩ/i - ⁵⁵	i m n t	245
+7298	Old_Burmese	the horse	m r a ŋ ⁵⁵	m r a ŋ ⁵⁵	i m n c t	245
+2010	Achang_Longchuan	the house	i n ⁵⁵	- i n ⁵⁵	n c t	246
+2012	Atsi	the house	j ṵ/u m ⁵¹	j ṵ/u m ⁵¹	i n c t	246
+2013	Bola	the house	j a̰/a m ⁵⁵	j a̰/a m ⁵⁵	i n c t	246
+2016	Lashi	the house	j ɔ̰/ɔ m ³³	j ɔ̰/ɔ m ³³	i n c t	246
+2017	Maru	the house	j a̰/a m ³¹	j a̰/a m ³¹	i n c t	246
+2018	Xiandao	the house	i n ⁵⁵	- i n ⁵⁵	n c t	246
+5662	Rangoon	the house	ẽ/e ∼ ²²	- ẽ/e ∼ ²²	n c t	246
+7300	Old_Burmese	the house	i m	- i m -	n c	246
+2075	Achang_Longchuan	the husband	nʲ i ³¹ + ŋ au ⁵⁵	nʲ i ³¹ + ŋ au ⁵⁵	i n t + i n t	580 494
+2077	Atsi	the husband	l a ŋ ⁵¹	l a ŋ ⁵¹	i n c t	250
+2078	Bola	the husband	j ɔ̃/ɔ ∼ ³¹ + l ɔ̃/ɔ ∼ ⁵⁵	j ɔ̃/ɔ ∼ ³¹ + l ɔ̃/ɔ ∼ ⁵⁵	i n c t + i n c t	581 250
+2081	Lashi	the husband	l a ŋ ³¹	l a ŋ ³¹	i n c t	250
+2082	Maru	the husband	l ɔ̃/ɔ ∼ ³¹	l ɔ̃/ɔ ∼ ³¹	i n c t	250
+2083	Xiandao	the husband	l a ʔ ³¹ + ŋ au ⁵⁵	l a ʔ ³¹ + ŋ au ⁵⁵	i n c t + i n t	582 494
+5401	Rangoon	the husband	l ĩ/i ∼ ²²	l ĩ/i ∼ ²²	i n c t	250
+7302	Old_Burmese	the husband	l a ŋ	l a ŋ -	i n c	250
+2089	Achang_Longchuan	the ice	k ə t ³⁵	k ə t ³⁵	i n c t	584
+2092	Atsi	the ice	ŋ a̰/a n ⁵¹ + tʰ u ŋ ²¹	ŋ a̰/a n ⁵¹ + tʰ u ŋ ²¹	i n c t + i n c t	583 587
+2094	Bola	the ice	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	i n c t	583
+2096	Lashi	the ice	ŋ a̰/a n ³³	ŋ a̰/a n ³³	i n c t	583
+5254	Rangoon	the ice	j e ²² + kʰ ɛ ⁵⁵	j e - ²² + kʰ ɛ ⁵⁵	i n t + i n t	585 586
+7304	Old_Burmese	the ice	r i j + kʰ aj	r i j - + kʰ aj -	i n c + i n	585 586
+2197	Achang_Longchuan	the knee	tɕʰ i ⁵⁵ + nʲ ɔ ʔ ⁵⁵	tɕʰ - i ⁵⁵ + nʲ ɔ ʔ ⁵⁵	i n t + i n c t	21 588
+2200	Atsi	the knee	kʰ j i ⁵¹ + pʰ u t ⁵⁵	kʰ j i ⁵¹ + pʰ u t ⁵⁵	i m n t + i n c t	21 257
+2202	Bola	the knee	p ɔ̰/ɔ t ⁵⁵ + l au ʔ ⁵⁵	p ɔ̰/ɔ t ⁵⁵ + l au ʔ ⁵⁵	i n c t + i n c t	257 258
+2205	Lashi	the knee	p ɔ̰/ɔ t ⁵³ + l u ʔ ³¹	p ɔ̰/ɔ t ⁵³ + l u ʔ ³¹	i n c t + i n c t	257 258
+2207	Maru	the knee	p a̰/a t ⁵⁵ + l au k ³¹	p a̰/a t ⁵⁵ + l au k ³¹	i n c t + i n c t	257 258
+2209	Xiandao	the knee	pʰ ɔ ʔ ³¹ + ʈʂʰ ɯ k ⁵⁵	pʰ ɔ ʔ ³¹ + ʈʂʰ ɯ k ⁵⁵	i n c t + i n c t	257 589
+5489	Rangoon	the knee	d u ⁵⁵	d u ⁵⁵	i n t	256
+7306	Old_Burmese	the knee	p u + tsʰ a ts	p u - - + tsʰ a ts -	i n + i n c	257 589
+7308	Old_Burmese	the knee	d u ⁵⁵	d u ⁵⁵	i n t	256
+2231	Achang_Longchuan	the lake	n̥ ɔ ŋ ³⁵	n̥ ɔ ŋ ³⁵	i n c t	259
+2232	Atsi	the lake	n o ŋ ⁵⁵	n o ŋ ⁵⁵	i n c t	259
+2234	Bola	the lake	n ɔ̰/ɔ ŋ ⁵⁵	n ɔ̰/ɔ ŋ ⁵⁵	i n c t	259
+2236	Lashi	the lake	n ɔ̰/ɔ ŋ ⁵⁵	n ɔ̰/ɔ ŋ ⁵⁵	i n c t	259
+2237	Maru	the lake	n ɔ̰/ɔ ŋ ⁵⁵	n ɔ̰/ɔ ŋ ⁵⁵	i n c t	259
+5425	Rangoon	the lake	k ɑ̃/ɑ ∼ ²²	k ɑ̃/ɑ ∼ ²²	i n c t	260
+7310	Old_Burmese	the lake	k a n	k a n -	i n c	260
+2266	Achang_Longchuan	the leaf	a ³¹ + x ʐ o ʔ ⁵⁵	a ³¹ + x ʐ o ʔ ⁵⁵	n t + i m n c t	1 262
+2268	Atsi	the leaf	a ²¹ + x a ʔ ⁵⁵	a ²¹ + x - a ʔ ⁵⁵	n t + i n c t	1 262
+2269	Bola	the leaf	s a k ⁵⁵ + f a ʔ ⁵⁵	s a k ⁵⁵ + f a ʔ ⁵⁵	i n c t + i n c t	592 595
+2272	Lashi	the leaf	a ³¹ + f ṵ/u ʔ ⁵⁵	a ³¹ + f ṵ/u ʔ ⁵⁵	n t + i n c t	1 595
+2273	Maru	the leaf	pʰ ɔ ʔ ⁵⁵	pʰ ɔ ʔ ⁵⁵	i n c t	594
+2275	Xiandao	the leaf	a ³¹ + x ʐ o ʔ ⁵⁵	a ³¹ + x ʐ o ʔ ⁵⁵	n t + i m n c t	1 262
+5419	Rangoon	the leaf	ɑ ⁵³ + j w ɛ ʔ ⁴	ɑ ⁵³ + j w ɛ ʔ ⁴	n t + i m n c t	1 262
+7312	Old_Burmese	the leaf	a + r o k	a - + r - o k -	n + i n c	1 262
+8067	Rangoon	the leaf	ɑ ⁵³ + j w ɛ ʔ ⁴	ɑ ⁵³ + j w ɛ ʔ ⁴	n t + i m n c t	1 864
+8236	Achang_Longchuan	the leaf	a ³¹ + xʐ o ʔ ⁵⁵	a ³¹ + xʐ - o ʔ ⁵⁵	n t + i n c t	1 862
+8400	Xiandao	the leaf	a ³¹ + xʐ o ʔ ⁵⁵	a ³¹ + xʐ - o ʔ ⁵⁵	n t + i n c t	1 865
+8563	Atsi	the leaf	a ²¹ + x a ʔ ⁵⁵	a ²¹ + x - a ʔ ⁵⁵	n t + i n c t	1 863
+8730	Maru	the leaf	pʰ ɔ ʔ ⁵⁵	pʰ ɔ ʔ ⁵⁵	i n c t	869
+8731	Maru	the leaf	f ɔ ʔ ⁵⁵	f ɔ ʔ ⁵⁵	i n c t	595
+8894	Bola	the leaf	s a k ⁵⁵ + f a ʔ ⁵⁵	s a k ⁵⁵ + f a ʔ ⁵⁵	i n c t + i n c t	592 867
+9057	Lashi	the leaf	a ³¹ + f ṵ/u ʔ ⁵⁵	a ³¹ + f ṵ/u ʔ ⁵⁵	n t + i n c t	1 868
+6189	Achang_Longchuan	the lip (the lips)	n̥ʲ o t ⁵⁵ + t u ŋ ⁵⁵	n̥ʲ o t ⁵⁵ + t u ŋ ⁵⁵	i n c t + i n c t	285 784
+6266	Rangoon	the lip (the lips)	n̥ o ʔ ⁴ + kʰ ɑ̃/ɑ ∼ ⁵⁵	n̥ o ʔ ⁴ + kʰ ɑ̃/ɑ ∼ ⁵⁵	i n c t + i n c t	285 507
+6341	Atsi	the lip (the lips)	n ṵ/u t ⁵⁵ + k ṵ/u ʔ ⁵⁵	n ṵ/u t ⁵⁵ + k ṵ/u ʔ ⁵⁵	i n c t + i n c t	285 453
+6367	Maru	the lip (the lips)	n a̰/a t ⁵⁵ + k a̰/au k ⁵⁵	n a̰/a t ⁵⁵ + k a̰/au k ⁵⁵	i n c t + i n c t	285 453
+6519	Lashi	the lip (the lips)	n ua̰/a t ⁵⁵ + k ṵ/u k ⁵⁵	n ua̰/a t ⁵⁵ + k ṵ/u k ⁵⁵	i n c t + i n c t	285 453
+6577	Xiandao	the lip (the lips)	n̥ u t ⁵⁵ + ʐ ɿ ⁵⁵	n̥ u t ⁵⁵ + ʐ ɿ ⁵⁵	i n c t + i n t	285 450
+6636	Bola	the lip (the lips)	n ɔ̰/ɔ t ⁵⁵ + k a̰/au ʔ ⁵⁵	n ɔ̰/ɔ t ⁵⁵ + k a̰/au ʔ ⁵⁵	i n c t + i n c t	285 453
+7314	Old_Burmese	the lip (the lips)	n̥ u t	n̥ u t -	i n c	285
+2420	Achang_Longchuan	the liver	a ³¹ + ʂ ə ŋ ³¹	a ³¹ + ʂ ə ŋ ³¹	n t + i n c t	1 149
+2423	Atsi	the liver	s i ŋ ²¹	s i ŋ ²¹	i n c t	149
+2426	Bola	the liver	s a ŋ ³⁵	s a ŋ ³⁵	i n c t	149
+2431	Lashi	the liver	s ə ŋ ⁵⁵	s ə ŋ ⁵⁵	i n c t	149
+2434	Maru	the liver	s a ŋ ³⁵	s a ŋ ³⁵	i n c t	149
+2436	Xiandao	the liver	a ³¹ + ʂ ɯ ŋ ³¹	a ³¹ + ʂ ɯ ŋ ³¹	n t + i n c t	1 149
+5610	Rangoon	the liver	ɑ ⁵³ + tθ ɛ ⁵⁵	ɑ ⁵³ + tθ ɛ - ⁵⁵	n t + i n t	1 149
+7316	Old_Burmese	the liver	a + s a nʲ ⁵⁵	a - + s a nʲ ⁵⁵	n + i n c t	1 149
+2468	Achang_Longchuan	the louse	ʂ a n ³¹	ʂ a n ³¹	i n c t	273
+2471	Atsi	the louse	ʃ i n ²¹	ʃ i n ²¹	i n c t	273
+2473	Bola	the louse	ʃ ɔ n ³⁵	ʃ ɔ n ³⁵	i n c t	273
+2475	Lashi	the louse	ʃ ɛ̰/ɛ n ⁵⁵	ʃ ɛ̰/ɛ n ⁵⁵	i n c t	273
+2476	Maru	the louse	ʃ i ŋ ³⁵	ʃ i ŋ ³⁵	i n c t	273
+2478	Xiandao	the louse	ʂ a n ³¹	ʂ a n ³¹	i n c t	273
+5280	Rangoon	the louse	tθ ɑ̃/ɑ ∼ ⁵⁵	tθ ɑ̃/ɑ ∼ ⁵⁵	i n c t	273
+7318	Old_Burmese	the louse	s a n ⁵⁵	s a n ⁵⁵	i n c t	273
+6131	Bola	the lung	ts ɔ̰/ɔ t ⁵⁵	ts ɔ̰/ɔ t ⁵⁵	i n c t	466
+6217	Achang_Longchuan	the lung	a ³¹ + tɕʰ o t ⁵³	a ³¹ + tɕʰ o t ⁵³	n t + i n c t	703 466
+6277	Maru	the lung	ts a̰/a t ⁵⁵	ts a̰/a t ⁵⁵	i n c t	466
+6295	Rangoon	the lung	a ⁵³ + sʰ o ʔ ⁴	a ⁵³ + sʰ o ʔ ⁴	n t + i n c t	703 466
+6376	Atsi	the lung	ts ṵ/u t ⁵⁵	ts ṵ/u t ⁵⁵	i n c t	466
+6551	Lashi	the lung	ts ɔ̰/ɔ t ⁵⁵	ts ɔ̰/ɔ t ⁵⁵	i n c t	466
+6612	Xiandao	the lung	a ³¹ + cʰ u t ⁵⁵	a ³¹ + cʰ u t ⁵⁵	n t + i n c t	703 466
+7320	Old_Burmese	the lung	a + tsʰ u t	a - + tsʰ u t -	n + i n c	703 466
+2489	Achang_Longchuan	the man (male human)	i ³¹ + tɕ i ⁵⁵	- i - ³¹ + tɕ i ⁵⁵	n t + i n t	367 219
+2492	Atsi	the man (male human)	j u ʔ ²¹ + k e ⁵¹	j u ʔ ²¹ + k e ⁵¹	i n c t + i n t	367 219
+2494	Bola	the man (male human)	j au ʔ ³¹ + k ai ⁵⁵	j au ʔ ³¹ + k ai ⁵⁵	i n c t + i n t	367 219
+2497	Lashi	the man (male human)	j u ʔ ⁵⁵ + k ɛ ³¹	j u ʔ ⁵⁵ + k ɛ ³¹	i n c t + i n t	367 219
+2498	Maru	the man (male human)	j au k ³¹ + k ai ³¹	j au k ³¹ + k ai ³¹	i n c t + i n t	367 219
+2500	Xiandao	the man (male human)	j u ʔ ³¹ + ɕ ɛ ⁵⁵	j u ʔ ³¹ + ɕ ɛ ⁵⁵	i n c t + i n t	367 219
+5369	Rangoon	the man (male human)	j ɑu ʔ ⁴ + tɕ ɑ ⁵⁵	j ɑu ʔ ⁴ + tɕ ɑ ⁵⁵	i n c t + i n t	367 219
+2534	Achang_Longchuan	the meat	ʂ u a ³¹	ʂ u a ³¹	i m n t	547
+2535	Atsi	the meat	ʃ o ²¹	ʃ - o ²¹	i n t	547
+2536	Bola	the meat	ʃ a ³⁵	ʃ - a ³⁵	i n t	547
+2537	Lashi	the meat	ʃ o ⁵⁵	ʃ - o ⁵⁵	i n t	547
+2538	Maru	the meat	ʃ ɔ ³⁵	ʃ - ɔ ³⁵	i n t	547
+2539	Xiandao	the meat	ʂ ɔ ³¹	ʂ - ɔ ³¹	i n t	547
+5457	Rangoon	the meat	ɑ ⁵³ + tθ ɑ ⁵⁵	ɑ ⁵³ + tθ - ɑ ⁵⁵	n t + i n t	143 547
+7322	Old_Burmese	the meat	a + s a ⁵⁵	a - + s - a ⁵⁵	n + i n t	143 547
+2602	Achang_Longchuan	the moon	pʰ ă/ă ³¹ + l ɔ ʔ ³¹	pʰ ă/ă ³¹ + l ɔ ʔ ³¹	i n t + i n c t	280 278
+2604	Atsi	the moon	l o̰/o ⁵⁵ + m o ⁵⁵	l o̰/o - ⁵⁵ + m o ⁵⁵	i n t + i n t	278 279
+2606	Bola	the moon	l ɛ̰̃/ɛ ∼ ³⁵ + m a ³¹	l ɛ̰̃/ɛ ∼ ³⁵ + m a ³¹	i n c t + i n t	278 279
+2609	Lashi	the moon	l o̰/o ⁵³	l o̰/o - ⁵³	i n t	278
+2610	Maru	the moon	l ɔ̰/ɔ ⁵⁵	l ɔ̰/ɔ - ⁵⁵	i n t	278
+2611	Xiandao	the moon	p au ⁵⁵ + l̥ ɔ ³¹	p au ⁵⁵ + l̥ ɔ - ³¹	i n t + i n t	280 278
+5548	Rangoon	the moon	l ɑ ⁵³	l ɑ - ⁵³	i n t	278
+7324	Old_Burmese	the moon	l a ⁵³	l a - ⁵³	i n t	278
+6132	Lashi	the mosquito	k j a̰/a ŋ ³³	k j a̰/a ŋ ³³	i m n c t	467
+6161	Maru	the mosquito	k j ɔ̰̃/ɔ ∼ ³¹	k j ɔ̰̃/ɔ ∼ ³¹	i m n c t	467
+6247	Bola	the mosquito	k j ɔ̰̃/ɔ ∼ ⁵⁵	k j ɔ̰̃/ɔ ∼ ⁵⁵	i m n c t	467
+6296	Rangoon	the mosquito	tɕʰ ĩ/i ∼ ²²	tɕʰ - ĩ/i ∼ ²²	i n c t	467
+6338	Achang_Longchuan	the mosquito	pʰ ɔ p ⁵⁵	pʰ ɔ p ⁵⁵	i n c t	516
+6482	Atsi	the mosquito	k j a̰/a ŋ ⁵¹	k j a̰/a ŋ ⁵¹	i m n c t	467
+6564	Xiandao	the mosquito	c a ŋ ³¹ + kʰ ʐ a ŋ ⁵⁵	c a ŋ ³¹ + kʰ ʐ a ŋ ⁵⁵	i n c t + i m n c t	517 467
+7326	Old_Burmese	the mosquito	kʰ r a ŋ	kʰ r a ŋ -	i m n c	467
+2627	Achang_Longchuan	the mother	m au ʔ ⁵¹	m - au ʔ ⁵¹	i n c t	281
+2630	Atsi	the mother	a ⁵⁵ + n u ²¹	a ⁵⁵ + n u - ²¹	n t + i n t	143 282
+2631	Bola	the mother	a ³¹ + n u ŋ ⁵⁵	a ³¹ + n u ŋ ⁵⁵	n t + i n c t	143 282
+2634	Lashi	the mother	a ⁵⁵ + m j ḭ/i ⁵³	a ⁵⁵ + m j ḭ/i - ⁵³	n t + i m n t	143 281
+2635	Maru	the mother	a ⁵⁵ + m j ḭ/i ⁵⁵	a ⁵⁵ + m j ḭ/i - ⁵⁵	n t + i m n t	143 281
+2637	Xiandao	the mother	m ɛ ³¹	m - ɛ - ³¹	i n t	281
+5297	Rangoon	the mother	ɑ ⁵³ + m e ²²	ɑ ⁵³ + m - e - ²²	n t + i n t	143 281
+7328	Old_Burmese	the mother	a + m i j	a - + m - i j -	n + i n c	143 281
+2641	Achang_Longchuan	the mountain	p u m ⁵⁵	p u m ⁵⁵	i n c t	283
+2644	Atsi	the mountain	p u m ⁵¹	p u m ⁵¹	i n c t	283
+2646	Bola	the mountain	p a m ⁵⁵	p a m ⁵⁵	i n c t	283
+2649	Lashi	the mountain	p ɔ m ³¹	p ɔ m ³¹	i n c t	283
+2650	Maru	the mountain	p a m ³¹	p a m ³¹	i n c t	283
+2652	Xiandao	the mountain	p u m ⁵⁵	p u m ⁵⁵	i n c t	283
+5613	Rangoon	the mountain	t ɑ̃/ɑu ∼ ²²	t ɑ̃/ɑu ∼ ²²	i n c t	284
+7330	Old_Burmese	the mountain	t ʊ ŋ	t ʊ ŋ -	i n c	284
+6175	Xiandao	the mouse or rat	k ʐ o ʔ ⁵⁵	k ʐ o ʔ ⁵⁵	i m n c t	82
+6185	Achang_Longchuan	the mouse or rat	k ʐ o ʔ ⁵⁵	k ʐ o ʔ ⁵⁵	i m n c t	82
+6226	Bola	the mouse or rat	ɣ ɔ ʔ ³¹ + n a ʔ ³¹	ɣ - ɔ ʔ ³¹ + n a ʔ ³¹	i n c t + i n c t	82 99
+6407	Rangoon	the mouse or rat	tɕ w ɛ ʔ ⁴	tɕ w ɛ ʔ ⁴	i m n c t	82
+6461	Atsi	the mouse or rat	ŋ ĕ/ĕ ²¹ + n o ʔ ²¹	ŋ ĕ/ĕ ²¹ + n o ʔ ²¹	i n t + i n c t	777 99
+6566	Maru	the mouse or rat	ɣ u k ³¹ + n ɔ ʔ ³¹	ɣ - u k ³¹ + n ɔ ʔ ³¹	i n c t + i n c t	82 99
+6647	Lashi	the mouse or rat	k j ĭ/ĭ ²¹ + n ɔ ʔ ³¹	k j ĭ/ĭ - ²¹ + n ɔ ʔ ³¹	i m n t + i n c t	82 99
+7332	Old_Burmese	the mouse or rat	k r o k	k r o k -	i m n c	82
+2662	Achang_Longchuan	the mouth	n̥ʲ o t ⁵³	n̥ʲ o t ⁵³	i n c t	606
+2667	Bola	the mouth	n ɔ̰/ɔ t ⁵⁵	n ɔ̰/ɔ t ⁵⁵	i n c t	606
+2671	Maru	the mouth	n a̰/a t ⁵⁵	n a̰/a t ⁵⁵	i n c t	606
+5298	Rangoon	the mouth	p ɑ ⁵⁵ + s ɑ ʔ ⁴	p ɑ ⁵⁵ + s ɑ ʔ ⁴	i n t + i n c t	607 286
+7334	Old_Burmese	the mouth	p a ⁵⁵ + ts a p	p a ⁵⁵ + ts a p -	i n t + i n c	607 286
+7336	Old_Burmese	the mouth	n̥ u t	n̥ u t -	i n c	606
+6225	Maru	the mud	m j i k ³¹ + ts a̰/ai ³⁵	m j i k ³¹ + ts a̰/ai ³⁵	i m n c t + i n t	362 364
+6244	Atsi	the mud	k ə̰/ə ⁵⁵ + n a̰/a ²¹	k ə̰/ə ⁵⁵ + n a̰/a ²¹	i n t + i n t	805 806
+6246	Rangoon	the mud	ɕ ũ/u ∼ ⁵³	ɕ ũ/u ∼ ⁵³	i n c t	130
+6293	Lashi	the mud	tʰ ɔ m ⁵⁵ + p ɔ p ³¹	tʰ ɔ m ⁵⁵ + p ɔ p ³¹	i n c t + i n c t	130 807
+6424	Achang_Longchuan	the mud	n̥ʲ o n ⁵⁵ + p e n ³¹	n̥ʲ o n ⁵⁵ + p e n ³¹	i n c t + i n c t	129 808
+6615	Bola	the mud	ts ə̆ ⁵⁵ + ŋ j a̰/a ʔ ⁵⁵	ts ə̆ ⁵⁵ + ŋ j a̰/a ʔ ⁵⁵	i n t + i m n c t	364 809
+2692	Achang_Longchuan	the nail (fingernail or claw)	l ɔ ʔ ⁵⁵ + ʂ ə ŋ ³¹	l ɔ ʔ ⁵⁵ + ʂ ə ŋ ³¹	i n c t + i n c t	148 149
+2694	Atsi	the nail (fingernail or claw)	l o ʔ ²¹ + s i ŋ ²¹	l o ʔ ²¹ + s i ŋ ²¹	i n c t + i n c t	148 149
+2696	Bola	the nail (fingernail or claw)	l a ʔ ³¹ + s a ŋ ³⁵	l a ʔ ³¹ + s a ŋ ³⁵	i n c t + i n c t	148 149
+2697	Lashi	the nail (fingernail or claw)	l ɔ ʔ ³¹ + s ə̰/ə ŋ ⁵⁵	l ɔ ʔ ³¹ + s ə̰/ə ŋ ⁵⁵	i n c t + i n c t	148 149
+2699	Maru	the nail (fingernail or claw)	l ɔ ʔ ³¹ + s a ŋ ³⁵	l ɔ ʔ ³¹ + s a ŋ ³⁵	i n c t + i n c t	148 149
+2701	Xiandao	the nail (fingernail or claw)	l ɔ ʔ ⁵⁵ + ʂ ɯ ŋ ³¹	l ɔ ʔ ⁵⁵ + ʂ ɯ ŋ ³¹	i n c t + i n c t	148 149
+5318	Rangoon	the nail (fingernail or claw)	l ɛ ʔ ⁴ + tθ ɛ ⁵⁵	l ɛ ʔ ⁴ + tθ ɛ - ⁵⁵	i n c t + i n t	148 149
+7339	Old_Burmese	the nail (fingernail or claw)	l a k + s a nʲ ⁵⁵	l a k - + s a nʲ ⁵⁵	i n c + i n c t	148 149
+2716	Achang_Longchuan	the name	a ³¹ + nʲ i ŋ ⁵⁵	a ³¹ + nʲ - i ŋ ⁵⁵	n t + i n c t	1 287
+2718	Atsi	the name	m j i ŋ ⁵¹	m j i ŋ ⁵¹	i m n c t	287
+2719	Bola	the name	m a ŋ ⁵⁵	m - a ŋ ⁵⁵	i n c t	287
+2722	Lashi	the name	m j i ŋ ³¹	m j i ŋ ³¹	i m n c t	287
+2723	Maru	the name	m a ŋ ³¹	m - a ŋ ³¹	i n c t	287
+2724	Xiandao	the name	a ³¹ + n i ŋ ⁵⁵	a ³¹ + n - i ŋ ⁵⁵	n t + i n c t	1 287
+5529	Rangoon	the name	n ɑ ²² + m i ²²	n ɑ ²² + m - i - ²²	i n t + i n t	609 287
+5530	Rangoon	the name	n ɑ ²² + m ɛ ²²	n ɑ ²² + m - ɛ - ²²	i n t + i n t	871 287
+7341	Old_Burmese	the name	a + m a nʲ	a - + m - a nʲ -	n + i n c	1 287
+2781	Achang_Longchuan	the neck	l a ŋ ³¹ + ts ə ŋ ³¹	l a ŋ ³¹ + ts ə ŋ ³¹	i n c t + i n c t	293 294
+2786	Bola	the neck	l a ŋ ⁵⁵ + t a ŋ ³¹	l a ŋ ⁵⁵ + t a ŋ ³¹	i n c t + i n c t	293 294
+2792	Maru	the neck	l a ŋ ³¹ + ts a ŋ ³⁵	l a ŋ ³¹ + ts a ŋ ³⁵	i n c t + i n c t	293 294
+5629	Rangoon	the neck	l ɛ ²² + p ĩ/i ∼ ⁵⁵	l ɛ - ²² + p ĩ/i ∼ ⁵⁵	i n t + i n c t	293 295
+7343	Old_Burmese	the neck	l a nʲ	l a nʲ -	i n c	293
+2798	Achang_Longchuan	the needle (for sewing)	a p ⁵⁵	- a p ⁵⁵	n c t	296
+2800	Atsi	the needle (for sewing)	a p ⁵⁵	- a p ⁵⁵	n c t	296
+2801	Bola	the needle (for sewing)	ŋ ɛ̰/ɛ ʔ ⁵⁵	ŋ ɛ̰/ɛ ʔ ⁵⁵	i n c t	296
+2804	Lashi	the needle (for sewing)	ŋ a̰/a p ⁵⁵	ŋ a̰/a p ⁵⁵	i n c t	296
+2805	Maru	the needle (for sewing)	ŋ ɛ̰/ɛ ʔ ⁵⁵	ŋ ɛ̰/ɛ ʔ ⁵⁵	i n c t	296
+2806	Xiandao	the needle (for sewing)	a p ⁵⁵	- a p ⁵⁵	n c t	296
+5347	Rangoon	the needle (for sewing)	ɑ ʔ ⁴	- ɑ ʔ ⁴	n c t	296
+7345	Old_Burmese	the needle (for sewing)	a p	- a p -	n c	296
+6191	Xiandao	the nit	ʂ a n ³¹ + u ³¹	ʂ a n ³¹ + u - ³¹	i n c t + n t	273 785
+6206	Lashi	the nit	ʃ ɛ̰/ɛ n ⁵⁵ + u ⁵³	ʃ ɛ̰/ɛ n ⁵⁵ + u - ⁵³	i n c t + n t	273 785
+6245	Bola	the nit	ʃ ɔ n ³⁵ + ṵ/u ³⁵	ʃ ɔ n ³⁵ + ṵ/u - ³⁵	i n c t + n t	273 785
+6335	Achang_Longchuan	the nit	ʂ a n ³¹ + u ʔ ³¹	ʂ a n ³¹ + u ʔ ³¹	i n c t + n c t	273 785
+6401	Maru	the nit	ʃ i ŋ ³⁵ + a̰/au ⁵⁵	ʃ i ŋ ³⁵ + a̰/au - ⁵⁵	i n c t + n t	273 785
+6417	Rangoon	the nit	tθ ɑ̃/ɑ ∼ ⁵⁵ + u ⁵³	tθ ɑ̃/ɑ ∼ ⁵⁵ + u - ⁵³	i n c t + n t	273 785
+6479	Atsi	the nit	ʃ i n ²¹ + u ⁵⁵	ʃ i n ²¹ + u - ⁵⁵	i n c t + n t	273 785
+2854	Achang_Longchuan	the nose	n̥ʲ ɔ ŋ ⁵⁵	n̥ʲ ɔ ŋ ⁵⁵	i n c t	299
+2860	Bola	the nose	n a̰/a ⁵⁵	n a̰/a - ⁵⁵	i n t	299
+2866	Maru	the nose	n ɔ̰/ɔ ³¹	n ɔ̰/ɔ - ³¹	i n t	299
+5337	Rangoon	the nose	n̥ ɑ ²² + kʰ ɑ̃/ɑu ∼ ⁵⁵	n̥ ɑ - ²² + kʰ ɑ̃/ɑu ∼ ⁵⁵	i n t + i n c t	299 300
+7347	Old_Burmese	the nose	n̥ a ²²	n̥ a - ²²	i n t	299
+2964	Achang_Longchuan	the otter	s a m ⁵⁵	s a m ⁵⁵	i n c t	304
+2966	Atsi	the otter	x a m ⁵¹	x a m ⁵¹	i n c t	304
+2967	Bola	the otter	x ɛ̃/ɛ ∼ ⁵⁵	x ɛ̃/ɛ ∼ ⁵⁵	i n c t	304
+2970	Lashi	the otter	ʃ a̰/a m ³³	ʃ a̰/a m ³³	i n c t	304
+2971	Maru	the otter	x ɛ̃/ɛ ∼ ³¹	x ɛ̃/ɛ ∼ ³¹	i n c t	304
+2972	Xiandao	the otter	t i ⁵⁵ + k ʐ o ŋ ⁵⁵	t i ⁵⁵ + k ʐ o ŋ ⁵⁵	i n t + i m n c t	414 614
+5257	Rangoon	the otter	pʰ j ɑ̃/ɑ ∼ ²²	pʰ j ɑ̃/ɑ ∼ ²²	i m n c t	615
+7349	Old_Burmese	the otter	pʰ j a m	pʰ j a m -	i m n c	615
+3025	Achang_Longchuan	the pig	o ʔ ⁵⁵	- o ʔ ⁵⁵	n c t	472
+3027	Atsi	the pig	v a ʔ ²¹	v a ʔ ²¹	i n c t	472
+3028	Bola	the pig	v a ʔ ³¹	v a ʔ ³¹	i n c t	472
+3031	Lashi	the pig	v u ʔ ³¹	v u ʔ ³¹	i n c t	472
+3032	Maru	the pig	v ɔ ʔ ³¹	v ɔ ʔ ³¹	i n c t	472
+3033	Xiandao	the pig	o ʔ ⁵⁵	- o ʔ ⁵⁵	n c t	472
+5536	Rangoon	the pig	w ɛ ʔ ⁴	w ɛ ʔ ⁴	i n c t	472
+7351	Old_Burmese	the pig	w a k	w a k -	i n c	472
+3236	Achang_Longchuan	the rain	m au ³¹ + ʐ o ⁵⁵	m au - ³¹ + ʐ o ⁵⁵	i n t + i n t	623 313
+3239	Atsi	the rain	m au ²¹	m au - ²¹	i n t	623
+3242	Bola	the rain	m au ³¹ + ɣ ɔ ⁵⁵	m au - ³¹ + ɣ ɔ ⁵⁵	i n t + i n t	623 313
+3246	Lashi	the rain	m ou ³³ + w ɔ ³¹	m ou - ³³ + w ɔ ³¹	i n t + i n t	623 313
+3248	Maru	the rain	m u k ⁵⁵	m u k ⁵⁵	i n c t	623
+3250	Xiandao	the rain	m au ³¹ + ʐ o ⁵⁵	m au - ³¹ + ʐ o ⁵⁵	i n t + i n t	623 313
+5281	Rangoon	the rain	m o ⁵⁵	m o - ⁵⁵	i n t	623
+7353	Old_Burmese	the rain	r o	r o -	i n	313
+6143	Xiandao	the rainbow	l̥ ɿ ⁵⁵ + ɲ̊ ɔ ʔ ⁵⁵ + l̥ a ŋ ³¹ + k a m ⁵⁵	l̥ ɿ ⁵⁵ + ɲ̊ - ɔ ʔ ⁵⁵ + l̥ a ŋ ³¹ + k a m ⁵⁵	i n t + i n c t + i n c t + i n c t	737 506 738 739
+6151	Achang_Longchuan	the rainbow	x ɔ ŋ ⁵¹ + nʲ i n ³¹ + n a m ³¹	x ɔ ŋ ⁵¹ + nʲ i n ³¹ + n a m ³¹	i n c t + i n c t + i n c t	502 736 740
+6169	Lashi	the rainbow	s ə̰/ə ŋ ⁵⁵ + j a ŋ ³³ + j ɔ ³¹ + k a n ³³	s ə̰/ə ŋ ⁵⁵ + j - a ŋ ³³ + j ɔ ³¹ + k a n ³³	i n c t + i n c t + i n t + i n c t	502 506 741 739
+6209	Maru	the rainbow	ɣ ɔ ʔ ³¹ + k a ŋ ³⁵ + s a ŋ ³¹ + ŋ j ɔ̃/ɔ ∼ ³¹	ɣ ɔ ʔ ³¹ + k a ŋ ³⁵ + s a ŋ ³¹ + ŋ j ɔ̃/ɔ ∼ ³¹	i n c t + i n c t + i n c t + i m n c t	503 504 505 506
+6229	Rangoon	the rainbow	tθ ɛ ʔ ⁴ + t ɑ̃/ɑ ∼ ⁵³	tθ ɛ ʔ ⁴ + t ɑ̃/ɑ ∼ ⁵³	i n c t + i n c t	500 501
+6294	Atsi	the rainbow	v o ʔ ²¹ + k a n ²¹ + ʃ i ŋ ⁵⁵ + j a ŋ ²¹	v o ʔ ²¹ + k a n ²¹ + ʃ i ŋ ⁵⁵ + j - a ŋ ²¹	i n c t + i n c t + i n c t + i n c t	503 504 505 506
+6595	Bola	the rainbow	ɣ a ʔ ³¹ + k ɛ̃/ɛ ∼ ³¹ + s a ŋ ⁵⁵ + n j u ŋ ⁵⁵	ɣ a ʔ ³¹ + k ɛ̃/ɛ ∼ ³¹ + s a ŋ ⁵⁵ + n j u ŋ ⁵⁵	i n c t + i n c t + i n c t + i m n c t	503 504 505 506
+7355	Old_Burmese	the rainbow	s a k + t a m	s a k - + t a m -	i n c + i n c	500 501
+3310	Achang_Longchuan	the rice plant	tsʰ e n ⁵⁵	tsʰ e n ⁵⁵	i n c t	316
+3311	Atsi	the rice plant	tʃʰ i n ⁵¹	tʃʰ i n ⁵¹	i n c t	316
+3312	Bola	the rice plant	tʃʰ ɔ n ⁵⁵	tʃʰ ɔ n ⁵⁵	i n c t	316
+3313	Lashi	the rice plant	tʃʰ ɛ n ³³	tʃʰ ɛ n ³³	i n c t	316
+3314	Maru	the rice plant	tʃʰ i ŋ ³¹	tʃʰ i ŋ ³¹	i n c t	316
+3315	Xiandao	the rice plant	tsʰ ɛ n ⁵⁵	tsʰ ɛ n ⁵⁵	i n c t	316
+5674	Rangoon	the rice plant	sʰ ɑ̃/ɑ ∼ ²²	sʰ ɑ̃/ɑ ∼ ²²	i n c t	316
+7357	Old_Burmese	the rice plant	k ʊ k	k ʊ k	i n c	844
+3365	Achang_Longchuan	the river	ʈʂʰ ă/ă ⁵⁵ + ʐ o ŋ ³¹	ʈʂʰ ă/ă ⁵⁵ + ʐ o ŋ ³¹	i n t + i n c t	626 627
+3368	Atsi	the river	v ui ⁵¹ + m o ⁵⁵	v - ui - ⁵¹ + m o ⁵⁵	i n t + i n t	337 629
+3370	Bola	the river	ɣ əi ⁵⁵ + l ɔ̃/ɔ ∼ ⁵⁵	ɣ - əi - ⁵⁵ + l ɔ̃/ɔ ∼ ⁵⁵	i n t + i n c t	337 321
+3373	Lashi	the river	k j ei ⁵³ + m ə ŋ ³³	k j ei - ⁵³ + m ə ŋ ³³	i m n t + i n c t	337 641
+3374	Maru	the river	ɣ ə k ³¹ + l ɔ̃/ɔ ∼ ³¹	ɣ - ə k ³¹ + l ɔ̃/ɔ ∼ ³¹	i n c t + i n c t	337 321
+3376	Xiandao	the river	t i ⁵⁵ + k ɯ ³¹	t i ⁵⁵ + k ɯ ³¹	i n t + i n t	630 631
+5343	Rangoon	the river	m j i ʔ ⁴	m j i ʔ ⁴	i m n c t	320
+7359	Old_Burmese	the river	m l a ts	m l a ts -	i m n c	320
+3387	Achang_Longchuan	the road	x a ⁵⁵ + m ʐ u a ³¹	x - a ⁵⁵ + m ʐ u a ³¹	i n t + i m M n t	322 632
+3390	Atsi	the road	kʰ j o ⁵¹	kʰ j o ⁵¹	i m n t	322
+3392	Bola	the road	kʰ j a ⁵⁵	kʰ j a ⁵⁵	i m n t	322
+3394	Lashi	the road	kʰ j o ³³	kʰ j o ³³	i m n t	322
+3395	Maru	the road	kʰ j ɔ ³¹	kʰ j ɔ ³¹	i m n t	322
+3397	Xiandao	the road	cʰ ɔ ⁵⁵ + m ɔ ³¹	cʰ - ɔ ⁵⁵ + m - - ɔ ³¹	i n t + i n t	322 632
+5638	Rangoon	the road	l ɑ̃/ɑ ∼ ⁵⁵	l ɑ̃/ɑ ∼ ⁵⁵	i n c t	323
+7361	Old_Burmese	the road	l a m ⁵⁵	l a m ⁵⁵	i n c t	323
+3401	Achang_Longchuan	the root	m ʐ ua t ⁵⁵	m ʐ ua t ⁵⁵	i m n c t	324
+3404	Atsi	the root	a ²¹ + p ṵ/u n ⁵¹	a ²¹ + p ṵ/u n ⁵¹	n t + i n c t	635 325
+3406	Bola	the root	s a k ⁵⁵ + k j i ³¹	s a k ⁵⁵ + k j i ³¹	i n c t + i m n t	633 634
+3409	Lashi	the root	ɑ ³¹ + p ɔ̰/ɔ n ³³	ɑ ³¹ + p ɔ̰/ɔ n ³³	n t + i n c t	635 325
+3410	Maru	the root	p a̰/a n ³¹	p a̰/a n ³¹	i n c t	325
+3412	Xiandao	the root	m ɛ t ⁵⁵	m - ɛ t ⁵⁵	i n c t	324
+5583	Rangoon	the root	ɑ ⁵³ + m j i ʔ ⁴	ɑ ⁵³ + m j i ʔ ⁴	n t + i m n c t	635 324
+3416	Achang_Longchuan	the rope	t oi ³¹	t oi ³¹	i n t	326
+3419	Atsi	the rope	t ṵ/ui ²¹	t ṵ/ui ²¹	i n t	326
+3421	Bola	the rope	t ṵ/ui ³⁵	t ṵ/ui ³⁵	i n t	326
+3424	Lashi	the rope	t ə̰/ə ⁵⁵	t ə̰/ə ⁵⁵	i n t	326
+3425	Maru	the rope	t ɔ̰/ɔi ³⁵	t ɔ̰/ɔi ³⁵	i n t	326
+3427	Xiandao	the rope	t ui ³¹	t ui ³¹	i n t	326
+5561	Rangoon	the rope	tɕ o ⁵⁵	tɕ - o - ⁵⁵	i n t	327
+7365	Old_Burmese	the rope	k r ə w ⁵⁵	k r ə w ⁵⁵	i m n c t	327
+3476	Achang_Longchuan	the salt	tɕʰ ɔ ³¹	tɕʰ ɔ ³¹	i n t	328
+3479	Atsi	the salt	tsʰ o ⁵⁵	tsʰ o ⁵⁵	i n t	328
+3481	Bola	the salt	tʰ a ³⁵	tʰ a ³⁵	i n t	328
+3484	Lashi	the salt	tsʰ o ⁵⁵	tsʰ o ⁵⁵	i n t	328
+3485	Maru	the salt	tsʰ ɔ ³⁵	tsʰ ɔ ³⁵	i n t	328
+3487	Xiandao	the salt	cʰ ɔ ³¹	cʰ ɔ ³¹	i n t	328
+5653	Rangoon	the salt	sʰ ɑ ⁵⁵	sʰ ɑ ⁵⁵	i n t	328
+7367	Old_Burmese	the salt	tsʰ a ⁵⁵	tsʰ a ⁵⁵	i n t	328
+3491	Achang_Longchuan	the sand	s ă/ă ³¹ + l e ⁵⁵	s ă/ă ³¹ + l e ⁵⁵	i n t + i n t	329 330
+3494	Atsi	the sand	s ă/ă ²¹ + m ui ⁵¹	s ă/ă ²¹ + m ui ⁵¹	i n t + i n t	329 331
+3496	Bola	the sand	m ɛ ⁵⁵ + ʃ a ⁵⁵	m ɛ ⁵⁵ + ʃ a ⁵⁵	i n t + i n t	636 329
+3499	Lashi	the sand	s ə̆ ⁵⁵ + m ui ³¹	s ə̆ ⁵⁵ + m ui ³¹	i n t + i n t	329 331
+3500	Maru	the sand	m a ³¹ + ʃ ɔ ³¹	m a ³¹ + ʃ ɔ ³¹	i n t + i n t	636 329
+3502	Xiandao	the sand	s a ³¹ + l ɛ ³¹	s a ³¹ + l ɛ ³¹	i n t + i n t	329 330
+5506	Rangoon	the sand	tθ ɛ ⁵⁵	tθ ɛ ⁵⁵	i n t	329
+7369	Old_Burmese	the sand	s aj	s aj -	i n	329
+3533	Achang_Longchuan	the sea	n a m ³¹ + tɕ u ³¹	n a m ³¹ + tɕ u ³¹	i n c t + i n t	639 640
+3535	Atsi	the sea	v ui ⁵¹ + m i ŋ ²¹	v - ui - ⁵¹ + m i ŋ ²¹	i n t + i n c t	337 334
+3538	Lashi	the sea	k j ei ⁵³ + m ə ŋ ³³	k j ei - ⁵³ + m ə ŋ ³³	i m n t + i n c t	337 334
+5438	Rangoon	the sea	p ĩ/i ²² + l ɛ ²²	p ĩ/i - ²² + l ɛ - ²²	i n t + i n t	336 335
+7371	Old_Burmese	the sea	p a ŋ + l a j	p a ŋ - + l a j -	i n c + i n c	336 335
+3574	Achang_Longchuan	the seed	a ³¹ + nʲ au ³¹	a ³¹ + nʲ - au - ³¹	n t + i n t	774 339
+3577	Atsi	the seed	a ²¹ + m j i ²¹	a ²¹ + m j i - ²¹	n t + i m n t	774 339
+3579	Bola	the seed	a ³¹ + m j u ŋ ³¹	a ³¹ + m j u ŋ ³¹	n t + i m n c t	774 339
+3582	Lashi	the seed	a ³³ + m j ou ³³	a ³³ + m j ou - ³³	n t + i m n t	774 339
+3583	Maru	the seed	m j u k ⁵⁵	m j u k ⁵⁵	i m n c t	339
+3585	Xiandao	the seed	a ³¹ + ɲ au ⁵¹	a ³¹ + ɲ - au - ⁵¹	n t + i n t	774 339
+5658	Rangoon	the seed	m j o ⁵⁵ + s i ⁵³	m j o - ⁵⁵ + s i - ⁵³	i m n t + i n t	339 644
+7373	Old_Burmese	the seed	m j ə w ⁵⁵ + ts i j ⁵³	m j ə w ⁵⁵ + ts i j ⁵³	i m n c t + i n c t	339 644
+6147	Xiandao	the sheep	p a ʔ ³¹	p a ʔ ³¹	i n c t	794
+6224	Rangoon	the sheep	tθ o ⁵⁵	tθ o - ⁵⁵	i n t	43
+6287	Achang_Longchuan	the sheep	p a ʔ ⁵⁵	p a ʔ ⁵⁵	i n c t	794
+6351	Maru	the sheep	tʃʰ a t ⁵⁵ + p ɛ̰/ɛ ʔ ⁵⁵	tʃʰ a t ⁵⁵ + p ɛ̰/ɛ ʔ ⁵⁵	i n c t + i n c t	44 794
+6442	Atsi	the sheep	s au ²¹ + m j ḭ/i ⁵⁵	s au ²¹ + m j ḭ/i ⁵⁵	i n t + i m n t	746 747
+6623	Lashi	the sheep	tʃʰ ɔ t ⁵⁵ + p a t ³¹ + n u ⁵⁵	tʃʰ ɔ t ⁵⁵ + p a t ³¹ + n u ⁵⁵	i n c t + i n c t + i n t	44 794 833
+7375	Old_Burmese	the sheep	s ə w ⁵⁵	s ə w ⁵⁵	i n c t	43
+6127	Bola	the shoulder	l a ʔ ³¹ + s ɛ̃/ɛ ∼ ⁵⁵	l a ʔ ³¹ + s ɛ̃/ɛ ∼ ⁵⁵	i n c t + i n c t	229 29
+6192	Achang_Longchuan	the shoulder	x u ŋ ³¹ + p au ³¹	x u ŋ ³¹ + p au ³¹	i n c t + i n t	717 460
+6250	Maru	the shoulder	l ɔ ʔ ³¹ + s a ŋ ³¹	l ɔ ʔ ³¹ + s a ŋ ³¹	i n c t + i n c t	229 29
+6269	Rangoon	the shoulder	p ɑ ⁵³ + kʰ õ/o ∼ ⁵⁵	p ɑ ⁵³ + kʰ õ/o ∼ ⁵⁵	i n t + i n c t	460 30
+6344	Atsi	the shoulder	k o ʔ ²¹ + s a n ⁵¹	k o ʔ ²¹ + s a n ⁵¹	i n c t + i n c t	718 29
+6436	Lashi	the shoulder	l ɔ ʔ ³¹ + s a̰/a n ³³	l ɔ ʔ ³¹ + s a̰/a n ³³	i n c t + i n c t	229 29
+6580	Xiandao	the shoulder	l ɔ ʔ ³¹ + s a n ⁵⁵	l ɔ ʔ ³¹ + s a n ⁵⁵	i n c t + i n c t	229 29
+7377	Old_Burmese	the shoulder	p a + kʰ u m ⁵⁵	p a - + kʰ u m ⁵⁵	i n + i n c t	460 30
+6271	Lashi	the sickle	ʃ ə̰/ə m ³³ + ŋ ṵ/ui ⁵⁵	ʃ ə̰/ə m ³³ + ŋ ṵ/ui ⁵⁵	i n c t + i n t	131 508
+6332	Xiandao	the sickle	ʐ ɯ t ⁵⁵ + m ɔ ³¹	ʐ ɯ t ⁵⁵ + m ɔ - ³¹	i n c t + i n t	816 510
+6404	Bola	the sickle	ʃ ɛ̃/ɛ ∼ ⁵⁵ + ŋ ø̰/ø ³⁵	ʃ ɛ̃/ɛ ∼ ⁵⁵ + ŋ ø̰/ø ³⁵	i n c t + i n t	131 508
+6470	Achang_Longchuan	the sickle	ʐ i t ⁵⁵ + m ɔ ʔ ³¹	ʐ i t ⁵⁵ + m ɔ ʔ ³¹	i n c t + i n c t	816 510
+6525	Maru	the sickle	ʃ ɛ̃/ɛ ∼ ³¹ + ŋ ø̰/ø ³⁵	ʃ ɛ̃/ɛ ∼ ³¹ + ŋ ø̰/ø ³⁵	i n c t + i n t	131 508
+6609	Rangoon	the sickle	t ɑ̃/ɑ ∼ ²² + s ĩ/i ∼ ²²	t ɑ̃/ɑ ∼ ²² + s ĩ/i ∼ ²²	i n c t + i n c t	817 131
+6630	Atsi	the sickle	j e ŋ ²¹ + kʰ oi ⁵⁵	j e ŋ ²¹ + kʰ oi - ⁵⁵	i n c t + i n t	818 817
+6125	Bola	the skin	ʃ ă/ă ³⁵ + k a̰/au ʔ ⁵⁵	ʃ ă/ă ³⁵ + k a̰/au ʔ ⁵⁵	i n t + i n c t	561 453
+6208	Achang_Longchuan	the skin	a ³¹ + ʐ ɿ ⁵⁵	a ³¹ + ʐ ɿ - ⁵⁵	n t + i n t	1 585
+6263	Maru	the skin	ʃ ɔ̆ ³⁵ + j a m ⁵⁵	ʃ ɔ̆ ³⁵ + j a m ⁵⁵	i n t + i n c t	561 709
+6285	Rangoon	the skin	ɑ ⁵³ + tθ ɑ ⁵⁵ + ɑ ⁵³ + j e ²²	ɑ ⁵³ + tθ ɑ ⁵⁵ + ɑ ⁵³ + j e - ²²	n t + i n t + n t + i n t	872 561 1 585
+6363	Atsi	the skin	ʃ ŏ/ŏ ²¹ + k ṵ/u ʔ ⁵⁵	ʃ ŏ/ŏ ²¹ + k ṵ/u ʔ ⁵⁵	i n t + i n c t	561 453
+6540	Lashi	the skin	ʃ ŏ/ŏ ⁵⁵ + k ṵ/u k ⁵⁵	ʃ ŏ/ŏ ⁵⁵ + k ṵ/u k ⁵⁵	i n t + i n c t	561 453
+6600	Xiandao	the skin	a ³¹ + ʐ ɿ ⁵⁵	a ³¹ + ʐ ɿ - ⁵⁵	n t + i n t	1 585
+7379	Old_Burmese	the skin	a + r i j	a - + r i j -	n + i n c	1 585
+3790	Achang_Longchuan	the sky	m au ³¹	m au - ³¹	i n t	312
+3792	Atsi	the sky	m au ²¹ + kʰ u ŋ ⁵¹	m au - ²¹ + kʰ u ŋ ⁵¹	i n t + i n c t	312 348
+3793	Bola	the sky	m au ³¹ + kʰ au ŋ ⁵⁵	m au - ³¹ + kʰ au ŋ ⁵⁵	i n t + i n c t	312 348
+3796	Lashi	the sky	m ou ³³ + kʰ u ŋ ³³	m ou - ³³ + kʰ u ŋ ³³	i n t + i n c t	312 348
+3797	Maru	the sky	m u k ⁵⁵	m u k ⁵⁵	i n c t	312
+3798	Xiandao	the sky	m au ³¹	m au - ³¹	i n t	312
+5608	Rangoon	the sky	m o ⁵⁵	m o - ⁵⁵	i n t	312
+7381	Old_Burmese	the sky	m ə w ⁵⁵	m ə w ⁵⁵	i n c t	312
+3853	Achang_Longchuan	the smoke	n i ³¹ + x au ³¹	n - i ³¹ + x au - ³¹	i n t + i n t	193 352
+3856	Atsi	the smoke	m j i ²¹ + kʰ au ²¹	m j i ²¹ + kʰ au - ²¹	i m n t + i n t	193 352
+3858	Bola	the smoke	tʃʰ i ³⁵	tʃʰ i - ³⁵	i n t	352
+3861	Lashi	the smoke	m j i ³³ + kʰ ou ⁵⁵	m j i ³³ + kʰ ou - ⁵⁵	i m n t + i n t	193 352
+3862	Maru	the smoke	m j i ²¹ + kʰ u k ⁵⁵	m j i ²¹ + kʰ u k ⁵⁵	i m n t + i n c t	193 352
+3864	Xiandao	the smoke	n̥ i ³¹ + x au ³¹	n̥ - i ³¹ + x au - ³¹	i n t + i n t	193 352
+5452	Rangoon	the smoke	m i ⁵⁵ + kʰ o ⁵⁵	m - i ⁵⁵ + kʰ o - ⁵⁵	i n t + i n t	193 352
+7383	Old_Burmese	the smoke	kʰ ə w ⁵⁵	kʰ ə w ⁵⁵	i n c t	352
+3879	Achang_Longchuan	the snake	m ʐ ui ⁵⁵	m ʐ ui - ⁵⁵	i m n t	354
+3882	Atsi	the snake	l a̰/a ŋ ⁵¹ + m ui ⁵¹	l a̰/a ŋ ⁵¹ + m - ui - ⁵¹	i n c t + i n t	321 354
+3884	Bola	the snake	l ɔ̃/ɔ ∼ ⁵⁵ + m ø ⁵⁵	l ɔ̃/ɔ ∼ ⁵⁵ + m - ø - ⁵⁵	i n c t + i n t	321 354
+3887	Lashi	the snake	l a̰/a ŋ ³³ + m j u ³¹	l a̰/a ŋ ³³ + m j u - ³¹	i n c t + i m n t	321 354
+3888	Maru	the snake	l ɔ̃/ɔ ∼ ³¹ + m ɔi ³¹	l ɔ̃/ɔ ∼ ³¹ + m - ɔi - ³¹	i n c t + i n t	321 354
+3890	Xiandao	the snake	m ʐ ui ⁵⁵	m ʐ ui - ⁵⁵	i m n t	354
+5360	Rangoon	the snake	m w e ²²	m w e - ²²	i m n t	354
+7385	Old_Burmese	the snake	m r u j	m r u j -	i m n c	354
+3901	Achang_Longchuan	the snow	x a n ³¹ + ʑ ai ⁵⁵	x a n ³¹ + ʑ ai ⁵⁵	i n c t + i n t	655 654
+3902	Atsi	the snow	k j o ʔ ²¹	k j o ʔ ²¹	i m n c t	653
+3903	Bola	the snow	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	ŋ ɛ̰̃/ɛ ∼ ⁵⁵	i n c t	253
+5669	Rangoon	the snow	sʰ i ⁵⁵ + n̥ ĩ/i ∼ ⁵⁵	sʰ i ⁵⁵ + n̥ ĩ/i ∼ ⁵⁵	i n t + i n c t	356 253
+7387	Old_Burmese	the snow	n̥ a ŋ ⁵⁵	n̥ a ŋ ⁵⁵	i n c t	253
+3933	Achang_Longchuan	the son	ts ɔ ³¹ + l o ³¹	ts ɔ ³¹ + l o ³¹	i n t + i n t	366 658
+3936	Atsi	the son	j u ʔ ²¹ + k e ⁵¹ + ts o ²¹	j u ʔ ²¹ + k e ⁵¹ + ts o ²¹	i n c t + i n t + i n t	367 368 366
+3938	Bola	the son	t a ³¹	t a ³¹	i n t	366
+3941	Lashi	the son	ts ə̆ ³³ + s a̰/a ŋ ³³	ts ə̆ ³³ + s a̰/a ŋ ³³	i n t + i n c t	366 659
+3942	Maru	the son	ts o	ts o -	i n	366
+3944	Xiandao	the son	j u ʔ ³¹ + c ɛ ⁵⁵ + ts ɔ ³¹	j u ʔ ³¹ + c ɛ ⁵⁵ + ts ɔ ³¹	i n c t + i n t + i n t	367 368 366
+5400	Rangoon	the son	tθ ɑ ⁵⁵	tθ ɑ ⁵⁵	i n t	366
+7389	Old_Burmese	the son	s a ⁵⁵	s a ⁵⁵	i n t	366
+6126	Lashi	the sparrow	tʃ o ³¹ + kʰ j a ŋ ⁵³	tʃ o - ³¹ + kʰ j a ŋ ⁵³	i n t + i m n c t	458 457
+6183	Xiandao	the sparrow	ŋ ɔ ʔ ⁵⁵	ŋ ɔ ʔ ⁵⁵	i n c t	94
+6235	Bola	the sparrow	tʃ ə̆ ʔ ³¹ + kʰ j ɔ̃/ɔ ∼ ³⁵	tʃ ə̆ ʔ ³¹ + kʰ j ɔ̃/ɔ ∼ ³⁵	i n c t + i m n c t	458 457
+6325	Achang_Longchuan	the sparrow	ts i ⁵⁵ + ʈʂ ua k ⁵⁵	ts i ⁵⁵ + ʈʂ ua k ⁵⁵	i n t + i n c t	716 715
+6413	Rangoon	the sparrow	s ɑ ²²	s ɑ - ²²	i n t	458
+6468	Atsi	the sparrow	tʃ o ⁵¹ + kʰ j a ŋ ⁵⁵	tʃ o - ⁵¹ + kʰ j a ŋ ⁵⁵	i n t + i m n c t	458 457
+6619	Maru	the sparrow	tʃ ɔ̆ ³¹ + kʰ j ɔ̃/ɔ ∼ ⁵⁵	tʃ ɔ̆ - ³¹ + kʰ j ɔ̃/ɔ ∼ ⁵⁵	i n t + i m n c t	458 457
+6133	Lashi	the spider	l a ʔ ³¹ + k a ŋ ³³	l a ʔ ³¹ + k a ŋ ³³	i n c t + i n c t	470 468
+6166	Maru	the spider	pʰ j ɔ̆ ³¹ + k ɔ̃/ɔ ∼ ³⁵	pʰ j ɔ̆ - ³¹ + k ɔ̃/ɔ ∼ ³⁵	i m n t + i n c t	469 468
+6194	Xiandao	the spider	k o ŋ ³¹ + k au ⁵⁵	k o ŋ ³¹ + k au ⁵⁵	i n c t + i n t	468 849
+6248	Bola	the spider	pʰ i ³¹ + k ɔ̃/ɔ ∼ ³¹	pʰ - i - ³¹ + k ɔ̃/ɔ ∼ ³¹	i n t + i n c t	469 468
+6339	Achang_Longchuan	the spider	k u ŋ ³¹ + k ai ³⁵ + ʑ ai ⁵⁵	k u ŋ ³¹ + k ai ³⁵ + ʑ ai ⁵⁵	i n c t + i n t + i n t	468 520 519
+6419	Rangoon	the spider	p ĩ/i ∼ ⁵³ + k u ²²	p - ĩ/i ∼ ⁵³ + k u ²²	i n c t + i n t	469 849
+6484	Atsi	the spider	l ă/ă ²¹ + k a ŋ ²¹	l ă/ă - ²¹ + k a ŋ ²¹	i n t + i n c t	470 468
+6601	Atsi	the spider	a ⁵⁵ + k a ŋ ²¹	a ⁵⁵ + k a ŋ ²¹	n t + i n c t	518 873
+7392	Old_Burmese	the spider	p a ŋ ⁵³ + k u ²²	p - a ŋ ⁵³ + k u ²²	i n c t + i n t	469 849
+4052	Achang_Longchuan	the star	kʰ ʐ ə ⁵⁵	kʰ ʐ ə - ⁵⁵	i m n t	373
+4055	Atsi	the star	k j ḭ/i ⁵¹	k j ḭ/i - ⁵¹	i m n t	373
+4057	Bola	the star	k j ḭ/i ⁵⁵	k j ḭ/i - ⁵⁵	i m n t	373
+4060	Lashi	the star	k j ḭ/i ³³	k j ḭ/i - ³³	i m n t	373
+4061	Maru	the star	k j ḭ/i ³¹	k j ḭ/i - ³¹	i m n t	373
+4064	Xiandao	the star	tsʰ i ⁵⁵ + ʐ u m ³¹	tsʰ - i - ⁵⁵ + ʐ u m ³¹	i n t + i n c t	373 832
+5572	Rangoon	the star	tɕ ɛ ²²	tɕ - ɛ - ²²	i n t	373
+7394	Old_Burmese	the star	k r a j	k r a j -	i m n c	373
+6252	Lashi	the stick	k a̰/a n ⁵⁵ + t a ŋ ³³	k a̰/a n ⁵⁵ + t a ŋ ³³	i n c t + i n c t	814 815
+6308	Xiandao	the stick	t a m ⁵⁵	t a m ⁵⁵	i n c t	137
+6380	Bola	the stick	v ə̆ ⁵⁵ + s ɛ ³¹	v ə̆ ⁵⁵ + s ɛ ³¹	i n t + i n t	140 139
+6455	Achang_Longchuan	the stick	t a m ⁵⁵	t a m ⁵⁵	i n c t	137
+6505	Maru	the stick	v ə̆ ⁵⁵ + s ɛ ³⁵	v ə̆ ⁵⁵ + s ɛ ³⁵	i n t + i n t	140 139
+6531	Rangoon	the stick	t o ʔ ⁴	t o ʔ ⁴	i n c t	138
+7396	Old_Burmese	the stick	t u t	t u t -	i n c	138
+4085	Achang_Longchuan	the stone (a piece of)	a ³¹ + ts i ʔ ³¹	a ³¹ + ts i ʔ ³¹	n t + i n c t	724 184
+4088	Atsi	the stone (a piece of)	a ²¹ + tʃ i ⁵⁵	a ²¹ + tʃ i - ⁵⁵	n t + i n t	724 184
+4090	Bola	the stone (a piece of)	ʃ ɪ̆ ³⁵ + tʃ ɿ ³¹	ʃ ɪ̆ ³⁵ + tʃ ɿ - ³¹	i n t + i n t	660 184
+4093	Lashi	the stone (a piece of)	a ³¹ + tʃ ei ⁵⁵	a ³¹ + tʃ ei - ⁵⁵	n t + i n t	724 184
+4094	Maru	the stone (a piece of)	tʃ i k ⁵⁵	tʃ i k ⁵⁵	i n c t	184
+4097	Xiandao	the stone (a piece of)	a ³¹ + ts i ³¹	a ³¹ + ts i - ³¹	n t + i n t	724 184
+5602	Rangoon	the stone (a piece of)	u ²² + t ɑ̃/ɑi ∼ ²²	u ²² + t ɑ̃/ɑi ∼ ²²	n t + i n c t	724 184
+5603	Rangoon	the stone (a piece of)	ɑ ⁵³ + s i ⁵³	ɑ ⁵³ + s i ⁵³	n t + i n t	875 660
+4138	Achang_Longchuan	the sun	n i ³¹ + m ɔ ³¹	n i - ³¹ + m ɔ ³¹	i n t + i n t	664 383
+4141	Atsi	the sun	p ui ⁵¹	p ui ⁵¹	i n t	377
+4144	Bola	the sun	p ui ⁵⁵	p ui ⁵⁵	i n t	377
+4148	Lashi	the sun	p ei ³¹	p ei ³¹	i n t	377
+4150	Maru	the sun	p a ³¹	p a ³¹	i n t	377
+4152	Xiandao	the sun	n ³¹ + m ɔ ³¹	- n - ³¹ + m ɔ ³¹	n t + i n t	664 383
+5287	Rangoon	the sun	n e ²²	n e - ²²	i n t	664
+7399	Old_Burmese	the sun	n i j	n i j -	i n c	664
+4220	Achang_Longchuan	the tail	tɕʰ i ³¹ + nʲ a ŋ ³⁵	tɕʰ i ³¹ + nʲ a ŋ ³⁵	i n t + i n c t	561 666
+4223	Atsi	the tail	ʃ ŏ/ŏ ²¹ + m j i ²¹	ʃ ŏ/ŏ ²¹ + m j i ²¹	i n t + i m n t	561 384
+4226	Bola	the tail	ʃ ă/ă ³⁵ + m i ³¹	ʃ ă/ă ³⁵ + m - i ³¹	i n t + i n t	561 384
+4231	Lashi	the tail	ʃ ŏ/ŏ ⁵⁵ + m j i ³³	ʃ ŏ/ŏ ⁵⁵ + m j i ³³	i n t + i m n t	561 384
+4234	Maru	the tail	ʃ ɔ̆ ³⁵ + m j i ³¹	ʃ ɔ̆ ³⁵ + m j i ³¹	i n t + i m n t	561 384
+4237	Xiandao	the tail	n̥ i ³¹ + ʈʂʰ ɔ ³¹	n̥ i ³¹ + ʈʂʰ ɔ ³¹	i n t + i n t	668 826
+5271	Rangoon	the tail	ɑ ⁵³ + m j i ⁵⁵	ɑ ⁵³ + m j i ⁵⁵	n t + i m n t	665 384
+7401	Old_Burmese	the tail	m r i ⁵⁵	m r i ⁵⁵	i m n t	384
+6198	Achang_Longchuan	the thigh	tɕʰ i ⁵⁵ + s a n ⁵⁵	tɕʰ i ⁵⁵ + s a n ⁵⁵	i n t + i n c t	22 791
+6253	Maru	the thigh	t ɔ̃/ɔ ∼ ⁵⁵ + p u k ⁵⁵	t ɔ̃/ɔ ∼ ⁵⁵ + p u k ⁵⁵	i n c t + i n c t	105 106
+6276	Rangoon	the thigh	p ɑ̃/ɑu ∼ ²²	p ɑ̃/ɑu ∼ ²²	i n c t	107
+6350	Atsi	the thigh	t a̰/a ŋ ²¹ + p au ⁵⁵	t a̰/a ŋ ²¹ + p au - ⁵⁵	i n c t + i n t	105 106
+6527	Lashi	the thigh	t a̰/a ŋ ⁵⁵ + p ou ⁵⁵	t a̰/a ŋ ⁵⁵ + p ou - ⁵⁵	i n c t + i n t	105 106
+6587	Xiandao	the thigh	l a m ⁵⁵ + p au ⁵³	l a m ⁵⁵ + p au - ⁵³	i n c t + i n t	790 106
+6643	Bola	the thigh	t ɔ̰̃/ɔ ∼ ³⁵ + p au ³¹	t ɔ̰̃/ɔ ∼ ³⁵ + p au - ³¹	i n c t + i n t	105 106
+7403	Old_Burmese	the thigh	p ʊ ŋ	p ʊ ŋ -	i n c	107
+6148	Achang_Longchuan	the thunder	m au ³¹ + ʐ au ³¹	m au - ³¹ + ʐ au ³¹	i n t + i n t	623 48
+6155	Bola	the thunder	m au ³¹ + m j a ŋ ⁵⁵	m au - ³¹ + m j a ŋ ⁵⁵	i n t + i m n c t	623 45
+6207	Maru	the thunder	m u k ⁵⁵ + k u m ³¹	m u k ⁵⁵ + k u m ³¹	i n c t + i n c t	623 47
+6227	Rangoon	the thunder	m o ⁵⁵ + tɕʰ ẽ/e ∼ ⁵⁵	m o - ⁵⁵ + tɕʰ ẽ/e ∼ ⁵⁵	i n t + i n c t	623 46
+6292	Atsi	the thunder	m au ²¹ + m j i ŋ ⁵¹	m au - ²¹ + m j i ŋ ⁵¹	i n t + i m n c t	623 45
+6481	Lashi	the thunder	m ou ³³ + k ɔ m ³³	m ou - ³³ + k ɔ m ³³	i n t + i n c t	623 47
+6538	Xiandao	the thunder	m au ³¹ + c au ³¹	m au - ³¹ + c au ³¹	i n t + i n t	623 48
+6216	Bola	the tiger	l a ³¹	l - a ³¹	i n t	113
+6303	Achang_Longchuan	the tiger	l ɔ ³¹	l - ɔ ³¹	i n t	113
+6371	Maru	the tiger	l ɔ ³⁵	l - ɔ ³⁵	i n t	113
+6395	Rangoon	the tiger	tɕ ɑ ⁵⁵	tɕ - ɑ ⁵⁵	i n t	113
+6402	Xiandao	the tiger	l ɔ̆ ³¹ + m ɔ ³¹ + m u t ³⁵	l - ɔ̆ ³¹ + m ɔ ³¹ + m u t ³⁵	i n t + i n t + i n c t	113 114 801
+6457	Atsi	the tiger	l o ²¹ + m o ⁵⁵	l - o ²¹ + m o ⁵⁵	i n t + i n t	113 114
+6570	Lashi	the tiger	l ə̆ ³³ + m o ⁵⁵	l - ə̆ ³³ + m o ⁵⁵	i n t + i n t	113 114
+6639	Lashi	the tiger	l o ³³	l - o ³³	i n t	876
+7405	Old_Burmese	the tiger	k l a ⁵⁵	k l a ⁵⁵	i m n t	113
+4594	Achang_Longchuan	the tongue	ɕ ɔ ⁵⁵	ɕ - ɔ ⁵⁵	i n t	402
+4597	Atsi	the tongue	ʃ o ⁵¹	ʃ - o ⁵¹	i n t	402
+4600	Bola	the tongue	ʃ a ⁵⁵	ʃ - a ⁵⁵	i n t	402
+4605	Lashi	the tongue	j o̰/o ³³	j - o̰/o ³³	i n t	402
+4608	Maru	the tongue	ʃ ɔ ³¹	ʃ - ɔ ³¹	i n t	402
+4610	Xiandao	the tongue	ç/ç ɔ ⁵⁵	ç/ç - ɔ ⁵⁵	i n t	402
+5588	Rangoon	the tongue	ɕ ɑ ²²	ɕ - ɑ ²²	i n t	402
+7407	Old_Burmese	the tongue	l̥ j a ²²	l̥ j a ²²	i m n t	402
+4615	Achang_Longchuan	the tooth (front)	tɕ oi ⁵⁵	tɕ oi ⁵⁵	i n t	403
+4618	Atsi	the tooth (front)	ts ui ⁵¹	ts ui ⁵¹	i n t	403
+4620	Bola	the tooth (front)	t ui ⁵⁵	t ui ⁵⁵	i n t	403
+4625	Lashi	the tooth (front)	ts ɿ ³¹	ts ɿ ³¹	i n t	403
+4628	Maru	the tooth (front)	ts ɔi ³¹	ts ɔi ³¹	i n t	403
+4630	Xiandao	the tooth (front)	c ui ⁵⁵	c ui ⁵⁵	i n t	403
+5558	Rangoon	the tooth (front)	tθ w ɑ ⁵⁵	tθ w ɑ ⁵⁵	i m n t	404
+4639	Achang_Longchuan	the tree	s a ŋ ³¹ + ts e ŋ ⁵⁵	s a ŋ ³¹ + ts e ŋ ⁵⁵	i n c t + i n c t	678 679
+4642	Atsi	the tree	s i k ⁵⁵	s i k ⁵⁵	i n c t	678
+4644	Bola	the tree	s a k ⁵⁵	s a k ⁵⁵	i n c t	678
+4647	Lashi	the tree	s ə̰/ə k ⁵⁵	s ə̰/ə k ⁵⁵	i n c t	678
+4648	Maru	the tree	s a̰/a k ⁵⁵	s a̰/a k ⁵⁵	i n c t	678
+4650	Xiandao	the tree	ʂ ɯ k ⁵⁵	ʂ ɯ k ⁵⁵	i n c t	678
+5505	Rangoon	the tree	tθ i ʔ ⁴ + p ĩ/i ∼ ²²	tθ i ʔ ⁴ + p ĩ/i ∼ ²²	i n c t + i n c t	678 405
+7410	Old_Burmese	the tree	s a ts + p a ŋ	s a ts - + p a ŋ -	i n c + i n c	678 405
+4865	Achang_Longchuan	the water	t i ⁵⁵	t i ⁵⁵	i n t	415
+4868	Atsi	the water	v ui ⁵¹	v - ui - ⁵¹	i n t	413
+4871	Bola	the water	ɣ əi ⁵⁵	ɣ - əi - ⁵⁵	i n t	413
+4875	Lashi	the water	k j ei ³¹	k j ei - ³¹	i m n t	413
+4877	Maru	the water	ɣ ə k ³¹	ɣ - ə k ³¹	i n c t	413
+4879	Xiandao	the water	t i ⁵⁵	t i ⁵⁵	i n t	415
+5282	Rangoon	the water	j e ²²	j - e - ²²	i n t	413
+7412	Old_Burmese	the water	r i j	r - i j -	i n c	413
+6162	Lashi	the wheat	s ṵ/u ŋ ³³ + s o̰/o ³³	s ṵ/u ŋ ³³ + s o̰/o ³³	i n c t + i n t	763 764
+6274	Bola	the wheat	m ɛ ³¹ + j a ⁵¹	m ɛ - ³¹ + j a ⁵¹	i n t + i n t	66 820
+6369	Achang_Longchuan	the wheat	m e ʔ ³¹ + ts ɿ ⁵⁵	m e ʔ ³¹ + ts ɿ ⁵⁵	i n c t + i n t	66 766
+6445	Rangoon	the wheat	dʑ õ/o ∼ ²²	dʑ õ/o ∼ ²²	i n c t	765
+6507	Atsi	the wheat	m ə ⁵⁵ + j a ²¹ + ŋ j a ŋ ²¹	m ə - ⁵⁵ + j a ²¹ + ŋ j a ŋ ²¹	i n t + i n t + i m n c t	66 820 831
+5049	Achang_Longchuan	the wife	nʲ i ³¹ + m ɔ ʔ ³¹	nʲ - i ³¹ + m ɔ ʔ ³¹	i n t + i n c t	426 510
+5052	Atsi	the wife	m j i ²¹	m j i ²¹	i m n t	426
+5054	Bola	the wife	j õ/o ³¹ + m i ³¹	j õ/o ³¹ + m - i ³¹	i n t + i n t	702 426
+5057	Lashi	the wife	m j i ³³	m j i ³³	i m n t	426
+5058	Maru	the wife	m j i ³⁵	m j i ³⁵	i m n t	426
+5060	Xiandao	the wife	n i ⁵⁵ + m ɔ ³¹	n - i ⁵⁵ + m ɔ - ³¹	i n t + i n t	426 510
+5308	Rangoon	the wife	m ɑ ⁵³ + j ɑ ⁵⁵	m ɑ - ⁵³ + j ɑ ⁵⁵	i n t + i n t	510 431
+5066	Achang_Longchuan	the wind	l̥ i ⁵⁵	l̥ i - ⁵⁵	i n t	432
+5069	Atsi	the wind	l ai ⁵¹	l ai - ⁵¹	i n t	432
+5071	Bola	the wind	l i ⁵⁵	l i - ⁵⁵	i n t	432
+5074	Lashi	the wind	l ei ³¹	l ei - ³¹	i n t	432
+5075	Maru	the wind	l a ³¹	l a - ³¹	i n t	432
+5077	Xiandao	the wind	l ai ⁵⁵	l ai - ⁵⁵	i n t	432
+5469	Rangoon	the wind	l e ²²	l e - ²²	i n t	432
+7415	Old_Burmese	the wind	l i j	l i j -	i n c	432
+5089	Achang_Longchuan	the wing	a ³¹ + t u ŋ ⁵⁵	a ³¹ + t u ŋ ⁵⁵	n t + i n c t	703 284
+5092	Atsi	the wing	t u ŋ ⁵¹	t u ŋ ⁵¹	i n c t	284
+5094	Bola	the wing	t au ŋ ⁵⁵	t au ŋ ⁵⁵	i n c t	284
+5098	Lashi	the wing	t u ŋ ³¹	t u ŋ ³¹	i n c t	284
+5100	Maru	the wing	t au ŋ ³¹	t au ŋ ³¹	i n c t	284
+5103	Xiandao	the wing	a ³¹ + t u ŋ ⁵⁵	a ³¹ + t u ŋ ⁵⁵	n t + i n c t	703 284
+5476	Rangoon	the wing	t ɑ̃/ɑu ∼ ²² + p ɑ̃/ɑ ∼ ²²	t ɑ̃/ɑu ∼ ²² + p ɑ̃/ɑ ∼ ²²	i n c t + i n c t	284 434
+7417	Old_Burmese	the wing	t ʊ ŋ + p a m	t ʊ ŋ - + p a m -	i n c + i n c	284 434
+6178	Xiandao	the wolf	p u m ⁵⁵ + f ui ³¹	p u m ⁵⁵ + f ui ³¹	i n c t + i n t	283 779
+6238	Achang_Longchuan	the wolf	p u m ⁵⁵ + x ui ³¹	p u m ⁵⁵ + x ui ³¹	i n c t + i n t	283 779
+6251	Bola	the wolf	m j a ŋ ⁵⁵ + kʰ ui ³⁵	m j a ŋ ⁵⁵ + kʰ ui ³⁵	i m n c t + i n t	780 779
+6382	Maru	the wolf	m j a ŋ ³¹ + kʰ a ³⁵	m j a ŋ ³¹ + kʰ a ³⁵	i m n c t + i n t	780 779
+6408	Rangoon	the wolf	w ũ/u ∼ ²² + p u ⁵³ + l w e ²²	w ũ/u ∼ ²² + p u ⁵³ + l w e ²²	i n c t + i n t + i m n t	781 83 84
+6463	Atsi	the wolf	v a m ⁵¹ + kʰ ui ²¹ + m o ⁵⁵	v a m ⁵¹ + kʰ ui ²¹ + m o ⁵⁵	i n c t + i n t + i n t	781 779 778
+6649	Lashi	the wolf	w ɔ m ³¹ + kʰ ui ⁵⁵	w ɔ m ³¹ + kʰ ui ⁵⁵	i n c t + i n t	781 779
+5127	Achang_Longchuan	the woman	i ³¹ + nʲ ɔ ³¹	- i ³¹ + nʲ ɔ ³¹	n t + i n t	454 28
+5130	Atsi	the woman	m j i ²¹ + v e ²¹	m j i - ²¹ + v e ²¹	i m n t + i n t	428 437
+5132	Bola	the woman	m i ³¹ + ɣ ɛ ³¹	m - i - ³¹ + ɣ ɛ ³¹	i n t + i n t	428 437
+5135	Lashi	the woman	m j i ³³ + j i ³³	m j i - ³³ + j i ³³	i m n t + i n t	428 454
+5136	Maru	the woman	m j i ³⁵ + ɤɛ ³⁵	m j i - ³⁵ + - ɤɛ ³⁵	i m n t + n t	428 437
+5138	Xiandao	the woman	j i ³¹ + ɲ ɔ ³¹	j i ³¹ + ɲ ɔ ³¹	i n t + i n t	454 28
+5359	Rangoon	the woman	m ẽ/e ∼ ⁵⁵ + m ɑ ⁵³	m - ẽ/e ∼ ⁵⁵ + m ɑ ⁵³	i n c t + i n t	428 430
+5148	Achang_Longchuan	the wood (material)	ʂ ə k ⁵⁵	ʂ ə k ⁵⁵	i n c t	123
+5150	Atsi	the wood (material)	s i k ⁵⁵ + t ṵ/u m ⁵⁵	s i k ⁵⁵ + t ṵ/u m ⁵⁵	i n c t + i n c t	123 439
+5152	Bola	the wood (material)	s a k ⁵⁵ + t a̰/a m ³⁵	s a k ⁵⁵ + t a̰/a m ³⁵	i n c t + i n c t	123 439
+5155	Lashi	the wood (material)	s ə̰/ə k ⁵⁵ + t ɔ̰/ɔ m ⁵³	s ə̰/ə k ⁵⁵ + t ɔ̰/ɔ m ⁵³	i n c t + i n c t	123 439
+5156	Maru	the wood (material)	s a k ⁵⁵ + tʰ au ŋ ³⁵	s a k ⁵⁵ + tʰ au ŋ ³⁵	i n c t + i n c t	123 705
+5158	Xiandao	the wood (material)	p ɛ n ³¹	p ɛ n ³¹	i n c t	438
+5472	Rangoon	the wood (material)	tθ i ʔ ⁴ + t õ/o ∼ ⁵⁵	tθ i ʔ ⁴ + t õ/o ∼ ⁵⁵	i n c t + i n c t	123 439
+7420	Old_Burmese	the wood (material)	s a ts	s a ts -	i n c	123
+5171	Achang_Longchuan	the year	n̥ ə k ⁵⁵	n̥ ə k ⁵⁵	i n c t	685
+5173	Atsi	the year	ts a n ⁵¹	ts a n ⁵¹	i n c t	441
+5175	Bola	the year	t ɛ̃/ɛ ∼ ⁵⁵	t ɛ̃/ɛ ∼ ⁵⁵	i n c t	441
+5178	Lashi	the year	ts a n ³¹	ts a n ³¹	i n c t	441
+5179	Maru	the year	ts ə ŋ ³¹	ts ə ŋ ³¹	i n c t	441
+5180	Xiandao	the year	n̥ ɤ k ⁵⁵	n̥ ɤ k ⁵⁵	i n c t	685
+5633	Rangoon	the year	n̥ i ʔ ⁴	n̥ i ʔ ⁴	i n c t	685
+7422	Old_Burmese	the year	a + n̥ a ts	a + n̥ a ts -	n + i n c	848 685
+4316	Achang_Longchuan	there	tʰ e ⁵⁵ + tʰ ɔ ʔ ⁵⁵	tʰ e ⁵⁵ + tʰ ɔ ʔ ⁵⁵	i n t + i n c t	390 565
+4317	Atsi	there	x j e ⁵¹ + m a ⁵⁵	x j e ⁵¹ + m a - ⁵⁵	i m n t + i n t	85 568
+4318	Bola	there	tʰ ɔ̆i ⁵⁵ + m ɛ̃/ɛ ∼ ⁵⁵	tʰ ɔ̆i ⁵⁵ + m ɛ̃/ɛ ∼ ⁵⁵	i n t + i n c t	390 568
+4319	Lashi	there	tʰ ə ³³ + m o ³³	tʰ ə ³³ + m o - ³³	i n t + i n t	390 568
+4320	Maru	there	tʰ ø ⁵⁵ + m ɛ ³¹	tʰ ø ⁵⁵ + m ɛ - ³¹	i n t + i n t	390 568
+4321	Xiandao	there	tʰ ɛ ⁵⁵ + tʰ ɔ ʔ ⁵⁵	tʰ ɛ ⁵⁵ + tʰ ɔ ʔ ⁵⁵	i n t + i n c t	390 565
+5430	Rangoon	there	tʰ o ²² + ɑ ⁵³ + n ɑ ⁵⁵	tʰ o ²² + ɑ ⁵³ + n ɑ ⁵⁵	i n t + n t + i n t	390 827 828
+4356	Achang_Longchuan	thick	k a n ³¹	k a n ³¹	i n c t	394
+4359	Atsi	thick	tʰ u ⁵¹	tʰ u ⁵¹	i n t	393
+4361	Bola	thick	tʰ u ⁵⁵	tʰ u ⁵⁵	i n t	393
+4364	Lashi	thick	tʰ uː/u ³³	tʰ uː/u ³³	i n t	393
+4365	Maru	thick	tʰ au ³¹	tʰ au ³¹	i n t	393
+4367	Xiandao	thick	k a n ³⁵	k a n ³⁵	i n c t	394
+5361	Rangoon	thick	tʰ u ²²	tʰ u ²²	i n t	393
+7424	Old_Burmese	thick	t u p	t u p	i n c	846
+4467	Achang_Longchuan	this	x ai ⁵⁵	x - ai ⁵⁵	i n t	238
+4470	Atsi	this	x j i ⁵¹	x j i ⁵¹	i m n t	238
+4472	Bola	this	tʃʰ ə ⁵⁵	tʃʰ ə ⁵⁵	i n t	398
+4475	Lashi	this	x j ɛ ³³	x j ɛ ³³	i m n t	238
+4476	Maru	this	tʃʰ ɛ ³¹	tʃʰ ɛ ³¹	i n t	398
+4478	Xiandao	this	x ai ⁵⁵	x - ai ⁵⁵	i n t	238
+5559	Rangoon	this	tθ i ²²	tθ i - ²²	i n t	397
+5560	Rangoon	this	d i ²²	d i - ²²	i n t	877
+7428	Old_Burmese	this	s a nʲ	s a nʲ -	i n c	397
+5229	Achang_Longchuan	thou [second person singular]	n ua ŋ ⁵⁵	n ua ŋ ⁵⁵	i n c t	448
+5230	Atsi	thou [second person singular]	n a ŋ ⁵¹	n a ŋ ⁵¹	i n c t	448
+5231	Bola	thou [second person singular]	n ɔ̃/ɔ ∼ ⁵⁵	n ɔ̃/ɔ ∼ ⁵⁵	i n c t	448
+5232	Lashi	thou [second person singular]	n a ŋ ³¹	n a ŋ ³¹	i n c t	448
+5233	Maru	thou [second person singular]	n ɔ̃/ɔ ∼ ³¹	n ɔ̃/ɔ ∼ ³¹	i n c t	448
+5234	Xiandao	thou [second person singular]	n ɔ ŋ ⁵⁵	n ɔ ŋ ⁵⁵	i n c t	448
+5316	Rangoon	thou [second person singular]	m ĩ/i ∼ ⁵⁵	m ĩ/i ∼ ⁵⁵	i n c t	449
+7430	Old_Burmese	thou [second person singular]	nʲ a nʲ ⁵⁵	nʲ a nʲ ⁵⁵	i n c t	448
+4524	Achang_Longchuan	three	s u m ³¹	s u m ³¹	i n c t	400
+4527	Atsi	three	s u m ²¹	s u m ²¹	i n c t	400
+4529	Bola	three	s a m ⁵⁵	s a m ⁵⁵	i n c t	400
+4532	Lashi	three	s ɔ m ⁵⁵	s ɔ m ⁵⁵	i n c t	400
+4533	Maru	three	s a m ³¹	s a m ³¹	i n c t	400
+4535	Xiandao	three	s u m ³¹	s u m ³¹	i n c t	400
+5453	Rangoon	three	tθ õ/o ∼ ⁵⁵	tθ õ/o ∼ ⁵⁵	i n c t	400
+7432	Old_Burmese	three	s u m ⁵⁵	s u m ⁵⁵	i n c t	400
+6236	Maru	to be alive	t ɔi ³¹ + k au ³⁵	t ɔi ³¹ + k au ³⁵	i n t + i n t	136 810
+6279	Rangoon	to be alive	ɑ ⁵³ + ɕ ĩ/i ∼ ²²	ɑ ⁵³ + ɕ ĩ/i ∼ ²²	n t + i n c t	813 135
+6502	Lashi	to be alive	t ə ³¹ + ts ə ⁵⁵	t ə ³¹ + ts ə ⁵⁵	i n t + i n t	136 812
+6640	Bola	to be alive	a ³¹ + t ui ⁵⁵	a ³¹ + t ui ⁵⁵	n t + i n t	813 136
+7434	Old_Burmese	to be alive	h i j ⁵³	h i j ⁵³	i n c t	854
+343	Bola	to bite	p ɛ̃/ɛ ∼ ³¹	p ɛ̃/ɛ ∼ ³¹	i n c t	96
+348	Maru	to bite	p ə ŋ ³⁵	p ə ŋ ³⁵	i n c t	96
+350	Lashi	to bite	ŋ aː/a t ³¹	ŋ aː/a t ³¹	i n c t	522
+5246	Rangoon	to bite	k ɑi ʔ ⁴	k ɑi ʔ ⁴	i n c t	95
+7435	Old_Burmese	to bite	k ə k	k ə k -	i n c	95
+406	Achang_Longchuan	to blow (of wind)	x ʐ au ʔ ³⁵	x ʐ au ʔ ³⁵	i m n c t	9
+407	Atsi	to blow (of wind)	kʰ j ui ²¹	kʰ j ui - ²¹	i m n t	9
+408	Bola	to blow (of wind)	kʰ j u ³⁵	kʰ j u - ³⁵	i m n t	9
+409	Lashi	to blow (of wind)	kʰ j aː/au ⁵³	kʰ j aː/au - ⁵³	i m n t	9
+411	Maru	to blow (of wind)	kʰ j u k ⁵⁵	kʰ j u k ⁵⁵	i m n c t	9
+5500	Rangoon	to blow (of wind)	n̥ ɑ ʔ ⁴ + nʲ i ʔ ⁴	n̥ ɑ ʔ ⁴ + nʲ i ʔ ⁴	i n c t + i n c t	13 17
+7437	Old_Burmese	to blow (of wind)	t ə k	t ə k	i n c	523
+573	Achang_Longchuan	to burn [intransitive]	nʲ e ³⁵	nʲ - e ³⁵	i n t	132
+574	Atsi	to burn [intransitive]	ŋ j e ⁵⁵	ŋ j e ⁵⁵	i m n t	132
+575	Bola	to burn [intransitive]	t ɛ ʔ ³¹	t ɛ ʔ ³¹	i n c t	133
+577	Lashi	to burn [intransitive]	t a̰ː/a p ⁵⁵	t a̰ː/a p ⁵⁵	i n c t	133
+578	Maru	to burn [intransitive]	t ɛ ʔ ³¹	t ɛ ʔ ³¹	i n c t	133
+579	Xiandao	to burn [intransitive]	tʂ/ʈʂ a p ³⁵	tʂ/ʈʂ a p ³⁵	i n c t	133
+5339	Rangoon	to burn [intransitive]	l ɑ̃/ɑu ∼ ²²	l ɑ̃/ɑu ∼ ²²	i n c t	134
+7439	Old_Burmese	to burn [intransitive]	l ʊ ŋ	l ʊ ŋ -	i n c	134
+9161	Old_Burmese	to burn [intransitive]	nʲ i	nʲ - i -	i n	132
+596	Achang_Longchuan	to buy	oi ⁵⁵	- oi - ⁵⁵	n t	142
+598	Atsi	to buy	v ui ⁵¹	v ui - ⁵¹	i n t	142
+599	Bola	to buy	v ɛ ⁵⁵	v ɛ - ⁵⁵	i n t	142
+602	Lashi	to buy	ɣ əː/ə ³¹	ɣ əː/ə - ³¹	i n t	142
+603	Maru	to buy	v ai ³¹	v ai - ³¹	i n t	142
+604	Xiandao	to buy	ui ⁵⁵	- ui - ⁵⁵	n t	142
+5355	Rangoon	to buy	w ɛ ²²	w ɛ - ²²	i n t	142
+7441	Old_Burmese	to buy	w a j	w a j -	i n c	142
+6174	Xiandao	to chew	m a m ³¹	m a m ³¹	i n c t	79
+6396	Maru	to chew	v ɔ ³⁵	v ɔ ³⁵	i n t	81
+6465	Rangoon	to chew	w ɑ ⁵⁵	w ɑ ⁵⁵	i n t	81
+6466	Achang_Longchuan	to chew	m a m ³¹	m a m ³¹	i n c t	79
+6504	Bola	to chew	v a ³¹	v a ³¹	i n t	81
+6522	Atsi	to chew	n ḛ/e ²¹	n ḛ/e ²¹	i n t	80
+6648	Lashi	to chew	n ɛ̰ː/ɛ ⁵⁵	n ɛ̰ː/ɛ ⁵⁵	i n t	80
+7443	Old_Burmese	to chew	w a ⁵⁵	w a ⁵⁵	i n t	81
+686	Achang_Longchuan	to come	ʐ ə ³⁵	ʐ ə ³⁵	i n t	158
+689	Atsi	to come	l e ⁵⁵	l e ⁵⁵	i n t	158
+691	Bola	to come	l a ⁵⁵	l a ⁵⁵	i n t	158
+694	Lashi	to come	l eː/e ⁵⁵	l eː/e ⁵⁵	i n t	158
+695	Maru	to come	l i ⁵⁵	l i ⁵⁵	i n t	158
+697	Xiandao	to come	l ɔ ⁵⁵	l ɔ ⁵⁵	i n t	158
+5625	Rangoon	to come	l ɑ ²²	l ɑ ²²	i n t	158
+7445	Old_Burmese	to come	l a ²²	l a ²²	i n t	158
+738	Achang_Longchuan	to count	a n ³⁵	a n ³⁵	n c t	160
+740	Atsi	to count	ŋ a̰/a p ⁵⁵	ŋ a̰/a p ⁵⁵	i n c t	161
+741	Bola	to count	ŋ ɛ̰/ɛ ʔ ⁵⁵	ŋ ɛ̰/ɛ ʔ ⁵⁵	i n c t	161
+743	Lashi	to count	ŋ a̰ː/a p ⁵⁵	ŋ a̰ː/a p ⁵⁵	i n c t	161
+744	Maru	to count	ŋ ɛ̰/ɛ ʔ ⁵⁵	ŋ ɛ̰/ɛ ʔ ⁵⁵	i n c t	161
+745	Xiandao	to count	a n ³⁵	a n ³⁵	n c t	160
+5522	Rangoon	to count	j e ²²	j e - ²²	i n t	585
+7447	Old_Burmese	to count	r i j	r i j -	i n c	585
+7449	Old_Burmese	to count	t i j ⁵⁵	t i j ⁵⁵	i n c t	838
+6140	Lashi	to cry (weep)	ŋ aː/au ³¹	ŋ aː/au - ³¹	i n t	35
+6197	Xiandao	to cry (weep)	ŋ au ⁵⁵	ŋ au - ⁵⁵	i n t	35
+6300	Bola	to cry (weep)	ŋ au ⁵⁵	ŋ au - ⁵⁵	i n t	35
+6377	Achang_Longchuan	to cry (weep)	ŋ au ⁵⁵	ŋ au - ⁵⁵	i n t	35
+6418	Maru	to cry (weep)	ŋ u k ³¹	ŋ u k ³¹	i n c t	35
+6496	Rangoon	to cry (weep)	ŋ o ²²	ŋ o - ²²	i n t	35
+6556	Atsi	to cry (weep)	ŋ au ⁵¹	ŋ au - ⁵¹	i n t	35
+7451	Old_Burmese	to cry (weep)	ŋ ə w	ŋ ə w -	i n c	35
+888	Bola	to die	ʃ ɿ ⁵⁵	ʃ ɿ - ⁵⁵	i n t	162
+893	Lashi	to die	ʃ eː/ei ³³	ʃ eː/ei - ³³	i n t	162
+896	Maru	to die	ʃ i k ³¹	ʃ i k ³¹	i n c t	162
+898	Xiandao	to die	ʂ ɿ ⁵⁵	ʂ ɿ - ⁵⁵	i n t	162
+5451	Rangoon	to die	tθ e ²²	tθ e - ²²	i n t	162
+7453	Old_Burmese	to die	s i j	s i j -	i n c	162
+913	Atsi	to dig	kʰ ai ²¹	kʰ ai - ²¹	i n t	164
+917	Lashi	to dig	t uː/u ³³	t uː/u ³³	i n t	163
+918	Maru	to dig	t au ³⁵	t au ³⁵	i n t	163
+920	Xiandao	to dig	t u ³¹	t u ³¹	i n t	163
+921	Achang_Longchuan	to dig	t u ³¹	t u ³¹	i n t	163
+925	Bola	to dig	kʰ ø ʔ ³¹	kʰ ø ʔ ³¹	i n c t	164
+5516	Rangoon	to dig	t u ⁵⁵	t u ⁵⁵	i n t	163
+7455	Old_Burmese	to dig	tʰ u ⁵⁵	tʰ u ⁵⁵	i n t	163
+1012	Bola	to drink	ʃ au ʔ ⁵⁵	ʃ au ʔ ⁵⁵	i n c t	172
+1015	Lashi	to drink	ʃ uː/u k ⁵⁵	ʃ uː/u k ⁵⁵	i n c t	172
+1017	Maru	to drink	ʃ au k ⁵⁵	ʃ au k ⁵⁵	i n c t	172
+5542	Rangoon	to drink	tθ ɑu ʔ ⁴	tθ ɑu ʔ ⁴	i n c t	172
+7457	Old_Burmese	to drink	s ʊ k	s ʊ k -	i n c	172
+1125	Bola	to eat	t a ³¹	t a ³¹	i n t	180
+1129	Lashi	to eat	ts ɔː/ɔ ³³	ts ɔː/ɔ ³³	i n t	180
+1132	Maru	to eat	ts ɔ ³⁵	ts ɔ ³⁵	i n t	180
+5549	Rangoon	to eat	s ɑ ⁵⁵	s ɑ ⁵⁵	i n t	180
+7459	Old_Burmese	to eat	ts a ⁵⁵	ts a ⁵⁵	i n t	180
+1352	Achang_Longchuan	to fight	t e k ⁵⁵ + k ɔ ³¹	t e k ⁵⁵ + k ɔ ³¹	i n c t + i n t	489 490
+1361	Xiandao	to fight	t a ³⁵ + k ɔ ³⁵	t a - ³⁵ + k ɔ ³⁵	i n t + i n t	489 490
+1363	Atsi	to fight	p a t ²¹ + l ṵ/u m ²¹	p - a t ²¹ + l ṵ/u m ²¹	i n c t + i n c t	192 487
+1364	Bola	to fight	p ɛ ʔ ³¹ + l a̰/a m ³⁵	p - ɛ ʔ ³¹ + l a̰/a m ³⁵	i n c t + i n c t	192 487
+1365	Lashi	to fight	p a t ³¹ + k ɔ ⁵⁵	p - a t ³¹ + k ɔ ⁵⁵	i n c t + i n t	192 490
+1366	Maru	to fight	p ɛ ʔ ³¹ + l a̰/a m ³¹	p - ɛ ʔ ³¹ + l a̰/a m ³¹	i n c t + i n c t	192 487
+5262	Rangoon	to fight	j ɑ̃/ɑ ∼ ²² + pʰ j i ʔ ⁴	j ɑ̃/ɑ ∼ ²² + pʰ j i ʔ ⁴	i n c t + i m n c t	488 192
+1433	Achang_Longchuan	to float	nʲ ə ³¹	nʲ ə ³¹	i n t	200
+1435	Atsi	to float	m j u ²¹	m j u - ²¹	i m n t	199
+1437	Bola	to float	m j u ŋ ³¹	m j u ŋ ³¹	i m n c t	199
+1439	Lashi	to float	k j aː/a m ⁵⁵	k j aː/a m ⁵⁵	i m n c t	548
+1440	Maru	to float	m j u ŋ ³⁵	m j u ŋ ³⁵	i m n c t	199
+1441	Xiandao	to float	ɲ u ³¹	ɲ u ³¹	i n t	200
+5626	Rangoon	to float	p ɔ ²²	p ɔ ²²	i n t	198
+1445	Achang_Longchuan	to flow	s o ³¹	s o ³¹	i n t	202
+1447	Atsi	to flow	j ui ⁵¹	j ui - ⁵¹	i n t	201
+1448	Bola	to flow	j u ⁵⁵	j u - ⁵⁵	i n t	201
+1450	Lashi	to flow	j aː/au ³¹	j aː/au - ³¹	i n t	201
+1451	Maru	to flow	j u k ³¹	j u k ³¹	i n c t	201
+1452	Xiandao	to flow	ʂ a ³¹	ʂ a ³¹	i n t	202
+5327	Rangoon	to flow	s i ⁵⁵	s i ⁵⁵	i n t	202
+7464	Old_Burmese	to flow	ts i ⁵⁵	ts i ⁵⁵	i n t	202
+1471	Bola	to fly (move through air)	t ɔ̃/ɔ ∼ ³¹	t ɔ̃/ɔ ∼ ³¹	i n c t	206
+1474	Lashi	to fly (move through air)	t aː/a ŋ ³³	t aː/a ŋ ³³	i n c t	206
+1475	Maru	to fly (move through air)	t ɔ̃/ɔ ∼ ³⁵	t ɔ̃/ɔ ∼ ³⁵	i n c t	206
+1476	Xiandao	to fly (move through air)	tʂ/ʈʂ a m ⁵⁵	tʂ/ʈʂ a m ⁵⁵	i n c t	552
+5462	Rangoon	to fly (move through air)	p j ɑ̃/ɑ ∼ ²²	p j ɑ̃/ɑ ∼ ²²	i m n c t	205
+7466	Old_Burmese	to fly (move through air)	p j a m	p j a m -	i m n c	205
+1604	Achang_Longchuan	to give	ts i ³¹	ts i ³¹	i n t	217
+1605	Atsi	to give	p j i ²¹	p j i - ²¹	i m n t	216
+1606	Bola	to give	p i ³¹	p - i - ³¹	i n t	216
+1608	Lashi	to give	p j eː/ei ³³	p j eː/ei - ³³	i m n t	216
+1609	Maru	to give	p j i k ⁵⁵	p j i k ⁵⁵	i m n c t	216
+1610	Xiandao	to give	ts i ³¹	ts i ³¹	i n t	217
+5250	Rangoon	to give	p e ⁵⁵	p - e - ⁵⁵	i n t	216
+7470	Old_Burmese	to give	p i j ⁵⁵	p - i j ⁵⁵	i n c t	216
+1805	Achang_Longchuan	to hear	k ʐ u a ³¹	k ʐ u a ³¹	i m M n t	233
+1806	Atsi	to hear	v o ⁵⁵ + k j o ²¹	v o ⁵⁵ + k j - o ²¹	i n t + i m n t	234 233
+1807	Bola	to hear	ɣ ə̆ ³¹ + k j a ³¹	ɣ ə̆ ³¹ + k j - a ³¹	i n t + i m n t	234 233
+1810	Lashi	to hear	j ɔː/ɔ ⁵⁵ + k j ɔː/ɔ ³³	j ɔː/ɔ ⁵⁵ + k j - ɔː/ɔ ³³	i n t + i m n t	234 233
+1812	Maru	to hear	ɣ ɔ ⁵⁵ + k j ɔ ³⁵	ɣ ɔ ⁵⁵ + k j - ɔ ³⁵	i n t + i m n t	234 233
+1815	Xiandao	to hear	k ʐ ɔ ³¹	k ʐ - ɔ ³¹	i m n t	233
+5353	Rangoon	to hear	tɕ ɑ ⁵⁵	tɕ - - ɑ ⁵⁵	i n t	233
+7472	Old_Burmese	to hear	k r a ⁵⁵	k r - a ⁵⁵	i m n t	233
+1889	Achang_Longchuan	to hide (conceal)	s au ⁵⁵	s au ⁵⁵	i n t	241
+1890	Atsi	to hide (conceal)	x a ʔ ⁵⁵	x a ʔ ⁵⁵	i n c t	570
+1891	Bola	to hide (conceal)	ŋ j a̰/a m ³⁵	ŋ j a̰/a m ³⁵	i m n c t	240
+1892	Lashi	to hide (conceal)	ŋ j ṵː/u m ⁵⁵	ŋ j ṵː/u m ⁵⁵	i m n c t	240
+1893	Maru	to hide (conceal)	ŋ j a̰/a m ³⁵	ŋ j a̰/a m ³⁵	i m n c t	240
+1894	Xiandao	to hide (conceal)	s au ⁵⁵	s au ⁵⁵	i n t	241
+5593	Rangoon	to hide (conceal)	pʰ w ɛ ʔ ⁴	pʰ w ɛ ʔ ⁴	i m n c t	841
+7474	Old_Burmese	to hide (conceal)	pʰ o k	pʰ - o k -	i n c	841
+1918	Achang_Longchuan	to hold	m̥ ʐ ə ʔ ⁵⁵	m̥ ʐ ə ʔ ⁵⁵	i m n c t	571
+1921	Atsi	to hold	ts ui ²¹	ts ui ²¹	i n t	493
+1923	Bola	to hold	ts a̰/a p ⁵⁵	ts a̰/a p ⁵⁵	i n c t	243
+1926	Maru	to hold	ts ɔi ³⁵	ts ɔi ³⁵	i n t	493
+1928	Xiandao	to hold	ʈʂʰ o p ⁵⁵	ʈʂʰ o p ⁵⁵	i n c t	243
+5294	Rangoon	to hold	k ɑ̃/ɑi ∼ ²²	k ɑ̃/ɑi ∼ ²²	i n c t	242
+7476	Old_Burmese	to hold	k ʊ ŋ	k ʊ ŋ -	i n c	242
+2063	Achang_Longchuan	to hunt	tɕʰ e t ⁵⁵ + t au ʔ ⁵⁵	tɕʰ e t ⁵⁵ + t au ʔ ⁵⁵	i n c t + i n c t	575 576
+2065	Atsi	to hunt	ʃ ŏ/ŏ ²¹ + p i k ²¹	ʃ ŏ/ŏ ²¹ + p i k ²¹	i n t + i n c t	574 578
+2066	Bola	to hunt	ʃ ă/ă ³⁵ + p a k ³¹	ʃ ă/ă ³⁵ + p a k ³¹	i n t + i n c t	574 578
+2068	Lashi	to hunt	ʃ o ⁵⁵ + p əː/ə ³¹	ʃ o ⁵⁵ + p əː/ə - ³¹	i n t + i n t	574 578
+2069	Maru	to hunt	ʃ ɔ̆ ³⁵ + p a k ³¹	ʃ ɔ̆ ³⁵ + p a k ³¹	i n t + i n c t	574 578
+2071	Xiandao	to hunt	ʂ ɔ ³¹ + p ɤ k ⁵⁵	ʂ ɔ ³¹ + p ɤ k ⁵⁵	i n t + i n c t	574 578
+5470	Rangoon	to hunt	ɑ ⁵³ + m ɛ ⁵⁵ + l ɑi ʔ ⁴	ɑ ⁵³ + m ɛ ⁵⁵ + l ɑi ʔ ⁴	n t + i n t + i n c t	191 577 579
+2184	Achang_Longchuan	to kill	s a t ⁵⁵	s a t ⁵⁵	i n c t	255
+2187	Atsi	to kill	s a t ²¹	s a t ²¹	i n c t	255
+2189	Bola	to kill	s ɛ̰/ɛ ʔ ⁵⁵	s ɛ̰/ɛ ʔ ⁵⁵	i n c t	255
+2191	Lashi	to kill	s a̰ː/a t ⁵⁵	s a̰ː/a t ⁵⁵	i n c t	255
+2192	Maru	to kill	s ɛ̰/ɛ ʔ ⁵⁵	s ɛ̰/ɛ ʔ ⁵⁵	i n c t	255
+2194	Xiandao	to kill	s a t ⁵⁵ + pʰ u t ⁵⁵	s a t ⁵⁵ + pʰ u t ⁵⁵	i n c t + i n c t	255 590
+5422	Rangoon	to kill	tθ ɑ ʔ ⁴	tθ ɑ ʔ ⁴	i n c t	255
+5550	Rangoon	to kill	p ɔ ²²	p ɔ ²²	i n t	591
+7479	Old_Burmese	to kill	s a t	s a t -	i n c	255
+2254	Bola	to laugh	ɣ əi ⁵⁵	ɣ əi - ⁵⁵	i n t	261
+2258	Lashi	to laugh	j iː/i ³¹	j iː/i - ³¹	i n t	261
+2261	Maru	to laugh	ɣ ə ³¹	ɣ ə - ³¹	i n t	261
+5483	Rangoon	to laugh	j i ²²	j i - ²²	i n t	261
+7485	Old_Burmese	to laugh	r a j	r a j -	i n c	261
+2345	Bola	to lick	j a ʔ ³¹	j - a ʔ ³¹	i n c t	267
+2349	Lashi	to lick	j ɔː/ɔ ʔ ³¹	j - ɔː/ɔ ʔ ³¹	i n c t	267
+2352	Maru	to lick	j ɔ ʔ ³¹	j - ɔ ʔ ³¹	i n c t	267
+5642	Rangoon	to lick	j ɛ ʔ ⁴	j - ɛ ʔ ⁴	i n c t	267
+7489	Old_Burmese	to lick	l j a k	l j a k -	i m n c	267
+2357	Achang_Longchuan	to lie down	ŋ̊ a ⁵⁵	ŋ̊ a ⁵⁵	i n t	598
+2358	Atsi	to lie down	l e ʔ ²¹	l e ʔ ²¹	i n c t	268
+2359	Bola	to lie down	l a ŋ ³⁵	l a ŋ ³⁵	i n c t	268
+2360	Lashi	to lie down	l əː/ə ŋ ³¹	l əː/ə ŋ ³¹	i n c t	268
+2361	Maru	to lie down	l a ŋ ³⁵	l a ŋ ³⁵	i n c t	268
+2362	Xiandao	to lie down	ɲ ɛ ŋ ⁵⁵	ɲ ɛ ŋ ⁵⁵	i n c t	599
+5517	Rangoon	to lie down	t õ/o ∼ ⁵⁵ + l õ/o ∼ ⁵⁵ + ɬ ɛ ⁵⁵	t õ/o ∼ ⁵⁵ + l õ/o ∼ ⁵⁵ + ɬ ɛ ⁵⁵	i n c t + i n c t + i n t	495 496 497
+7491	Old_Burmese	to lie down	l aj	l aj -	i n	497
+6124	Rangoon	to plant (vegetals, rice)	s ɑi ʔ ⁴	s ɑi ʔ ⁴	i n c t	456
+6181	Atsi	to plant (vegetals, rice)	x o ²¹	x o ²¹	i n t	455
+6272	Lashi	to plant (vegetals, rice)	ʃ ɔː/ɔ ⁵⁵	ʃ ɔː/ɔ ⁵⁵	i n t	455
+6327	Xiandao	to plant (vegetals, rice)	s ɔ ³¹	s ɔ ³¹	i n t	455
+6508	Achang_Longchuan	to plant (vegetals, rice)	s ɔ ³¹	s ɔ ³¹	i n t	455
+6533	Bola	to plant (vegetals, rice)	x a ³⁵	x a ³⁵	i n t	455
+6560	Maru	to plant (vegetals, rice)	x ɔ ³⁵	x ɔ ³⁵	i n t	455
+3058	Achang_Longchuan	to play	ts e ʔ ⁵⁵	ts e ʔ ⁵⁵	i n c t	307
+3060	Atsi	to play	ŋ j i ⁵¹ + k ṵ/u n ⁵⁵	ŋ j i - ⁵¹ + k ṵ/u n ⁵⁵	i m n t + i n c t	616 306
+3062	Bola	to play	kʰ ɔ̃/ɔ ∼ ³⁵ + k ɔ̰/ɔ n ³¹	kʰ ɔ̃/ɔ ∼ ³⁵ + k ɔ̰/ɔ n ³¹	i n c t + i n c t	617 306
+3064	Lashi	to play	l ṵː/u ³³	l ṵː/u ³³	i n t	618
+3065	Maru	to play	n a ³¹ + k ṵ/u m ⁵⁵	n - a - ³¹ + k ṵ/u m ⁵⁵	i n t + i n c t	616 835
+3067	Xiandao	to play	ts ɛ ʔ ⁵⁵	ts ɛ ʔ ⁵⁵	i n c t	307
+5292	Rangoon	to play	k ɑ ⁵³ + s ɑ ⁵³	k ɑ ⁵³ + s ɑ ⁵³	i n t + i n t	619 620
+3100	Achang_Longchuan	to pull	ʂ a ⁵⁵	ʂ a ⁵⁵	i n t	308
+3101	Atsi	to pull	ʃ e ⁵¹	ʃ e ⁵¹	i n t	308
+3102	Bola	to pull	ʃ ɛ ⁵⁵	ʃ ɛ ⁵⁵	i n t	308
+3103	Lashi	to pull	ʃ ɛ̰/ɛ ³³	ʃ ɛ̰/ɛ ³³	i n t	308
+3104	Maru	to pull	ʃ ɛ ³¹	ʃ ɛ ³¹	i n t	308
+3105	Xiandao	to pull	ʂ a ⁵⁵	ʂ a ⁵⁵	i n t	308
+5447	Rangoon	to pull	sʰ w ɛ ⁵⁵	sʰ w ɛ - ⁵⁵	i m n t	309
+7497	Old_Burmese	to pull	tsʰ o j	tsʰ - o j -	i n c	309
+3143	Achang_Longchuan	to push	t u n ³¹	t u n ³¹	i n c t	310
+3146	Atsi	to push	tʃ ṵ/u n ²¹	tʃ ṵ/u n ²¹	i n c t	621
+3148	Bola	to push	tʃ ɔ̰/ɔ n ³⁵	tʃ ɔ̰/ɔ n ³⁵	i n c t	621
+3150	Lashi	to push	t uː/u n ³³	t uː/u n ³³	i n c t	310
+3151	Maru	to push	tʃ ṵ/u m ³⁵	tʃ ṵ/u m ³⁵	i n c t	621
+3153	Xiandao	to push	t u n ³¹	t u n ³¹	i n c t	310
+5672	Rangoon	to push	t ũ/u ∼ ⁵⁵	t ũ/u ∼ ⁵⁵	i n c t	310
+7499	Old_Burmese	to push	t o n ⁵⁵	t o n ⁵⁵	i n c t	310
+7501	Old_Burmese	to push	t ə w ⁵⁵	t ə w ⁵⁵	i n c t	843
+7503	Old_Burmese	to push	n̥ i p	n̥ i p	i n c	842
+3298	Achang_Longchuan	to reside (live)	nʲ ɔ ʔ ⁵⁵	nʲ - ɔ ʔ ⁵⁵	i n c t	616
+3300	Atsi	to reside (live)	ŋ j i ⁵¹	ŋ j i - ⁵¹	i m n t	616
+3302	Bola	to reside (live)	ŋ j i ⁵⁵	ŋ j i - ⁵⁵	i m n t	616
+3304	Lashi	to reside (live)	l uː/u ŋ ⁵⁵	l uː/u ŋ ⁵⁵	i n c t	624
+3305	Maru	to reside (live)	n a ³¹	n - a - ³¹	i n t	616
+3307	Xiandao	to reside (live)	n ai ⁵⁵	n - ai - ⁵⁵	i n t	616
+5330	Rangoon	to reside (live)	n e ²²	n - e - ²²	i n t	616
+7505	Old_Burmese	to reside (live)	n i j	n - i j -	i n c	616
+3525	Achang_Longchuan	to scratch	kʰ ʐ ə n ⁵⁵	kʰ ʐ ə n ⁵⁵	i m n c t	332
+3526	Atsi	to scratch	k j i n ⁵¹	k j i n ⁵¹	i m n c t	332
+3527	Bola	to scratch	k j ɔ̰/ɔ n ⁵⁵	k j ɔ̰/ɔ n ⁵⁵	i m n c t	332
+3528	Lashi	to scratch	k j ḭː/i n ³¹	k j ḭː/i n ³¹	i m n c t	332
+3529	Maru	to scratch	k j ḭ/i ŋ ³¹	k j ḭ/i ŋ ³¹	i m n c t	332
+3530	Xiandao	to scratch	kʰ ʐ a n ⁵⁵	kʰ ʐ a n ⁵⁵	i m n c t	332
+5636	Rangoon	to scratch	ɑ ⁵³ + j ɑ ⁵⁵ + pʰ j ɑu ʔ ⁴	ɑ ⁵³ + j ɑ ⁵⁵ + pʰ j ɑu ʔ ⁴	n t + i n t + i m n c t	637 638 333
+7509	Old_Burmese	to scratch	pʰ j ʊ k	pʰ j ʊ k -	i m n c	333
+3556	Achang_Longchuan	to see	e n ³¹ + m ʐ a ŋ ⁵⁵	e n ³¹ + m ʐ a ŋ ⁵⁵	n c t + i m n c t	642 338
+3559	Atsi	to see	m j a ŋ ⁵¹	m j a ŋ ⁵¹	i m n c t	338
+3561	Bola	to see	m j ɔ̃/ɔ ∼ ⁵⁵	m j ɔ̃/ɔ ∼ ⁵⁵	i m n c t	338
+3565	Lashi	to see	m j aː/a ŋ ³¹	m j aː/a ŋ ³¹	i m n c t	338
+3567	Maru	to see	m j ɔ̃/ɔ ∼ ³¹	m j ɔ̃/ɔ ∼ ³¹	i m n c t	338
+3569	Xiandao	to see	m ʐ a ŋ ⁵⁵	m ʐ a ŋ ⁵⁵	i m n c t	338
+5322	Rangoon	to see	m j ĩ/i ∼ ²²	m j ĩ/i ∼ ²²	i m n c t	338
+7511	Old_Burmese	to see	m r a ŋ	m r a ŋ -	i m n c	338
+3671	Achang_Longchuan	to shoot (an arrow)	p ə k ⁵⁵	p ə k ⁵⁵	i n c t	249
+3674	Atsi	to shoot (an arrow)	p i k ²¹	p i k ²¹	i n c t	249
+3676	Bola	to shoot (an arrow)	p a k ³¹	p a k ³¹	i n c t	249
+3679	Lashi	to shoot (an arrow)	p əː/ə k ³¹	p əː/ə k ³¹	i n c t	249
+3680	Maru	to shoot (an arrow)	p a k ³¹	p a k ³¹	i n c t	249
+3682	Xiandao	to shoot (an arrow)	p ɤ k ⁵⁵	p ɤ k ⁵⁵	i n c t	249
+5683	Rangoon	to shoot (an arrow)	p i ʔ ⁴	p i ʔ ⁴	i n c t	249
+7513	Old_Burmese	to shoot (an arrow)	p a ts	p a ts -	i n c	249
+3728	Atsi	to sing	tʰ o ⁵¹	tʰ o ⁵¹	i n t	345
+3729	Bola	to sing	tʰ ɔ ⁵⁵	tʰ ɔ ⁵⁵	i n t	345
+3731	Lashi	to sing	kʰ uː/u n ⁵⁵	kʰ uː/u n ⁵⁵	i n c t	647
+3732	Maru	to sing	tʰ u ³¹	tʰ u ³¹	i n t	345
+5634	Rangoon	to sing	sʰ o ²²	sʰ o - ²²	i n t	346
+7515	Old_Burmese	to sing	tsʰ ə w	tsʰ ə w -	i n c	346
+3802	Achang_Longchuan	to sleep	e ³¹	- e - ³¹	n t	649
+3805	Atsi	to sleep	j ṵ/u p ⁵⁵	j ṵ/u p ⁵⁵	i n c t	649
+3807	Bola	to sleep	j a̰/a p ⁵⁵	j a̰/a p ⁵⁵	i n c t	649
+3811	Lashi	to sleep	j ṵː/u p ⁵⁵	j ṵː/u p ⁵⁵	i n c t	649
+3813	Maru	to sleep	j a p ³¹	j a p ³¹	i n c t	649
+3816	Xiandao	to sleep	i t ⁵⁵	- i t ⁵⁵	n c t	649
+5544	Rangoon	to sleep	e ʔ ⁴	- e ʔ ⁴	n c t	649
+7517	Old_Burmese	to sleep	i p	- i p -	n c	649
+3840	Bola	to smell (perceive odor) [transitive]	n ɛ̰̃/ɛ ∼ ⁵⁵	n ɛ̰̃/ɛ ∼ ⁵⁵	i n c t	351
+3845	Lashi	to smell (perceive odor) [transitive]	n aː/a m ³¹	n aː/a m ³¹	i n c t	351
+3848	Maru	to smell (perceive odor) [transitive]	n ɛ̃/ɛ ∼ ³¹	n ɛ̃/ɛ ∼ ³¹	i n c t	351
+5417	Rangoon	to smell (perceive odor) [transitive]	n ɑ̃/ɑ ∼ ⁵⁵	n ɑ̃/ɑ ∼ ⁵⁵	i n c t	351
+7519	Old_Burmese	to smell (perceive odor) [transitive]	m̥ u j ⁵⁵	m̥ u j ⁵⁵	i n c t	845
+3967	Achang_Longchuan	to spit	tɕʰ o ³¹	tɕʰ o ³¹	i n t	371
+3970	Atsi	to spit	p j e ⁵⁵	p j e ⁵⁵	i m n t	370
+3972	Bola	to spit	pʰ ø ³⁵	pʰ - ø ³⁵	i n t	370
+3975	Lashi	to spit	p yː/y ³³	p - yː/y ³³	i n t	370
+3977	Maru	to spit	pʰ ø ³⁵	pʰ - ø ³⁵	i n t	370
+3979	Xiandao	to spit	ts ɛ ³⁵	ts ɛ ³⁵	i n t	371
+5541	Rangoon	to spit	tʰ w e ⁵⁵	tʰ w e - ⁵⁵	i m n t	369
+7521	Old_Burmese	to spit	tʰ u j ⁵⁵	tʰ - u j ⁵⁵	i n c t	369
+4043	Achang_Longchuan	to stand	ʑ a p ⁵⁵	ʑ - a p ⁵⁵	i n c t	372
+4044	Atsi	to stand	j a p ²¹	j - a p ²¹	i n c t	372
+4045	Bola	to stand	j ɛ ʔ ⁵⁵	j - ɛ ʔ ⁵⁵	i n c t	372
+4046	Lashi	to stand	j aː/a p ³¹	j - aː/a p ³¹	i n c t	372
+4047	Maru	to stand	j ɛ ʔ ³¹	j - ɛ ʔ ³¹	i n c t	372
+4048	Xiandao	to stand	j a p ⁵⁵	j - a p ⁵⁵	i n c t	372
+5332	Rangoon	to stand	j ɑ ʔ ⁴	j - ɑ ʔ ⁴	i n c t	372
+7523	Old_Burmese	to stand	r j a p	r j a p -	i m n c	372
+4068	Achang_Longchuan	to steal	x au ³¹	x au - ³¹	i n t	374
+4071	Atsi	to steal	kʰ au ²¹	kʰ au - ²¹	i n t	374
+4073	Bola	to steal	kʰ au ³¹	kʰ au - ³¹	i n t	374
+4076	Lashi	to steal	kʰ aː/au ⁵⁵	kʰ aː/au - ⁵⁵	i n t	374
+4077	Maru	to steal	kʰ u k ⁵⁵	kʰ u k ⁵⁵	i n c t	374
+4079	Xiandao	to steal	x au ³¹	x au - ³¹	i n t	374
+5573	Rangoon	to steal	kʰ o ⁵⁵	kʰ o - ⁵⁵	i n t	374
+7525	Old_Burmese	to steal	kʰ ə w ⁵⁵	kʰ ə w ⁵⁵	i n c t	374
+4453	Achang_Longchuan	to think (reflect)	s a m ⁵⁵	s a m ⁵⁵	i n c t	671
+4456	Atsi	to think (reflect)	m j i t ²¹	m j i t ²¹	i m n c t	395
+4458	Bola	to think (reflect)	m j ɔ t ³¹	m j ɔ t ³¹	i m n c t	395
+4460	Lashi	to think (reflect)	m j iː/i t ³¹	m j iː/i t ³¹	i m n c t	395
+4461	Maru	to think (reflect)	m j i k ³¹	m j i k ³¹	i m n c t	395
+4463	Xiandao	to think (reflect)	t a k ⁵⁵	t a k ⁵⁵	i n c t	672
+5514	Rangoon	to think (reflect)	t w e ⁵⁵	t w e - ⁵⁵	i m n t	396
+7527	Old_Burmese	to think (reflect)	t u j ⁵⁵	t - u j ⁵⁵	i n c t	396
+4541	Achang_Longchuan	to throw	x ua t ⁵⁵	x ua t ⁵⁵	i n c t	675
+4544	Atsi	to throw	t u ⁵⁵	t u ⁵⁵	i n t	673
+4546	Bola	to throw	p j ɛ̰/ɛ ʔ ⁵⁵	p j ɛ̰/ɛ ʔ ⁵⁵	i m n c t	401
+4549	Lashi	to throw	t uː/u n ³³	t uː/u n ³³	i n c t	676
+4550	Maru	to throw	p j ɛ̰/ɛ ʔ ⁵⁵	p j ɛ̰/ɛ ʔ ⁵⁵	i m n c t	401
+4552	Xiandao	to throw	f u ⁵⁵	f u ⁵⁵	i n t	674
+5478	Rangoon	to throw	p i ʔ ⁴	p - i ʔ ⁴	i n c t	401
+4780	Achang_Longchuan	to vomit	pʰ a t ⁵⁵	pʰ a t ⁵⁵	i n c t	409
+4783	Atsi	to vomit	pʰ a t ⁵⁵	pʰ a t ⁵⁵	i n c t	409
+4785	Bola	to vomit	t au ʔ ³¹	t au ʔ ³¹	i n c t	410
+4788	Lashi	to vomit	pʰ aː/a t ⁵⁵	pʰ aː/a t ⁵⁵	i n c t	409
+4790	Maru	to vomit	t au k ³¹	t au k ³¹	i n c t	410
+4793	Xiandao	to vomit	pʰ a t ⁵⁵	pʰ a t ⁵⁵	i n c t	409
+5264	Rangoon	to vomit	ɑ̃/ɑ ∼ ²²	ɑ̃/ɑ ∼ ²²	n c t	411
+7530	Old_Burmese	to vomit	a n	a n -	n c	411
+4798	Achang_Longchuan	to walk	s o ³¹	s - o ³¹	i n t	412
+4801	Atsi	to walk	s o ²¹	s - o ²¹	i n t	412
+4803	Bola	to walk	s ɔ ³⁵	s - ɔ ³⁵	i n t	412
+4805	Lashi	to walk	s ɔ̰ː/ɔ ⁵⁵	s - ɔ̰ː/ɔ ⁵⁵	i n t	412
+4806	Maru	to walk	s u ³⁵	s - u ³⁵	i n t	412
+4808	Xiandao	to walk	s o ³¹	s - o ³¹	i n t	412
+5667	Rangoon	to walk	tθ w ɑ ⁵⁵	tθ w ɑ ⁵⁵	i m n t	412
+7533	Old_Burmese	to walk	l̥ j ʊ k	l̥ j ʊ k	i m n c	847
+5108	Achang_Longchuan	to wipe	s u t ⁵⁵	s u t ⁵⁵	i n c t	435
+5111	Atsi	to wipe	s u t ⁵⁵	s u t ⁵⁵	i n c t	435
+5113	Bola	to wipe	s ɔ t ⁵⁵	s ɔ t ⁵⁵	i n c t	435
+5116	Lashi	to wipe	s uː/u t ⁵⁵	s uː/u t ⁵⁵	i n c t	435
+5117	Maru	to wipe	s a̰/a t ⁵⁵	s a̰/a t ⁵⁵	i n c t	435
+5120	Xiandao	to wipe	s u t ⁵⁵	s u t ⁵⁵	i n c t	435
+5381	Rangoon	to wipe	tθ o ʔ ⁴	tθ o ʔ ⁴	i n c t	435
+7535	Old_Burmese	to wipe	s u t	s u t -	i n c	435
+6157	Atsi	today	kʰ ĕ/ĕ ⁵⁵ + ŋ j i ⁵⁵	kʰ ĕ/ĕ ⁵⁵ + ŋ j i - ⁵⁵	i n t + i m n t	54 380
+6333	Lashi	today	kʰ ə̆ ⁵⁵ + ŋ j ei ⁵⁵	kʰ ə̆ ⁵⁵ + ŋ j ei - ⁵⁵	i n t + i m n t	54 380
+6403	Xiandao	today	f u ³¹ + ɳ ɛ n ³¹	f u ³¹ + ɳ ɛ n ³¹	i n t + i n c t	754 53
+6528	Achang_Longchuan	today	x ai ⁵⁵ + nʲ e n ³¹	x ai ⁵⁵ + nʲ e n ³¹	i n t + i n c t	755 53
+6541	Bola	today	a ³¹ + kʰ ə̆ ³¹ + n ɛ ʔ ³¹	a ³¹ + kʰ ə̆ ³¹ + n ɛ ʔ ³¹	n t + i n t + i n c t	756 753 57
+6589	Maru	today	a ³¹ + n a ⁵⁵ + n ɛ ʔ ³¹	a ³¹ + n - a - ⁵⁵ + n ɛ ʔ ³¹	n t + i n t + i n c t	756 380 57
+6620	Rangoon	today	j ɑ ⁵³ + n e ⁵³	j ɑ ⁵³ + n e - ⁵³	i n t + i n t	752 57
+6159	Atsi	tomorrow	n a ʔ ²¹ + m a ⁵⁵	n a ʔ ²¹ + m a ⁵⁵	i n c t + i n t	58 61
+6290	Maru	tomorrow	n ɛ ʔ ³¹ + m ɔ ⁵⁵ + n ɛ ʔ ³¹	n ɛ ʔ ³¹ + m ɔ ⁵⁵ + n - ɛ ʔ ³¹	i n c t + i n t + i n c t	58 61 381
+6337	Lashi	tomorrow	n a p ³¹ + j ɔ ³¹ + ŋ j ei ⁵⁵	n a p ³¹ + j ɔ ³¹ + ŋ j ei - ⁵⁵	i n c t + i n t + i m n t	58 762 381
+6456	Bola	tomorrow	n ɛ ʔ ³¹ + m a ³⁵ + n ɛ ʔ ³¹	n ɛ ʔ ³¹ + m a ³⁵ + n ɛ ʔ ³¹	i n c t + i n t + i n c t	880 61 58
+6476	Xiandao	tomorrow	n̥ a ³¹ + ʐ ɔ ⁵⁵	n̥ a ³¹ + ʐ ɔ ⁵⁵	i n t + i n t	759 760
+6532	Achang_Longchuan	tomorrow	pʰ ă/ă ⁵⁵ + n a p ⁵⁵	pʰ ă/ă ⁵⁵ + n a p ⁵⁵	i n t + i n c t	761 58
+6622	Rangoon	tomorrow	n ɛ ʔ ⁴ + pʰ j ɑ̃/ɑ ∼ ²²	n ɛ ʔ ⁴ + pʰ j ɑ̃/ɑ ∼ ²²	i n c t + i m n c t	58 112
+4699	Achang_Longchuan	twenty	t ă/ă ³¹ + s au ⁵⁵	t ă/ă ³¹ + s au ⁵⁵	i n t + i n t	680 241
+4702	Atsi	twenty	i ⁵⁵ + tsʰ e ⁵¹	i ⁵⁵ + tsʰ e - ⁵¹	n t + i n t	681 670
+4704	Bola	twenty	ḭ/i ³⁵ + tʰ ai ⁵⁵	ḭ/i ³⁵ + tʰ ai - ⁵⁵	n t + i n t	681 670
+4706	Lashi	twenty	ə̰/ə ⁵⁵ + tsʰ e ³³	ə̰/ə ⁵⁵ + tsʰ e - ³³	n t + i n t	681 670
+4707	Maru	twenty	ʃ ḭ/i k ⁵⁵ + tsʰ ɛ ³¹	ʃ ḭ/i k ⁵⁵ + tsʰ ɛ - ³¹	i n c t + i n t	682 670
+4709	Xiandao	twenty	t a ³¹ + s au ⁵⁵	t a ³¹ + s au ⁵⁵	i n t + i n t	680 241
+5249	Rangoon	twenty	n̥ i ʔ ⁴ + sʰ ɛ ²²	n̥ i ʔ ⁴ + sʰ ɛ - ²²	i n c t + i n t	685 670
+7539	Old_Burmese	twenty	n̥ a ts + tsʰ a j	n̥ a ts - + tsʰ a j -	i n c + i n c	685 670
+4713	Achang_Longchuan	two	s ə k ⁵⁵	s ə k ⁵⁵	i n c t	407
+4716	Atsi	two	i ⁵⁵	i - ⁵⁵	n t	406
+4718	Bola	two	ḭ/i ³⁵	ḭ/i - ³⁵	n t	406
+4721	Lashi	two	ə̰/ə k ⁵⁵	ə̰/ə k ⁵⁵	n c t	406
+4722	Maru	two	ʃ ḭ/i k ⁵⁵	ʃ ḭ/i k ⁵⁵	i n c t	407
+4724	Xiandao	two	s ɤ k ⁵⁵	s ɤ k ⁵⁵	i n c t	407
+5640	Rangoon	two	n̥	n̥ - -	i	684
+7541	Old_Burmese	two	n̥ a ts	n̥ a ts	i n c	684
+4894	Achang_Longchuan	we [first person plural inclusive]	ŋ ɔ ⁵⁵ + t u ʔ ³¹	ŋ ɔ ⁵⁵ + t u ʔ ³¹	i n t + i n c t	416 417
+4895	Atsi	we [first person plural inclusive]	ŋ a ⁵⁵ + m o ʔ ⁵⁵	ŋ a ⁵⁵ + m o ʔ ⁵⁵	i n t + i n c t	416 418
+4896	Bola	we [first person plural inclusive]	ŋ ă/ă ⁵⁵ + m a ʔ ³¹	ŋ ă/ă ⁵⁵ + m a ʔ ³¹	i n t + i n c t	416 418
+4897	Lashi	we [first person plural inclusive]	ŋ ŏ/ŏ ³¹ + n ṵ/u ŋ ⁵⁵	ŋ ŏ/ŏ ³¹ + n ṵ/u ŋ ⁵⁵	i n t + i n c t	416 419
+4898	Maru	we [first person plural inclusive]	ŋ ɔ̆ ³¹ + n a̰/au ŋ ⁵⁵	ŋ ɔ̆ ³¹ + n a̰/au ŋ ⁵⁵	i n t + i n c t	416 419
+4899	Xiandao	we [first person plural inclusive]	ŋ ɔ ⁵⁵ + t u ³⁵	ŋ ɔ ⁵⁵ + t u - ³⁵	i n t + i n t	416 417
+5415	Rangoon	we [first person plural inclusive]	ŋ ɑ ²² + t o ⁵³	ŋ ɑ ²² + t o - ⁵³	i n t + i n t	416 417
+4951	Achang_Longchuan	wet	pʰ e t ⁵⁵	pʰ e t ⁵⁵	i n c t	686
+4953	Atsi	wet	t ḛ/e ʔ ⁵⁵	t ḛ/e ʔ ⁵⁵	i n c t	420
+4954	Bola	wet	tʃ ɔ̰/ɔ ʔ ⁵⁵	tʃ ɔ̰/ɔ ʔ ⁵⁵	i n c t	420
+4957	Lashi	wet	tʃ ṵː/u ʔ ⁵⁵	tʃ ṵː/u ʔ ⁵⁵	i n c t	420
+4958	Maru	wet	tʃ ṵ/u k ⁵⁵	tʃ ṵ/u k ⁵⁵	i n c t	420
+4959	Xiandao	wet	c o ʔ ⁵⁵	c o ʔ ⁵⁵	i n c t	420
+5497	Rangoon	wet	s o ²²	s o - ²²	i n t	420
+7543	Old_Burmese	wet	ts ə w	ts ə w -	i n c	420
+4963	Achang_Longchuan	what	p i ³¹ + s i ⁵⁵	p i ³¹ + s i ⁵⁵	i n t + i n t	421 690
+4966	Atsi	what	x ai ⁵¹	x ai ⁵¹	i n t	689
+4968	Bola	what	p ɛ̰/ɛ ⁵⁵ + tʃ u ŋ ³¹	p ɛ̰/ɛ ⁵⁵ + tʃ u ŋ ³¹	i n t + i n c t	421 422
+4970	Lashi	what	x a ³¹ + tʃ u ŋ ³³	x a ³¹ + tʃ u ŋ ³³	i n t + i n c t	689 422
+4971	Maru	what	p ɛ̰/ɛ ⁵⁵	p ɛ̰/ɛ ⁵⁵	i n t	421
+4973	Xiandao	what	p ɛ ³¹	p ɛ ³¹	i n t	421
+5512	Rangoon	what	ɑ ⁵³ + b ɛ ²²	ɑ ⁵³ + b ɛ ²²	n t + i n t	687 688
+5513	Rangoon	what	b ɑ ²²	b ɑ ²²	i n t	881
+4984	Achang_Longchuan	where	x oi ⁵⁵ + tʰ ɔ ʔ ⁵⁵	x oi ⁵⁵ + tʰ ɔ ʔ ⁵⁵	i n t + i n c t	694 691
+4987	Atsi	where	kʰ a ⁵¹ + m a ⁵⁵	kʰ a - ⁵¹ + m a ⁵⁵	i n t + i n t	27 692
+4989	Bola	where	kʰ ă/ă k ⁵⁵ + kʰ j a ⁵⁵	kʰ ă/ă k ⁵⁵ + kʰ j a ⁵⁵	i n c t + i m n t	27 697
+4991	Lashi	where	kʰ ă/ă ³³ + m o ³³	kʰ ă/ă - ³³ + m o ³³	i n t + i n t	27 692
+4992	Maru	where	m̥ ə̆ ³¹ + m ɛ ³¹	m̥ ə̆ ³¹ + m ɛ ³¹	i n t + i n t	692 26
+4994	Xiandao	where	x ɔ ³¹ + l ɔ ³¹	x ɔ ³¹ + l ɔ ³¹	i n t + i n t	694 693
+5677	Rangoon	where	ɑ ⁵³ + b ɛ ²² + m̥ ɑ ²²	ɑ ⁵³ + b ɛ ²² + m̥ ɑ ²²	n t + i n t + i n t	695 696 692
+4998	Achang_Longchuan	white	pʰ ʐ o ⁵⁵	pʰ ʐ o ⁵⁵	i m n t	698
+5000	Atsi	white	pʰ j u ⁵¹	pʰ j u ⁵¹	i m n t	698
+5001	Bola	white	pʰ j u ⁵⁵	pʰ j u ⁵⁵	i m n t	698
+5004	Lashi	white	pʰ j uː/u ³³	pʰ j uː/u ³³	i m n t	698
+5005	Maru	white	pʰ j u ³¹	pʰ j u ³¹	i m n t	698
+5006	Xiandao	white	pʰ ʐ u ⁵⁵	pʰ ʐ u ⁵⁵	i m n t	698
+5534	Rangoon	white	pʰ j u ²²	pʰ j u ²²	i m n t	698
+7545	Old_Burmese	white	pʰ l u ²²	pʰ l u ²²	i m n t	698
+5014	Achang_Longchuan	who	x au ⁵⁵	x au - ⁵⁵	i n t	425
+5017	Atsi	who	o ⁵⁵	o ⁵⁵	n t	701
+5019	Bola	who	kʰ a k ⁵⁵ + j au ʔ ³¹	kʰ a k ⁵⁵ + j au ʔ ³¹	i n c t + i n c t	700 24
+5022	Lashi	who	x a ŋ ⁵⁵	x a ŋ ⁵⁵	i n c t	425
+5023	Maru	who	kʰ ə̆ ³¹ + j au k ³¹	kʰ ə̆ - ³¹ + j au k ³¹	i n t + i n c t	700 24
+5025	Xiandao	who	x au ⁵⁵	x au - ⁵⁵	i n t	425
+5428	Rangoon	who	m i ²² + tθ u ²²	m i ²² + tθ u ²²	i n t + i n t	144 699
+5429	Rangoon	who	b ɛ ²² + tθ u ²²	b ɛ ²² + tθ u ²²	i n t + i n t	157 882
+7547	Old_Burmese	who	s u ²²	s u ²²	i n t	699
+5202	Achang_Longchuan	yellow	l ə ŋ ³⁵	l ə ŋ ³⁵	i n c t	444
+5204	Atsi	yellow	x ui ⁵¹	x ui ⁵¹	i n t	443
+5205	Bola	yellow	ŋ j ṵ/u ŋ ⁵⁵	ŋ j ṵ/u ŋ ⁵⁵	i m n c t	706
+5207	Lashi	yellow	x əː/ə ³³	x əː/ə ³³	i n t	443
+5208	Maru	yellow	x ui ³¹	x ui ³¹	i n t	443
+5209	Xiandao	yellow	l̥ ɯ ŋ ³⁵	l̥ ɯ ŋ ³⁵	i n c t	444
+5268	Rangoon	yellow	w a ²²	w a ²²	i n t	442
+7549	Old_Burmese	yellow	w a ²²	w a ²²	i n t	442
+6158	Atsi	yesterday	a ²¹ + ŋ j i ⁵⁵ + n a p ²¹	a ²¹ + ŋ j i ⁵⁵ + n a p ²¹	n t + i m n t + i n c t	1 382 57
+6343	Lashi	yesterday	a ³¹ + ŋ j ei ⁵⁵ + n a p ³¹	a ³¹ + ŋ j ei ⁵⁵ + n a p ³¹	n t + i m n t + i n c t	1 382 57
+6431	Xiandao	yesterday	n ³¹ + m̥ a n ³⁵	- - n ³¹ + m̥ a n ³⁵	n t + i n c t	382 55
+6516	Bola	yesterday	a ³¹ + ŋ j i ³⁵ + n ɛ ʔ ³¹	a ³¹ + ŋ j i ³⁵ + n ɛ ʔ ³¹	n t + i m n t + i n c t	1 382 57
+6529	Achang_Longchuan	yesterday	m a n ³⁵	m a n ³⁵	i n c t	55
+6590	Maru	yesterday	a ³¹ + ŋ j i ³¹ + n ɛ ʔ ³¹	a ³¹ + ŋ j i ³¹ + n ɛ ʔ ³¹	n t + i m n t + i n c t	1 382 57
+6621	Rangoon	yesterday	m ɑ ⁵³ + n e ⁵³ + k ɑ ⁵³	m ɑ ⁵³ + n - e ⁵³ + k ɑ ⁵³	i n t + i n t + i n t	62 382 758
+5220	Achang_Longchuan	you [second person plural]	n ua ŋ ⁵⁵ + t u ʔ ³¹	n - ua ŋ ⁵⁵ + t u ʔ ³¹	i n c t + i n c t	445 417
+5222	Atsi	you [second person plural]	n u ŋ ⁵⁵ + m o ʔ ⁵⁵	n - u ŋ ⁵⁵ + m o ʔ ⁵⁵	i n c t + i n c t	445 418
+5223	Bola	you [second person plural]	n au ŋ ³¹ + m a ʔ ³¹	n - au ŋ ³¹ + m a ʔ ³¹	i n c t + i n c t	445 418
+5225	Lashi	you [second person plural]	ŋ j a ŋ ³³ + n u ŋ ⁵⁵	ŋ j a ŋ ³³ + n u ŋ ⁵⁵	i m n c t + i n c t	445 419
+5226	Maru	you [second person plural]	n ɔ̃̆/ɔ̆ ∼ ³¹ + n a̰/au ŋ ⁵⁵	n - ɔ̃̆/ɔ̆ ∼ ³¹ + n a̰/au ŋ ⁵⁵	i n c t + i n c t	445 419
+5228	Xiandao	you [second person plural]	n ɔ ŋ ⁵⁵ + t u ³⁵	n - ɔ ŋ ⁵⁵ + t u - ³⁵	i n c t + i n t	445 417
+5382	Rangoon	you [second person plural]	m ĩ/i ∼ ⁵⁵ + t o ⁵³	m ĩ/i ∼ ⁵⁵ + t o - ⁵³	i n c t + i n t	499 417
+6219	Maru	young	ŋ ai ³¹	ŋ ai - ³¹	i n t	350
+6260	Rangoon	young	n u ⁵³	n u ⁵³	i n t	121
+6261	Rangoon	young	p j o ²²	p j o ²²	i m n t	122
+6336	Atsi	young	a ²¹ + s a k ²¹ + t ḭ/i ʔ ⁵⁵	a ²¹ + s a k ²¹ + t ḭ/i ʔ ⁵⁵	n t + i n c t + i n c t	1 120 116
+6558	Xiandao	young	ʐ a m ³¹	ʐ a m ³¹	i n c t	802
+6591	Achang_Longchuan	young	n o m ³⁵	n o m ³⁵	i n c t	803
+6625	Bola	young	a ³¹ + s a k ³¹ + ŋ ai ⁵⁵	a ³¹ + s a k ³¹ + ŋ ai - ⁵⁵	n t + i n c t + i n t	1 120 350
+6644	Xiandao	young	a ³¹ + ʐ a m ³¹	a ³¹ + ʐ a m ³¹	n t + i n c t	1 883
+7552	Old_Burmese	young	ŋ a j	ŋ a j -	i n c	350
+#@highlight=ALIGNMENT|SEGMENTS
+#@sampa=SEGMENTS
+#@pinyin=
+#@css=menu:show|database:hide
+#@basics=ALIGNMENT|CONCEPT|CROSSIDS|DOCULECT|SEGMENTS|STRUCTURE
+#@_selected_doculects=Rangoon|Atsi|Maru|Lashi|Xiandao|Bola|Achang_Longchuan|Old_Burmese
+#@_selected_concepts=I [first person singular]|above|all|bad|below, under|big|black|cold (of temperature)|correct (right)|dark|dirty|dry|early|eight|far|firewood|five|four|full|good|green|hard|he or she [third person singular]|heavy|here|high / tall|horizontal|hot|hundred|inside|late|left|light (of weight)|long|many|middle|morning|narrow|near|new|nine|noon|old (of person)|one|outside|red|right|round|salty|seven|sharp|short|shy|six|small|smooth|soft|straight|ten|that|the ant|the armpit|the bamboo|the barley (tibetan or highland)|the belly|the bird|the blood|the body hair (hair or fur)|the bone|the branch|the breast (female)|the child (young human)|the cloud|the daughter|the dew|the dog|the dream|the dust|the ear|the earth (soil)|the earthworm|the egg|the eye|the father|the feather|the fire|the fish|the flea|the flower|the fog|the foot|the forest|the fox|the frog|the front (front side)|the frost|the fruit|the goat|the grass|the hail|the hair (of the head)|the hand|the head|the heart|the hoof|the horn (keratinized skin)|the horse|the house|the husband|the ice|the knee|the lake|the leaf|the lip (the lips)|the liver|the louse|the lung|the man (male human)|the meat|the moon|the mosquito|the mother|the mountain|the mouse or rat|the mouth|the mud|the nail (fingernail or claw)|the name|the neck|the needle (for sewing)|the nit|the nose|the otter|the pig|the rain|the rainbow|the rice plant|the river|the road|the root|the rope|the salt|the sand|the sea|the seed|the sheep|the shoulder|the sickle|the skin|the sky|the smoke|the snake|the snow|the son|the sparrow|the spider|the star|the stick|the stone (a piece of)|the sun|the tail|the thigh|the thunder|the tiger|the tongue|the tooth (front)|the tree|the water|the wheat|the wife|the wind|the wing|the wolf|the woman|the wood (material)|the year|there|thick|this|thou [second person singular]|three|to be alive|to bite|to blow (of wind)|to burn [intransitive]|to buy|to chew|to come|to count|to cry (weep)|to die|to dig|to drink|to eat|to fight|to float|to flow|to fly (move through air)|to give|to hear|to hide (conceal)|to hold|to hunt|to kill|to laugh|to lick|to lie down|to plant (vegetals, rice)|to play|to pull|to push|to reside (live)|to scratch|to see|to shoot (an arrow)|to sing|to sleep|to smell (perceive odor) [transitive]|to spit|to stand|to steal|to think (reflect)|to throw|to vomit|to walk|to wipe|today|tomorrow|twenty|two|we [first person plural inclusive]|wet|what|where|white|who|yellow|yesterday|you [second person plural]|young
+#@sorted_taxa=Rangoon|Atsi|Maru|Lashi|Xiandao|Bola|Achang_Longchuan|Old_Burmese
+#@sorted_concepts=I [first person singular]|above|all|bad|below, under|big|black|cold (of temperature)|correct (right)|dark|dirty|dry|early|eight|far|firewood|five|four|full|good|green|hard|he or she [third person singular]|heavy|here|high / tall|horizontal|hot|hundred|inside|late|left|light (of weight)|long|many|middle|morning|narrow|near|new|nine|noon|old (of person)|one|outside|red|right|round|salty|seven|sharp|short|shy|six|small|smooth|soft|straight|ten|that|the ant|the armpit|the bamboo|the barley (tibetan or highland)|the belly|the bird|the blood|the body hair (hair or fur)|the bone|the branch|the breast (female)|the child (young human)|the cloud|the daughter|the dew|the dog|the dream|the dust|the ear|the earth (soil)|the earthworm|the egg|the eye|the father|the feather|the fire|the fish|the flea|the flower|the fog|the foot|the forest|the fox|the frog|the front (front side)|the frost|the fruit|the goat|the grass|the hail|the hair (of the head)|the hand|the head|the heart|the hoof|the horn (keratinized skin)|the horse|the house|the husband|the ice|the knee|the lake|the leaf|the lip (the lips)|the liver|the louse|the lung|the man (male human)|the meat|the moon|the mosquito|the mother|the mountain|the mouse or rat|the mouth|the mud|the nail (fingernail or claw)|the name|the neck|the needle (for sewing)|the nit|the nose|the otter|the pig|the rain|the rainbow|the rice plant|the river|the road|the root|the rope|the salt|the sand|the sea|the seed|the sheep|the shoulder|the sickle|the skin|the sky|the smoke|the snake|the snow|the son|the sparrow|the spider|the star|the stick|the stone (a piece of)|the sun|the tail|the thigh|the thunder|the tiger|the tongue|the tooth (front)|the tree|the water|the wheat|the wife|the wind|the wing|the wolf|the woman|the wood (material)|the year|there|thick|this|thou [second person singular]|three|to be alive|to bite|to blow (of wind)|to burn [intransitive]|to buy|to chew|to come|to count|to cry (weep)|to die|to dig|to drink|to eat|to fight|to float|to flow|to fly (move through air)|to give|to hear|to hide (conceal)|to hold|to hunt|to kill|to laugh|to lick|to lie down|to plant (vegetals, rice)|to play|to pull|to push|to reside (live)|to scratch|to see|to shoot (an arrow)|to sing|to sleep|to smell (perceive odor) [transitive]|to spit|to stand|to steal|to think (reflect)|to throw|to vomit|to walk|to wipe|today|tomorrow|twenty|two|we [first person plural inclusive]|wet|what|where|white|who|yellow|yesterday|you [second person plural]|young
+#@display=filedisplay
+#@missing_marker=Ø
+#@separator=	
+#@gap_marker=-
+#@formatter=false
+#@root_formatter=CROSSIDS
+#@note_formatter=undefined
+#@pattern_formatter=undefined
+#@publish=undefined
+#@_almcol=ALIGNMENT
+#@filename=burmish-240-8.tsv
+#@navbar=true
+#@_morphology_mode=full

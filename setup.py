@@ -18,9 +18,9 @@ setup(
             'Programming Language :: Python :: 3.5',
             'Programming Language :: Python :: 3.6',
         ],
-        version='0.1.4',
+        version='1.0.0.dev0',
         packages=find_packages(where='src'),
         package_dir={'': 'src'},
-        install_requires=['lingpy'],
+        install_requires=['lingpy>=2.6.8'],
         keywords="historical linguistics, computational linguistics, computer-assisted language comparison"
         )
