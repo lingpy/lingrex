@@ -8,6 +8,7 @@ except ImportError:
 setup(
         name='lingrex',
         description="Linguistic reconstruction with LingPy",
+        long_description=open('README.md').read(),
         author='Johann-Mattis List',
         url='https://github.com/lingpy/lingrex',
         classifiers=[
