@@ -1,0 +1,26 @@
+{
+    "title": "LingRex. Linguistic Reconstruction with LingPy",
+    "creators": [
+        {
+            "name": "Johann-Mattis List"
+        }
+    ],
+    "description": "<p>Cite the library as:</p>\n\n<blockquote>\n<p>List, Johann-Mattis (2021): LingRex. Linguistic reconstruction with LingPy. Version 1.0.0. URL: https://github.com/lingpy/lingrex, DOI: https://doi.org/10.5281/zenodo.1544943. Leipzig: Max Planck Institute for Evolutionary Anthropology.</p>\n</blockquote>",
+    "access_right": "open",
+    "keywords": [
+        "linguistics",
+        "cldf:Wordlist"
+    ],
+    "license": {
+        "id": "CC-BY-4.0"
+    },
+    "upload_type": "software",
+    "communities": [
+        {
+            "identifier": "dighl"
+        },
+        {
+            "identifier": "calc"
+        }
+    ]
+}

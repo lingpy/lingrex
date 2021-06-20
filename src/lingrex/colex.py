@@ -4,8 +4,14 @@ Functions for partial colexification manipulations.
 from lingpy import *
 from collections import defaultdict
 
-def find_bad_internal_alignments(alignments, ref='cogids', segments='tokens',
-        alignment='alignment', transcription='ipa'):
+
+def find_bad_internal_alignments(
+    alignments,
+    ref="cogids",
+    segments="tokens",
+    alignment="alignment",
+    transcription="ipa",
+):
     """
     Helper function discards wrongly assigned cross-semantic cognates.
 
@@ -16,15 +22,16 @@ def find_bad_internal_alignments(alignments, ref='cogids', segments='tokens',
         cross-semantic cognates.
     """
     newIDs = {}
+
     def get_all_indices(lst):
         idxs = defaultdict(list)
         for i, l in enumerate(lst):
             idxs[l] += [i]
         return idxs
-    new_cogid = max(alignments.msa[ref])+1
+
+    new_cogid = max(alignments.msa[ref]) + 1
     for cogid, msa in alignments.msa[ref].items():
-        idxs = [i for t, i in get_all_indices(msa['taxa']).items() if len(i) >
-                1]
+        idxs = [i for t, i in get_all_indices(msa["taxa"]).items() if len(i) > 1]
         for idx in idxs:
             tups = [tuple(msa["alignment"][x]) for x in idx]
             if len(set(tups)) > 1:
@@ -45,10 +52,11 @@ def expand_alignment(msa, taxa, missing="Ø"):
     """
     out = []
     for taxon in taxa:
-        if taxon in msa['taxa']:
-            tidx = msa['taxa'].index(taxon)
-            out += [[x.split('/')[1] if '/' in x else x for x in
-                msa['alignment'][tidx]]]
+        if taxon in msa["taxa"]:
+            tidx = msa["taxa"].index(taxon)
+            out += [
+                [x.split("/")[1] if "/" in x else x for x in msa["alignment"][tidx]]
+            ]
         else:
             out += [len(msa["alignment"][0]) * [missing]]
     return out
@@ -59,12 +67,11 @@ def compatible(msa1, msa2, missing="Ø", gap="-"):
     matches = 0
     for line1, line2 in zip(msa1, msa2):
         if [x for x in line1 if x != gap] == [
-                x for x in line2 if x != gap] and \
-                        missing not in line1+line2:
+            x for x in line2 if x != gap
+        ] and missing not in line1 + line2:
             matches += 1
         else:
-            if list(set(line1))[0] == missing or list(set(
-                line2))[0] == missing:
+            if list(set(line1))[0] == missing or list(set(line2))[0] == missing:
                 pass
             else:
                 return False
@@ -78,8 +85,12 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
     out = []
     missing_taxa = []
     for k, (a, b) in enumerate(zip(almA, almB)):
-        if len(set(a)) == 1 and list(set(a))[0] == missing and \
-                len(set(b)) == 1 and list(set(b))[0] == missing:
+        if (
+            len(set(a)) == 1
+            and list(set(a))[0] == missing
+            and len(set(b)) == 1
+            and list(set(b))[0] == missing
+        ):
             missing_taxa += [k]
     i, j = 0, 0
     while i < len(almA[0]) and j < len(almB[0]):
@@ -113,11 +124,11 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
                     j += 1
                     col = []
                     break
-                
+
                 if a == missing:
                     col += [b]
                 elif b == missing:
-                    col += [a] 
+                    col += [a]
                 else:
                     col += [a]
             if col:
@@ -147,20 +158,20 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
     return nalm
 
 
-
-
-def find_colexified_alignments(alignments, cognates='cogids', segments='tokens',
-        missing="Ø", ref='crossids'):
+def find_colexified_alignments(
+    alignments, cognates="cogids", segments="tokens", missing="Ø", ref="crossids"
+):
     """
     Identify identical alignments in a dataset and label them as homophones.
     """
-    
+
     queue = []
-    for cogid, msa in sorted(alignments.msa[cognates].items(), key=lambda x:
-            len(set(x[1]['taxa'])), reverse=True):
-        queue += [(cogid, expand_alignment(msa, alignments.taxa,
-            missing=missing))]
-    print(queue)
+    for cogid, msa in sorted(
+        alignments.msa[cognates].items(),
+        key=lambda x: len(set(x[1]["taxa"])),
+        reverse=True,
+    ):
+        queue += [(cogid, expand_alignment(msa, alignments.taxa, missing=missing))]
 
     merged = {}
 
@@ -169,28 +180,16 @@ def find_colexified_alignments(alignments, cognates='cogids', segments='tokens',
         deletes = []
         merged[this_cogid] = this_cogid
         for i, (other_cogid, other_msa) in enumerate(queue):
-            print(this_cogid)
-            for row in this_msa:
-                print(" ".join(row))
-            print("")
-            print(other_cogid)
-            for row in other_msa:
-                print(" ".join(row))
-            print("")
-            print("compatible", compatible(this_msa, other_msa))
             if compatible(this_msa, other_msa) >= 1:
                 this_msa = merge_alignments(this_msa, other_msa)
                 merged[other_cogid] = this_cogid
                 deletes += [i]
-                
+
         for i in deletes[::-1]:
             del queue[i]
 
-    
     # assemble the clusters now
-    if alignments._mode == 'fuzzy':
+    if alignments._mode == "fuzzy":
         alignments.add_entries(ref, cognates, lambda x: [merged.get(y, y) for y in x])
     else:
         alignments.add_entries(ref, cognates, lambda x: merged.get(x, x))
-
-

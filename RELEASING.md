@@ -10,16 +10,16 @@ Releasing linse
   ```
   cd tests/workflows/list-2019
   make
+  cd ../tests/workflows/bodt-2019
+  make
+  cd ../tests/workflows/wu-2020
+  make
+  ```
 
 - Make sure statement coverage >= 99%
 - Use black to make the code unified:
   ```
   black src/lingrex/*.py
-  ```
-
-- Dump latest version of concepticon to the repo:
-  ```
-  concepticon --repos-version=vLATEST dump --destination=src/lingrex/data/concepticon.zip
   ```
 
 - Update the version number, by removing the trailing `.dev0` in:
