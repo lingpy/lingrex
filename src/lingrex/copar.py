@@ -1,4 +1,5 @@
 import math
+import pathlib
 import itertools
 import collections
 
@@ -689,8 +690,7 @@ class CoPaR(Alignments):
                 ", ".join(["{0}:{1}".format(x, y) for x, y in entries]),
                 concepts,
             )
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write(text)
+        pathlib.Path(filename).write_text(text, encoding="utf8")
 
     def purity(self):
         """
