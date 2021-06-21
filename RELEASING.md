@@ -7,18 +7,14 @@ Releasing linse
   tox -r
   ```
 - test if the workflow scripts still work:
-  ```
-  cd tests/workflows/list-2019
-  make
-  cd ../tests/workflows/bodt-2019
-  make
-  cd ../tests/workflows/wu-2020
-  make
+  ```shell
+  pytest -m"workflow"
   ```
 
 - Make sure statement coverage >= 99%
-- Use black to make the code unified:
+- Use black and flake8 to make the code unified:
   ```
+  flake8 src
   black src/lingrex/*.py
   ```
 

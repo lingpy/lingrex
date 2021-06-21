@@ -9,6 +9,30 @@ from tabulate import tabulate
 from lingpy.compare.sanity import average_coverage
 import codecs
 
+
+class CustomCoPaR(CoPaR):
+    def stats(self, score_mode='pairs'):
+        rest = 0
+        if self._mode == 'fuzzy':
+            for idx, cogids, alms in self.iter_rows(self._ref, self._alignment):
+                for alm, cogid in zip(alms, cogids):
+                    if cogid not in self.msa[self._ref]:
+                        rest += len(alm)
+                    else:
+                        pass
+        else:
+            for idx, cogid, alm in self.iter_rows(self._ref, self._alignment):
+                if cogid not in self.msa[self._ref]:
+                    rest += len(alm)
+        scores = [0 for i in range(rest)]
+        for (p, ptn), sites in self.clusters.items():
+            scores += len(sites) * [score_patterns(
+                [
+                    self.sites[site][1] for site in sites
+                ], mode=score_mode)]
+        return sum(scores) / len(scores)
+
+
 def run_experiments(
         f, 
         ref, 
@@ -32,7 +56,7 @@ def run_experiments(
                 'patterns', 'predicted', 'predictable', 'removed', 'regular',
                 'purityx'])+'\n')
 
-    cpb = CoPaR(f, ref=ref, fuzzy=fuzzy, split_on_tones=False,
+    cpb = CustomCoPaR(f, ref=ref, fuzzy=fuzzy, split_on_tones=False,
             segments='segments', minrefs=2, structure="structure",
             transcription="segments")
     
@@ -81,7 +105,7 @@ def run_experiments(
                 else:
                     D[idx] = cpb[idx]
         
-        cp = CoPaR(D, ref=ref, fuzzy=fuzzy, split_on_tones=False,
+        cp = CustomCoPaR(D, ref=ref, fuzzy=fuzzy, split_on_tones=False,
                 segments='segments', minrefs=2, structure="structure",
                 transcription="segments")
         if 'l' in argv: 
