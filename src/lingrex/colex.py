@@ -47,7 +47,9 @@ def expand_alignment(msa, taxa, missing="Ø"):
     for taxon in taxa:
         if taxon in msa["taxa"]:
             tidx = msa["taxa"].index(taxon)
-            out.append([x.split("/")[1] if "/" in x else x for x in msa["alignment"][tidx]])
+            out.append(
+                [x.split("/")[1] if "/" in x else x for x in msa["alignment"][tidx]]
+            )
         else:
             out.append(len(msa["alignment"][0]) * [missing])
     return out
@@ -76,9 +78,9 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
     for k, (a, b) in enumerate(zip(almA, almB)):
         if (
             len(set(a)) == 1
-            and list(set(a))[0] == missing
-            and len(set(b)) == 1
-            and list(set(b))[0] == missing
+            and list(set(a))[0] == missing  # noqa: W503
+            and len(set(b)) == 1  # noqa: W503
+            and list(set(b))[0] == missing  # noqa: W503
         ):
             missing_taxa += [k]
     i, j = 0, 0
@@ -142,7 +144,9 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
     return nalm
 
 
-def find_colexified_alignments(alignments, cognates="cogids", missing="Ø", ref="crossids"):
+def find_colexified_alignments(
+    alignments, cognates="cogids", missing="Ø", ref="crossids"
+):
     """
     Identify identical alignments in a dataset and label them as homophones.
     """

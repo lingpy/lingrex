@@ -3,7 +3,7 @@ Utility functions for the lingrex package.
 """
 import pathlib
 
-from lingpy import *
+from lingpy import tokens2class, prosodic_string
 from lingpy.align.sca import get_consensus
 from lingpy import basictypes as bt
 

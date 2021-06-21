@@ -4,7 +4,7 @@ Basic code for borrowing detection.
 import itertools
 import collections
 
-from lingpy import *
+from lingpy import Pairwise
 from lingpy.compare.partial import Partial
 from lingpy.compare.lexstat import LexStat
 

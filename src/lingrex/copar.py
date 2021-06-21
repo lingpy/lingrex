@@ -42,7 +42,7 @@ def incompatible_columns(patterns, missing="Ø"):
         col = [
             patterns[j][i] for j in range(len(patterns)) if patterns[j][i] != missing
         ]
-        columns.append('*' if len(set(col)) > 1 else '')
+        columns.append("*" if len(set(col)) > 1 else "")
     return columns
 
 
@@ -126,7 +126,7 @@ def compatible_columns(colA, colB, missing="Ø", gap="-"):
     """
     matches, mismatches = 0, 0
     for a, b in zip(colA, colB):
-        if not missing in [a, b]:
+        if missing not in [a, b]:
             if a != b:
                 mismatches += 1
             else:
@@ -191,7 +191,7 @@ class CoPaR(Alignments):
         self.missing = missing
         self.gap = gap
         self.irregular = irregular
-        if not structure in self.columns:
+        if structure not in self.columns:
             raise ValueError("no column {0} for structure was found".format(structure))
 
     def positions_from_prostrings(self, cogid, indices, alignment, structures):
@@ -344,11 +344,15 @@ class CoPaR(Alignments):
         clusters = self.clusters
         while True:
             prog = 0
-            with pb(desc="CoPaR: cluster_sites()", total=len(self.clusters)) as progress:
+            with pb(
+                desc="CoPaR: cluster_sites()", total=len(self.clusters)
+            ) as progress:
                 sorted_clusters = sorted(
                     clusters.items(),
                     key=lambda x: (
-                        score_patterns([self.sites[y][1] for y in x[1]], mode=score_mode),
+                        score_patterns(
+                            [self.sites[y][1] for y in x[1]], mode=score_mode
+                        ),
                         len(x[1]),
                     ),
                     reverse=True,
@@ -367,8 +371,14 @@ class CoPaR(Alignments):
                             missing=self.missing,
                             gap=self.gap,
                         )
-                        if this_pos == next_pos and match >= match_threshold and mism == 0:
-                            this_cluster = consensus_pattern([this_cluster, next_cluster])
+                        if (
+                            this_pos == next_pos
+                            and match >= match_threshold  # noqa: W503
+                            and mism == 0  # noqa: W503
+                        ):
+                            this_cluster = consensus_pattern(
+                                [this_cluster, next_cluster]
+                            )
                             these_vals += next_vals
                         else:
                             queue += [((next_pos, next_cluster), next_vals)]
@@ -391,7 +401,9 @@ class CoPaR(Alignments):
                     break
                 else:
                     log.warning(
-                        "iterating, since {0} clusters can further be merged".format(match)
+                        "iterating, since {0} clusters can further be merged".format(
+                            match
+                        )
                     )
         self.clusters = clusters
         self.ordered_clusters = sorted(clusters, key=lambda x: len(x[1]))
@@ -429,7 +441,9 @@ class CoPaR(Alignments):
             Minimal size of clusters that we regard as regular.
 
         """
-        bad_clusters = [(clr, pts[0]) for clr, pts in self.clusters.items() if len(pts) == 1]
+        bad_clusters = [
+            (clr, pts[0]) for clr, pts in self.clusters.items() if len(pts) == 1
+        ]
         good_clusters = sorted(
             [(clr, pts) for clr, pts in self.clusters.items() if len(pts) >= accepted],
             key=lambda x: len(x[1]),
@@ -446,7 +460,9 @@ class CoPaR(Alignments):
                         irregular_patterns += [clr]
                         break
         # re-assign alignments to the data by adding the irregular character
-        for key, value in sorted(new_clusters.items(), key=lambda x: len(x[1]), reverse=True):
+        for key, value in sorted(
+            new_clusters.items(), key=lambda x: len(x[1]), reverse=True
+        ):
             if len(value) > 0:
                 for i, pattern in enumerate(value):
                     pt = []
@@ -454,7 +470,6 @@ class CoPaR(Alignments):
                         if a != b and self.missing not in [a, b]:
                             pt += [irregular_prefix + b]
                             # assign pattern to the corresponding alignments
-                            doc = self.cols[lid]
                             for cogid, position in self.clusters[pattern]:
                                 if self._mode == "fuzzy":
                                     word_indices = self.etd[self.ref][cogid][lid]
@@ -468,24 +483,33 @@ class CoPaR(Alignments):
                                                 irregular_prefix, b, a
                                             )
                                             alms[cog_pos] = new_alm
-                                            self[widx, self._alignment] = self._str_type(
-                                                " + ".join([" ".join(x) for x in alms]).split()
+                                            self[
+                                                widx, self._alignment
+                                            ] = self._str_type(
+                                                " + ".join(
+                                                    [" ".join(x) for x in alms]
+                                                ).split()
                                             )
                                 else:
                                     word_indices = self.etd[self.ref][cogid][lid]
                                     if word_indices:
                                         for widx in word_indices:
-                                            alm = self._str_type(self[widx, self._alignment])
+                                            alm = self._str_type(
+                                                self[widx, self._alignment]
+                                            )
                                             alm[position] = "{0}{1}/{2}".format(
                                                 irregular_prefix, b, a
                                             )
-                                            self[widx, self._alignment] = self._str_type(
-                                                " ".join(alm))
+                                            self[
+                                                widx, self._alignment
+                                            ] = self._str_type(" ".join(alm))
                         else:
                             pt += [b]
 
         self.ipatterns = new_clusters
-        for pattern, data in [(a, b) for a, b in bad_clusters if a not in irregular_patterns]:
+        for pattern, data in [
+            (a, b) for a, b in bad_clusters if a not in irregular_patterns
+        ]:
             cogid, position = data
             if self._mode == "fuzzy":
                 for indices in [idx for idx in self.etd[self.ref][cogid] if idx]:
@@ -595,7 +619,7 @@ class CoPaR(Alignments):
                             try:
                                 this_pattern[position] = pattern_id
                                 P[idx].change(pattern_position, this_pattern)
-                            except:
+                            except:  # noqa: E722
                                 log.warning("error in {0}".format(cogid))
 
                         else:
@@ -737,10 +761,6 @@ class CoPaR(Alignments):
         """
         Compute upper bound for clique partitioning following Bhasker 1991.
         """
-        # compute nodes
-        nodes = len(self.sites)
-        # compute edges
-        edges = 0
         degs = {s: 0 for s in self.sites}
         sings = {s: 0 for s in self.sites}
         for (nA, (posA, ptnA)), (nB, (posB, ptnB)) in itertools.combinations(
@@ -781,7 +801,6 @@ class CoPaR(Alignments):
         minrefs = self.minrefs
         missing = self.missing
         samples = kw.get("samples", 3)
-        structure = self._structure
 
         # pre-analyse the data to get for each site the best patterns in ranked
         # form
@@ -811,7 +830,6 @@ class CoPaR(Alignments):
         purity = {site: {} for site in ranked_sites}
 
         preds = {}
-        count = 1
         for cogid, msa in self.msa[self._ref].items():
             missings = [t for t in self.cols if t not in msa["taxa"]]
             if len(set(msa["taxa"])) >= minrefs:
