@@ -707,7 +707,7 @@ class CoPaR(Alignments):
                 ", ".join(["{0}:{1}".format(x, y) for x, y in entries]),
                 concepts,
             )
-        with open(filename, "w") as f:
+        with open(filename, "w", encoding="utf-8") as f:
             f.write(text)
 
     def purity(self):
