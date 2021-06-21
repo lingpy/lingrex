@@ -42,14 +42,11 @@ def incompatible_columns(patterns, missing="Ø"):
         col = [
             patterns[j][i] for j in range(len(patterns)) if patterns[j][i] != missing
         ]
-        if len(set(col)) > 1:
-            columns += ["*"]
-        else:
-            columns += [""]
+        columns.append('*' if len(set(col)) > 1 else '')
     return columns
 
 
-def score_patterns(patterns, missing="Ø", mode="coverage", smooth=0):
+def score_patterns(patterns, missing="Ø", mode="coverage"):
     """
     Function gives a score for the overall number of reflexes.
 
@@ -80,12 +77,9 @@ def score_patterns(patterns, missing="Ø", mode="coverage", smooth=0):
         return sum(scores) / sum(ranks) / len(patterns)
 
     if mode == "squared":
-        scores = []
         psize = len(patterns[0])
-        for row in patterns:
-            scores += [((psize - row.count(missing)) / psize) ** 2]
-        score = sum(scores) / len(scores)
-        return score
+        scores = [((psize - row.count(missing)) / psize) ** 2 for row in patterns]
+        return sum(scores) / len(scores)
 
     if mode == "pairs":
 
@@ -136,9 +130,7 @@ def compatible_columns(colA, colB, missing="Ø", gap="-"):
             if a != b:
                 mismatches += 1
             else:
-                if a == gap:
-                    pass
-                else:
+                if a != gap:
                     matches += 1
     return matches, mismatches
 
@@ -158,11 +150,8 @@ def density(wordlist, ref="cogid"):
     for concept in wordlist.rows:
         idxs = wordlist.get_list(row=concept, flat=True)
         cogids = [wordlist[idx, ref] for idx in idxs]
-        sums = []
-        for idx, cogid in zip(idxs, cogids):
-            sums += [1 / cogids.count(cogid)]
-        score = sum(sums) / len(sums)
-        scores += [score]
+        sums = [1 / cogids.count(cogid) for idx, cogid in zip(idxs, cogids)]
+        scores.append(sum(sums) / len(sums))
     return 1 - sum(scores) / len(scores)
 
 
@@ -218,7 +207,7 @@ class CoPaR(Alignments):
             strucs = [
                 class2tokens(struc, alm) for struc, alm in zip(structures, alignment)
             ]
-        consensus = get_consensus(alignment, gaps=True)
+        get_consensus(alignment, gaps=True)
         prostring = []
         for i in range(len(strucs[0])):
             row = [x[i] for x in strucs if x[i] != "-"]
@@ -355,16 +344,11 @@ class CoPaR(Alignments):
         clusters = self.clusters
         while True:
             prog = 0
-            with pb(
-                desc="CoPaR: cluster_sites()",
-                total=len(self.clusters),
-            ) as progress:
+            with pb(desc="CoPaR: cluster_sites()", total=len(self.clusters)) as progress:
                 sorted_clusters = sorted(
                     clusters.items(),
                     key=lambda x: (
-                        score_patterns(
-                            [self.sites[y][1] for y in x[1]], mode=score_mode
-                        ),
+                        score_patterns([self.sites[y][1] for y in x[1]], mode=score_mode),
                         len(x[1]),
                     ),
                     reverse=True,
@@ -383,14 +367,8 @@ class CoPaR(Alignments):
                             missing=self.missing,
                             gap=self.gap,
                         )
-                        if (
-                            this_pos == next_pos
-                            and match >= match_threshold
-                            and mism == 0
-                        ):
-                            this_cluster = consensus_pattern(
-                                [this_cluster, next_cluster]
-                            )
+                        if this_pos == next_pos and match >= match_threshold and mism == 0:
+                            this_cluster = consensus_pattern([this_cluster, next_cluster])
                             these_vals += next_vals
                         else:
                             queue += [((next_pos, next_cluster), next_vals)]
@@ -413,9 +391,7 @@ class CoPaR(Alignments):
                     break
                 else:
                     log.warning(
-                        "iterating, since {0} clusters can further be merged".format(
-                            match
-                        )
+                        "iterating, since {0} clusters can further be merged".format(match)
                     )
         self.clusters = clusters
         self.ordered_clusters = sorted(clusters, key=lambda x: len(x[1]))
@@ -441,13 +417,9 @@ class CoPaR(Alignments):
         self.patterns = asites
 
     def fuzziness(self):
+        return sum([len(b) for a, b in self.patterns.items()]) / len(self.patterns)
 
-        fuzziness = sum([len(b) for a, b in self.patterns.items()]) / len(self.patterns)
-        return fuzziness
-
-    def irregular_patterns(
-        self, accepted=2, mismatches=1, matches=1, irregular_prefix="!"
-    ):
+    def irregular_patterns(self, accepted=2, matches=1, irregular_prefix="!"):
         """
         Try to assign irregular patterns to accepted patterns.
 
@@ -457,9 +429,7 @@ class CoPaR(Alignments):
             Minimal size of clusters that we regard as regular.
 
         """
-        bad_clusters = [
-            (clr, pts[0]) for clr, pts in self.clusters.items() if len(pts) == 1
-        ]
+        bad_clusters = [(clr, pts[0]) for clr, pts in self.clusters.items() if len(pts) == 1]
         good_clusters = sorted(
             [(clr, pts) for clr, pts in self.clusters.items() if len(pts) >= accepted],
             key=lambda x: len(x[1]),
@@ -476,9 +446,7 @@ class CoPaR(Alignments):
                         irregular_patterns += [clr]
                         break
         # re-assign alignments to the data by adding the irregular character
-        for key, value in sorted(
-            new_clusters.items(), key=lambda x: len(x[1]), reverse=True
-        ):
+        for key, value in sorted(new_clusters.items(), key=lambda x: len(x[1]), reverse=True):
             if len(value) > 0:
                 for i, pattern in enumerate(value):
                     pt = []
@@ -500,33 +468,24 @@ class CoPaR(Alignments):
                                                 irregular_prefix, b, a
                                             )
                                             alms[cog_pos] = new_alm
-                                            self[
-                                                widx, self._alignment
-                                            ] = self._str_type(
-                                                " + ".join(
-                                                    [" ".join(x) for x in alms]
-                                                ).split()
+                                            self[widx, self._alignment] = self._str_type(
+                                                " + ".join([" ".join(x) for x in alms]).split()
                                             )
                                 else:
                                     word_indices = self.etd[self.ref][cogid][lid]
                                     if word_indices:
                                         for widx in word_indices:
-                                            alm = self._str_type(
-                                                self[widx, self._alignment]
-                                            )
+                                            alm = self._str_type(self[widx, self._alignment])
                                             alm[position] = "{0}{1}/{2}".format(
                                                 irregular_prefix, b, a
                                             )
-                                            self[
-                                                widx, self._alignment
-                                            ] = self._str_type(" ".join(alm))
+                                            self[widx, self._alignment] = self._str_type(
+                                                " ".join(alm))
                         else:
                             pt += [b]
 
         self.ipatterns = new_clusters
-        for pattern, data in [
-            (a, b) for a, b in bad_clusters if a not in irregular_patterns
-        ]:
+        for pattern, data in [(a, b) for a, b in bad_clusters if a not in irregular_patterns]:
             cogid, position = data
             if self._mode == "fuzzy":
                 for indices in [idx for idx in self.etd[self.ref][cogid] if idx]:
