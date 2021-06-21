@@ -268,7 +268,11 @@ class CoPaR(Alignments):
         """
         Retrieve the alignment sites of interest for initial analysis.
         """
-        sites, all_sites, taxa = collections.OrderedDict(), collections.OrderedDict(), self.cols
+        sites, all_sites, taxa = (
+            collections.OrderedDict(),
+            collections.OrderedDict(),
+            self.cols,
+        )
         errors = self._check()
         if errors:
             raise ValueError("found {0} problems in the data".format(len(errors)))
@@ -761,7 +765,9 @@ class CoPaR(Alignments):
                     site=" ".join(self.sites[site][1]),
                 )
 
-        for ((s1, p1), ptn1), ((s2, p2), ptn2) in itertools.combinations(self.sites.items(), r=2):
+        for ((s1, p1), ptn1), ((s2, p2), ptn2) in itertools.combinations(
+            self.sites.items(), r=2
+        ):
             if ptn1[0] == ptn2[0]:
                 m, mm = compatible_columns(ptn1[1], ptn2[1])
                 if m and not mm:

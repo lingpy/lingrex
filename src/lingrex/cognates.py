@@ -8,8 +8,8 @@ import lingpy
 
 
 def common_morpheme_cognates(
-        wordlist, cognates="cogids", ref="autoid",
-        morphemes="automorphemes", override=True):
+    wordlist, cognates="cogids", ref="autoid", morphemes="automorphemes", override=True
+):
     """
     Convert partial cognates to full cognates.
     """
@@ -40,8 +40,8 @@ def common_morpheme_cognates(
 
 
 def salient_cognates(
-        wordlist, cognates="cogids", ref="newcogid", morphemes="morphemes",
-        override=True):
+    wordlist, cognates="cogids", ref="newcogid", morphemes="morphemes", override=True
+):
     """
     Convert partial cognates to full cognates ignoring non-salient cognate sets.
     """
@@ -49,7 +49,7 @@ def salient_cognates(
     lookup, D = {}, {}
     for idx, cogids, morphemes in wordlist.iter_rows(cognates, morphemes):
         selected_cogids = []
-        for cogid, morpheme in zip(cogids, morphemes): 
+        for cogid, morpheme in zip(cogids, morphemes):
             if not morpheme.startswith("_"):
                 selected_cogids += [cogid]
         salient = tuple(selected_cogids)

@@ -23,7 +23,7 @@ setup(
         install_requires=['lingpy>=2.6.8'],
         extras_require={
             "test": ["pytest", "coverage", "pytest-mock", "pytest-cov"],
-            "dev": ["wheel", "twine", "tox"],
+            "dev": ["wheel", "twine", "tox", "black", "flake8"],
         },
         keywords="historical linguistics, computational linguistics, computer-assisted language comparison"
         )

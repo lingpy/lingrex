@@ -79,7 +79,9 @@ def shrink_alignments(alignments):
         if "-" in col and len(col) == 1:
             excludes.append(i)
     return [
-        [site for i, site in enumerate(alignment) if i not in excludes] for alignment in alignments]
+        [site for i, site in enumerate(alignment) if i not in excludes]
+        for alignment in alignments
+    ]
 
 
 def shrink(tokens, structures, converter):
