@@ -26,7 +26,7 @@ def internal_cognates(
         restricted_chars='_',
         modes=[('global', -1, 0.5), ('overlap', -1, 0.5)],
         ref='autocogids',
-        cluster_method='infomap',
+        cluster_method='upgma',
         model='sca'
         ):
     """
