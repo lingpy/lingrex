@@ -1,6 +1,6 @@
-from collections import defaultdict, OrderedDict
-from itertools import combinations
-from math import sqrt
+import math
+import itertools
+import collections
 
 from lingpy.sequence.sound_classes import class2tokens
 from lingpy.settings import rc
@@ -8,8 +8,6 @@ from lingpy.align.sca import get_consensus, Alignments
 from lingpy.util import pb
 from lingpy import log
 from lingpy import basictypes as bt
-
-from lingrex.util import add_structure
 
 import networkx as nx
 
@@ -270,7 +268,7 @@ class CoPaR(Alignments):
         """
         Retrieve the alignment sites of interest for initial analysis.
         """
-        sites, all_sites, taxa = OrderedDict(), OrderedDict(), self.cols
+        sites, all_sites, taxa = collections.OrderedDict(), collections.OrderedDict(), self.cols
         errors = self._check()
         if errors:
             raise ValueError("found {0} problems in the data".format(len(errors)))
@@ -347,7 +345,7 @@ class CoPaR(Alignments):
 
         """
         if not hasattr(self, "clusters"):
-            self.clusters = defaultdict(list)
+            self.clusters = collections.defaultdict(list)
             for (cogid, idx), (pos, ptn) in self.sites.items():
                 self.clusters[pos, ptn] += [(cogid, idx)]
         clusters = self.clusters
@@ -425,10 +423,7 @@ class CoPaR(Alignments):
         -----
         We rank according to general compatibility.
         """
-        asites = defaultdict(list)
-        best_patterns = sorted(
-            [c for c, s in self.clusters.items() if len(s) >= threshold]
-        )
+        asites = collections.defaultdict(list)
         for consensus in pb(
             self.clusters, desc="CoPaR: sites_to_pattern()", total=len(self.clusters)
         ):
@@ -546,10 +541,10 @@ class CoPaR(Alignments):
         return new_clusters
 
     def load_patterns(self, patterns="patterns"):
-        self.id2ptn = OrderedDict()
-        self.clusters = OrderedDict()
-        self.id2pos = defaultdict(set)
-        self.sites = OrderedDict()
+        self.id2ptn = collections.OrderedDict()
+        self.clusters = collections.OrderedDict()
+        self.id2pos = collections.defaultdict(set)
+        self.sites = collections.OrderedDict()
         # get the template
         template = [self.missing for m in self.cols]
         tidx = {self.cols[i]: i for i in range(self.width)}
@@ -596,7 +591,7 @@ class CoPaR(Alignments):
             pidx = 0
 
         if irregular_patterns:
-            new_clusters = defaultdict(list)
+            new_clusters = collections.defaultdict(list)
             for reg, iregs in self.ipatterns.items():
                 for cogid, position in self.clusters[reg]:
                     new_clusters[reg] += [(cogid, position)]
@@ -654,7 +649,7 @@ class CoPaR(Alignments):
             raise ValueError("You should run CoPaR.add_patterns first!")
 
         if irregular_patterns:
-            new_clusters = defaultdict(list)
+            new_clusters = collections.defaultdict(list)
             for (pos, reg), iregs in self.ipatterns.items():
                 for cogid, position in self.clusters[pos, reg]:
                     new_clusters[pos, reg] += [(cogid, position)]
@@ -730,7 +725,7 @@ class CoPaR(Alignments):
                     if itm != self.missing:
                         sums += [col.count(itm) ** 2]
                 if sums:
-                    sums = sqrt(sum(sums)) / len(col)
+                    sums = math.sqrt(sum(sums)) / len(col)
                 else:
                     sums = 0
                 all_sums += [sums]
@@ -766,7 +761,7 @@ class CoPaR(Alignments):
                     site=" ".join(self.sites[site][1]),
                 )
 
-        for ((s1, p1), ptn1), ((s2, p2), ptn2) in combinations(self.sites.items(), r=2):
+        for ((s1, p1), ptn1), ((s2, p2), ptn2) in itertools.combinations(self.sites.items(), r=2):
             if ptn1[0] == ptn2[0]:
                 m, mm = compatible_columns(ptn1[1], ptn2[1])
                 if m and not mm:
@@ -783,7 +778,7 @@ class CoPaR(Alignments):
         edges = 0
         degs = {s: 0 for s in self.sites}
         sings = {s: 0 for s in self.sites}
-        for (nA, (posA, ptnA)), (nB, (posB, ptnB)) in combinations(
+        for (nA, (posA, ptnA)), (nB, (posB, ptnB)) in itertools.combinations(
             self.sites.items(), r=2
         ):
             if posA == posB:
@@ -859,7 +854,7 @@ class CoPaR(Alignments):
                 for i, m in enumerate(missings):
                     tidx = self.cols.index(m)
                     for j in range(len(msa["alignment"][0])):
-                        segments = defaultdict(int)
+                        segments = collections.defaultdict(int)
                         sidx = 0
                         if (cogid, j) in ranked_sites:
                             while True:
@@ -878,7 +873,7 @@ class CoPaR(Alignments):
                             words[i] += ["Ø"]
                             purity[cogid, j][m] = 0
                         else:
-                            purity[cogid, j][m] = sqrt(
+                            purity[cogid, j][m] = math.sqrt(
                                 sum(
                                     [
                                         (s / sum(segments.values())) ** 2

@@ -1,18 +1,15 @@
 """
 Utility functions for the lingrex package.
 """
-import os
-from lingpy.sequence.sound_classes import tokens2class, prosodic_string
+import pathlib
+
 from lingpy import *
 from lingpy.align.sca import get_consensus
 from lingpy import basictypes as bt
 
 
 def lingrex_path(*comps):
-    """
-    Our data-path in CLICS.
-    """
-    return os.path.join(os.path.dirname(__file__), os.pardir, *comps)
+    return str(pathlib.Path(__file__).parent.joinpath(*comps))
 
 
 def add_structure(

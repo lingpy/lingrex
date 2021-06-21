@@ -1,8 +1,9 @@
 """
 Operations with cognate sets.
 """
+import collections
+
 from clldutils.text import strip_brackets, split_text
-from collections import defaultdict
 import lingpy
 
 
@@ -18,7 +19,7 @@ def common_morpheme_cognates(
     for concept in wordlist.rows:
         base = split_text(strip_brackets(concept))[0].upper().replace(" ", "_")
         idxs = wordlist.get_list(row=concept, flat=True)
-        cogids = defaultdict(list)
+        cogids = collections.defaultdict(list)
         for idx in idxs:
             M[idx] = [c for c in wordlist[idx, cognates]]
             for cogid in lingpy.basictypes.ints(wordlist[idx, cognates]):

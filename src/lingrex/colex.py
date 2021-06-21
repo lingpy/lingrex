@@ -1,8 +1,7 @@
 """
 Functions for partial colexification manipulations.
 """
-from lingpy import *
-from collections import defaultdict
+import collections
 
 
 def find_bad_internal_alignments(
@@ -24,7 +23,7 @@ def find_bad_internal_alignments(
     newIDs = {}
 
     def get_all_indices(lst):
-        idxs = defaultdict(list)
+        idxs = collections.defaultdict(list)
         for i, l in enumerate(lst):
             idxs[l] += [i]
         return idxs

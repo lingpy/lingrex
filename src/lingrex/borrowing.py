@@ -1,8 +1,8 @@
 """
 Basic code for borrowing detection.
 """
-from collections import defaultdict
-from itertools import product, combinations
+import itertools
+import collections
 
 from lingpy import *
 from lingpy.compare.partial import Partial
@@ -165,7 +165,7 @@ def external_cognates(
             cogids = [wordlist[idx, cognates] for idx in idxs]
 
             # assemble cogids to groups
-            groups = defaultdict(list)
+            groups = collections.defaultdict(list)
             for i, d, t, c in zip(idxs, taxa, tokens, cogids):
                 groups[c] += [(i, d, t)]
     
@@ -177,10 +177,10 @@ def external_cognates(
                         )
     
             # compare groups 
-            for (gA, iA), (gB, iB) in combinations(list(groups.items()), r=2):
+            for (gA, iA), (gB, iB) in itertools.combinations(list(groups.items()), r=2):
                 if G.nodes[str(gA)][family] != G.nodes[str(gB)][family]:
                     sims = []
-                    wpairs = [(a[2], b[2]) for a, b in product(iA, iB)]
+                    wpairs = [(a[2], b[2]) for a, b in itertools.product(iA, iB)]
     
                     pairs = Pairwise(wpairs)
                     pairs.align(distance=True, gop=gop, mode=align_mode)

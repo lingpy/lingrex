@@ -1,7 +1,6 @@
 """
 Various phonetic alignment functions.
 """
-from lingpy import *
 from lingpy import basictypes as bt
 
 
@@ -9,7 +8,7 @@ def gap_free_pairwise(seqA, seqB, syllables=None, gap="-"):
     """
     Carry out a gap-free alignment in which segments are merged instead of gapped.
     """
-    syllables = syllables or []
+    syllables = [] if syllables is None else syllables
     start = True
     merge = False
     outA, outB = [], []
@@ -17,7 +16,7 @@ def gap_free_pairwise(seqA, seqB, syllables=None, gap="-"):
         if i in syllables:
             start = True
         if start and charB == gap:
-            outA += [charA + ">"]
+            outA.append(charA + ">")
             merge = True
         elif not merge and charB == gap:
             outA[-1] += "<" + charA
@@ -26,11 +25,11 @@ def gap_free_pairwise(seqA, seqB, syllables=None, gap="-"):
                 outA[-1] += charA + ">"
             else:
                 outA[-1] += charA
-                outB += [charB]
+                outB.append(charB)
                 merge = False
         else:
-            outA += [charA]
-            outB += [charB]
+            outA.append(charA)
+            outB.append(charB)
         start = False
     return outA, outB
 
@@ -39,17 +38,13 @@ def align_to_template(sequence, structures, template, gap="-"):
     """
     Align a sequence to a template.
     """
-    try:
-        assert len(sequence) == len(structures) and len(template) >= len(sequence)
-    except:
+    if (len(sequence) != len(structures)) or (len(template) < len(sequence)):
         raise ValueError(
             "sequence {0} and structure {1} have different length".format(
                 repr(sequence), repr(structures)
             )
         )
-    try:
-        assert len([x for x in structures if x not in template]) == 0
-    except:
+    if len([x for x in structures if x not in template]) != 0:
         raise ValueError(
             "{0} items in the structure {1} is not in the template".format(
                 len([x for x in structures if x not in template]), repr(structures)
@@ -65,16 +60,16 @@ def align_to_template(sequence, structures, template, gap="-"):
             segment, structure = gap, ""
         current_structure = template[idxB]
         if current_structure == structure:
-            out += [segment]
+            out.append(segment)
             idxA += 1
         else:
-            out += [gap]
+            out.append(gap)
         idxB += 1
 
     return out
 
 
-def shrink_alignments(alignments, gap="-"):
+def shrink_alignments(alignments):
     """
     Remove columns from alignment which all consist of gaps.
     """
@@ -82,11 +77,9 @@ def shrink_alignments(alignments, gap="-"):
     for i in range(len(alignments[0])):
         col = set([line[i] for line in alignments])
         if "-" in col and len(col) == 1:
-            excludes += [i]
-    out = []
-    for alignment in alignments:
-        out += [[site for i, site in enumerate(alignment) if i not in excludes]]
-    return out
+            excludes.append(i)
+    return [
+        [site for i, site in enumerate(alignment) if i not in excludes] for alignment in alignments]
 
 
 def shrink(tokens, structures, converter):
@@ -96,7 +89,7 @@ def shrink(tokens, structures, converter):
     .. note:: Works only for shrinking two structure elements so far.
     """
     outt, outs = [], []
-    merge = False
+    sm, merge = None, False
     for i in range(len(tokens)):
         if i > 0:
             sm = " ".join([structures[i - 1], structures[i]])
