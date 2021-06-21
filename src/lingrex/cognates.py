@@ -1,14 +1,15 @@
 """
 Operations with cognate sets.
 """
+import collections
+
 from clldutils.text import strip_brackets, split_text
-from collections import defaultdict
 import lingpy
 
 
 def common_morpheme_cognates(
-        wordlist, cognates="cogids", ref="autoid",
-        morphemes="automorphemes", override=True):
+    wordlist, cognates="cogids", ref="autoid", morphemes="automorphemes", override=True
+):
     """
     Convert partial cognates to full cognates.
     """
@@ -18,7 +19,7 @@ def common_morpheme_cognates(
     for concept in wordlist.rows:
         base = split_text(strip_brackets(concept))[0].upper().replace(" ", "_")
         idxs = wordlist.get_list(row=concept, flat=True)
-        cogids = defaultdict(list)
+        cogids = collections.defaultdict(list)
         for idx in idxs:
             M[idx] = [c for c in wordlist[idx, cognates]]
             for cogid in lingpy.basictypes.ints(wordlist[idx, cognates]):
@@ -39,8 +40,8 @@ def common_morpheme_cognates(
 
 
 def salient_cognates(
-        wordlist, cognates="cogids", ref="newcogid", morphemes="morphemes",
-        override=True):
+    wordlist, cognates="cogids", ref="newcogid", morphemes="morphemes", override=True
+):
     """
     Convert partial cognates to full cognates ignoring non-salient cognate sets.
     """
@@ -48,7 +49,7 @@ def salient_cognates(
     lookup, D = {}, {}
     for idx, cogids, morphemes in wordlist.iter_rows(cognates, morphemes):
         selected_cogids = []
-        for cogid, morpheme in zip(cogids, morphemes): 
+        for cogid, morpheme in zip(cogids, morphemes):
             if not morpheme.startswith("_"):
                 selected_cogids += [cogid]
         salient = tuple(selected_cogids)

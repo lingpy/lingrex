@@ -1,17 +1,10 @@
 """
 Functions for partial colexification manipulations.
 """
-from lingpy import *
-from collections import defaultdict
+import collections
 
 
-def find_bad_internal_alignments(
-    alignments,
-    ref="cogids",
-    segments="tokens",
-    alignment="alignment",
-    transcription="ipa",
-):
+def find_bad_internal_alignments(alignments, ref="cogids"):
     """
     Helper function discards wrongly assigned cross-semantic cognates.
 
@@ -24,7 +17,7 @@ def find_bad_internal_alignments(
     newIDs = {}
 
     def get_all_indices(lst):
-        idxs = defaultdict(list)
+        idxs = collections.defaultdict(list)
         for i, l in enumerate(lst):
             idxs[l] += [i]
         return idxs
@@ -54,11 +47,11 @@ def expand_alignment(msa, taxa, missing="Ø"):
     for taxon in taxa:
         if taxon in msa["taxa"]:
             tidx = msa["taxa"].index(taxon)
-            out += [
+            out.append(
                 [x.split("/")[1] if "/" in x else x for x in msa["alignment"][tidx]]
-            ]
+            )
         else:
-            out += [len(msa["alignment"][0]) * [missing]]
+            out.append(len(msa["alignment"][0]) * [missing])
     return out
 
 
@@ -71,9 +64,7 @@ def compatible(msa1, msa2, missing="Ø", gap="-"):
         ] and missing not in line1 + line2:
             matches += 1
         else:
-            if list(set(line1))[0] == missing or list(set(line2))[0] == missing:
-                pass
-            else:
+            if list(set(line1))[0] != missing and list(set(line2))[0] != missing:
                 return False
     return matches
 
@@ -87,9 +78,9 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
     for k, (a, b) in enumerate(zip(almA, almB)):
         if (
             len(set(a)) == 1
-            and list(set(a))[0] == missing
-            and len(set(b)) == 1
-            and list(set(b))[0] == missing
+            and list(set(a))[0] == missing  # noqa: W503
+            and len(set(b)) == 1  # noqa: W503
+            and list(set(b))[0] == missing  # noqa: W503
         ):
             missing_taxa += [k]
     i, j = 0, 0
@@ -125,12 +116,7 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
                     col = []
                     break
 
-                if a == missing:
-                    col += [b]
-                elif b == missing:
-                    col += [a]
-                else:
-                    col += [a]
+                col.append(b if a == missing else a)
             if col:
                 out += [col]
                 i += 1
@@ -159,7 +145,7 @@ def merge_alignments(almA, almB, missing="Ø", gap="-"):
 
 
 def find_colexified_alignments(
-    alignments, cognates="cogids", segments="tokens", missing="Ø", ref="crossids"
+    alignments, cognates="cogids", missing="Ø", ref="crossids"
 ):
     """
     Identify identical alignments in a dataset and label them as homophones.

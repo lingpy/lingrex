@@ -17,7 +17,6 @@ print('[i] search for colexified alignments')
 find_colexified_alignments(
         alms,
         cognates='cogids',
-        segments='tokens',
         ref='crossids'
         )
 

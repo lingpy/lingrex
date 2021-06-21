@@ -1,10 +1,10 @@
 """
 Basic code for borrowing detection.
 """
-from collections import defaultdict
-from itertools import product, combinations
+import itertools
+import collections
 
-from lingpy import *
+from lingpy import Pairwise
 from lingpy.compare.partial import Partial
 from lingpy.compare.lexstat import LexStat
 
@@ -14,21 +14,21 @@ from lingpy.util import pb
 
 
 def internal_cognates(
-        wordlist,
-        family='family',
-        partial=True,
-        method='lexstat',
-        runs=10000,
-        threshold=0.50,
-        smooth=1,
-        ratio=(2,1),
-        vscale=0.5,
-        restricted_chars='_',
-        modes=[('global', -1, 0.5), ('overlap', -1, 0.5)],
-        ref='autocogids',
-        cluster_method='upgma',
-        model='sca'
-        ):
+    wordlist,
+    family="family",
+    partial=True,
+    method="lexstat",
+    runs=10000,
+    threshold=0.50,
+    smooth=1,
+    ratio=(2, 1),
+    vscale=0.5,
+    restricted_chars="_",
+    modes=[("global", -1, 0.5), ("overlap", -1, 0.5)],
+    ref="autocogids",
+    cluster_method="upgma",
+    model="sca",
+):
     """
     Cluster the data into cognate sets, but only inside each family.
 
@@ -36,12 +36,12 @@ def internal_cognates(
        be found (defaults="family")
     """
     families = {wordlist[k, family] for k in wordlist}
-    
+
     # split data into parts
     D = {k: {} for k in sorted(families)}
     for idx, fam in wordlist.iter_rows(family):
         D[fam][idx] = [cell for cell in wordlist[idx]]
-    
+
     gcogid = 0
     G = {}
     for fam, data in D.items():
@@ -50,36 +50,36 @@ def internal_cognates(
             lex = Partial(data, model=model)
             if method == "lexstat":
                 lex.get_partial_scorer(
-                    runs=runs, 
-                    smooth=smooth, 
-                    ratio=ratio, 
+                    runs=runs,
+                    smooth=smooth,
+                    ratio=ratio,
                     vscale=vscale,
                     restricted_chars=restricted_chars,
-                    modes=modes
-                    )
+                    modes=modes,
+                )
             lex.partial_cluster(
-                    ref=ref, 
-                    method=method, 
-                    cluster_method=cluster_method, 
-                    threshold=threshold
-                    )
+                ref=ref,
+                method=method,
+                cluster_method=cluster_method,
+                threshold=threshold,
+            )
         else:
             lex = LexStat(data, model=model)
             if method == "lexstat":
                 lex.get_scorer(
-                    runs=runs, 
-                    smooth=smooth, 
-                    ratio=ratio, 
+                    runs=runs,
+                    smooth=smooth,
+                    ratio=ratio,
                     vscale=vscale,
                     restricted_chars=restricted_chars,
-                    modes=modes
-                    )
+                    modes=modes,
+                )
             lex.cluster(
-                    ref=ref, 
-                    method=method, 
-                    cluster_method=cluster_method, 
-                    threshold=threshold
-                    )
+                ref=ref,
+                method=method,
+                cluster_method=cluster_method,
+                threshold=threshold,
+            )
 
         # prepare global cognate indicies
         if partial:
@@ -90,7 +90,7 @@ def internal_cognates(
                     if idx_:
                         for idx in idx_:
                             cogids = lex[idx, ref]
-                            C[idx][cogids.index(cogid)] = cogid+gcogid
+                            C[idx][cogids.index(cogid)] = cogid + gcogid
         else:
             C = {idx: 0 for idx in lex}
             etd = lex.get_etymdict(ref=ref)
@@ -98,11 +98,11 @@ def internal_cognates(
                 for idx_ in idxs:
                     if idx_:
                         for idx in idx_:
-                            C[idx] = cogid+gcogid
+                            C[idx] = cogid + gcogid
         for idx in lex:
             lex[idx, ref] = C[idx]
             G[idx] = C[idx]
-        gcogid += max(etd)+1
+        gcogid += max(etd) + 1
 
     renumber = {}
     cogid = 1
@@ -130,17 +130,17 @@ def internal_cognates(
 
 
 def external_cognates(
-        wordlist,
-        cognates='autocogid',
-        ref='autoborid',
-        threshold=0.3,
-        segments='tokens',
-        gop=-1,
-        family='family',
-        doculect='doculect',
-        concept='concept',
-        align_mode="overlap"
-        ):
+    wordlist,
+    cognates="autocogid",
+    ref="autoborid",
+    threshold=0.3,
+    segments="tokens",
+    gop=-1,
+    family="family",
+    doculect="doculect",
+    concept="concept",
+    align_mode="overlap",
+):
     """
     Compute language-external cognates and assign them to cognate sets.
 
@@ -165,23 +165,24 @@ def external_cognates(
             cogids = [wordlist[idx, cognates] for idx in idxs]
 
             # assemble cogids to groups
-            groups = defaultdict(list)
+            groups = collections.defaultdict(list)
             for i, d, t, c in zip(idxs, taxa, tokens, cogids):
                 groups[c] += [(i, d, t)]
-    
+
             for group, items in groups.items():
-                G.add_node(str(group), concept=concept, 
-                        taxa=', '.join([t[1] for t in items]), 
-                        idxs=', '.join([str(t[0]) for t in items]),
-                        family=wordlist[[t[0] for t in items][0], family]
-                        )
-    
-            # compare groups 
-            for (gA, iA), (gB, iB) in combinations(list(groups.items()), r=2):
+                G.add_node(
+                    str(group),
+                    concept=concept,
+                    taxa=", ".join([t[1] for t in items]),
+                    idxs=", ".join([str(t[0]) for t in items]),
+                    family=wordlist[[t[0] for t in items][0], family],
+                )
+
+            # compare groups
+            for (gA, iA), (gB, iB) in itertools.combinations(list(groups.items()), r=2):
                 if G.nodes[str(gA)][family] != G.nodes[str(gB)][family]:
-                    sims = []
-                    wpairs = [(a[2], b[2]) for a, b in product(iA, iB)]
-    
+                    wpairs = [(a[2], b[2]) for a, b in itertools.product(iA, iB)]
+
                     pairs = Pairwise(wpairs)
                     pairs.align(distance=True, gop=gop, mode=align_mode)
                     dst = []
@@ -191,21 +192,23 @@ def external_cognates(
                     dst = sum(dst) / len(dst)
                     if dst <= threshold:
                         G.add_edge(str(gA), str(gB), distance=dst)
-            
+
             # components
             for i, comp in enumerate(nx.connected_components(G)):
                 if len(comp) > 1:
                     table = []
                     for cogid in comp:
-                        idxs = [int(x) for x in G.nodes[cogid]['idxs'].split(', ')]
+                        idxs = [int(x) for x in G.nodes[cogid]["idxs"].split(", ")]
                         for idx in idxs:
-                            table += [[
-                                wordlist[idx, doculect],
-                                wordlist[idx, concept],
-                                str(wordlist[idx, segments]),
-                                wordlist[idx, family],
-                                cogid
-                                ]]
+                            table += [
+                                [
+                                    wordlist[idx, doculect],
+                                    wordlist[idx, concept],
+                                    str(wordlist[idx, segments]),
+                                    wordlist[idx, family],
+                                    cogid,
+                                ]
+                            ]
                         for idx in idxs:
                             B[idx] = borid
                     borid += 1

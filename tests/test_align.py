@@ -43,37 +43,31 @@ def test_shrink_alignments():
     assert len(out[0]) == 2
 
 
-def test_template_alignment():
-    wl = Wordlist(
-        {
-            0: ["doculect", "concept", "tokens", "structure", "cogid"],
-            1: ["a", "a", "b au".split(), "i n".split(), 1],
-            2: ["b", "a", "b o k".split(), "i n c".split(), 1],
-            3: ["c", "a", "b w a k".split(), "i m n c".split(), 1],
-        }
-    )
+@pytest.fixture
+def wldata():
+    return {
+        0: ["doculect", "concept", "tokens", "structure", "cogid"],
+        1: ["a", "a", "b au".split(), "i n".split(), 1],
+        2: ["b", "a", "b o k".split(), "i n c".split(), 1],
+        3: ["c", "a", "b w a k".split(), "i m n c".split(), 1],
+    }
+
+
+@pytest.fixture
+def wldata_listvalued_cogid(wldata):
+    return {k: v if k == 0 else v[:-1] + [[v[-1]]] for k, v in wldata.items()}
+
+
+def test_template_alignment(wldata, wldata_listvalued_cogid):
+    wl = Wordlist(wldata)
     template_alignment(wl, fuzzy=False, template="imnc")
     assert "alignment" in wl.columns
-    wl = Wordlist(
-        {
-            0: ["doculect", "concept", "tokens", "structure", "cogid"],
-            1: ["a", "a", "b au".split(), "i n".split(), [1]],
-            2: ["b", "a", "b o k".split(), "i n c".split(), [1]],
-            3: ["c", "a", "b w a k".split(), "i m n c".split(), [1]],
-        }
-    )
+    wl = Wordlist(wldata_listvalued_cogid)
     template_alignment(wl, fuzzy=True, template="imnc")
     assert "alignment" in wl.columns
 
 
-def test_shrink_template():
-    wl = Wordlist(
-        {
-            0: ["doculect", "concept", "tokens", "structure", "cogid"],
-            1: ["a", "a", "b au".split(), "i n".split(), [1]],
-            2: ["b", "a", "b o k".split(), "i n c".split(), [1]],
-            3: ["c", "a", "b w a k".split(), "i m n c".split(), [1]],
-        }
-    )
+def test_shrink_template(wldata_listvalued_cogid):
+    wl = Wordlist(wldata_listvalued_cogid)
     shrink_template(wl)
     assert wl[2, "tokens2"][-1] == "ok"

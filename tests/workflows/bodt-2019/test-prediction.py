@@ -1,11 +1,10 @@
-from lingpy import *
-from lingrex.copar import *
-from sys import argv
+import codecs
 import random
+import collections
+
+from lingrex.copar import *
 from lingpy.basictypes import *
 from tabulate import tabulate
-from lingpy.compare.sanity import average_coverage
-import codecs
 
 def run_experiments(
         f, 
@@ -89,7 +88,7 @@ def run_experiments(
             cp.sites_to_pattern()
 
         # compute size of alphabets
-        sounds = {d: defaultdict(int) for d in cp.cols}
+        sounds = {d: collections.defaultdict(int) for d in cp.cols}
         for idx, doc, tks in cp.iter_rows('doculect', 'segments'):
             for t in tks:
                 if t != '+':

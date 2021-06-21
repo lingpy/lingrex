@@ -1,24 +1,19 @@
 
-Releasing linse
-===============
+# Releasing lingrex
 
 - Do platform test via tox:
-  ```shell script
+  ```shell
   tox -r
   ```
 - test if the workflow scripts still work:
-  ```
-  cd tests/workflows/list-2019
-  make
-  cd ../tests/workflows/bodt-2019
-  make
-  cd ../tests/workflows/wu-2020
-  make
+  ```shell
+  pytest -m"workflow"
   ```
 
 - Make sure statement coverage >= 99%
-- Use black to make the code unified:
-  ```
+- Use black and flake8 to make the code unified:
+  ```shell
+  flake8 src
   black src/lingrex/*.py
   ```
 
@@ -27,27 +22,24 @@ Releasing linse
   - `src/lingrex/__init__.py`
 
 - Create the release commit:
-  ```shell script
+  ```shell
   git commit -a -m "release <VERSION>"
   ```
 
 - Create a release tag:
-  ```shell script
+  ```shell
   git tag -a v<VERSION> -m"<VERSION> release"
   ```
 
-- Release to PyPI (see https://github.com/di/markdown-description-example/issues/1#issuecomment-374474296):
-  ```shell script
+- Release to PyPI:
+  ```shell
   rm dist/*
-  python setup.py sdist
-  twine upload dist/*
-  rm dist/*
-  python setup.py bdist_wheel
+  python setup.py sdist bdist_wheel
   twine upload dist/*
   ```
 
 - Push to github:
-  ```shell script
+  ```shell
   git push origin
   git push --tags
   ```
@@ -57,7 +49,7 @@ Releasing linse
   - `src/lingrex/__init__.py`
 
 - Commit/push the version change:
-  ```shell script
+  ```shell
   git commit -a -m "bump version for development"
   git push origin
   ```
