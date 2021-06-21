@@ -1,3 +1,5 @@
+import collections
+
 from lingpy import *
 from lingrex.copar import *
 from sys import argv
@@ -90,7 +92,7 @@ def run_experiments(
             cp.sites_to_pattern()
 
         # compute size of alphabets
-        sounds = {d: defaultdict(int) for d in cp.cols}
+        sounds = {d: collections.defaultdict(int) for d in cp.cols}
         for idx, doc, tks in cp.iter_rows('doculect', 'segments'):
             for t in tks:
                 if t != '+':
