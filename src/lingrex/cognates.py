@@ -7,7 +7,7 @@ import lingpy
 
 
 def common_morpheme_cognates(
-        wordlist, ref="cogids", cognates="autoid",
+        wordlist, cognates="cogids", ref="autoid",
         morphemes="automorphemes", override=True):
     """
     Convert partial cognates to full cognates.
@@ -20,8 +20,8 @@ def common_morpheme_cognates(
         idxs = wordlist.get_list(row=concept, flat=True)
         cogids = defaultdict(list)
         for idx in idxs:
-            M[idx] = [c for c in wordlist[idx, ref]]
-            for cogid in lingpy.basictypes.ints(wordlist[idx, ref]):
+            M[idx] = [c for c in wordlist[idx, cognates]]
+            for cogid in lingpy.basictypes.ints(wordlist[idx, cognates]):
                 cogids[cogid] += [idx]
         for i, (cogid, idxs) in enumerate(
             sorted(cogids.items(), key=lambda x: len(x[1]), reverse=True)
@@ -33,20 +33,20 @@ def common_morpheme_cognates(
                 else:
                     M[idx][M[idx].index(cogid)] = "_" + base.lower()
             current += 1
-    wordlist.add_entries(cognates, C, lambda x: x)
+    wordlist.add_entries(ref, C, lambda x: x)
     if morphemes:
         wordlist.add_entries(morphemes, M, lambda x: x, override=override)
 
 
 def salient_cognates(
-        wordlist, ref="cogids", cognates="newcogid", morphemes="morphemes",
+        wordlist, cognates="cogids", ref="newcogid", morphemes="morphemes",
         override=True):
     """
     Convert partial cognates to full cognates ignoring non-salient cognate sets.
     """
 
     lookup, D = {}, {}
-    for idx, cogids, morphemes in wordlist.iter_rows(ref, morphemes):
+    for idx, cogids, morphemes in wordlist.iter_rows(cognates, morphemes):
         selected_cogids = []
         for cogid, morpheme in zip(cogids, morphemes): 
             if not morpheme.startswith("_"):
@@ -62,4 +62,4 @@ def salient_cognates(
             lookup[salient] = 1
             D[idx] = 1
 
-    wordlist.add_entries(cognates, D, lambda x: x, override=override)
+    wordlist.add_entries(ref, D, lambda x: x, override=override)
