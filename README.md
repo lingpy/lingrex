@@ -13,7 +13,7 @@ To test this workflow, please check the workflow code example in `tests/workflow
 
 When using this package in your research, please make sure to quote the paper accordingly, and quote the software package as follows:
 
-> List, Johann-Mattis (2021): LingRex: Linguistic reconstruction with LingPy. Version 1.0.0. Leipzig: Max Planck Institute for Evolutionary Anthropology. URL: https://github.com/lingpy/lingrex
+> List, Johann-Mattis and Robert Forkel (2021): LingRex: Linguistic reconstruction with LingPy. Version 1.1.0. Leipzig: Max Planck Institute for Evolutionary Anthropology. URL: https://github.com/lingpy/lingrex
 
 Since this software package itself makes use of LingPy's alignment algorithms, you should also quote the LingPy package itself.
 

@@ -5,7 +5,7 @@ setup(
         name='lingrex',
         description="Linguistic reconstruction with LingPy",
         long_description=open('README.md').read(),
-        author='Johann-Mattis List',
+        author='Johann-Mattis List and Robert Forkel',
         url='https://github.com/lingpy/lingrex',
         classifiers=[
             'Development Status :: 4 - Beta',
@@ -17,7 +17,7 @@ setup(
             'Programming Language :: Python :: 3.8',
             'Programming Language :: Python :: 3.9',
         ],
-        version='1.1.0.dev0',
+        version='1.1.0',
         packages=find_packages(where='src'),
         package_dir={'': 'src'},
         install_requires=['lingpy>=2.6.8'],
