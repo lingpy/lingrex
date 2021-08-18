@@ -25,6 +25,17 @@ def wl(data):
 def test_internal_cognates(kw, success, wl):
     internal_cognates(wl, runs=10, **kw)
     assert success(wl)
+    
+    etd = wl.get_etymdict(ref=kw["ref"])
+    
+    for cogid, vals in etd.items():
+        concepts = []
+        for idx_ in vals:
+            if idx_:
+                for idx in idx_:
+                    concepts += [wl[idx, "concept"]]
+        assert len(set(concepts)) == 1
+
 
 
 def test_external_cognates(wl):
