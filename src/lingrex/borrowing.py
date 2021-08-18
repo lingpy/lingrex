@@ -100,7 +100,6 @@ def internal_cognates(
                         for idx in idx_:
                             C[idx] = cogid + gcogid
         for idx in lex:
-            lex[idx, ref] = C[idx]
             G[idx] = C[idx]
         gcogid += max(etd) + 1
 
@@ -121,11 +120,11 @@ def internal_cognates(
     else:
         for idx, val in G.items():
             f = wordlist[idx, family]
-            if (f, val) in renumber:
-                G[idx] = renumber[f, val]
-            else:
+            if (f, val) not in renumber:
                 renumber[f, val] = cogid
                 cogid += 1
+            G[idx] = renumber[f, val]
+
     wordlist.add_entries(ref, G, lambda x: x)
 
 
