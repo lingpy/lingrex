@@ -17,7 +17,7 @@ setup(
             'Programming Language :: Python :: 3.8',
             'Programming Language :: Python :: 3.9',
         ],
-        version='1.1.1',
+        version='1.1.2.dev0',
         packages=find_packages(where='src'),
         package_dir={'': 'src'},
         install_requires=['lingpy>=2.6.8'],
