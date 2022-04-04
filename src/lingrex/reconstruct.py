@@ -11,6 +11,7 @@ import random
 import networkx as nx
 from networkx.algorithms.clique import find_cliques
 from itertools import combinations
+from lingpy import log
 
 def ungap(alignment, languages, proto):
     cols = []
@@ -325,7 +326,8 @@ def simple_align(
         gap="-",
         startend=True,
         prosody=False,
-        position=False
+        position=False,
+        firstlast=False,
         ):
     if align:
         seqs = [[s for s in seq if s != gap] for seq in seqs]
@@ -337,6 +339,9 @@ def simple_align(
         alms = normalize_alignment([s for s in seqs])
     if training:
         alms = ungap(alms, languages, languages[-1])
+        these_seqs = seqs[:-1]
+    else:
+        these_seqs = seqs
     matrix = [[missing for x in all_languages] for y in alms[0]]
     for i in range(len(alms[0])):
         for j, lng in enumerate(languages):
@@ -361,9 +366,17 @@ def simple_align(
                             _output="CcV"
                             ), 
                         alms[j]
-                        ) for j in range(len(seqs))],
+                        ) for j in range(len(these_seqs))],
                     gaps=True)):
             matrix[i] += [c]
+    if firstlast:
+        if training:
+            all_seqs = len(all_languages)-1
+        else:
+            all_seqs = len(all_languages)
+        for i, row in enumerate(matrix):
+            for j in range(all_seqs):
+                matrix[i] += [matrix[0][j], matrix[-1][j]]
     
     # for debugging
     for row in matrix:
@@ -385,6 +398,7 @@ class PatternReconstructor(ReconstructionBase):
         self.patterns = defaultdict(lambda : defaultdict(list))
         self.occurrences = defaultdict(list)
         self.func = func or simple_align
+        self.matrices = {}
         
         for cogid, alignment, languages in self.iter_alignments(valid_target=True):
             if len(alignment) >= 2:
@@ -393,6 +407,7 @@ class PatternReconstructor(ReconstructionBase):
                         languages,
                         self.languages+[self.target],
                         training=True)
+                self.matrices[cogid] = matrix
                 for i, row in enumerate(matrix):
                     ptn = tuple(row[:len(self.languages)]+row[len(self.languages)+1:])
                     self.patterns[ptn][row[len(self.languages)]] += [
@@ -400,11 +415,8 @@ class PatternReconstructor(ReconstructionBase):
                     for j, lng in enumerate(self.languages):
                         if row[j] not in [self.missing]:
                             self.occurrences[lng, j, row[j]] += [(cogid, i)]
-                        #print(lng, j, row[j], row, ptn)
                     for j in range(len(self.languages)+1, len(row)):
-                        #print(j, row[j], row, ptn)
                         self.occurrences["feature-{0}".format(j-1), j-1, row[j]] += [(cogid, i)]
-                    #input()
         
         self.snd2idx = {(i, self.missing): 0 for i in
                 range(len(matrix[0]))}
@@ -413,6 +425,9 @@ class PatternReconstructor(ReconstructionBase):
 
         idxtracker = {i: 2 for i in range(len(matrix[0]))}
         for lng, lidx, sound in self.occurrences:
+            #print(lng, lidx, sound)
+            #for row in self.matrices[self.occurrences[lng, lidx, sound][0][0]]:
+            #    print(row)
             last_idx = idxtracker[lidx]
             if (lidx, sound) not in self.snd2idx:
                 self.snd2idx[lidx, sound] = last_idx
@@ -445,14 +460,14 @@ class PatternReconstructor(ReconstructionBase):
             self.clf = clf 
         else:
             self.clf = naive_bayes.CategoricalNB() 
-        print("[i] fitting classifier")
+        log.info("fitting classifier")
         if onehot:
             self.onehot = OneHot(self.matrix)
             self.clf.fit(self.onehot(self.matrix), self.solutions)
         else:
             self.clf.fit(self.matrix, self.solutions)
         self.idx2tgt = {v: k for k, v in self.tgt2idx.items()}
-        print("... done.")
+        log.info("fitted the classifier")
 
     def predict(self, alignment, languages, unknown="?", onehot=False):
         """
