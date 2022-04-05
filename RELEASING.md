@@ -21,6 +21,8 @@
   - `setup.py`
   - `src/lingrex/__init__.py`
 
+- Check metadata in `.zenodo.json`
+
 - Create the release commit:
   ```shell
   git commit -a -m "release <VERSION>"
