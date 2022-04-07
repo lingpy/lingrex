@@ -179,7 +179,7 @@ def external_cognates(
 
             # compare groups
             for (gA, iA), (gB, iB) in itertools.combinations(list(groups.items()), r=2):
-                if G.nodes[str(gA)][family] != G.nodes[str(gB)][family]:
+                if G.nodes[str(gA)]["family"] != G.nodes[str(gB)]["family"]:
                     wpairs = [(a[2], b[2]) for a, b in itertools.product(iA, iB)]
 
                     pairs = Pairwise(wpairs)
