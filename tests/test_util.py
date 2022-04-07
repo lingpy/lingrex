@@ -5,7 +5,6 @@ from lingrex.util import ungap, clean_sound, unjoin, alm2tok, bleu_score
 
 
 def test_bleu_score():
-
     candidate = "this is a test".split()
     reference = "this is a small test".split()
 
@@ -28,13 +27,17 @@ def test_bleu_score():
                 trim=False),
             2) == 0.70
 
+    assert round(
+        bleu_score(
+            candidate,
+            reference,
+            n=2,
+            trim=False),
+        2) == 0.70
 
-    
 
 def test_ungap():
-
-    matrix = ungap([['a', 'b'], ['x', '-'], ['y', '-']], ['proto', 'l1', 'l2'],
-            'proto')
+    matrix = ungap([['a', 'b'], ['x', '-'], ['y', '-']], ['proto', 'l1', 'l2'], 'proto')
     assert matrix[0][0] == 'a.b'
     assert matrix[1][0] == 'x'
     assert matrix[2][0] == "y"
@@ -46,15 +49,16 @@ def test_ungap():
     out = ungap([["p", "-", "a"], ["p", "j", "a"]], ["German", "E"], "E")
     assert out[1][0] == "p.j"
 
+    alm = [['a', 'b'], ['-', '-'], ['-', '-']]
+    assert ungap(alm, ['p', 'l1', 'l2'], 'p') == alm
+
 def test_clean_sound():
-    
     assert clean_sound("a/b") == "b"
     assert clean_sound("a") == "a"
     assert clean_sound("a/b.c/d") == "b.d"
 
 
 def test_unjoin():
-
     assert unjoin("k.p a p u k.a/b".split())[0] == "k"
 
 

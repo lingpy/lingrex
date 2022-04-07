@@ -1,13 +1,13 @@
 """
 Utility functions for the lingrex package.
 """
+import math
 import pathlib
 
 from lingpy import tokens2class, prosodic_string
 from lingpy.align.sca import get_consensus
 from lingpy import basictypes as bt
 from lingpy.sequence.ngrams import get_n_ngrams
-import math
 
 
 def lingrex_path(*comps):
@@ -26,16 +26,15 @@ def bleu_score(word, reference, n=4, weights=None, trim=True):
     """
 
     if not weights:
-        weights = [1/n for x in range(n)]
-    
+        weights = [1 / n for x in range(n)]
+
     scores = []
-    for i in range(1, n+1):
-        
+    for i in range(1, n + 1):
         new_wrd = list(get_n_ngrams(word, i))
         new_ref = list(get_n_ngrams(reference, i))
         if trim and i > 1:
-            new_wrd = new_wrd[i-1:-(i-1)]
-            new_ref = new_ref[i-1:-(i-1)]
+            new_wrd = new_wrd[i - 1:-(i - 1)]
+            new_ref = new_ref[i - 1:-(i - 1)]
 
         clipped, divide = [], []
         for itm in set(new_wrd):
@@ -44,15 +43,12 @@ def bleu_score(word, reference, n=4, weights=None, trim=True):
         scores += [sum(clipped) / sum(divide)]
 
     # calculate arithmetic mean
-    out_score  = 1
+    out_score = 1
     for weight, score in zip(weights, scores):
         out_score = out_score * (score ** weight)
-    
-    if len(word) > len(reference):
-        bp = 1
-    else:
-        bp = math.e ** (1-(len(reference)/len(word)))
-    return bp * (out_score ** (1/sum(weights)))
+
+    bp = 1 if len(word) > len(reference) else math.e ** (1 - (len(reference) / len(word)))
+    return bp * (out_score ** (1 / sum(weights)))
 
 
 def clean_sound(sound):
@@ -80,7 +76,7 @@ def unjoin(seq):
 def ungap(alignment, languages, proto):
     """
     Trim an MSA to remove all gaps in the target sequence.
-    
+
     :examples:
       >>> ungap([['a', 'b'], ['x', '-'], ['y', '-']], ['proto', 'l1', 'l2'], 'proto')
       ... [['a.b'], ['x'], ['y']]
@@ -102,7 +98,7 @@ def ungap(alignment, languages, proto):
         for j, cell in enumerate(row):
             if j in merges or mergeit:
                 mergeit = False
-                if not started: #j != 0:
+                if not started:  # j != 0:
                     if cell != "-":
                         new_alm[-1] += '.' + cell if new_alm[-1] else cell
                 else:
@@ -115,10 +111,8 @@ def ungap(alignment, languages, proto):
     return new_alms
 
 
-
 def add_structure(
-    wordlist, model="cv", segments="tokens", structure="structure", ref="cogid", gap="-"
-):
+        wordlist, model="cv", segments="tokens", structure="structure", ref="cogid", gap="-"):
     """Add structure to a wordlist to make sure correspondence patterns can be
     inferred"""
     if model not in ["cv", "c", "CcV", "ps", "nogap"]:
