@@ -126,7 +126,6 @@ class CorPaRClassifier(object):
                     out += [self.predictions[tuple(row)]]
                 else:
                     out += [self.missing]
-        return out        
         return out
 
 
