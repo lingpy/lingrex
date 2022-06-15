@@ -1,26 +1,37 @@
 """
 Module provides methods for linguistic reconstruction.
 """
+
+import itertools
+import collections
+
 from lingpy.align.sca import Alignments, get_consensus
 from lingpy.sequence.sound_classes import prosodic_string, class2tokens
-from lingpy.sequence.ngrams import get_n_ngrams
 from lingpy.align.multiple import Multiple
 from lingpy.align.pairwise import edit_dist, nw_align
 from lingpy.evaluate.acd import _get_bcubed_score as get_bcubed_score
-import collections
-import itertools
-from csvw.dsv import UnicodeDictReader
 from lingpy.align.sca import normalize_alignment
-import random
 import networkx as nx
 from networkx.algorithms.clique import find_cliques
 from lingpy import log
-import math
 
-from lingrex.util import clean_sound, ungap, unjoin, alm2tok
+from lingrex.util import clean_sound, ungap, alm2tok
 
 
 class CorPaRClassifier(object):
+    """
+    A classifier for word prediction based on correspondence patterns.
+
+    Note
+    ----
+    This classifier was first used in List et al. (2022).
+
+    > List, J.-M., N. Hill, and R. Forkel (2022): A new framework for fast
+    > automated phonological reconstruction using trimmed alignments and sound
+    > correspondence patterns. In: Proceedings of the 3rd Workshop on
+    > Computational Approaches to Historical Language Change. Association for
+    > Computational Linguistics 89-96. URL: https://aclanthology.org/2022.lchange-1.9 
+    """
 
     def __init__(self, minrefs=2, missing=0, threshold=1):
         self.G = nx.Graph()
@@ -63,14 +74,14 @@ class CorPaRClassifier(object):
         # get identical patterns
         P = collections.defaultdict(list)
         for i, row in enumerate(X):
-            P[tuple(row+[y[i]])] += [i]
+            P[tuple(row + [y[i]])] += [i]
         # make graph
         for (pA, vA), (pB, vB) in itertools.combinations(P.items(), r=2):
             match_, mismatch = self.compatible(pA, pB)
             if not mismatch and match_ >= self.threshold:
-                if not pA in self.G:
+                if pA not in self.G:
                     self.G.add_node(pA, freq=len(vA))
-                if not pB in self.G:
+                if pB not in self.G:
                     self.G.add_node(pB, freq=len(vB))
                 self.G.add_edge(pA, pB, weight=match_)
         self.patterns = collections.defaultdict(collections.Counter)
@@ -92,7 +103,7 @@ class CorPaRClassifier(object):
             for i in range(len(ptn)):
                 if ptn[i] != self.missing:
                     self.ptnlkp[i, ptn[i]] += [ptn]
-        
+    
     def predict(self, matrix):
         out = []
         for row in matrix:
@@ -116,6 +127,7 @@ class CorPaRClassifier(object):
                 else:
                     out += [self.missing]
         return out        
+        return out
 
 
 class ReconstructionBase(Alignments):
@@ -123,10 +135,10 @@ class ReconstructionBase(Alignments):
     Basic class for the phonological reconstruction.
     """
     def __init__(
-            self, infile, target=None, ref="cogids", fuzzy=True, 
+            self, infile, target=None, ref="cogids", fuzzy=True,
             transcription="form", missing="Ø", gap="-"):
-        Alignments.__init__(self, infile, fuzzy=fuzzy, ref=ref,
-                transcription=transcription)
+        Alignments.__init__(
+                self, infile, fuzzy=fuzzy, ref=ref, transcription=transcription)
         self.target = target
         self.missing = missing
         self.gap = gap
@@ -144,13 +156,8 @@ class ReconstructionBase(Alignments):
         for cogid, idxs in self.etd[self._ref].items():
             if idxs[self.tgtidx]:
                 if self._mode == "fuzzy":
-                    target = self[
-                            idxs[self.tgtidx][0],
-                            seq_ref
-                            ].n[
-                                    self[
-                                        idxs[self.tgtidx][0], self._ref
-                                        ].index(cogid)]
+                    target = self[idxs[self.tgtidx][0], seq_ref].n[
+                        self[idxs[self.tgtidx][0], self._ref].index(cogid)]
                 else:
                     target = self[idxs[self.tgtidx][0], seq_ref]
                 alignment, languages = [], []
@@ -181,8 +188,8 @@ class OneHot(object):
         self.vals = []
         for i in range(len(matrix[0])):
             cols = [row[i] for row in matrix]
-            self.vals += [sorted(set(cols))+["?"]]
-    
+            self.vals += [sorted(set(cols)) + ["?"]]
+
     def __call__(self, matrix):
         out = [[] for row in matrix]
         for i, vals in enumerate(self.vals):
@@ -194,7 +201,6 @@ class OneHot(object):
                     template[-1] = 1
                 out[j] += template
         return out
-
 
 
 def transform_alignment(
@@ -237,31 +243,26 @@ def transform_alignment(
             matrix[i] += [i]
     if startend:
         matrix[0] += [0]
-        for i in range(1, len(matrix)-1):
+        for i in range(1, len(matrix) - 1):
             matrix[i] += [1]
         if len(matrix) > 1:
             matrix[-1] += [2]
     if prosody:
         for i, c in enumerate(
                 get_consensus(
-                    [class2tokens(
-                        prosodic_string(
-                            seqs[j], 
-                            _output="CcV"
-                            ), 
-                        alms[j]
-                        ) for j in range(len(these_seqs))],
+                    [class2tokens(prosodic_string(seqs[j], _output="CcV"), alms[j])
+                     for j in range(len(these_seqs))],
                     gaps=True)):
             matrix[i] += [c]
     if firstlast:
         if training:
-            all_seqs = len(all_languages)-1
+            all_seqs = len(all_languages) - 1
         else:
             all_seqs = len(all_languages)
         for i, row in enumerate(matrix):
             for j in range(all_seqs):
                 matrix[i] += [matrix[0][j], matrix[-1][j]]
-    
+
     # for debugging
     for row in matrix:
         assert len(row) == len(matrix[0])
@@ -271,6 +272,16 @@ def transform_alignment(
 class PatternReconstructor(ReconstructionBase):
     """
     Automatic reconstruction with correspondence patterns.
+
+    Note
+    ----
+    This classifier was first used in List et al. (2022).
+
+    > List, J.-M., N. Hill, and R. Forkel (2022): A new framework for fast
+    > automated phonological reconstruction using trimmed alignments and sound
+    > correspondence patterns. In: Proceedings of the 3rd Workshop on
+    > Computational Approaches to Historical Language Change. Association for
+    > Computational Linguistics 89-96. URL: https://aclanthology.org/2022.lchange-1.9 
     """
 
     def fit(self, clf=None, onehot=False, func=None, aligned=False):
@@ -279,29 +290,28 @@ class PatternReconstructor(ReconstructionBase):
 
         :param clf: a classifier with a predict function.
         """
-        self.patterns = collections.defaultdict(lambda : collections.defaultdict(list))
+        self.patterns = collections.defaultdict(lambda: collections.defaultdict(list))
         self.occurrences = collections.defaultdict(list)
         self.func = func or transform_alignment
-        
+
         for cogid, alignment, languages in self.iter_sequences():
             if len(alignment) >= 2:
                 matrix = self.func(
-                        alignment,
-                        languages,
-                        self.languages+[self.target],
-                        training=True)
+                    alignment,
+                    languages,
+                    self.languages + [self.target],
+                    training=True)
                 for i, row in enumerate(matrix):
-                    ptn = tuple(row[:len(self.languages)]+row[len(self.languages)+1:])
+                    ptn = tuple(row[:len(self.languages)] + row[len(self.languages) + 1:])
                     self.patterns[ptn][row[len(self.languages)]] += [
                         (cogid, i)]
                     for j, lng in enumerate(self.languages):
                         if row[j] not in [self.missing]:
                             self.occurrences[lng, j, row[j]] += [(cogid, i)]
-                    for j in range(len(self.languages)+1, len(row)):
-                        self.occurrences["feature-{0}".format(j-1), j-1, row[j]] += [(cogid, i)]
-        
-        self.snd2idx = {(i, self.missing): 0 for i in
-                range(len(matrix[0]))}
+                    for j in range(len(self.languages) + 1, len(row)):
+                        self.occurrences["feature-{0}".format(j - 1), j - 1, row[j]] += [(cogid, i)]
+
+        self.snd2idx = {(i, self.missing): 0 for i in range(len(matrix[0]))}
         for i in range(len(matrix[0])):
             self.snd2idx[i, self.gap] = 1
 
@@ -324,21 +334,19 @@ class PatternReconstructor(ReconstructionBase):
         self.solutions = []
         for pattern, sounds in self.patterns.items():
             for sound, vals in sounds.items():
-                freq = len(vals)
                 tidx = self.tgt2idx[sound]
                 row = []
                 for i in range(len(pattern)):
                     sidx = self.snd2idx[i, pattern[i]]
                     row += [sidx]
-                #self.matrix += [row]
                 for cogid, idx in vals:
                     self.matrix += [row]
                     self.solutions += [tidx]
         self.dim = len(self.matrix[0])
         if clf is not None:
-            self.clf = clf 
+            self.clf = clf
         else:
-            self.clf = CorPaRClassifier() 
+            self.clf = CorPaRClassifier()
         log.info("fitting classifier")
         if onehot:
             self.onehot = OneHot(self.matrix)
@@ -369,14 +377,13 @@ class PatternReconstructor(ReconstructionBase):
         return alm2tok(out) if desegment else out
 
 
-
 def eval_by_dist(data, func=None, **kw):
     """
     Evaluate by measuring distances between sequences.
-    
+
     :param data: List of tuples with prediction and attested sequence.
     :param func: Alignment function (defaults to edit distance)
-    
+
     :note: Defaults to the unnormalized edit distance.
     """
     func = func or edit_dist
@@ -387,7 +394,7 @@ def eval_by_dist(data, func=None, **kw):
         if not seqB:
             seqB = ["?"]
         scores += [func(seqA, seqB, **kw)]
-    return sum(scores)/len(scores)
+    return sum(scores) / len(scores)
 
 
 def eval_by_bcubes(data, func=None, **kw):
@@ -396,6 +403,14 @@ def eval_by_bcubes(data, func=None, **kw):
 
     :param data: List of tuples with prediction and attested sequence.
     :param func: Alignment function (defaults to Needleman-Wunsch)
+
+    Note
+    ----
+    This evaluation was first introduced in List (2019).
+
+    > List, J.-M. (2019): Beyond Edit Distances: Comparing linguistic
+    > reconstruction systems. Theoretical Linguistics 45.3-4. 1-10. DOI:
+    > https://doi.org/10.1515/tl-2019-0016
     """
     numsA, numsB = {"": 0}, {"": 0}
     func = func or nw_align
@@ -407,12 +422,11 @@ def eval_by_bcubes(data, func=None, **kw):
             seqB = ["?"]
         almA, almB, score = func(seqA, seqB, **kw)
         for a, b in zip(almA, almB):
-            if not a in numsA:
-                numsA[a] = max(numsA.values())+1
-            if not b in numsB:
-                numsB[b] = max(numsB.values())+1
+            if a not in numsA:
+                numsA[a] = max(numsA.values()) + 1
+            if b not in numsB:
+                numsB[b] = max(numsB.values()) + 1
             almsA += [numsA[a]]
             almsB += [numsB[b]]
     p, r = get_bcubed_score(almsA, almsB), get_bcubed_score(almsB, almsA)
-    return 2*(p*r)/(p+r)
-                
+    return 2 * (p * r) / (p + r)

@@ -8,11 +8,13 @@ def find_bad_internal_alignments(alignments, ref="cogids"):
     """
     Helper function discards wrongly assigned cross-semantic cognates.
 
-    .. note:: The function essentially iterates over the alignments and picks
-        out those in which the same language has the same cognate ID, and if
-        the alignment itself differs, it assigns it a new cognate ID. It
-        presupposes that the data has not been analyzed in search for
-        cross-semantic cognates.
+    Note
+    ----
+    The function essentially iterates over the alignments and picks
+    out those in which the same language has the same cognate ID, and if
+    the alignment itself differs, it assigns it a new cognate ID. It
+    presupposes that the data has not been analyzed in search for
+    cross-semantic cognates.
     """
     newIDs = {}
 
@@ -56,7 +58,9 @@ def expand_alignment(msa, taxa, missing="Ø"):
 
 
 def compatible(msa1, msa2, missing="Ø", gap="-"):
-    """Compare two alignments and check whether they colexify."""
+    """
+    Compare two alignments and check whether they colexify.
+    """
     matches = 0
     for line1, line2 in zip(msa1, msa2):
         if [x for x in line1 if x != gap] == [
@@ -149,6 +153,14 @@ def find_colexified_alignments(
 ):
     """
     Identify identical alignments in a dataset and label them as homophones.
+
+    Note
+    ----
+    This function was first introduced in Wu et al. (2020).
+
+    > Wu, M.-S., N. Schweikhard, T. Bodt, N. Hill, and J.-M. List (2020):
+    > Computer-Assisted Language Comparison. State of the Art. Journal of Open
+    > Humanities Data 6.2. 1-14. DOI: https://doi.org/10.5334/johd.12
     """
 
     queue = []
