@@ -48,6 +48,11 @@ def cross_semantic_cognate_statistics(
     > Wu, M.-S. and J.-M. List (2022): Annotating cognates in phylogenetic
     > studies of South-East Asian languages. Preprint: https://doi.org/10.17613/rabq-7z45
     """
+
+    # type check for basic types if they are not there
+    for idx, cogids, morphemes in wordlist.iter_rows(ref, morpheme_glosses):
+        wordlist[idx, ref] = lingpy.basictypes.ints(cogids)
+        wordlist[idx, morpheme_glosses] = lingpy.basictypes.strings(morphemes)
     
     if ignore_affixes:
         D = {}

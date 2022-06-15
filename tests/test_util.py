@@ -30,19 +30,6 @@ def test_bleu_score():
     
 
 def test_ungap():
-
-    matrix = ungap([['a', 'b'], ['x', '-'], ['y', '-']], ['proto', 'l1', 'l2'],
-            'proto')
-    assert round(
-        bleu_score(
-            candidate,
-            reference,
-            n=2,
-            trim=False),
-        2) == 0.70
-
-
-def test_ungap():
     matrix = ungap([['a', 'b'], ['x', '-'], ['y', '-']], ['proto', 'l1', 'l2'], 'proto')
     assert matrix[0][0] == 'a.b'
     assert matrix[1][0] == 'x'
@@ -54,11 +41,10 @@ def test_ungap():
 
     out = ungap([["p", "-", "a"], ["p", "j", "a"]], ["German", "E"], "E")
     assert out[1][0] == "p.j"
-
-def test_clean_sound():
     
     alm = [['a', 'b'], ['-', '-'], ['-', '-']]
     assert ungap(alm, ['p', 'l1', 'l2'], 'p') == alm
+
 
 def test_clean_sound():
     assert clean_sound("a/b") == "b"
