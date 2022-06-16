@@ -142,6 +142,14 @@ def template_alignment(
 ):
     """
     Function aligns the cognate sets in a wordlist to a template.
+
+    Note
+    ----
+    This function was first introduced in Wu et al. (2020).
+
+    > Wu, M.-S., N. Schweikhard, T. Bodt, N. Hill, and J.-M. List (2020):
+    > Computer-Assisted Language Comparison. State of the Art. Journal of Open
+    > Humanities Data 6.2. 1-14. DOI: https://doi.org/10.5334/johd.12
     """
 
     for idx, tokens, structures in wordlist.iter_rows(segments, structure):

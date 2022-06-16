@@ -90,10 +90,10 @@ def score_patterns(patterns, missing="Ø", mode="coverage"):
         m, n = len(patterns[0]), len(patterns)
         for i in range(n):
             vals = m - patterns[i].count(missing)
-            pairs += (vals ** 2 - vals) / 2
+            pairs += (vals**2 - vals) / 2
         for i in range(m):
             vals = n - [p[i] for p in patterns].count(missing)
-            pairs += (vals ** 2 - vals) / 2
+            pairs += (vals**2 - vals) / 2
             if vals != 0:
                 covered += 1
         return ((pairs / n) / covered) / m
@@ -139,11 +139,8 @@ def compatible_columns(colA, colB, missing="Ø", gap="-"):
 def density(wordlist, ref="cogid"):
     """Compute the density of a wordlist.
 
-
-    XXX TOTO: better move to util or elsewhere
-
-    Notes
-    -----
+    Note
+    ----
     We define the density of a wordlist by measuring how many words can be
     explained by the same cognate set.
     """
@@ -172,6 +169,14 @@ class CoPaR(Alignments):
     alignment : str (default="alignment")
         The column which stores the alignments (or will store the alignments if
         they have not yet been computed).
+
+    Note
+    ----
+    This method was first introduced in List (2019).
+
+    > List, J.-M. (2019): Automatic inference of sound correspondence patterns
+    > across multiple languages. Computational Linguistics 45.1. 137-161. DOI:
+    > http://doi.org/10.1162/coli_a_00344
     """
 
     def __init__(

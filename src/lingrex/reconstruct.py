@@ -1,6 +1,7 @@
 """
 Module provides methods for linguistic reconstruction.
 """
+
 import itertools
 import collections
 
@@ -18,6 +19,19 @@ from lingrex.util import clean_sound, ungap, alm2tok
 
 
 class CorPaRClassifier(object):
+    """
+    A classifier for word prediction based on correspondence patterns.
+
+    Note
+    ----
+    This classifier was first used in List et al. (2022).
+
+    > List, J.-M., N. Hill, and R. Forkel (2022): A new framework for fast
+    > automated phonological reconstruction using trimmed alignments and sound
+    > correspondence patterns. In: Proceedings of the 3rd Workshop on
+    > Computational Approaches to Historical Language Change. Association for
+    > Computational Linguistics 89-96. URL: https://aclanthology.org/2022.lchange-1.9
+    """
 
     def __init__(self, minrefs=2, missing=0, threshold=1):
         self.G = nx.Graph()
@@ -79,7 +93,8 @@ class CorPaRClassifier(object):
             for node in nodes:
                 self.lookup[node[:-1]][cons[:-1]] += len(nodes)
         self.predictions = {
-            ptn: counts.most_common(1)[0][0] for ptn, counts in self.patterns.items()}
+            ptn: counts.most_common(1)[0][0] for ptn, counts in self.patterns.items()
+        }
         for ptn, counts in self.lookup.items():
             self.predictions[ptn] = self.predictions[counts.most_common(1)[0][0]]
 
@@ -108,7 +123,9 @@ class CorPaRClassifier(object):
                                 elif match_ - mismatch:
                                     candidates[ptnB] = match_ - mismatch
                 if candidates:
-                    self.predictions[tuple(row)] = self.predictions[candidates.most_common(1)[0][0]]
+                    self.predictions[tuple(row)] = self.predictions[
+                        candidates.most_common(1)[0][0]
+                    ]
                     out += [self.predictions[tuple(row)]]
                 else:
                     out += [self.missing]
@@ -119,10 +136,20 @@ class ReconstructionBase(Alignments):
     """
     Basic class for the phonological reconstruction.
     """
+
     def __init__(
-            self, infile, target=None, ref="cogids", fuzzy=True,
-            transcription="form", missing="Ø", gap="-"):
-        Alignments.__init__(self, infile, fuzzy=fuzzy, ref=ref, transcription=transcription)
+        self,
+        infile,
+        target=None,
+        ref="cogids",
+        fuzzy=True,
+        transcription="form",
+        missing="Ø",
+        gap="-",
+    ):
+        Alignments.__init__(
+            self, infile, fuzzy=fuzzy, ref=ref, transcription=transcription
+        )
         self.target = target
         self.missing = missing
         self.gap = gap
@@ -141,7 +168,8 @@ class ReconstructionBase(Alignments):
             if idxs[self.tgtidx]:
                 if self._mode == "fuzzy":
                     target = self[idxs[self.tgtidx][0], seq_ref].n[
-                        self[idxs[self.tgtidx][0], self._ref].index(cogid)]
+                        self[idxs[self.tgtidx][0], self._ref].index(cogid)
+                    ]
                 else:
                     target = self[idxs[self.tgtidx][0], seq_ref]
                 alignment, languages = [], []
@@ -151,7 +179,9 @@ class ReconstructionBase(Alignments):
                         languages += [lng]
                         idx = idxs[lidx][0]
                         if self._mode == "fuzzy":
-                            alm = self[idx, seq_ref].n[self[idx, self._ref].index(cogid)]
+                            alm = self[idx, seq_ref].n[
+                                self[idx, self._ref].index(cogid)
+                            ]
                         else:
                             alm = self[idx, seq_ref]
                         alignment.append([clean_sound(x) for x in alm])
@@ -186,17 +216,19 @@ class OneHot(object):
         return out
 
 
-def transform_alignment(seqs,
-                        languages,
-                        all_languages,
-                        align=True,
-                        training=True,
-                        missing="Ø",
-                        gap="-",
-                        startend=False,
-                        prosody=False,
-                        position=False,
-                        firstlast=False):
+def transform_alignment(
+    seqs,
+    languages,
+    all_languages,
+    align=True,
+    training=True,
+    missing="Ø",
+    gap="-",
+    startend=False,
+    prosody=False,
+    position=False,
+    firstlast=False,
+):
     """
     Basic alignment function used for phonological reconstruction.
     """
@@ -230,10 +262,14 @@ def transform_alignment(seqs,
             matrix[-1] += [2]
     if prosody:
         for i, c in enumerate(
-                get_consensus(
-                    [class2tokens(prosodic_string(seqs[j], _output="CcV"), alms[j])
-                     for j in range(len(these_seqs))],
-                    gaps=True)):
+            get_consensus(
+                [
+                    class2tokens(prosodic_string(seqs[j], _output="CcV"), alms[j])
+                    for j in range(len(these_seqs))
+                ],
+                gaps=True,
+            )
+        ):
             matrix[i] += [c]
     if firstlast:
         if training:
@@ -253,6 +289,16 @@ def transform_alignment(seqs,
 class PatternReconstructor(ReconstructionBase):
     """
     Automatic reconstruction with correspondence patterns.
+
+    Note
+    ----
+    This classifier was first used in List et al. (2022).
+
+    > List, J.-M., N. Hill, and R. Forkel (2022): A new framework for fast
+    > automated phonological reconstruction using trimmed alignments and sound
+    > correspondence patterns. In: Proceedings of the 3rd Workshop on
+    > Computational Approaches to Historical Language Change. Association for
+    > Computational Linguistics 89-96. URL: https://aclanthology.org/2022.lchange-1.9
     """
 
     def fit(self, clf=None, onehot=False, func=None, aligned=False):
@@ -268,19 +314,20 @@ class PatternReconstructor(ReconstructionBase):
         for cogid, alignment, languages in self.iter_sequences():
             if len(alignment) >= 2:
                 matrix = self.func(
-                    alignment,
-                    languages,
-                    self.languages + [self.target],
-                    training=True)
+                    alignment, languages, self.languages + [self.target], training=True
+                )
                 for i, row in enumerate(matrix):
-                    ptn = tuple(row[:len(self.languages)] + row[len(self.languages) + 1:])
-                    self.patterns[ptn][row[len(self.languages)]] += [
-                        (cogid, i)]
+                    ptn = tuple(
+                        row[:len(self.languages)] + row[len(self.languages) + 1:]
+                    )
+                    self.patterns[ptn][row[len(self.languages)]] += [(cogid, i)]
                     for j, lng in enumerate(self.languages):
                         if row[j] not in [self.missing]:
                             self.occurrences[lng, j, row[j]] += [(cogid, i)]
                     for j in range(len(self.languages) + 1, len(row)):
-                        self.occurrences["feature-{0}".format(j - 1), j - 1, row[j]] += [(cogid, i)]
+                        self.occurrences[
+                            "feature-{0}".format(j - 1), j - 1, row[j]
+                        ] += [(cogid, i)]
 
         self.snd2idx = {(i, self.missing): 0 for i in range(len(matrix[0]))}
         for i in range(len(matrix[0])):
@@ -327,9 +374,7 @@ class PatternReconstructor(ReconstructionBase):
         self.idx2tgt = {v: k for k, v in self.tgt2idx.items()}
         log.info("fitted the classifier")
 
-    def predict(
-            self, alignment, languages, unknown="?", onehot=False,
-            desegment=True):
+    def predict(self, alignment, languages, unknown="?", onehot=False, desegment=True):
         """
         Predict a word form from an alignment.
 
@@ -374,6 +419,14 @@ def eval_by_bcubes(data, func=None, **kw):
 
     :param data: List of tuples with prediction and attested sequence.
     :param func: Alignment function (defaults to Needleman-Wunsch)
+
+    Note
+    ----
+    This evaluation was first introduced in List (2019).
+
+    > List, J.-M. (2019): Beyond Edit Distances: Comparing linguistic
+    > reconstruction systems. Theoretical Linguistics 45.3-4. 1-10. DOI:
+    > https://doi.org/10.1515/tl-2019-0016
     """
     numsA, numsB = {"": 0}, {"": 0}
     func = func or nw_align
