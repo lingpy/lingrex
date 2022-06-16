@@ -5,6 +5,7 @@ import statistics
 from lingpy.evaluate.acd import _get_bcubed_score as bcs
 import lingpy
 
+
 def compare_cognate_sets(wordlist, refA, refB):
     """
     Compute cognate set comparison statistics by computing B-Cubed Scores.
@@ -27,9 +28,13 @@ def compare_cognate_sets(wordlist, refA, refB):
 
 
 def cross_semantic_cognate_statistics(
-        wordlist, ref="cogids", concept="concept", 
-        morpheme_glosses="morphemes", ignore_affixes=True, 
-        affixes=("suf", "suffix", "SUF", "SUFFIX")):
+    wordlist,
+    ref="cogids",
+    concept="concept",
+    morpheme_glosses="morphemes",
+    ignore_affixes=True,
+    affixes=("suf", "suffix", "SUF", "SUFFIX"),
+):
     """
     Calculate colexification statistics for partial colexifications.
 
@@ -53,7 +58,7 @@ def cross_semantic_cognate_statistics(
     for idx, cogids, morphemes in wordlist.iter_rows(ref, morpheme_glosses):
         wordlist[idx, ref] = lingpy.basictypes.ints(cogids)
         wordlist[idx, morpheme_glosses] = lingpy.basictypes.strings(morphemes)
-    
+
     if ignore_affixes:
         D = {}
         for idx, cogids, morphemes in wordlist.iter_rows(ref, morpheme_glosses):
@@ -62,8 +67,8 @@ def cross_semantic_cognate_statistics(
                 if not sum([1 if s in morpheme else 0 for s in affixes]):
                     new_cogids += [cogid]
             D[idx] = lingpy.basictypes.ints(new_cogids)
-        wordlist.add_entries(ref+"_derived", D, lambda x: x)
-        new_ref = ref+"_derived"
+        wordlist.add_entries(ref + "_derived", D, lambda x: x)
+        new_ref = ref + "_derived"
     else:
         new_ref = ref
 

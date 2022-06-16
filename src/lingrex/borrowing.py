@@ -41,7 +41,7 @@ def internal_cognates(
 
     > List, J.-M. and R. Forkel (2022): Automated identification of borrowings
     > in multilingual wordlists [version 3; peer review: 4 approved]. Open
-    > Research Europe 1.79. 1-11. DOI: https://doi.org/10.12688/openreseurope.13843.3 
+    > Research Europe 1.79. 1-11. DOI: https://doi.org/10.12688/openreseurope.13843.3
     """
     families = {wordlist[k, family] for k in wordlist}
 
@@ -162,7 +162,7 @@ def external_cognates(
 
     > List, J.-M. and R. Forkel (2022): Automated identification of borrowings
     > in multilingual wordlists [version 3; peer review: 4 approved]. Open
-    > Research Europe 1.79. 1-11. DOI: https://doi.org/10.12688/openreseurope.13843.3 
+    > Research Europe 1.79. 1-11. DOI: https://doi.org/10.12688/openreseurope.13843.3
     """
 
     B = {}

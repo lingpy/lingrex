@@ -8,7 +8,6 @@ from lingpy import tokens2class, prosodic_string
 from lingpy.align.sca import get_consensus
 from lingpy import basictypes as bt
 from lingpy.sequence.ngrams import get_n_ngrams
-import math
 
 
 def lingrex_path(*comps):
@@ -46,9 +45,13 @@ def bleu_score(word, reference, n=4, weights=None, trim=True):
     # calculate arithmetic mean
     out_score = 1
     for weight, score in zip(weights, scores):
-        out_score = out_score * (score ** weight)
+        out_score = out_score * (score**weight)
 
-    bp = 1 if len(word) > len(reference) else math.e ** (1 - (len(reference) / len(word)))
+    bp = (
+        1
+        if len(word) > len(reference)
+        else math.e ** (1 - (len(reference) / len(word)))
+    )
     return bp * (out_score ** (1 / sum(weights)))
 
 
@@ -56,7 +59,7 @@ def clean_sound(sound):
     """
     Get rid of "a/b" notation for sound segments.
     """
-    return ".".join([s.split('/')[1] if "/" in s else s for s in sound.split('.')])
+    return ".".join([s.split("/")[1] if "/" in s else s for s in sound.split(".")])
 
 
 def alm2tok(seq, gap="-"):
@@ -72,7 +75,7 @@ def unjoin(seq):
     """
     out = []
     for itm in seq:
-        out += itm.split('.')
+        out += itm.split(".")
     return out
 
 
@@ -101,7 +104,7 @@ def ungap(alignment, languages, proto):
     for i in range(len(alignment[0])):  # go through the rows of the alignment ...
         col = [row[i] for row in alignment]
         # ... looking for gap-only alignments (in non-proto languages):
-        if {site for j, site in enumerate(col) if j not in pidxs} == {'-'}:
+        if {site for j, site in enumerate(col) if j not in pidxs} == {"-"}:
             merges += [i]
     if not merges:
         return alignment
@@ -113,7 +116,7 @@ def ungap(alignment, languages, proto):
                 mergeit = False
                 if not started:  # j != 0:
                     if cell != "-":
-                        new_alm[-1] += '.' + cell if new_alm[-1] else cell
+                        new_alm[-1] += "." + cell if new_alm[-1] else cell
                 else:
                     mergeit = True
                     new_alm.append("" if cell == "-" else cell)
@@ -125,7 +128,8 @@ def ungap(alignment, languages, proto):
 
 
 def add_structure(
-        wordlist, model="cv", segments="tokens", structure="structure", ref="cogid", gap="-"):
+    wordlist, model="cv", segments="tokens", structure="structure", ref="cogid", gap="-"
+):
     """
     Add structure to a wordlist to make sure correspondence patterns can be inferred.
     """

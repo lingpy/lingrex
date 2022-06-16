@@ -90,10 +90,10 @@ def score_patterns(patterns, missing="Ø", mode="coverage"):
         m, n = len(patterns[0]), len(patterns)
         for i in range(n):
             vals = m - patterns[i].count(missing)
-            pairs += (vals ** 2 - vals) / 2
+            pairs += (vals**2 - vals) / 2
         for i in range(m):
             vals = n - [p[i] for p in patterns].count(missing)
-            pairs += (vals ** 2 - vals) / 2
+            pairs += (vals**2 - vals) / 2
             if vals != 0:
                 covered += 1
         return ((pairs / n) / covered) / m

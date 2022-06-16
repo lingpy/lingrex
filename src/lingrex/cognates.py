@@ -16,7 +16,7 @@ def common_morpheme_cognates(
     Note
     ----
     This method was first introduced by Wu and List (to appear).
-    
+
     > Wu, Mei-Shin and List, Johann-Mattis (to appear): Annotating cognates in
     > phylogenetic studies of South-East Asian languages. Language Dynamics and
     > Change. Preprint: https://doi.org/10.17613/rabq-7z45
@@ -56,7 +56,7 @@ def salient_cognates(
     Note
     ----
     This method was first introduced by Wu and List (to appear).
-    
+
     > Wu, Mei-Shin and List, Johann-Mattis (to appear): Annotating cognates in
     > phylogenetic studies of South-East Asian languages. Language Dynamics and
     > Change. Preprint: https://doi.org/10.17613/rabq-7z45
