@@ -5,6 +5,7 @@ setup(
         name='lingrex',
         description="Linguistic reconstruction with LingPy",
         long_description=open('README.md').read(),
+        long_description_content_type="text/markdown",
         author='Johann-Mattis List and Robert Forkel',
         url='https://github.com/lingpy/lingrex',
         classifiers=[
