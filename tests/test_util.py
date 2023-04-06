@@ -1,7 +1,8 @@
 import pytest
-from lingrex.util import lingrex_path, add_structure
 from lingpy import Wordlist, Alignments
+from lingrex.util import lingrex_path, add_structure
 from lingrex.util import ungap, clean_sound, unjoin, alm2tok, bleu_score
+from lingrex.util import prep_wordlist, prep_alignments        
 
 
 def test_bleu_score():
@@ -95,3 +96,32 @@ def test_add_structure():
         }
         wl = Alignments(D, ref="cogids", transcription="tokens")
         add_structure(wl, m, ref="cogids")
+
+
+dummy_wl = {
+    0: ["doculect", "concept", "form", "tokens", "alignment", "cogid"],
+    1: ["A", "one", "atawu", "ata+wu", "a t a w u", 1],
+    2: ["B", "one", "a_twu", "a_twu", "a t - w u", 1],
+    3: ["C", "one", "tawu", "tawu", "- t a w u", 1],
+    4: ["D", "one", "tefu", "tefu", "- t e f u", 1],
+    5: ["A", "two", "satu", "satu", "s a t u", 2],
+    6: ["A", "two", "seram", "seram", "s e r a m", 2]
+}
+
+
+def test_prep_wordlist():
+    test_wl = Wordlist(dummy_wl)
+    test_wl = prep_wordlist(test_wl)
+
+    assert len(test_wl) == 4
+    assert "+" not in test_wl[1, "tokens"]
+    assert "_" not in test_wl[2, "tokens"]
+
+
+def test_prep_alignments():
+    test_wl = Wordlist(dummy_wl)
+    test_wl = prep_wordlist(test_wl)
+    test_wl = Alignments(test_wl, transcription="form")
+    test_wl = prep_alignments(test_wl)
+
+    assert test_wl[4, "structure"] == "C V C V"
