@@ -119,9 +119,7 @@ def test_prep_wordlist():
 
 
 def test_prep_alignments():
-    test_wl = Wordlist(dummy_wl)
-    test_wl = prep_wordlist(test_wl)
-    test_wl = Alignments(test_wl, transcription="form")
+    test_wl = Alignments(dummy_wl, transcription="form")
     test_wl = prep_alignments(test_wl)
 
     assert test_wl[4, "structure"] == "C V C V"
