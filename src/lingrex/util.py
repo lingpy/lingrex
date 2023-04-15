@@ -8,7 +8,19 @@ from lingpy import tokens2class, prosodic_string
 from lingpy.align.sca import get_consensus
 from lingpy import basictypes as bt
 from lingpy.sequence.ngrams import get_n_ngrams
-from lingrex.trimming import subsequence_of, get_skeleton
+
+
+def subsequence_of(source, target):
+    """
+    Check if all items of source appear in target in order, but not necessarily consecutively.
+    """
+    i = 0
+    for c in source:
+        try:
+            i = target[i:].index(c)
+        except ValueError:  # c is not in the remainder of target.
+            return False
+    return True
 
 
 def lingrex_path(*comps):
@@ -217,35 +229,3 @@ def prep_wordlist(wordlist, min_refs=3, exclude="_+"):
     for idx in whitelist:
         dct[idx] = wordlist[idx]
     return wordlist.__class__(dct)
-
-
-def prep_alignments(
-        aligned_wl, 
-        skeletons=("CV", "VC"),
-        ref="cogid"
-        ):
-    """"
-    Preparing the alignments assures that the structure is correctly
-    added to the wordlist.
-
-    :param wordlist: A lingpy Alignments.
-    :type wordlist: :class:lingpy.Alignments
-    :param skeletons: Tuple of syllable-skeletons that should be preserved
-        for further processing. Defaults to '("CV", "VC")'.
-    :type skeletons: tuple
-    :param ref: The column which stores the cognate sets, defaults to 'cogid'
-    :type ref: str
-    :return: Pre-processed alignments.
-    :rtype: :class:lingpy.Alignments
-    """
-    whitelist = []
-    for _, msa in aligned_wl.msa[ref].items():
-        skel = get_skeleton(msa["alignment"])
-        if any([subsequence_of(s, skel) for s in skeletons]):
-            whitelist += msa["ID"]
-    aligned_wl.add_entries(
-            "structure", "tokens", lambda x: " ".join(get_skeleton([x])))
-    dct = {0: aligned_wl.columns}
-    for idx in whitelist:
-        dct[idx] = aligned_wl[idx]
-    return aligned_wl.__class__(dct, transcription="form")

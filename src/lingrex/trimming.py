@@ -1,201 +1,178 @@
 """
-Trimming functionalities in lingrex.
+Functionality to trim alignments by removing sites.
 """
 import random
+import typing
+import functools
+import itertools
 import collections
+
 from lingpy.sequence.sound_classes import token2class
 
+from lingrex.util import subsequence_of
 
-def revert(alms):
-    return [[row[i] for row in alms] for i in range(len(alms[0]))]        
-
-
-def get_skeleton(alms, gap="-"):
-    return [token2class(([c for c in col if c != gap] or ["+"])[0], "cv") for col in revert(alms)]
+__all__ = ['GAP', 'Sites', 'prep_alignments']
+GAP = '-'
 
 
-def apply_trim(alms, idxs):
+class Site(list):
     """
-    Basic trimming function, based on a selection of indices that are trimmed.
+    A site in an alignment is a "column", i.e. a list of the n-th sound in the aligned words.
     """
-    return [[row[i] for i in range(len(row)) if i not in idxs] for row in alms]
+    def gap_ratio(self, gap: str = GAP) -> float:
+        return self.count(gap) / len(self)
+
+    def first_sound(self, gap=GAP):
+        for s in itertools.dropwhile(lambda c: c == gap, self):
+            return s
+
+    def soundclass(self, gap: str = GAP) -> str:
+        return token2class(self.first_sound(gap=gap) or "+", "cv")
 
 
-def subsequence_of(source, target):
+class Sites(list):
     """
-    Check if source is a subsequence of target.
+    A Sites object represents an alignment in the orthogonal view, i.e. listing columns rather
+    than rows.
     """
-    q_1, q_2 = list(target), list(source)
-    while q_1:
-        s = q_1.pop(0)
-        if q_2 and q_2[0] == s:
-            q_2.pop(0)
-        elif q_2:
-            pass
-        else:
-            break
-    if not q_2:
-        return True
-    return False
+    def __init__(self, alms: typing.List[typing.Union[str, typing.List[str]]], gap: str = GAP):
+        """
+        :parameter alms: List of aligned sequences.
+        :parameter gap: String that codes gaps in alignment sites.
+        """
+        self.gap = gap
+        super().__init__(Site([row[i] for row in alms]) for i in range(len(alms[0])))
 
+    @property
+    def gap_ratios(self) -> typing.List[float]:
+        return [s.gap_ratio(gap=self.gap) for s in self]
 
-def consecutive_gaps(seq, gap="-"):
-    """
-    Return consecutive gaps in line.
-    """
-    start, end = [0], [len(seq)]
-    for i in range(len(seq)):
-        if seq[i] == gap:
-            gapped = True
-        else:
-            gapped = False
-        if gapped:
-            start += [i + 1]
-        if not gapped:
-            break
-    for i in range(len(seq) - 1, 0, -1):
-        if seq[i] == "-":
-            gapped = True
-        else:
-            gapped = False
-        if gapped:
-            end += [i]
-        if not gapped:
-            break
-    return start[:-1], end[::-1][:-1]
+    @property
+    def soundclasses(self) -> typing.List[str]:
+        return [s.soundclass(gap=self.gap) for s in self]
 
+    def trimmed(self, idxs: typing.Iterable[int]) -> 'Sites':
+        for idx in sorted(set(idxs), reverse=True):
+            del self[idx]
+        return self
 
-def gap_profile(alms, gap="-"):
-    """
-    Return a profile of the gap-ration per column.
-    """
-    return [col.count(gap) / len(col) for col in revert(alms)]
+    def to_alignment(self) -> typing.List[typing.List[str]]:
+        return [[s[i] for s in self] for i in range(len(self[0]))]
 
+    def trimmed_by_gap(self,
+                       threshold: float = 0.5,
+                       skeletons: typing.Iterable[str] = ("CV", "VC"),
+                       exclude="_+") -> 'Sites':
+        """
+        Trim alignment sites by gaps.
 
-def trim_by_gap(alms, threshold=0.5, skeletons=("CV", "VC"), gap="-", exclude="_+"):
-    """
-    Trim alignment sites by gaps.
+        :parameter threshold: Threshold for gap ratio by which sites should be trimmed.
+        :param skeletons: Iterable of syllable-skeletons at least one of which should be preserved \
+        for further processing.
+        :param exclude: Sequence of strings that should be excluded from further processing,
+            e.g. morpheme boundaries. Defaults to '_+'.
+        """
+        skeleton = list(enumerate(self.soundclasses))
 
-    :parameter alms: Alignment sites of a cognate set.
-    :type alms: list
-    :parameter threshold: Threshold by which sites with gaps should be trimmed.
-        Defaults to '0.5'.
-    :type threshold: int
-    :param skeletons: Tuple of syllable-skeletons that should be preserved
-        for further processing. Defaults to '("CV", "VC")'.
-    :type skeletons: tuple
-    :parameter gap: String that codes gaps in alignment sites. Defaults to '-'.
-    :type gap: string
-    :param exclude: Sequence of strings that should be excluded from further processing,
-        e.g. morpheme boundaries. Defaults to '_+'.
-    :param exclude: str
-    :return: Indices of trimmed strings.
-    :rtype: set
-    """
-    skeleton = get_skeleton(alms, gap=gap)
-    profile = gap_profile(alms, gap)
-    # exclude markers
-    idxs = [i for i, c in enumerate(skeleton) if c in exclude]
-    # order by gap weights
-    sorted_profile = sorted(enumerate(profile), key=lambda x: x[1], reverse=True)
-    while sorted_profile:
-        idx, score = sorted_profile.pop(0)
-        if score >= threshold:
-            current_skeleton = "".join([skeleton[i] for i in
-                                        range(len(skeleton)) if i not in idxs+[idx]])
-            if any([subsequence_of(s, current_skeleton) for s in skeletons]):
-                idxs += [idx]
+        # exclude markers
+        idxs = [i for i, c in skeleton if c in exclude]
+        # order by gap weights
+        for idx, score in sorted(enumerate(self.gap_ratios), key=lambda x: x[1], reverse=True):
+            if score >= threshold:
+                current_skeleton = [c for i, c in skeleton if i not in idxs + [idx]]
+                if any([subsequence_of(s, current_skeleton) for s in skeletons]):
+                    # Trimming this site leaves a "big enough" remainder.
+                    idxs.append(idx)
+                else:
+                    break
             else:
                 break
-        else:
-            break
-    return sorted(set(idxs))
+        return self.trimmed(idxs)
+
+    def trimmed_by_core(self,
+                        threshold: float = 0.5,
+                        skeletons: typing.Iterable[str] = ("CV", "VC"),
+                        exclude="_+") -> 'Sites':
+        """
+        Trim alignment sites by gaps, preserving a core of sites.
+
+        :parameter threshold: Threshold by which sites with gaps should be trimmed.
+        :param skeletons: Tuple of syllable-skeletons that should be preserved
+            for further processing. Defaults to '("CV", "VC")'.
+        :parameter gap: String that codes gaps in alignment sites. Defaults to '-'.
+        """
+        skeleton = list(enumerate(self.soundclasses))
+        cons = [self.gap if ratio >= threshold else "S" for ratio in self.gap_ratios]
+        takewhile_gap = functools.partial(itertools.takewhile, lambda c: c[1] == self.gap)
+        left = [i for i, _ in takewhile_gap(enumerate(cons))]
+        right = [len(cons) - 1 - i for i, _ in takewhile_gap(enumerate(reversed(cons)))]
+
+        idxs = [i for i, c in skeleton if c in exclude]
+
+        for idx in right + left:
+            current_skeleton = [c for i, c in skeleton if i not in idxs + [idx]]
+            if any([subsequence_of(s, current_skeleton) for s in skeletons]):
+                idxs.append(idx)
+            else:
+                break
+        return self.trimmed(idxs)
+
+    def trimmed_random(self,
+                    func=None,
+                    threshold=0.5,
+                    skeletons=("CV", "VC"),
+                    exclude="_+") -> 'Sites':
+        """
+        For a base trim function, return a random version with a similar CV distribution.
+
+        :parameter func: Trimming function that should be applied. Defaults to 'None'.
+        :type func: function
+        :parameter threshold: Threshold by which sites with gaps should be trimmed.
+            Defaults to '0.5'.
+        :type threshold: int
+        :param skeletons: Tuple of syllable-skeletons that should be preserved
+            for further processing. Defaults to '("CV", "VC")'.
+        :type skeletons: tuple
+        """
+        func = func or 'trimmed_by_gap'
+        reference_skeleton = getattr(Sites(self.to_alignment(), gap=self.gap), func)(
+            threshold=threshold, skeletons=skeletons, exclude=exclude).soundclasses
+        # create a freq dict of ref skel
+        rs_freqs = collections.Counter(reference_skeleton)
+        # get a dictionary of indices by position
+        indices = {  # soundclass mapped to list of indices in cv template.
+            sc: [i[0] for i in items] for sc, items in itertools.groupby(
+                sorted(enumerate(self.soundclasses), key=lambda ii: ii[1]),
+                lambda ii: ii[1])}
+        # random sample indices to be retained
+        retain = [random.sample(indices[c], rs_freqs[c]) for c, _ in rs_freqs.items()]
+        retain = set(itertools.chain(*retain))
+        return self.trimmed([i for i in range(len(self)) if i not in retain])
 
 
-def trim_by_core(
-        alms, threshold=0.5, skeletons=("CV", "VC"), gap="-",
-        exclude="_+"
-        ):
-    """
-    Trim alignment sites by gaps, preserving a core of sites.
+def prep_alignments(aligned_wl, skeletons=("CV", "VC"), ref="cogid"):
+    """"
+    Preparing the alignments assures that the structure is correctly
+    added to the wordlist.
 
-    :parameter alms: Alignment sites of a cognate set.
-    :type alms: list
-    :parameter threshold: Threshold by which sites with gaps should be trimmed.
-        Defaults to '0.5'.
-    :type threshold: int
+    :param wordlist: A lingpy Alignments.
+    :type wordlist: :class:lingpy.Alignments
     :param skeletons: Tuple of syllable-skeletons that should be preserved
         for further processing. Defaults to '("CV", "VC")'.
     :type skeletons: tuple
-    :parameter gap: String that codes gaps in alignment sites. Defaults to '-'.
-    :type gap: string
-    :return: Indices of trimmed strings.
-    :rtype: set
+    :param ref: The column which stores the cognate sets, defaults to 'cogid'
+    :type ref: str
+    :return: Pre-processed alignments.
+    :rtype: :class:lingpy.Alignments
     """
-    cons = [gap if c >= threshold else "S" for c in gap_profile(alms, gap=gap)]
-    skeleton = get_skeleton(alms, gap=gap)
-    left, right = consecutive_gaps(cons)
-
-    idxs = [i for i, c in enumerate(skeleton) if c in exclude]
-
-    # order by first
-    sorted_indices = right[::-1] + left
-    while sorted_indices:
-        idx = sorted_indices.pop(0)
-        current_skeleton = "".join([skeleton[i] for i in
-                                    range(len(skeleton)) if i not in idxs+[idx]])
-        if any([subsequence_of(s, current_skeleton) for s in skeletons]):
-            idxs += [idx]
-        else:
-            break
-    return sorted(set(idxs))
-
-
-def trim_random(
-        alms,
-        func=None,
-        threshold=0.5,
-        skeletons=("CV", "VC"),
-        gap="-",
-        exclude="_+",
-        ):
-    """
-    For a base trim function, return a random version with a similar CV distribution.
-
-    :parameter alms: Alignment sites of a cognate set.
-    :type alms: list
-    :parameter func: Trimming function that should be applied. Defaults to 'None'.
-    :type func: function
-    :parameter threshold: Threshold by which sites with gaps should be trimmed.
-        Defaults to '0.5'.
-    :type threshold: int
-    :param skeletons: Tuple of syllable-skeletons that should be preserved
-        for further processing. Defaults to '("CV", "VC")'.
-    :type skeletons: tuple
-    :parameter gap: String that codes gaps in alignment sites. Defaults to '-'.
-    :type gap: string
-    :return: Indices of trimmed strings.
-    :rtype: set
-    """
-    func = func or trim_by_gap
-    reference = apply_trim(
-            alms,
-            func(
-                alms, threshold=threshold, skeletons=skeletons, gap=gap,
-                exclude=exclude)
-            )
-    reference_skeleton = get_skeleton(reference)
-    # create a freq dict of ref skel
-    rs_freqs = collections.defaultdict(int)
-    for c in reference_skeleton:
-        rs_freqs[c] += 1
-    # get a dictionary of indices by position
-    indices = collections.defaultdict(list)
-    for i, c in enumerate(get_skeleton(alms)):
-        indices[c] += [i]
-    # random sample indices to be retained
-    retain = []
-    for c, _ in rs_freqs.items():
-        retain += random.sample(indices[c], rs_freqs[c])
-    to_trim = [i for i in range(len(alms[0])) if i not in retain]
-    return to_trim
+    whitelist = []
+    for _, msa in aligned_wl.msa[ref].items():
+        skel = Sites(msa["alignment"]).soundclasses
+        if any([subsequence_of(s, skel) for s in skeletons]):
+            whitelist += msa["ID"]
+    aligned_wl.add_entries(
+        "structure", "tokens", lambda x: " ".join(Sites([c for c in x]).soundclasses))
+    dct = {0: aligned_wl.columns}
+    for idx in whitelist:
+        dct[idx] = aligned_wl[idx]
+    return aligned_wl.__class__(dct, transcription="form")
