@@ -54,7 +54,9 @@ def test_trim_by_gap(alms, kw, result):
     ]
 )
 def test_trim_by_core(alms, kw, result):
-    assert Sites(alms).trimmed(strategy='core', **kw).to_alignment()[0] == list(result)
+    sites = Sites(alms)
+    assert sites.trimmed(strategy='core', **kw).to_alignment()[0] == list(result)
+    assert str(sites)
 
 
 def test_trim_random(mocker):

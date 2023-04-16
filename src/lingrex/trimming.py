@@ -34,14 +34,43 @@ class Sites(list):
     """
     A Sites object represents an alignment in the orthogonal view, i.e. listing columns rather
     than rows.
+
+    .. code-block:: python
+
+        >>> s = Sites(['s-terb-', 'mete---', '-ate-bu', '--te-b-'])
+        >>> print(s)
+        s	-	t	e	r	b	-
+        m	e	t	e	-	-	-
+        -	a	t	e	-	b	u
+        -	-	t	e	-	b	-
+        >>> print(s.trimmed(strategy='gap-oriented'))
+        t	e	b
+        t	e	-
+        t	e	b
+        t	e	b
+        >>> print(s.trimmed(strategy='core-oriented'))
+        t	e	r	b
+        t	e	-	-
+        t	e	-	b
+        t	e	-	b
+        >>> print(s.trimmed(strategy='core-oriented', threshold=0.6))
+        s	-	t	e	r	b
+        m	e	t	e	-	-
+        -	a	t	e	-	b
+        -	-	t	e	-	b
     """
-    def __init__(self, alms: typing.List[typing.Union[str, typing.List[str]]], gap: str = GAP):
+    def __init__(self,
+                 alms: typing.Optional[typing.List[typing.Union[str, typing.List[str]]]] = None,
+                 sites: typing.Optional[typing.List[Site]] = None,
+                 gap: str = GAP):
         """
         :parameter alms: List of aligned sequences.
         :parameter gap: String that codes gaps in alignment sites.
         """
+        assert (alms or sites) and not (alms and sites)
         self.gap = gap
-        super().__init__(Site([row[i] for row in alms]) for i in range(len(alms[0])))
+        super().__init__(
+            sites if sites else (Site([row[i] for row in alms]) for i in range(len(alms[0]))))
 
     @property
     def gap_ratios(self) -> typing.List[float]:
@@ -55,12 +84,14 @@ class Sites(list):
         """
         Trim by removing the sites specified by index in `idxs`.
         """
-        for idx in sorted(set(idxs), reverse=True):
-            del self[idx]
-        return self
+        idxs = set(idxs)
+        return Sites(sites=[s for idx, s in enumerate(self) if idx not in idxs])
 
     def to_alignment(self) -> typing.List[typing.List[str]]:
         return [[s[i] for s in self] for i in range(len(self[0]))]
+
+    def __str__(self):
+        return '\n'.join('\t'.join(w) for w in self.to_alignment())
 
     def trimmed(self,
                 strategy: str = 'gap-oriented',
@@ -94,7 +125,7 @@ class Sites(list):
                 len(gap_or_not) - 1 - i for i, _ in takewhile_gap(enumerate(reversed(gap_or_not)))]
             candidates = trailing_gaps + leading_gaps
         else:
-            raise ValueError('Unknown strategy: {}'.format(strategy))
+            raise ValueError('Unknown strategy: {}'.format(strategy))  # pragma: no cover
 
         skeleton = list(enumerate(self.soundclasses))
         idxs = {i for i, c in skeleton if c in exclude}  # Exclude markers.
