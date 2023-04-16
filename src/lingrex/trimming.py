@@ -75,11 +75,11 @@ class Sites(list):
         - `'gap-oriented'`: Trim alignment sites by gaps.
         - `'core-oriented'`: Trim alignment sites by gaps, preserving a core of sites.
 
-        :parameter threshold: Threshold for gap ratio by which sites should be trimmed.
+        :parameter threshold: Threshold for gap ratio to qualify sites for trimming.
         :param skeletons: Iterable of syllable-skeletons at least one of which should be preserved \
         for further processing.
-        :param exclude: Sequence of strings that should be excluded from further processing,
-            e.g. morpheme boundaries. Defaults to '_+'.
+        :param exclude: Sequence of strings that should be excluded from further processing,\
+        e.g. morpheme boundaries.
         """
         if strategy in {'gap-oriented', 'gap'}:
             candidates = [  # Sites with big enough gap ratio ordered by decreasing ratio.
