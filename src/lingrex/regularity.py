@@ -3,6 +3,8 @@ Calculate regularity metrics on dataset.
 """
 import statistics
 
+from lingpy import log
+
 
 def regularity(wordlist, threshold=3, ref="cogid", min_refs=3, word_threshold=0.75):
     """
@@ -35,32 +37,28 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3, word_threshold=0.
     """
     if not hasattr(wordlist, "clusters"):
         raise ValueError("need a CoPaR object with clusters")
-    patterns = len({
-            p: len(vals) for p, vals in wordlist.clusters.items()
-            })
-    regular_patterns = len([p for p, vals in wordlist.clusters.items() if
-                            len(vals) >= threshold])
-    regular_proportion = sum([len(vals) for vals in wordlist.clusters.values()
-                              if len(vals) >= threshold])
+    patterns = len({p: len(vals) for p, vals in wordlist.clusters.items()})
+    regular_patterns = len(
+        [p for p, vals in wordlist.clusters.items() if len(vals) >= threshold])
+    regular_proportion = sum(
+        [len(vals) for vals in wordlist.clusters.values() if len(vals) >= threshold])
     full_proportion = sum([len(vals) for vals in wordlist.clusters.values()])
 
     # get the proportion of words
     regular_words, irregular_words = 0, 0
     for cogid, msa in filter(
-            lambda x: len(set(x[1]["taxa"])) >= min_refs, 
+            lambda x: len(set(x[1]["taxa"])) >= min_refs,
             wordlist.msa[ref].items()):
         scores = []
         for idx in range(len(msa["alignment"][0])):
             if (cogid, idx) not in wordlist.patterns:
-                print("warning, duplicate cognate in {0} / {1}".format(
-                    cogid, idx))
+                log.warning("duplicate cognate in {0} / {1}".format(cogid, idx))
             else:
-                if max([
-                        len(wordlist.clusters[b, c]) for a, b, c in
-                        wordlist.patterns[cogid, idx]]) >= threshold:
-                    scores += [1]
+                if max([len(wordlist.clusters[b, c]) for a, b, c in wordlist.patterns[cogid, idx]])\
+                        >= threshold:
+                    scores.append(1)
                 else:
-                    scores += [0]
+                    scores.append(0)
         if statistics.mean(scores) >= word_threshold:
             regular_words += len(set(msa["taxa"]))
         else:
@@ -71,12 +69,12 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3, word_threshold=0.
         patterns - regular_patterns,
         patterns,
         round((regular_patterns / patterns), 2),
-        regular_proportion, 
+        regular_proportion,
         full_proportion - regular_proportion,
         full_proportion,
-        round((regular_proportion / full_proportion),2),
+        round((regular_proportion / full_proportion), 2),
         regular_words,
         irregular_words,
         regular_words + irregular_words,
-        round((regular_words / (regular_words + irregular_words)),2)
-        )
+        round((regular_words / (regular_words + irregular_words)), 2)
+    )

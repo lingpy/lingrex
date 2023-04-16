@@ -26,7 +26,7 @@ def test_gap_ratio(alms, gap, ratios):
 
 def test_trimmed():
     alm = [list("toxta-"), list("to-tir"), list("to-t-r"), list("do--ar")]
-    assert " ".join(Sites(alm).trimmed([2, 5]).to_alignment()[0]) == "t o t a"
+    assert " ".join(Sites(alm)._trimmed([2, 5]).to_alignment()[0]) == "t o t a"
 
 
 def test_soundclasses():
@@ -43,7 +43,7 @@ def test_soundclasses():
     ]
 )
 def test_trim_by_gap(alms, kw, result):
-    assert Sites(alms).trimmed_by_gap(**kw).to_alignment()[0] == list(result)
+    assert Sites(alms).trimmed(**kw).to_alignment()[0] == list(result)
 
 
 @pytest.mark.parametrize(
@@ -54,18 +54,16 @@ def test_trim_by_gap(alms, kw, result):
     ]
 )
 def test_trim_by_core(alms, kw, result):
-    assert Sites(alms).trimmed_by_core(**kw).to_alignment()[0] == list(result)
+    assert Sites(alms).trimmed(strategy='core', **kw).to_alignment()[0] == list(result)
 
 
 def test_trim_random(mocker):
     mocker.patch('lingrex.trimming.random', mocker.Mock(sample=lambda pop, k: list(pop)[:k]))
     alms = ["--mat", "-xmut", "m-xut", "--xit"]
-    assert len(Sites(alms).trimmed_by_gap()) == len(Sites(alms).trimmed_random())
-    assert len(Sites(alms).trimmed_by_gap()) == \
-        len(Sites(alms).trimmed_random(method=Sites.trimmed_by_gap))
-    assert set(Sites(alms).trimmed_by_gap().soundclasses) == \
+    assert len(Sites(alms).trimmed()) == len(Sites(alms).trimmed_random())
+    assert set(Sites(alms).trimmed().soundclasses) == \
         set(Sites(alms).trimmed_random().soundclasses)
-    assert Sites(alms).trimmed_random(method=Sites.trimmed_by_core)
+    assert Sites(alms).trimmed_random(strategy='core')
 
 
 def test_prep_alignments(wl_with_alignments):

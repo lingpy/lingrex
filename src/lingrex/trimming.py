@@ -51,7 +51,7 @@ class Sites(list):
     def soundclasses(self) -> typing.List[str]:
         return [s.soundclass(gap=self.gap) for s in self]
 
-    def trimmed(self, idxs: typing.Iterable[int]) -> 'Sites':
+    def _trimmed(self, idxs: typing.Iterable[int]) -> 'Sites':
         """
         Trim by removing the sites specified by index in `idxs`.
         """
@@ -62,31 +62,18 @@ class Sites(list):
     def to_alignment(self) -> typing.List[typing.List[str]]:
         return [[s[i] for s in self] for i in range(len(self[0]))]
 
-    def trimmed_by_candidates(self,
-                              candidate_indices: typing.List[int],
-                              skeletons: typing.Iterable[str] = ("CV", "VC"),
-                              exclude="_+") -> 'Sites':
+    def trimmed(self,
+                strategy: str = 'gap-oriented',
+                threshold: float = 0.5,
+                skeletons: typing.Iterable[str] = ("CV", "VC"),
+                exclude="_+") -> 'Sites':
         """
-        Trim by removing sites specified by index in `candidate_indices` as long as this leaves an
-        alignment containing at least one of the cv-patterns from `skeletons`.
-        """
-        skeleton = list(enumerate(self.soundclasses))
-        idxs = {i for i, c in skeleton if c in exclude}  # Exclude markers.
-        for idx in candidate_indices:
-            current_skeleton = [c for i, c in skeleton if i not in idxs | {idx}]
-            if any(subsequence_of(s, current_skeleton) for s in skeletons):
-                # Trimming this site leaves a "big enough" remainder.
-                idxs.add(idx)
-            else:
-                break
-        return self.trimmed(idxs)
+        Trim by removing candidate sites as long as this leaves an alignment containing at least
+        one of the cv-patterns from `skeletons`.
 
-    def trimmed_by_gap(self,
-                       threshold: float = 0.5,
-                       skeletons: typing.Iterable[str] = ("CV", "VC"),
-                       exclude="_+") -> 'Sites':
-        """
-        Trim alignment sites by gaps.
+        Candidates are identified using `strategy`:
+        - `'gap-oriented'`: Trim alignment sites by gaps.
+        - `'core-oriented'`: Trim alignment sites by gaps, preserving a core of sites.
 
         :parameter threshold: Threshold for gap ratio by which sites should be trimmed.
         :param skeletons: Iterable of syllable-skeletons at least one of which should be preserved \
@@ -94,34 +81,34 @@ class Sites(list):
         :param exclude: Sequence of strings that should be excluded from further processing,
             e.g. morpheme boundaries. Defaults to '_+'.
         """
-        candidates = [  # Indices of sites with big enough gap ratio ordered by decreasing ratio.
-            idx for idx, score
-            in sorted(enumerate(self.gap_ratios), key=lambda x: x[1], reverse=True)
-            if score >= threshold]
-        return self.trimmed_by_candidates(candidates, skeletons=skeletons, exclude=exclude)
+        if strategy in {'gap-oriented', 'gap'}:
+            candidates = [  # Sites with big enough gap ratio ordered by decreasing ratio.
+                idx for idx, score
+                in sorted(enumerate(self.gap_ratios), key=lambda x: x[1], reverse=True)
+                if score >= threshold]
+        elif strategy in {'core-oriented', 'core'}:
+            gap_or_not = [self.gap if ratio >= threshold else "S" for ratio in self.gap_ratios]
+            takewhile_gap = functools.partial(itertools.takewhile, lambda c: c[1] == self.gap)
+            leading_gaps = [i for i, _ in takewhile_gap(enumerate(gap_or_not))]
+            trailing_gaps = [
+                len(gap_or_not) - 1 - i for i, _ in takewhile_gap(enumerate(reversed(gap_or_not)))]
+            candidates = trailing_gaps + leading_gaps
+        else:
+            raise ValueError('Unknown strategy: {}'.format(strategy))
 
-    def trimmed_by_core(self,
-                        threshold: float = 0.5,
-                        skeletons: typing.Iterable[str] = ("CV", "VC"),
-                        exclude="_+") -> 'Sites':
-        """
-        Trim alignment sites by gaps, preserving a core of sites.
-
-        :parameter threshold: Threshold by which sites with gaps should be trimmed.
-        :param skeletons: Tuple of syllable-skeletons that should be preserved
-            for further processing. Defaults to '("CV", "VC")'.
-        :parameter gap: String that codes gaps in alignment sites. Defaults to '-'.
-        """
-        gap_or_not = [self.gap if ratio >= threshold else "S" for ratio in self.gap_ratios]
-        takewhile_gap = functools.partial(itertools.takewhile, lambda c: c[1] == self.gap)
-        leading_gaps = [i for i, _ in takewhile_gap(enumerate(gap_or_not))]
-        trailing_gaps = [
-            len(gap_or_not) - 1 - i for i, _ in takewhile_gap(enumerate(reversed(gap_or_not)))]
-        return self.trimmed_by_candidates(
-            trailing_gaps + leading_gaps, skeletons=skeletons, exclude=exclude)
+        skeleton = list(enumerate(self.soundclasses))
+        idxs = {i for i, c in skeleton if c in exclude}  # Exclude markers.
+        for idx in candidates:
+            current_skeleton = [c for i, c in skeleton if i not in idxs | {idx}]
+            if any(subsequence_of(s, current_skeleton) for s in skeletons):
+                # Trimming this site leaves a "big enough" remainder.
+                idxs.add(idx)
+            else:
+                break
+        return self._trimmed(idxs)
 
     def trimmed_random(self,
-                       method: typing.Union[str, typing.Callable] = 'trimmed_by_gap',
+                       strategy: str = 'gap-oriented',
                        threshold: float = 0.5,
                        skeletons: typing.Iterable[str] = ("CV", "VC"),
                        exclude="_+") -> 'Sites':
@@ -134,10 +121,8 @@ class Sites(list):
         :param skeletons: Tuple of syllable-skeletons that should be preserved
             for further processing. Defaults to '("CV", "VC")'.
         """
-        if isinstance(method, str):
-            method = getattr(Sites, method)
-        reference_skeleton = method(
-            Sites(self.to_alignment(), gap=self.gap),
+        reference_skeleton = Sites(self.to_alignment(), gap=self.gap).trimmed(
+            strategy=strategy,
             threshold=threshold,
             skeletons=skeletons,
             exclude=exclude).soundclasses
@@ -151,7 +136,7 @@ class Sites(list):
         # random sample indices to be retained
         retain = [random.sample(indices[c], rs_freqs[c]) for c, _ in rs_freqs.items()]
         retain = set(itertools.chain(*retain))
-        return self.trimmed([i for i in range(len(self)) if i not in retain])
+        return self._trimmed([i for i in range(len(self)) if i not in retain])
 
 
 def prep_alignments(aligned_wl, skeletons=("CV", "VC"), ref="cogid"):
