@@ -2,7 +2,15 @@ import pytest
 
 from lingpy import Alignments
 
-from lingrex.trimming import prep_alignments, Sites
+from lingrex.trimming import *
+
+
+def test_Site():
+    site = Site([GAP, 'a', GAP, 't'])
+    assert site.gap_ratio() == pytest.approx(0.5)
+    assert site.gap_ratio(gap='#') == pytest.approx(0.0)
+    assert site.soundclass() == 'V'
+    assert site.soundclass(gap='a') == '0'
 
 
 @pytest.mark.parametrize(
@@ -29,6 +37,7 @@ def test_soundclasses():
     'alms,kw,result',
     [
         (["abc", "a-c", "--c"], {}, 'ac'),
+        (["abc", "a-c", "--c"], dict(skeletons=['VCC']), 'abc'),
         (["a+bco", "-+cco", "-+cco"], {}, 'bco'),
         (["a+b", "-+c", "-+c"], dict(exclude=""), 'a+b'),
     ]
@@ -52,8 +61,11 @@ def test_trim_random(mocker):
     mocker.patch('lingrex.trimming.random', mocker.Mock(sample=lambda pop, k: list(pop)[:k]))
     alms = ["--mat", "-xmut", "m-xut", "--xit"]
     assert len(Sites(alms).trimmed_by_gap()) == len(Sites(alms).trimmed_random())
+    assert len(Sites(alms).trimmed_by_gap()) == \
+        len(Sites(alms).trimmed_random(method=Sites.trimmed_by_gap))
     assert set(Sites(alms).trimmed_by_gap().soundclasses) == \
         set(Sites(alms).trimmed_random().soundclasses)
+    assert Sites(alms).trimmed_random(method=Sites.trimmed_by_core)
 
 
 def test_prep_alignments(wl_with_alignments):

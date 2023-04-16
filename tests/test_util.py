@@ -9,9 +9,13 @@ from lingrex.util import prep_wordlist, subsequence_of
     'source,target,result',
     [
         ('cvc', 'cvcvc', True),
+        ('cvc', 'cxcvc', True),
+        ('vcc', 'vc', False),
+        ('vcc', 'vcc', True),
         ('bla', 'bla', True),
         ('bla', 'bxlyaz', True),
         ('bla', 'abxlyaz', True),
+        ('bla', 'abxalyz', False),
         ('abc', 'ab', False),
     ]
 )

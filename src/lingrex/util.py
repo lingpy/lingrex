@@ -17,7 +17,7 @@ def subsequence_of(source, target):
     i = 0
     for c in source:
         try:
-            i = target[i:].index(c)
+            i += target[i:].index(c) + 1
         except ValueError:  # c is not in the remainder of target.
             return False
     return True
