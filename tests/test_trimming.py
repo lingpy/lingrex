@@ -1,61 +1,73 @@
-from lingrex.trimming import (
-        apply_trim, revert, get_skeleton, consecutive_gaps, gap_profile,
-        trim_by_gap,trim_by_core, trim_random, subsequence_of
-        )
-import random
-random.seed(1234)
+import pytest
+
+from lingpy import Alignments
+
+from lingrex.trimming import *
 
 
-def test_gap_profile():
-    assert gap_profile(["aaa", "aaa"], gap="-") == [0.0, 0.0, 0.0]
-    assert gap_profile(["aa", "a-"], gap="-") == [0.0, 0.5]
-
-def test_apply_trim():
-
-    alm = [
-            list("toxta-"), list("to-tir"), 
-            list("to-t-r"), list("do--ar")]
-    trimmed = apply_trim(alm, [2, 5])
-    assert " ".join(trimmed[0]) == "t o t a" 
+def test_Site():
+    site = Site([GAP, 'a', GAP, 't'])
+    assert site.gap_ratio() == pytest.approx(0.5)
+    assert site.gap_ratio(gap='#') == pytest.approx(0.0)
+    assert site.soundclass() == 'V'
+    assert site.soundclass(gap='a') == '0'
 
 
-def test_get_skeleton():
-    assert get_skeleton(["-bc", "ab-"], gap="-") == ["V", "C", "C"]
+@pytest.mark.parametrize(
+    'alms,gap,ratios',
+    [
+        (["aaa", "aa-"], '-', [0.0, 0.0, 0.5]),
+        (["aa", "a#"], '#', [0.0, 0.5]),
+    ]
+)
+def test_gap_ratio(alms, gap, ratios):
+    assert Sites(alms, gap=gap).gap_ratios == ratios
 
 
-def test_revert():
-    assert revert(["ab", "ab"]) == [["a", "a"], ["b", "b"]]
+def test_trimmed():
+    alm = [list("toxta-"), list("to-tir"), list("to-t-r"), list("do--ar")]
+    assert " ".join(Sites(alm)._trimmed([2, 5]).to_alignment()[0]) == "t o t a"
 
 
-def test_trim_by_gap():
-    assert trim_by_gap(["abc", "a-c", "--c"]) == [1]
-    assert trim_by_gap(["a+bco", "-+cco", "-+cco"], exclude="_+") == [0, 1]
-    assert trim_by_gap(["a+b", "-+c", "-+c"], exclude="") == []
+def test_soundclasses():
+    assert Sites(["-bc", "ab-"], gap="-").soundclasses == ["V", "C", "C"]
 
 
-def test_subsequence_of():
-    assert subsequence_of("cvc", "cvcvc")
-    assert subsequence_of("bla", "bla")
-    assert not subsequence_of("abc", "ab")
+@pytest.mark.parametrize(
+    'alms,kw,result',
+    [
+        (["abc", "a-c", "--c"], {}, 'ac'),
+        (["abc", "a-c", "--c"], dict(skeletons=['VCC']), 'abc'),
+        (["a+bco", "-+cco", "-+cco"], {}, 'bco'),
+        (["a+b", "-+c", "-+c"], dict(exclude=""), 'a+b'),
+    ]
+)
+def test_trim_by_gap(alms, kw, result):
+    assert Sites(alms).trimmed(**kw).to_alignment()[0] == list(result)
 
 
-def test_consecutive_gaps():
-    left, right = consecutive_gaps("--mat-gu-go--", gap="-")
-    assert " ".join([c for i, c in enumerate("--mat-gu-go--") if i not in
-                     left+right]
-                    ) == "m a t - g u - g o"
+@pytest.mark.parametrize(
+    'alms,kw,result',
+    [
+        (["--mat", "-xmut", "--mit", "m-xit"], {}, 'mat'),
+        (["--mat--", "-xmut--", "--mitx-", "m-xit-x"], {}, 'mat'),
+    ]
+)
+def test_trim_by_core(alms, kw, result):
+    sites = Sites(alms)
+    assert sites.trimmed(strategy='core', **kw).to_alignment()[0] == list(result)
+    assert str(sites)
 
 
-def test_trim_by_core():
-    assert trim_by_core(["--mat", "-xmut", "--mit", "m-xit"]) == [0, 1]
-    assert trim_by_core(["--mat--", "-xmut--", "--mitx-", "m-xit-x"]) == [0, 1, 5, 6]
-
-
-
-def test_trim_random():
-    
+def test_trim_random(mocker):
+    mocker.patch('lingrex.trimming.random', mocker.Mock(sample=lambda pop, k: list(pop)[:k]))
     alms = ["--mat", "-xmut", "m-xut", "--xit"]
-    assert len(trim_by_gap(alms)) == len(trim_random(alms))
-    assert set(get_skeleton(apply_trim(alms, trim_by_gap(alms)))) == \
-            set(get_skeleton(apply_trim(alms, trim_random(alms))))
+    assert len(Sites(alms).trimmed()) == len(Sites(alms).trimmed_random())
+    assert set(Sites(alms).trimmed().soundclasses) == \
+        set(Sites(alms).trimmed_random().soundclasses)
+    assert Sites(alms).trimmed_random(strategy='core')
 
+
+def test_prep_alignments(wl_with_alignments):
+    test_wl = prep_alignments(Alignments(wl_with_alignments, transcription="form"))
+    assert test_wl[4, "structure"] == "C V C V"
