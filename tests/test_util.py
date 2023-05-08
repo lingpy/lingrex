@@ -38,15 +38,22 @@ def test_bleu_score():
             2) == 0.64
 
     assert round(
+        bleu_score(
+            candidate,
+            reference,
+            weights=[0.5, 0.5],
+            n=2,
+            trim=False),
+        2) == 0.70
+
+    assert round(
             bleu_score(
                 candidate,
                 reference,
-                weights=[0.5, 0.5],
                 n=2,
                 trim=False),
             2) == 0.70
 
-    
 
 def test_ungap():
     matrix = ungap([['a', 'b'], ['x', '-'], ['y', '-']], ['proto', 'l1', 'l2'], 'proto')

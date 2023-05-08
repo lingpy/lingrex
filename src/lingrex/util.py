@@ -37,9 +37,7 @@ def bleu_score(word, reference, n=4, weights=None, trim=True):
     :param weights: list of weights, should be the same size as n
     :param trim: bool, decide to trim n-grams or not
     """
-
-    if not weights:
-        weights = [1 / n for x in range(n)]
+    weights = [1 / n for x in range(n)] if weights is None else weights
 
     scores = []
     for i in range(1, n + 1):

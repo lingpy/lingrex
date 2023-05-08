@@ -51,7 +51,7 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3, word_threshold=0.
             wordlist.msa[ref].items()):
         scores = []
         for idx in range(len(msa["alignment"][0])):
-            if (cogid, idx) not in wordlist.patterns:
+            if (cogid, idx) not in wordlist.patterns:  # pragma: no cover
                 log.warning("duplicate cognate in {0} / {1}".format(cogid, idx))
             else:
                 if max([len(wordlist.clusters[b, c]) for a, b, c in wordlist.patterns[cogid, idx]])\
