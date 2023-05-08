@@ -60,7 +60,7 @@ class Sites(list):
         -	-	t	e	-	b
     """
     def __init__(self,
-                 alms: typing.Optional[typing.List[typing.Union[str, typing.List[str]]]] = None,
+                 alms: typing.Optional[typing.List[typing.List[str]]] = None,
                  sites: typing.Optional[typing.List[Site]] = None,
                  gap: str = GAP):
         """
@@ -68,6 +68,8 @@ class Sites(list):
         :parameter gap: String that codes gaps in alignment sites.
         """
         assert (alms or sites) and not (alms and sites)
+        assert alms is None or (isinstance(alms[0], list) and isinstance(alms[0][0], str)), \
+            'Expected list of lists of str, got {}'.format(alms)
         self.gap = gap
         super().__init__(
             sites if sites else (Site([row[i] for row in alms]) for i in range(len(alms[0]))))
@@ -191,7 +193,7 @@ def prep_alignments(aligned_wl, skeletons=("CV", "VC"), ref="cogid"):
         if any([subsequence_of(s, skel) for s in skeletons]):
             whitelist += msa["ID"]
     aligned_wl.add_entries(
-        "structure", "tokens", lambda x: " ".join(Sites([c for c in x]).soundclasses))
+        "structure", "tokens", lambda x: " ".join(Sites([x]).soundclasses))
     dct = {0: aligned_wl.columns}
     for idx in whitelist:
         dct[idx] = aligned_wl[idx]

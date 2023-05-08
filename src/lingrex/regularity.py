@@ -31,7 +31,7 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3, word_threshold=0.
     :type min_refs: int
     :param word_threshold: The relative threshold of patterns that need to be regular
         in order for a word to be considered regular as well. Defaults to '0.75'.
-    :type word_threshold: int
+    :type word_threshold: float
     :return: Different scores of regularity.
     :rtype: tuple
     """
