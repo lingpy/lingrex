@@ -67,6 +67,12 @@ def test_soundclasses():
         #
         (['- a b'.split(), 'b a -'.split(), 'b a -'.split()], {}, ['-', 'a']),
         (['- a b'.split(), 'b - -'.split(), 'b - -'.split()], {}, ['-', 'a']),
+        ([
+             '- a b c'.split(),
+             'b - - -'.split(),
+             'b - - -'.split(),
+             'b - - d'.split()
+         ], {}, ['-', 'a', 'c']),
     ]
 )
 def test_trim_by_gap(alms, kw, result):

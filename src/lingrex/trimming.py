@@ -138,14 +138,16 @@ class Sites(list):
         for idxss in candidates:
             if not isinstance(idxss, list):
                 idxss = [idxss]
-            trimmed = False
+            trimmed = []
             for idx in idxss:
                 current_skeleton = [c for i, c in skeleton if i not in idxs | {idx}]
                 if any(subsequence_of(s, current_skeleton) for s in skeletons):
                     # Trimming this site leaves a "big enough" remainder.
                     idxs.add(idx)
-                    trimmed = True
-            if not trimmed:
+                    trimmed.append(True)
+                else:
+                    trimmed.append(False)
+            if not all(trimmed):
                 break
         return self._trimmed(idxs)
 
