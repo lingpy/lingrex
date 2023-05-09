@@ -37,7 +37,7 @@ class Sites(list):
 
     .. code-block:: python
 
-        >>> s = Sites(['s-terb-', 'mete---', '-ate-bu', '--te-b-'])
+        >>> s = Sites([list('s-terb-'), list('mete---'), list('-ate-bu'), list('--te-b-')])
         >>> print(s)
         s	-	t	e	r	b	-
         m	e	t	e	-	-	-
