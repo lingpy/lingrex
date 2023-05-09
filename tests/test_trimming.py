@@ -73,6 +73,8 @@ def test_soundclasses():
              'b - - -'.split(),
              'b - - d'.split()
          ], {}, ['-', 'a', 'c']),
+        ([list('bbabb'), list('bb-bb'), list('-b-b-'), list('-b-b-')], {}, list('bbabb')),
+        ([list('bbabb'), list('bb-bb'), list('-b-b-'), list('-b-b-')], {'strict_ratio': False}, list('bab')),
     ]
 )
 def test_trim_by_gap(alms, kw, result):
@@ -95,6 +97,7 @@ def test_trim_by_gap(alms, kw, result):
             '- - - - d u l -'.split(),
             '- - n u k - w ɔ'.split(),
          ], {}, ['-', '-', "'b/b", 'a']),
+        ([list('bbabb'), list('bb-bb'), list('-b-b-'), list('-b-b-')], {}, list('bab')),
     ]
 )
 def test_trim_by_core(alms, kw, result):

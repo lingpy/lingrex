@@ -99,6 +99,7 @@ class Sites(list):
                 strategy: str = 'gap-oriented',
                 threshold: float = 0.5,
                 skeletons: typing.Iterable[str] = ("CV", "VC"),
+                strict_ratio: bool = True,
                 exclude="_+") -> 'Sites':
         """
         Trim by removing candidate sites as long as this leaves an alignment containing at least
@@ -150,7 +151,7 @@ class Sites(list):
                     trimmed.append(True)
                 else:
                     trimmed.append(False)
-            if not all(trimmed):
+            if strict_ratio and not all(trimmed):
                 break
         return self._trimmed(idxs)
 
