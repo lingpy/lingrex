@@ -105,8 +105,11 @@ class Sites(list):
         one of the cv-patterns from `skeletons`.
 
         Candidates are identified using `strategy`:
-        - `'gap-oriented'`: Trim alignment sites by gaps.
-        - `'core-oriented'`: Trim alignment sites by gaps, preserving a core of sites.
+        - `'gap-oriented'`: Trim alignment sites by gaps. Candidates are groups of sites with the \
+          same gap ratio. Candidate groups are tried in order of decreasing gap ratio, and the \
+          trimming stops when not all sites in a group could be trimmed.
+        - `'core-oriented'`: Trim alignment sites by gaps, preserving a core of sites. Candidates \
+          are tried from start and end inwards.
 
         :parameter threshold: Threshold for gap ratio to qualify sites for trimming.
         :param skeletons: Iterable of syllable-skeletons at least one of which should be preserved \
