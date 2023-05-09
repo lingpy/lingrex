@@ -115,9 +115,13 @@ class Sites(list):
         e.g. morpheme boundaries.
         """
         if strategy in {'gap-oriented', 'gap'}:
-            candidates = [  # Sites with big enough gap ratio ordered by decreasing ratio.
-                idx for idx, score
-                in sorted(enumerate(self.gap_ratios), key=lambda x: x[1], reverse=True)
+            # Sites with big enough gap ratio, grouped by ratio, ordered by decreasing ratio.
+            candidates = [
+                [i[0] for i in idxs] for score, idxs in
+                # Note that the sort order must be a total ordering to make trimming reproducible.
+                itertools.groupby(
+                    sorted(enumerate(self.gap_ratios), key=lambda x: (x[1], -x[0]), reverse=True),
+                    lambda i: i[1])
                 if score >= threshold]
         elif strategy in {'core-oriented', 'core'}:
             gap_or_not = [self.gap if ratio >= threshold else "S" for ratio in self.gap_ratios]
@@ -131,12 +135,17 @@ class Sites(list):
 
         skeleton = list(enumerate(self.soundclasses))
         idxs = {i for i, c in skeleton if c in exclude}  # Exclude markers.
-        for idx in candidates:
-            current_skeleton = [c for i, c in skeleton if i not in idxs | {idx}]
-            if any(subsequence_of(s, current_skeleton) for s in skeletons):
-                # Trimming this site leaves a "big enough" remainder.
-                idxs.add(idx)
-            else:
+        for idxss in candidates:
+            if not isinstance(idxss, list):
+                idxss = [idxss]
+            trimmed = False
+            for idx in idxss:
+                current_skeleton = [c for i, c in skeleton if i not in idxs | {idx}]
+                if any(subsequence_of(s, current_skeleton) for s in skeletons):
+                    # Trimming this site leaves a "big enough" remainder.
+                    idxs.add(idx)
+                    trimmed = True
+            if not trimmed:
                 break
         return self._trimmed(idxs)
 

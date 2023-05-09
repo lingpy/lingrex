@@ -36,26 +36,64 @@ def test_soundclasses():
 @pytest.mark.parametrize(
     'alms,kw,result',
     [
-        (["abc", "a-c", "--c"], {}, 'ac'),
-        (["abc", "a-c", "--c"], dict(skeletons=['VCC']), 'abc'),
-        (["a+bco", "-+cco", "-+cco"], {}, 'bco'),
-        (["a+b", "-+c", "-+c"], dict(exclude=""), 'a+b'),
+        (["abc", "a-c", "--c"], {}, list('ac')),
+        (["abc", "a-c", "--c"], dict(skeletons=['VCC']), list('abc')),
+        (["a+bco", "-+cco", "-+cco"], {}, list('bco')),
+        (["a+b", "-+c", "-+c"], dict(exclude=""), list('a+b')),
+        ([
+             #"- - n u - - 'b/b a".split(),
+             '- - - - d ù/u - -'.split(),
+             '- - - - d ú/u - -'.split(),
+             '- - - - d ù/u - -'.split(),
+             "ɾ u 'w/w a s i ɾ a".split(),
+             '- - - - s u - e'.split(),
+             "- - n u - - 'b/b a".split(),
+             '- - - - d u l -'.split(),
+             '- - n u k - w ɔ'.split(),
+         ], {}, ['d', 'ù/u']),
+        ([
+             "- - n u - - 'b/b a".split(),
+             '- - - - d ù/u - -'.split(),
+             '- - - - d ú/u - -'.split(),
+             '- - - - d ù/u - -'.split(),
+             "ɾ u 'w/w a s i ɾ a".split(),
+             '- - - - s u - e'.split(),
+             #"- - n u - - 'b/b a".split(),
+             '- - - - d u l -'.split(),
+             '- - n u k - w ɔ'.split(),
+         ], {}, ['-', '-']),
+        # Non-overlapping alignments:
+        (['- - a b'.split(), 'a b - -'.split(), 'a b - -'.split()], {}, ['-', '-']),
+        #
+        (['- a b'.split(), 'b a -'.split(), 'b a -'.split()], {}, ['-', 'a']),
+        (['- a b'.split(), 'b - -'.split(), 'b - -'.split()], {}, ['-', 'a']),
     ]
 )
 def test_trim_by_gap(alms, kw, result):
-    assert Sites([list(w) for w in alms]).trimmed(**kw).to_alignment()[0] == list(result)
+    assert Sites([list(w) for w in alms]).trimmed(**kw).to_alignment()[0] == result
 
 
 @pytest.mark.parametrize(
     'alms,kw,result',
     [
-        (["--mat", "-xmut", "--mit", "m-xit"], {}, 'mat'),
-        (["--mat--", "-xmut--", "--mitx-", "m-xit-x"], {}, 'mat'),
+        (["--mat", "-xmut", "--mit", "m-xit"], {}, list('mat')),
+        (["--mat--", "-xmut--", "--mitx-", "m-xit-x"], {}, list('mat')),
+        ([
+            "- - n u - - 'b/b a".split(),
+            '- - - - d ù/u - -'.split(),
+            '- - - - d ú/u - -'.split(),
+            '- - - - d ù/u - -'.split(),
+            "ɾ u 'w/w a s i ɾ a".split(),
+            '- - - - s u - e'.split(),
+            "- - n u - - 'b/b a".split(),
+            '- - - - d u l -'.split(),
+            '- - n u k - w ɔ'.split(),
+         ], {}, ['-', '-', "'b/b", 'a']),
     ]
 )
 def test_trim_by_core(alms, kw, result):
     sites = Sites([list(w) for w in alms])
-    assert sites.trimmed(strategy='core', **kw).to_alignment()[0] == list(result)
+    assert sites.trimmed(strategy='core', **kw).to_alignment()[0] == result
     assert str(sites)
 
 
