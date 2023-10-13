@@ -56,8 +56,8 @@ def test_transform_alignment():
 
 def test_PatternReconstructor(data):
 
-    pt = PatternReconstructor(str(data / "hillburmish.tsv"), ref="cogids",
-            target="ProtoBurmish")
+    pt = PatternReconstructor(str(data / "hillburmish.tsv"), "ProtoBurmish", ref="cogids",
+            )
     t1 = partial(transform_alignment, align=True, position=False,
             prosody=False, startend=False, firstlast=False)
     t2 = partial(transform_alignment, align=True, position=True,
