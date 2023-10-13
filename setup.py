@@ -22,7 +22,7 @@ setup(
         version='1.3.1.dev0',
         packages=find_packages(where='src'),
         package_dir={'': 'src'},
-        install_requires=['lingpy>=2.6.8'],
+        install_requires=['lingpy>=2.6.10'],
         extras_require={
             "test": ["pytest", "coverage", "pytest-mock", "pytest-cov"],
             "dev": ["wheel", "twine", "tox", "black", "flake8"],
