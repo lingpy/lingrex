@@ -14,7 +14,12 @@ class FuzzyReconstructor:
         if isinstance(infile, (str, dict)):
             wordlist = lingpy.align.sca.Alignments(infile, ref=ref,
                     transcription=transcription)
-        elif isinstance(infile, lingpy.align.sca.Alignments):
+        elif isinstance(
+                infile, 
+                (
+                    lingpy.align.sca.Alignments, 
+                    lingpy.basic.wordlist.Wordlist
+                    )):
             wordlist = infile
         else:
             raise ValueError("Argument for infile must be a string or a wordlist.")
