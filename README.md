@@ -1,7 +1,6 @@
 # LingRex: Linguistic Reconstruction with LingPy
 
 [![Build Status](https://github.com/lingpy/lingrex/workflows/tests/badge.svg)](https://github.com/lingpy/lingrex/actions?query=workflow%3Atests)
-[![codecov.io](http://codecov.io/github/lingpy/lingrex/coverage.svg?branch=master)](http://codecov.io/github/lingpy/lingrex?branch=master)
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.1544943.svg)](https://doi.org/10.5281/zenodo.1544943)
 [![PyPI version](https://badge.fury.io/py/lingrex.png)](https://badge.fury.io/py/lingrex)
 
