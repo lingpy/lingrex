@@ -34,6 +34,16 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3, word_threshold=0.
     :type word_threshold: float
     :return: Different scores of regularity.
     :rtype: tuple
+
+    
+    Note
+    ----
+    These regularity checks were first introduced in a study by Blum and List (2023):
+
+    > Blum, F. and J.-M. List (2023): Trimming phonetic alignments improves the inference of 
+    > sound correspondence patterns from multilingual wordlists. 
+    > In: Proceedings of the 5th Workshop on Computational Typology and Multilingual NLP. 
+    > Association for Computational Linguistics 52-64. https://aclanthology.org/2023.sigtyp-1.6
     """
     if not hasattr(wordlist, "clusters"):
         raise ValueError("need a CoPaR object with clusters")
