@@ -140,7 +140,7 @@ class ReconstructionBase(Alignments):
     def __init__(
         self,
         infile,
-        target=None,
+        target,
         ref="cogids",
         fuzzy=True,
         transcription="form",
