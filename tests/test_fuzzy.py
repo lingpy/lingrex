@@ -2,11 +2,17 @@
 Test fuzzy reconstruction.
 """
 import pytest
-from lingrex.fuzzy import FuzzyReconstructor
+from lingrex.fuzzy import FuzzyReconstructor, ntile
 from lingrex.reconstruct import CorPaRClassifier
 import random
 import lingpy
 
+
+def test_ntile():
+    assert ntile(["kap", "kap", "kup", "kup"], 3) == 'k|k a|u p|p'
+    # counting is not the same for missing data!
+    assert ntile(["kap", "kØp", "kØp"], n=2) == 'k|k a|a p|p'
+    
 
 def test_FuzzyReconstructor(data):
     random.seed(1234)
