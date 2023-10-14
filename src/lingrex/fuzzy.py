@@ -6,6 +6,17 @@ import lingpy
 
 
 class FuzzyReconstructor:
+    """
+    Carry out fuzzy reconstructions by running reconstructions from different parts of the data.
+
+    Note
+    ----
+    This method was introduced in the study by List et al. (forthcoming):
+
+    > List, J.-M.; Hill, N. W.; Blum, F.; and Forkel, R. (forthcoming): A New Framework for the 
+    > Representation and Computation of Uncertainty in Phonological Reconstruction. To appear in: 
+    > Proceedings of the 4th Workshop on Computational Approaches to Historical Language Change.
+    """
 
     def __init__(self, infile, target, ref="cogid", fuzzy=False, transcription="form"):
         if isinstance(infile, (str, dict)):
