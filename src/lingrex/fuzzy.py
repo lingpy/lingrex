@@ -13,16 +13,19 @@ class FuzzyReconstructor:
     ----
     This method was introduced in the study by List et al. (forthcoming):
 
-    > List, J.-M.; Hill, N. W.; Blum, F.; and Forkel, R. (forthcoming): A New Framework for the 
-    > Representation and Computation of Uncertainty in Phonological Reconstruction. To appear in: 
+    > List, J.-M.; Hill, N. W.; Blum, F.; and Forkel, R. (forthcoming): A New Framework for the
+    > Representation and Computation of Uncertainty in Phonological Reconstruction. To appear in:
     > Proceedings of the 4th Workshop on Computational Approaches to Historical Language Change.
     """
 
     def __init__(self, infile, target, ref="cogid", fuzzy=False, transcription="form"):
         if isinstance(infile, (str, dict)):
             wordlist = lingpy.align.sca.Alignments(
-                infile, ref=ref, transcription=transcription)
-        elif isinstance(infile, (lingpy.align.sca.Alignments, lingpy.basic.wordlist.Wordlist)):
+                infile, ref=ref, transcription=transcription
+            )
+        elif isinstance(
+            infile, (lingpy.align.sca.Alignments, lingpy.basic.wordlist.Wordlist)
+        ):
             wordlist = infile
         else:
             raise ValueError("Argument for infile must be a string or a wordlist.")
@@ -32,7 +35,11 @@ class FuzzyReconstructor:
         self.fuzzy = fuzzy
 
     def random_splits(self, splits=10, retain=0.9):
-        idxs = [idx for idx in self.wordlist if self.wordlist[idx, "doculect"] != self.target]
+        idxs = [
+            idx
+            for idx in self.wordlist
+            if self.wordlist[idx, "doculect"] != self.target
+        ]
         tidxs = self.wordlist.get_list(col=self.target, flat=True)
         cogids = [self.wordlist[idx, self.ref] for idx in tidxs]
 
@@ -50,20 +57,23 @@ class FuzzyReconstructor:
                 if cogid in selected_cogids:
                     D[tidx] = [self.wordlist[tidx, c] for c in D[0]]
             self.wordlists[i] = PatternReconstructor(
-                D, ref=self.ref, target=self.target, fuzzy=self.fuzzy)
+                D, ref=self.ref, target=self.target, fuzzy=self.fuzzy
+            )
 
     def fit_samples(self, clf, onehot=False, func=None, aligned=False, pb=False):
         pb = progressbar if pb else lambda x, desc: x
         for i, wordlist in pb(self.wordlists.items(), desc="fitting data"):
             wordlist.fit(clf=clf(), onehot=onehot, func=func, aligned=aligned)
 
-    def predict(self,
-                alignment,
-                languages,
-                desegment=True,
-                orchar="¦",
-                scorechar=":",
-                output="percentiles"):
+    def predict(
+        self,
+        alignment,
+        languages,
+        desegment=True,
+        orchar="¦",
+        scorechar=":",
+        output="percentiles",
+    ):
         words = []
         for i, wordlist in self.wordlists.items():
             word = wordlist.predict(alignment, languages, desegment=False)
@@ -80,7 +90,10 @@ class FuzzyReconstructor:
                 distinct = {s: sounds.count(s) / len(sounds) for s in set(sounds)}
                 distinct_s = [
                     "{0}{1}{2}".format(k, scorechar, int(100 * v + 0.5))
-                    for k, v in sorted(distinct.items(), key=lambda x: x[1], reverse=True)]
+                    for k, v in sorted(
+                        distinct.items(), key=lambda x: x[1], reverse=True
+                    )
+                ]
                 out += [orchar.join(distinct_s)]
             if output == "percentiles":
                 return out

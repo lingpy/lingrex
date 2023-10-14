@@ -198,7 +198,8 @@ def external_cognates(
                 if G.nodes[str(gA)]["family"] != G.nodes[str(gB)]["family"]:
                     wpairs = [
                         (" ".join(a[2]), " ".join(b[2]))
-                        for a, b in itertools.product(iA, iB)]
+                        for a, b in itertools.product(iA, iB)
+                    ]
 
                     pairs = Pairwise(wpairs)
                     pairs.align(distance=True, gop=gop, mode=align_mode)

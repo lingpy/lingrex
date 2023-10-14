@@ -14,7 +14,7 @@ def compare_cognate_sets(wordlist, refA, refB):
     ----
     This check was first described in Wu and List (2023).
 
-    > Wu, M.-S. and J.-M. List (2023): Annotating cognates in phylogenetic studies 
+    > Wu, M.-S. and J.-M. List (2023): Annotating cognates in phylogenetic studies
     > of South-East Asian languages. Language Dynamics and Change. 161-197.
     > DOI: https://doi.org/10.1163/22105832-bja10023
     """
@@ -51,7 +51,7 @@ def cross_semantic_cognate_statistics(
     ----
     This check was first described in Wu and List (2023).
 
-    > Wu, M.-S. and J.-M. List (2023): Annotating cognates in phylogenetic studies 
+    > Wu, M.-S. and J.-M. List (2023): Annotating cognates in phylogenetic studies
     > of South-East Asian languages. Language Dynamics and Change. 161-197.
     > DOI: https://doi.org/10.1163/22105832-bja10023
     """

@@ -17,7 +17,7 @@ setup(
             'Programming Language :: Python :: 3.9',
             'Programming Language :: Python :: 3.10',
         ],
-        version='1.3.1.dev0',
+        version='1.4.0',
         packages=find_packages(where='src'),
         package_dir={'': 'src'},
         install_requires=['lingpy>=2.6.10'],
