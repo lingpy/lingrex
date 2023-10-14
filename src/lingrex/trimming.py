@@ -58,6 +58,15 @@ class Sites(list):
         m	e	t	e	-	-
         -	a	t	e	-	b
         -	-	t	e	-	b
+
+    Note
+    ----
+    Trimming of sites in an alignment was first introduced in a study by Blum and List (2023):
+
+    > Blum, F. and J.-M. List (2023): Trimming phonetic alignments improves the inference of 
+    > sound correspondence patterns from multilingual wordlists. 
+    > In: Proceedings of the 5th Workshop on Computational Typology and Multilingual NLP. 
+    > Association for Computational Linguistics 52-64. https://aclanthology.org/2023.sigtyp-1.6
     """
     def __init__(self,
                  alms: typing.Optional[typing.List[typing.List[str]]] = None,
