@@ -12,10 +12,11 @@ def compare_cognate_sets(wordlist, refA, refB):
 
     Note
     ----
-    This check was first described in Wu and List (forthcoming).
+    This check was first described in Wu and List (2023).
 
-    > Wu, M.-S. and J.-M. List (2022): Annotating cognates in phylogenetic
-    > studies of South-East Asian languages. Preprint: https://doi.org/10.17613/rabq-7z45
+    > Wu, M.-S. and J.-M. List (2023): Annotating cognates in phylogenetic studies 
+    > of South-East Asian languages. Language Dynamics and Change. 161-197.
+    > DOI: https://doi.org/10.1163/22105832-bja10023
     """
     ranks = []
     for concept in wordlist.rows:
@@ -48,10 +49,11 @@ def cross_semantic_cognate_statistics(
 
     Note
     ----
-    This check was first described in Wu and List (forthcoming).
+    This check was first described in Wu and List (2023).
 
-    > Wu, M.-S. and J.-M. List (2022): Annotating cognates in phylogenetic
-    > studies of South-East Asian languages. Preprint: https://doi.org/10.17613/rabq-7z45
+    > Wu, M.-S. and J.-M. List (2023): Annotating cognates in phylogenetic studies 
+    > of South-East Asian languages. Language Dynamics and Change. 161-197.
+    > DOI: https://doi.org/10.1163/22105832-bja10023
     """
 
     # type check for basic types if they are not there
