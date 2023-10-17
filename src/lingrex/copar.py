@@ -83,7 +83,6 @@ def score_patterns(patterns, missing="Ø", mode="coverage"):
         return sum(scores) / len(scores)
 
     if mode == "pairs":
-
         # count the number of pairs in the data
         pairs = 0
         covered = 0
