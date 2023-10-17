@@ -5,6 +5,49 @@ from lingpy.util import pb as progressbar
 import lingpy
 
 
+def ntile(words, n=5, gap="-", missing="Ø"):
+    """
+    Represent aligned words in form of n-tiles.
+    """
+    if len(words) == 1:
+        return ' '.join([x for x in words[0] if x != gap])
+
+    # start counting the occurrences
+    cols = []
+    for i in range(len(words[0])):
+        col = [line[i] for line in words]
+        cols += [col]
+    
+    ntile = len(words) / n 
+
+    sounds = []
+    for col in cols:
+        col = [x for x in col if x != missing]
+        if not col:
+            sounds += ['?']
+        else:
+            ntile = len(col) / n
+            dist = {}
+            sounds += [[]]
+            for s in set(col):
+                dist[s] = int(col.count(s) / ntile + 0.5)
+            for s, t in sorted(dist.items(), key=lambda x: x[1], reverse=True):
+                for i in range(t):
+                    sounds[-1] += [s]
+            iterated = 0
+            while len(sounds[-1]) < n:
+                sounds[-1] += sounds[-1]
+                iterated += 1
+                if iterated >= n:
+                    sounds[-1] += n * ["Ø"]
+            sounds[-1] = sorted(sounds[-1][:n], key=lambda x:
+                    sounds[-1].count(x), reverse=True)
+            sounds[-1] = '|'.join(sounds[-1])
+
+    return ' '.join([s for s in sounds if s.split('|').count(gap) !=
+        len(s.split('|'))-1])
+
+
 class FuzzyReconstructor:
 
     def __init__(
