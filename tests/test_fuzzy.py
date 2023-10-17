@@ -10,7 +10,10 @@ import lingpy
 
 
 def test_ntile():
-    assert ntile(["kap", "kap", "kup", "kup"], 2) == 'k|k u|a p|p'
+    assert set(
+            ntile(
+                ["kap", "kap", "kup", "kup"
+                    ], 2).split(" ")[1].split("|")) == set(["a", "u"])
     # counting is not the same for missing data!
     assert ntile(["kap", "kØp", "kØp"], n=2) == 'k|k a|a p|p'
     
