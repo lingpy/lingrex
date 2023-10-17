@@ -49,20 +49,26 @@ def ntile(words, n=5, gap="-", missing="Ø"):
 
 
 class FuzzyReconstructor:
+    """
+    Carry out fuzzy reconstructions by running reconstructions from different parts of the data.
 
-    def __init__(
-            self, infile, target, ref="cogid", fuzzy=False,
-            transcription="form"):
-        
+    Note
+    ----
+    This method was introduced in the study by List et al. (forthcoming):
+
+    > List, J.-M.; Hill, N. W.; Blum, F.; and Forkel, R. (forthcoming): A New Framework for the
+    > Representation and Computation of Uncertainty in Phonological Reconstruction. To appear in:
+    > Proceedings of the 4th Workshop on Computational Approaches to Historical Language Change.
+    """
+
+    def __init__(self, infile, target, ref="cogid", fuzzy=False, transcription="form"):
         if isinstance(infile, (str, dict)):
-            wordlist = lingpy.align.sca.Alignments(infile, ref=ref,
-                    transcription=transcription)
+            wordlist = lingpy.align.sca.Alignments(
+                infile, ref=ref, transcription=transcription
+            )
         elif isinstance(
-                infile, 
-                (
-                    lingpy.align.sca.Alignments, 
-                    lingpy.basic.wordlist.Wordlist
-                    )):
+            infile, (lingpy.align.sca.Alignments, lingpy.basic.wordlist.Wordlist)
+        ):
             wordlist = infile
         else:
             raise ValueError("Argument for infile must be a string or a wordlist.")
@@ -72,16 +78,18 @@ class FuzzyReconstructor:
         self.fuzzy = fuzzy
 
     def random_splits(self, splits=10, retain=0.9):
-
         idxs = [
-                idx for idx in self.wordlist if self.wordlist[idx, "doculect"] \
-                        != self.target]
+            idx
+            for idx in self.wordlist
+            if self.wordlist[idx, "doculect"] != self.target
+        ]
+
         tidxs = self.wordlist.get_list(col=self.target, flat=True)
         cogids = [self.wordlist[idx, self.ref] for idx in tidxs]
 
         self.samples = []
         for i in range(splits):
-            self.samples += [random.sample(idxs, int(retain*len(idxs)+0.5))]
+            self.samples += [random.sample(idxs, int(retain * len(idxs) + 0.5))]
 
         self.wordlists = {}
         for i, sample in enumerate(self.samples):
@@ -93,11 +101,8 @@ class FuzzyReconstructor:
                 if cogid in selected_cogids:
                     D[tidx] = [self.wordlist[tidx, c] for c in D[0]]
             self.wordlists[i] = PatternReconstructor(
-                    D,
-                    ref=self.ref,
-                    target=self.target,
-                    fuzzy=self.fuzzy
-                    )
+                D, ref=self.ref, target=self.target, fuzzy=self.fuzzy
+            )
 
 
     def fit_samples(self, clf, onehot=False, func=None, aligned=False, pb=False):
@@ -107,12 +112,18 @@ class FuzzyReconstructor:
 
 
     def predict(
-            self, alignment, languages, desegment=True, orchar="¦",
-            scorechar=":", output="percentiles"):
+        self,
+        alignment,
+        languages,
+        desegment=True,
+        orchar="¦",
+        scorechar=":",
+        output="percentiles",
+    ):
         words = []
         for i, wordlist in self.wordlists.items():
-            word = wordlist.predict(alignment, languages,
-                    desegment=False)
+            word = wordlist.predict(alignment, languages, desegment=False)
+
             words += [word]
         # transform to dictionary
         counts = {i: [] for i in range(len(words[0]))}
@@ -123,15 +134,18 @@ class FuzzyReconstructor:
         if output in ["percentiles", "wp"]:
             out = []
             for i, sounds in sorted(counts.items(), key=lambda x: x[0]):
-                distinct = {s: sounds.count(s)/len(sounds) for s in set(sounds)}
-                distinct_s = ["{0}{1}{2}".format(k, scorechar, int(100*v+0.5)) for k, v in
-                    sorted(distinct.items(), key=lambda x: x[1], reverse=True)]
+                distinct = {s: sounds.count(s) / len(sounds) for s in set(sounds)}
+                distinct_s = [
+                    "{0}{1}{2}".format(k, scorechar, int(100 * v + 0.5))
+                    for k, v in sorted(
+                        distinct.items(), key=lambda x: x[1], reverse=True
+                    )
+                ]
+
                 out += [orchar.join(distinct_s)]
             if output == "percentiles":
                 return out
             return words, out
         elif output == "words":
             return words
-
-
 

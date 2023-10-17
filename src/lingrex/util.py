@@ -44,8 +44,8 @@ def bleu_score(word, reference, n=4, weights=None, trim=True):
         new_wrd = list(get_n_ngrams(word, i))
         new_ref = list(get_n_ngrams(reference, i))
         if trim and i > 1:
-            new_wrd = new_wrd[i - 1:-(i - 1)]
-            new_ref = new_ref[i - 1:-(i - 1)]
+            new_wrd = new_wrd[i - 1 : -(i - 1)]
+            new_ref = new_ref[i - 1 : -(i - 1)]
 
         clipped, divide = [], []
         for itm in set(new_wrd):

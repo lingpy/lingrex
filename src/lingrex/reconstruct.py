@@ -318,7 +318,7 @@ class PatternReconstructor(ReconstructionBase):
                 )
                 for i, row in enumerate(matrix):
                     ptn = tuple(
-                        row[:len(self.languages)] + row[len(self.languages) + 1:]
+                        row[: len(self.languages)] + row[len(self.languages) + 1 :]
                     )
                     self.patterns[ptn][row[len(self.languages)]] += [(cogid, i)]
                     for j, lng in enumerate(self.languages):
