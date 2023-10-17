@@ -1,8 +1,51 @@
 """Create fuzzy reconstructions."""
 from lingrex.reconstruct import PatternReconstructor
 import random
-from lingpy.util import pb as progressbar
+from lingpy.util import pb as progressbar 
 import lingpy
+
+
+def ntile(words, n=5, gap="-", missing="Ø"):
+    """
+    Represent aligned words in form of n-tiles.
+    """
+    if len(words) == 1:
+        return ' '.join([x for x in words[0] if x != gap])
+
+    # start counting the occurrences
+    cols = []
+    for i in range(len(words[0])):
+        col = [line[i] for line in words]
+        cols += [col]
+    
+    ntile = len(words) / n 
+
+    sounds = []
+    for col in cols:
+        col = [x for x in col if x != missing]
+        if not col:
+            sounds += ['?']
+        else:
+            ntile = len(col) / n
+            dist = {}
+            sounds += [[]]
+            for s in set(col):
+                dist[s] = int(col.count(s) / ntile + 0.5)
+            for s, t in sorted(dist.items(), key=lambda x: x[1], reverse=True):
+                for i in range(t):
+                    sounds[-1] += [s]
+            iterated = 0
+            while len(sounds[-1]) < n:
+                sounds[-1] += sounds[-1]
+                iterated += 1
+                if iterated >= n:
+                    sounds[-1] += n * ["Ø"]
+            sounds[-1] = sorted(sounds[-1][:n], key=lambda x:
+                    sounds[-1].count(x), reverse=True)
+            sounds[-1] = '|'.join(sounds[-1])
+
+    return ' '.join([s for s in sounds if s.split('|').count(gap) !=
+        len(s.split('|'))-1])
 
 
 class FuzzyReconstructor:
@@ -40,6 +83,7 @@ class FuzzyReconstructor:
             for idx in self.wordlist
             if self.wordlist[idx, "doculect"] != self.target
         ]
+
         tidxs = self.wordlist.get_list(col=self.target, flat=True)
         cogids = [self.wordlist[idx, self.ref] for idx in tidxs]
 
@@ -60,10 +104,12 @@ class FuzzyReconstructor:
                 D, ref=self.ref, target=self.target, fuzzy=self.fuzzy
             )
 
+
     def fit_samples(self, clf, onehot=False, func=None, aligned=False, pb=False):
         pb = progressbar if pb else lambda x, desc: x
         for i, wordlist in pb(self.wordlists.items(), desc="fitting data"):
             wordlist.fit(clf=clf(), onehot=onehot, func=func, aligned=aligned)
+
 
     def predict(
         self,
@@ -77,6 +123,7 @@ class FuzzyReconstructor:
         words = []
         for i, wordlist in self.wordlists.items():
             word = wordlist.predict(alignment, languages, desegment=False)
+
             words += [word]
         # transform to dictionary
         counts = {i: [] for i in range(len(words[0]))}
@@ -94,9 +141,11 @@ class FuzzyReconstructor:
                         distinct.items(), key=lambda x: x[1], reverse=True
                     )
                 ]
+
                 out += [orchar.join(distinct_s)]
             if output == "percentiles":
                 return out
             return words, out
         elif output == "words":
             return words
+
