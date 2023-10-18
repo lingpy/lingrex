@@ -238,13 +238,14 @@ def transform_alignment(
         msa.prog_align()
         alms = [alm for alm in msa.alm_matrix]
     else:
-        seqs = [[s for s in seq if s != gap] for seq in seqs]
         alms = normalize_alignment([s for s in seqs])
+        seqs = [[s for s in seq if s != gap] for seq in seqs]
     if training:
         alms = ungap(alms, languages, languages[-1])
         these_seqs = seqs[:-1]
     else:
         these_seqs = seqs
+
     matrix = [[missing for x in all_languages] for y in alms[0]]
     for i in range(len(alms[0])):
         for j, lng in enumerate(languages):
@@ -264,7 +265,7 @@ def transform_alignment(
         for i, c in enumerate(
             get_consensus(
                 [
-                    class2tokens(prosodic_string(seqs[j], _output="CcV"), alms[j])
+                    class2tokens(prosodic_string(these_seqs[j], _output="CcV"), alms[j])
                     for j in range(len(these_seqs))
                 ],
                 gaps=True,
