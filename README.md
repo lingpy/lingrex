@@ -24,11 +24,11 @@ Methods for the handling of partial cognates were introduced in a study by Wu an
 
 Methods for the trimming of phonetic alignments were introduced in a study by Blum and List (2023):
 
-> Blum, F. and J.-M. List (2023): Trimming phonetic alignments improves the inference of sound correspondence patterns from multilingual wordlists. In: Proceedings of the 5th Workshop on Computational Typology and Multilingual NLP. Association for Computational Linguistics 52-64. https://aclanthology.org/2023.sigtyp-1.6.pdf
+> Blum, F. and J.-M. List (2023): Trimming phonetic alignments improves the inference of sound correspondence patterns from multilingual wordlists. In: Proceedings of the 5th Workshop on Computational Typology and Multilingual NLP. Association for Computational Linguistics. 52-64. https://aclanthology.org/2023.sigtyp-1.6.pdf
 
-Methods for the handling and creation of fuzzy / uncertain phonological reconstructions were introduced in a study by List et al. (forthcoming):
+Methods for the handling and creation of fuzzy / uncertain phonological reconstructions were introduced in a study by List et al. (2023):
 
-> List, J.-M.; Hill, N. W.; Blum, F.; and Forkel, R. (forthcoming): A New Framework for the Representation and Computation of Uncertainty in Phonological Reconstruction. To appear in:  Proceedings of the 4th Workshop on Computational Approaches to Historical Language Change.
+> List, J.-M.; Hill, N. W.; Blum, F.; and Forkel, R. (2023): A New Framework for the Representation and Computation of Uncertainty in Phonological Reconstruction. Proceedings of the 4th Workshop on Computational Approaches to Historical Language Change. 22-32. https://aclanthology.org/2023.lchange-1.3
 
 When using this package in your research, please make sure to quote the respective papers, depending on the algorithms you use, and quote the software package as follows:
 
