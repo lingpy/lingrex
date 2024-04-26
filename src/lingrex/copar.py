@@ -600,7 +600,7 @@ class CoPaR(Alignments):
         P = {
             idx: bt.lists(
                 [
-                    "0/n" if x not in rc("morpheme_separators") else "+"
+                    "0" if x not in rc("morpheme_separators") else "+"
                     for x in self[idx, self._alignment]
                 ]
             )
@@ -609,8 +609,8 @@ class CoPaR(Alignments):
         for i, ((struc, pattern), data) in enumerate(
             sorted(new_clusters.items(), key=lambda x: len(x), reverse=True)
         ):
-            pattern_id = "{0}-{1}/{2}".format(
-                i + 1, len(self.clusters[struc, pattern]), pattern[pidx]
+            pattern_id = "{0}".format(
+                i + 1 #, len(self.clusters[struc, pattern]), pattern[pidx]
             )
             self.id2ptn[pattern_id] = pattern
             self.ptn2id[pattern] = pattern_id
