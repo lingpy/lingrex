@@ -24,10 +24,12 @@ def test_regularity():
 
     test_alg = Alignments(test_wl)
     add_structure(test_alg, model="cv", structure="structure")
+    print(test_alg.structure)
     test_alg = CoPaR(test_alg, ref="cogid")
     test_alg.get_sites()
     test_alg.cluster_sites()
     test_alg.sites_to_pattern()
-    output = regularity(test_alg, threshold=2, word_threshold=0.5)
+    output = regularity(test_alg, threshold=2, word_threshold=0.5,
+                        sound_classes="cv")
 
     assert output == (2, 5, 7, 0.29, 4, 5, 9, 0.44, 3, 4, 7, 0.43)

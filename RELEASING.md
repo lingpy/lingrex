@@ -18,7 +18,7 @@
   ```
 
 - Update the version number, by removing the trailing `.dev0` in:
-  - `setup.py`
+  - `setup.cfg`
   - `src/lingrex/__init__.py`
 
 - Check metadata in `.zenodo.json`
