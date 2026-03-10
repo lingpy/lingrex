@@ -33,3 +33,9 @@ def test_regularity():
                         sound_classes="cv")
 
     assert output == (2, 5, 7, 0.29, 4, 5, 9, 0.44, 3, 4, 7, 0.43)
+    assert regularity(
+        test_alg, threshold=2, word_threshold=0.5, sound_classes="cv", min_refs=5
+    ) == (2, 5, 7, 0.29, 4, 5, 9, 0.44, 0, 0, 0, 0.0)
+    assert regularity(
+        test_alg, threshold=2, word_threshold=0.5, sound_classes="T"
+    ) == (0, 0, 0, 0.0, 0, 0, 0, 0.0, 0, 0, 0, 0.0)

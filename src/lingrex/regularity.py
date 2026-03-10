@@ -6,6 +6,10 @@ import statistics
 from lingpy import log
 
 
+def _safe_round_ratio(part, whole):
+    return round((part / whole), 2) if whole else 0.0
+
+
 def regularity(wordlist, threshold=3, ref="cogid", min_refs=3,
                word_threshold=0.75, sound_classes="cv"):
     """
@@ -96,13 +100,13 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3,
         regular_patterns,
         patterns - regular_patterns,
         patterns,
-        round((regular_patterns / patterns), 2),
+        _safe_round_ratio(regular_patterns, patterns),
         regular_proportion,
         full_proportion - regular_proportion,
         full_proportion,
-        round((regular_proportion / full_proportion), 2),
+        _safe_round_ratio(regular_proportion, full_proportion),
         regular_words,
         irregular_words,
         regular_words + irregular_words,
-        round((regular_words / (regular_words + irregular_words)), 2),
+        _safe_round_ratio(regular_words, regular_words + irregular_words),
     )
