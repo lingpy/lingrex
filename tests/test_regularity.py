@@ -1,4 +1,4 @@
-from pytest import raises
+from pytest import raises, warns
 from lingpy import Wordlist, Alignments
 from lingrex.copar import CoPaR
 from lingrex.util import add_structure
@@ -33,9 +33,11 @@ def test_regularity():
                         sound_classes="cv")
 
     assert output == (2, 5, 7, 0.29, 4, 5, 9, 0.44, 3, 4, 7, 0.43)
-    assert regularity(
-        test_alg, threshold=2, word_threshold=0.5, sound_classes="cv", min_refs=5
-    ) == (2, 5, 7, 0.29, 4, 5, 9, 0.44, 0, 0, 0, 0.0)
-    assert regularity(
-        test_alg, threshold=2, word_threshold=0.5, sound_classes="T"
-    ) == (0, 0, 0, 0.0, 0, 0, 0, 0.0, 0, 0, 0, 0.0)
+    with warns(RuntimeWarning, match=r"No cognate sets meet min_refs=5"):
+        assert regularity(
+            test_alg, threshold=2, word_threshold=0.5, sound_classes="cv", min_refs=5
+        ) == (2, 5, 7, 0.29, 4, 5, 9, 0.44, 0, 0, 0, 0.0)
+    with warns(RuntimeWarning, match=r"No patterns found for sound_classes='T'"):
+        assert regularity(
+            test_alg, threshold=2, word_threshold=0.5, sound_classes="T"
+        ) == (0, 0, 0, 0.0, 0, 0, 0, 0.0, 0, 0, 0, 0.0)

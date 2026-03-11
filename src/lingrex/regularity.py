@@ -2,6 +2,7 @@
 Calculate regularity metrics on dataset.
 """
 import statistics
+import warnings
 
 from lingpy import log
 
@@ -95,6 +96,28 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3,
                 regular_words += len(set(msa["taxa"]))
             else:
                 irregular_words += len(set(msa["taxa"]))
+
+    if not patterns and not (regular_words + irregular_words):
+        warnings.warn(
+            "No patterns found for sound_classes={0!r}; regularity proportions "
+            "are set to 0.0.".format(sound_classes),
+            RuntimeWarning,
+            stacklevel=2,
+        )
+    elif not patterns:
+        warnings.warn(
+            "No patterns found for sound_classes={0!r}; pattern regularity "
+            "proportions are set to 0.0.".format(sound_classes),
+            RuntimeWarning,
+            stacklevel=2,
+        )
+    elif not (regular_words + irregular_words):
+        warnings.warn(
+            "No cognate sets meet min_refs={0}; word regularity is set "
+            "to 0.0.".format(min_refs),
+            RuntimeWarning,
+            stacklevel=2,
+        )
 
     return (
         regular_patterns,
