@@ -2,13 +2,9 @@
 Calculate regularity metrics on dataset.
 """
 import statistics
-import warnings
 
 from lingpy import log
 
-
-def _safe_round_ratio(part, whole):
-    return round((part / whole), 2) if whole else 0.0
 
 
 def regularity(wordlist, threshold=3, ref="cogid", min_refs=3,
@@ -97,39 +93,31 @@ def regularity(wordlist, threshold=3, ref="cogid", min_refs=3,
             else:
                 irregular_words += len(set(msa["taxa"]))
 
-    if not patterns and not (regular_words + irregular_words):
-        warnings.warn(
-            "No patterns found for sound_classes={0!r}; regularity proportions "
-            "are set to 0.0.".format(sound_classes),
-            RuntimeWarning,
-            stacklevel=2,
+    if patterns == 0:
+        raise ValueError(
+            "Cannot compute regularity: no patterns were detected in the data. "
+            "Check sound_classes or input data."
         )
-    elif not patterns:
-        warnings.warn(
-            "No patterns found for sound_classes={0!r}; pattern regularity "
-            "proportions are set to 0.0.".format(sound_classes),
-            RuntimeWarning,
-            stacklevel=2,
+    if full_proportion == 0:
+        raise ValueError(
+            "Cannot compute regularity: no eligible alignment sites were found."
         )
-    elif not (regular_words + irregular_words):
-        warnings.warn(
-            "No cognate sets meet min_refs={0}; word regularity is set "
-            "to 0.0.".format(min_refs),
-            RuntimeWarning,
-            stacklevel=2,
+    if (regular_words + irregular_words) == 0:
+        raise ValueError(
+            "Cannot compute regularity: no words satisfy the min_refs threshold."
         )
 
     return (
         regular_patterns,
         patterns - regular_patterns,
         patterns,
-        _safe_round_ratio(regular_patterns, patterns),
+        round((regular_patterns / patterns), 2),
         regular_proportion,
         full_proportion - regular_proportion,
         full_proportion,
-        _safe_round_ratio(regular_proportion, full_proportion),
+        round((regular_proportion / full_proportion), 2),
         regular_words,
         irregular_words,
         regular_words + irregular_words,
-        _safe_round_ratio(regular_words, regular_words + irregular_words),
+        round((regular_words / (regular_words + irregular_words)), 2),
     )
